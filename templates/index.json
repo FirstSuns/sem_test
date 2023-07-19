@@ -1,0 +1,49 @@
+{
+  "sections": {
+    "f03ad310-ca4e-45e5-a6d0-188f9f09bac1": {
+      "type": "video-banner",
+      "settings": {
+        "background_video": "shopify:\/\/files\/videos\/1689098505271_a703a0-3.myshopify.com_c77f0d52063d2c44fdfb63b3f750397c.mp4",
+        "headline_text": "Welcome to our store",
+        "button_text": "Shop Now",
+        "button_link": "\/"
+      }
+    },
+    "80fba9b3-d604-40e5-969c-6d7d544f4082": {
+      "type": "text-fade",
+      "blocks": {
+        "f8dfdd69-097f-43c9-ae7a-68158fc0aff7": {
+          "type": "banner_block",
+          "settings": {
+            "headline": "Hello World 1",
+            "paragraph": "<p>Hot chicken vibecession cold-pressed intelligentsia ennui, <br\/>subway tile blue bottle occupy.  Gatekeep meh copper mug selvage prism .<\/p>"
+          }
+        },
+        "50a93013-b320-4561-b5fa-27507306c5e5": {
+          "type": "banner_block",
+          "settings": {
+            "headline": "Your Headline 2",
+            "paragraph": "<p>Activated charcoal la croix keffiyeh tofu vibecession pok pok roof party kombucha. <\/p>"
+          }
+        },
+        "ad1a9728-57bb-44b7-9b22-0ab81da43752": {
+          "type": "banner_block",
+          "settings": {
+            "headline": "Your Headline 3",
+            "paragraph": "<p>Synth vibecession taiyaki banh mi mlkshk.  Grailed single-origin coffee art party shabby chic before they sold out wayfarers.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "f8dfdd69-097f-43c9-ae7a-68158fc0aff7",
+        "50a93013-b320-4561-b5fa-27507306c5e5",
+        "ad1a9728-57bb-44b7-9b22-0ab81da43752"
+      ],
+      "settings": {}
+    }
+  },
+  "order": [
+    "f03ad310-ca4e-45e5-a6d0-188f9f09bac1",
+    "80fba9b3-d604-40e5-969c-6d7d544f4082"
+  ]
+}
