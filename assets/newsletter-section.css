@@ -42,6 +42,7 @@
   width: fit-content;
 }
 
+
 @media screen and (min-width: 750px) {
   .newsletter__button {
     flex-shrink: 0;

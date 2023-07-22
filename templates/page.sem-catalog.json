@@ -1,0 +1,94 @@
+{
+  "sections": {
+    "banner": {
+      "type": "np-video",
+      "settings": {
+        "col_title": "<p>Featured Lesson or <strong>Product Title<\/strong> Goes Here.<\/p>",
+        "col_content": "<p>LCD screens are uniquely modern in style, and the liquid crystals that make them work have allowed humanity to create slimmer<\/p>",
+        "col_button_text": "Learn More",
+        "col_button_link": "",
+        "heading": "",
+        "heading_size": "h1",
+        "enable_video_looping": false,
+        "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+        "cover_image": "shopify:\/\/shop_images\/banner.png",
+        "description": "",
+        "full_width": false,
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "feature": {
+      "type": "np-feature-collection",
+      "settings": {
+        "collection": "np-collection",
+        "title": "<p>Featured Products<\/p>",
+        "content": "<p>Establish a secure inner foundation, learn techniques for improving your physical, mental & spiritual hygiene & unleash your life-force. Learn to live in harmony with the things you can't control.<\/p>",
+        "button_text": "View All",
+        "button_link": "#",
+        "image_ratio": "square",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "products_to_show": 4,
+        "columns_desktop": 2
+      }
+    },
+    "needhelp": {
+      "type": "np-pdp-needhelp",
+      "settings": {
+        "beackgroud_image": "shopify:\/\/shop_images\/image_6.jpg",
+        "heading": "Need Help?",
+        "content": "Take the quiz to get a journey of lessons and teachings designed just for you.",
+        "button_text": "Take the Quiz?",
+        "button_link": "#"
+      }
+    },
+    "subscription": {
+      "type": "np-feature-collection",
+      "settings": {
+        "collection": "np-collection",
+        "title": "<p>Subscription<\/p>",
+        "content": "<p>Establish a secure inner foundation, learn techniques for improving your physical, mental & spiritual hygiene & unleash your life-force. Learn to live in harmony with the things you can't control.<\/p>",
+        "button_text": "View All",
+        "button_link": "#",
+        "image_ratio": "square",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "products_to_show": 6,
+        "columns_desktop": 3
+      }
+    },
+    "session": {
+      "type": "np-feature-collection",
+      "settings": {
+        "collection": "np-collection",
+        "title": "<p>Topic Sessions with Nic<\/p>",
+        "content": "<p>Establish a secure inner foundation, learn techniques for improving your physical, mental & spiritual hygiene & unleash your life-force. Learn to live in harmony with the things you can't control.<\/p>",
+        "button_text": "View All",
+        "button_link": "#",
+        "image_ratio": "square",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "products_to_show": 6,
+        "columns_desktop": 3
+      }
+    }
+  },
+  "order": [
+    "banner",
+    "feature",
+    "needhelp",
+    "subscription",
+    "session"
+  ]
+}

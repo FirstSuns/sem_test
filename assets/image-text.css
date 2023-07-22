@@ -1,0 +1,111 @@
+.image-text-about h3 {
+    margin: 0  0 40px;
+    font-size: 24px;
+    line-height: 35px;
+    color: #A1A1A1;
+}
+  .image-text-about h2 {
+    margin: 0 0 80px;
+    font-size: 34px;
+    line-height: 50px;
+}
+ .image-text-about-part {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+ .image-text-about-part h4 {
+    margin: 0 0 40px;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 70px;
+}
+  .image-text-about-part p {
+    margin: 0;
+    font-size: 20px;
+    line-height: 28px;
+    color: #A1A1A1;
+}
+  .image-text-about-part h4 span {
+    color: #FF9416;
+}
+  .image-text-about-part figure {
+    margin: 0;
+}
+  .image-text-about-part .btn a {
+    background: #FF9416;
+    border-radius: 3px;
+    padding: 14px 50px;
+    color: #fff;
+    text-decoration: none;
+}
+  .image-text-about-part .btn {
+    display: flex;
+    margin: 40px 0 0;
+}
+
+@media screen and (max-width: 1024px) {
+  .image-text-about-part h4 {
+    font-size: 38px;
+    line-height: 60px;
+}
+}
+
+  @media screen and (max-width: 768px) {
+  .image-text-about-part {
+    gap: 30px;
+}
+    .image-text-about-part h4 {
+    font-size: 28px;
+    line-height: 44px;
+      margin: 0 0 20px;
+}
+    .image-text-about h3 {
+    margin: 0px  0 20px;
+    font-size: 20px;
+    line-height: 30px;
+}
+    .image-text-about h2 {
+    margin: 0 0 40px;
+    font-size: 24px;
+    line-height: 40px;
+}
+    .image-text-about-part p {
+    font-size: 18px;
+    line-height: 26px;
+}
+    .image-text-about-part .btn a {
+    padding: 14px 30px;
+}
+  }
+
+ @media screen and (max-width: 749px) {
+.image-text-about-part {
+    grid-template-columns: 1fr;
+}
+   .image-text-about-part p {
+    font-size: 16px;
+    line-height: 24px;
+}
+   .image-text-about-part h4 {
+    font-size: 25px;
+    line-height: 38px;
+}
+   .image-text-about-part .btn a {
+    padding: 10px 30px;
+}
+   .image-text-about h2 {
+    margin: 0 0 20px;
+}
+   .image-text-about h3 {
+    margin: 0 0 5px;
+}
+   
+ }
+@media screen and (max-width: 575px) {
+.journey-newsletter-section .journey-newsletter-part {
+    padding: 0;
+}
+}

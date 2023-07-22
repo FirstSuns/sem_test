@@ -1,5 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Marcellus&display=swap');
-
+/*@import url('https://fonts.googleapis.com/css2?family=Marcellus&display=swap');*/
+img{max-width:100%;height:auto;}
+figure{margin:0;line-height:0;}
 :root {
   --alpha-button-background: 1;
   --alpha-button-border: 1;
@@ -153,6 +154,13 @@ body:has(.section-header .drawer-menu) .announcement-bar-section slideshow-compo
     padding: 0 5rem;
   }
 }
+
+@media screen and (min-width: 1340px) {
+.page-width {
+    max-width: 1292px !important;
+}
+}
+
 
 .isolate {
   position: relative;
@@ -2258,7 +2266,9 @@ product-info .loading-overlay:not(.hidden) ~ *,
   grid-template-columns: 1fr 2fr 1fr;
   align-items: center;
 }
-
+nav.menu-drawer__navigation {
+    background: #191919 !important;
+}
 @media screen and (max-width: 749px) {
   .header--has-app {
     grid-template-columns: auto 1fr auto;
@@ -2287,7 +2297,7 @@ product-info .loading-overlay:not(.hidden) ~ *,
 
   .header--middle-left {
     grid-template-areas: 'heading navigation icons';
-    grid-template-columns: auto auto 1fr;
+    grid-template-columns: 1fr auto 1fr;
     column-gap: 2rem;
   }
 
@@ -3325,3 +3335,49 @@ details-disclosure > details {
     --sparkle: url('./sparkle.gif');
   }
 }
+.header__icon, .header__icon--cart .icon{
+  width:5.5rem;
+}
+
+body{background:#191919 !important;}
+
+.wc-index .header-wrapper{
+  background:none !important;
+    position: absolute;
+    width: 100%;
+  top:0;
+  left:0;
+}
+
+.header-wrapper{
+  border:none !important;
+}
+
+.wc-index .scrolled-past-header .header-wrapper{
+  background:#191919 !important;
+}
+
+.page-width{
+  max-width:1180px;
+  padding-left:15px !important;
+  padding-right:15px !important;
+  margin:0 auto;
+  width: 100%;
+}
+
+.header--middle-left .header__heading-link, .header--top-left .header__heading-link{
+  padding:0;
+  margin:0;
+}
+.header__icon:not(.header__icon--summary), .header__icon span{
+  text-decoration:none;
+}
+.list-menu__item{color:#FFF;font-family:var(--secondary-font);font-size:14px;font-weight:400;line-height:22px !important;padding:0 30px;letter-spacing:0;}
+.header__menu-item:hover span{text-decoration:none;}
+.header__icon:not(.header__icon--summary), .header__icon span{color:#FFF;font-family:var(--secondary-font);font-size:14px;line-height:22px;}
+
+
+
+
+
+

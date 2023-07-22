@@ -1,0 +1,74 @@
+{{ 'np-section-pdpneedhelp.css' | asset_url | stylesheet_tag }}
+<div class="np-pdp-needhelp-container np-page-width" id="np-pdp-{{ section.id }}">
+  <div class="np-pdp-needhelp_inner">
+    {% if section.settings.beackgroud_image!=blank %}
+    <div class="np-pdp-needhelp-image" style="background-image: url({{ section.settings.beackgroud_image | img_url:'master' }})">      
+        <img src="{{ section.settings.beackgroud_image | img_url:'master' }}" >      
+    </div>
+    {% endif %}
+    <div class="np-pdp-needhelp-content_main">
+      <div class="np-needhelp-content_left">
+        {% if section.settings.heading!=blank %}
+          <div class="np-pdp-needhelp-heading">{{ section.settings.heading }}</div>
+        {% endif %}
+        {% if section.settings.content!=blank %}
+          <div class="np-pdp-needhelp-content">{{ section.settings.content }}</div>
+        {% endif %}
+      </div>
+      <div class="np-needhelp-content_right">
+        {% if section.settings.button_text!=blank %}
+          <div class="np-pdp-needhelp-button">
+            <a href="{{ section.settings.button_link }}">{{ section.settings.button_text }} </a>
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+  <div class="saprator"></div>
+</div>
+
+{% schema %}
+  {
+    "name": "Need Help",
+    "tag": "section",
+    "class": "np_pdp_need_help",
+    "disabled_on": {
+      "groups": ["header", "footer"]
+    },
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "beackgroud_image",        
+        "label": "Background Image"
+      },
+      {
+        "type": "inline_richtext",
+        "id": "heading",
+        "default": "Need Help?",
+        "label": "Heading"
+      },
+      {
+        "type": "inline_richtext",
+        "id": "content",        
+        "label": "Content"
+      },
+      {
+        "type": "text",
+        "id": "button_text",
+        "default": "Take the Quiz?",
+        "label": "Button Text"
+      },
+      {
+        "type": "url",
+        "id": "button_link",        
+        "label": "Button Link"
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

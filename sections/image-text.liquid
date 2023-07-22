@@ -1,0 +1,103 @@
+{{ 'image-text.css' | asset_url | stylesheet_tag }}
+<div class="image-text-about-section">
+  <div class="page-width">
+    <div class="image-text-about">
+      {% if section.settings.sub_title != blank %}
+      <h3>{{ section.settings.sub_title }}</h3>
+      {% endif %}
+      {% if section.settings.main_title != blank %}
+      <h2>{{ section.settings.main_title }}</h2>
+      {% endif %}
+      <div class="image-text-about-part">
+        {% if section.settings.image != blank %}
+        <div class="image-text-about-img">
+          <figure>
+            {%- liquid
+        assign image_height = section.settings.image.width | divided_by: section.settings.image.aspect_ratio
+          assign sizes = full_width
+      -%}
+    {{
+        section.settings.image
+        | image_url: width: 3840
+        | image_tag:
+          loading: 'lazy',
+          width: section.settings.image.width,
+          height: image_height,
+          sizes: sizes,
+          widths: widths
+      }}
+          </figure>
+        </div>
+        {% endif %}
+        <div class="image-text-about-desc">
+          {% if section.settings.title != blank %}
+          <h4>{{ section.settings.title }}</h4>
+          {% endif %}
+          {% if section.settings.desc != blank %}
+          <p>{{ section.settings.desc }}</p>
+          {% endif %}
+          {% if section.settings.btn_title != blank and section.settings.btn_link != blank %}
+       <div class="btn">   <a href="{{ section.settings.btn_link }}">{{ section.settings.btn_title }}</a></div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+{% schema %}
+  {
+    "name": "Image Text",
+    "settings": [
+      {
+        "type": "text",
+        "id": "main_title",
+        "label": "Main Heading"
+      },
+      {
+        "type": "text",
+        "id": "sub_title",
+        "label": "Sub Heading"
+      },
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image"
+      },
+      {
+        "type": "textarea",
+        "id": "title",
+        "label": "Heading"
+      },
+      {
+        "type": "richtext",
+        "id": "desc",
+        "label": "Description"
+      },
+      {
+        "type": "text",
+        "id": "btn_title",
+        "label": "Button Heading"
+      },
+      {
+        "type": "url",
+        "id": "btn_link",
+        "label": "Button Link"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Image Text",
+        "category": "Image Text"
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

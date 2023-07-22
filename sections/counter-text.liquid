@@ -1,0 +1,191 @@
+{{ 'counter-text.css' | asset_url | stylesheet_tag }}
+{{ 'counter-text.js' | asset_url | script_tag }}
+
+<div class="counter-text-section">
+  <div class="page-width">
+    <div class="counter-text">
+      {% if section.settings.sub_title != blank %}
+      <h3>{{ section.settings.sub_title }}</h3>
+      {% endif %}
+      {% if section.settings.title != blank %}
+      <h2>{{ section.settings.title }}</h2>
+      {% endif %}
+      <div class="counter-text-number-section">
+        {% for block in section.blocks %}
+          {% if block.type == 'Count' %}
+        <div class="counter-text-number">
+            {% if block.settings.number != blank %}
+         
+            
+{% assign num_list = block.settings.number | times: 3 %}
+          <div class="progress blue">
+<!--                  <span class="progress-left">
+                                   <span class="progress-bar"></span>
+                 </span>
+                 <span class="progress-right">
+                                   <span class="progress-bar"></span>
+                 </span> -->
+            <span class="progress-right">
+            <svg class="vue-sweet-progress-circle" viewBox="0 0 100 100" gapPosition="top"><path d="M 50,50 m 0,-47 a 47,47 0 1 1 0,94 a 47,47 0 1 1 0,-94" stroke="#ebebeb" stroke-width="6" fill-opacity="0" style="stroke-dasharray: 295.31px, 295.31px; stroke-dashoffset: 0px; transition: stroke-dashoffset 0.3s ease 0s, stroke-dasharray 0.3s ease 0s, stroke 0.3s ease 0s;"></path><path d="M 50,50 m 0,-47 a 47,47 0 1 1 0,94 a 47,47 0 1 1 0,-94" stroke="#FF9416" stroke-width="6" fill-opacity="0" style="stroke-dasharray: {{ num_list }}px, 295.31px;stroke-dashoffset: 0px;transition: stroke-dashoffset 0.3s ease 0s, stroke-dasharray 0.3s ease 0s, stroke 0.3s ease 0s;"></path></svg>
+            </span>   
+              <div class="progress-value">{{ block.settings.number }}%</div>
+               </div>
+
+
+          
+              {% endif %}
+            {% if block.settings.title != blank %}
+          <p>{{ block.settings.title }}</p>
+            {% endif %}
+        </div>
+            {% endif %}
+          {% endfor %}
+      </div>
+      <div class="counter-text-number-box">
+        {% for block in section.blocks %}
+          {% if block.type == 'Text' %}
+        <div class="counter-text-number-wrap">
+          {% if block.settings.number != blank %}
+         
+  
+          
+<progress id="file" value="{{ block.settings.number }}" max="100"   > {{ block.settings.number }} </progress>
+       
+          <h5>{{ block.settings.number }}%</h5>
+              {% endif %}
+            {% if block.settings.desc != blank %}
+          <p>{{ block.settings.desc }}</p>
+            {% endif %}
+        </div>
+            {% endif %}
+          {% endfor %}
+      </div>
+    </div>
+    <div class="ready-not-ready-section">
+      <div class="ready-not-ready-wrap">
+        {% if section.settings.ready_title != blank %}
+        <h2>{{ section.settings.ready_title }}</h2>
+        {% endif %}
+        {% if section.settings.ready_sub_title != blank %}
+        <h3>{{ section.settings.ready_sub_title }}</h3>
+        {% endif %}
+        {{ section.settings.ready_desc }}
+      </div>
+      <div class="ready-not-ready-wrap">
+        {% if section.settings.not_ready_title != blank %}
+        <h2>{{ section.settings.not_ready_title }}</h2>
+        {% endif %}
+        {% if section.settings.not_ready_sub_title != blank %}
+        <h3>{{ section.settings.not_ready_sub_title }}</h3>
+        {% endif %}
+        {{ section.settings.not_ready_desc }}
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+
+</style>
+
+{% schema %}
+  {
+    "name": "Counter Text",
+    "settings": [
+      {
+        "type": "textarea",
+        "id": "title",
+        "label": "Heading"
+      },
+      {
+        "type": "text",
+        "id": "sub_title",
+        "label": "Sub Heading"
+      },
+      {
+        "type": "header",
+        "content": "Ready"
+      },
+      {
+        "type": "text",
+        "id": "ready_title",
+        "label": "Heading"
+      },
+      {
+        "type": "text",
+        "id": "ready_sub_title",
+        "label": "Sub Heading"
+      },
+      {
+        "type": "richtext",
+        "id": "ready_desc",
+        "label": "Description"
+      },
+      {
+        "type": "header",
+        "content": "Not Ready"
+      },
+      {
+        "type": "text",
+        "id": "not_ready_title",
+        "label": "Heading"
+      },
+      {
+        "type": "text",
+        "id": "not_ready_sub_title",
+        "label": "Sub Heading"
+      },
+      {
+        "type": "richtext",
+        "id": "not_ready_desc",
+        "label": "Description"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "Count",
+        "name": "Count",
+        "settings": [
+          {
+            "type": "text",
+            "id": "number",
+            "label": "Number"
+          },
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Heading"
+          }
+        ]
+      },
+      {
+        "type": "Text",
+        "name": "Text",
+        "settings": [
+          {
+            "type": "text",
+            "id": "number",
+            "label": "Number"
+          },
+          {
+            "type": "textarea",
+            "id": "desc",
+            "label": "Description"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Counter Text",
+        "category": "Counter Text"
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

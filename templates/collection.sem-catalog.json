@@ -1,0 +1,54 @@
+{
+  "sections": {
+    "banner": {
+      "type": "np-catalog-banner",
+      "blocks": {
+        "068cc470-91b2-4bc2-9bdf-7e88c2c28fa3": {
+          "type": "picture",
+          "settings": {
+            "slide_item": "shopify:\/\/shop_images\/banner.png"
+          }
+        },
+        "0b75c26b-d0e0-4c07-8b2d-32a1b8de1a39": {
+          "type": "picture",
+          "settings": {
+            "slide_item": "shopify:\/\/shop_images\/Screenshot2023-07-11at5.26.27PM_81f5741a-d1eb-4ae2-a84f-969657048ac9.png"
+          }
+        }
+      },
+      "block_order": [
+        "068cc470-91b2-4bc2-9bdf-7e88c2c28fa3",
+        "0b75c26b-d0e0-4c07-8b2d-32a1b8de1a39"
+      ],
+      "settings": {
+        "col_title": "<p>Featured Lesson or <strong>Product Title<\/strong> Goes Here.<\/p>",
+        "col_content": "<p>LCD screens are uniquely modern in style, and the liquid crystals that make them work have allowed humanity to create slimmer<\/p>",
+        "col_button_text": "Learn more",
+        "col_button_link": "#"
+      }
+    },
+    "product-grid": {
+      "type": "np-collection-main-catalog",
+      "settings": {
+        "products_per_page": 16,
+        "title": "<p>Featured Products<\/p>",
+        "content": "<p>Establish a secure inner foundation, learn techniques for improving your physical, mental & spiritual hygiene & unleash your life-force. Learn to live in harmony with the things you can't control.<\/p>",
+        "button_text": "View All",
+        "button_link": "shopify:\/\/collections\/courses",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "enable_filtering": true,
+        "filter_type": "horizontal",
+        "enable_sorting": true
+      }
+    }
+  },
+  "order": [
+    "banner",
+    "product-grid"
+  ]
+}

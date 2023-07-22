@@ -1,0 +1,135 @@
+.main-faq-section{width:100%;}
+.main-faq{width:100%;padding:150px 0;}
+.main-faq h2{color:#F8F8F8;font-family:var(--primary-font);font-size:60px;font-weight:400;line-height:76px;letter-spacing:-0.5px;max-width:600px;margin:0;}
+.main-faq h3{margin:0 0 60px;color:#A1A1A1;font-family:var(--primary-font);font-size:24px;font-weight:400;line-height:35px;}
+.main-faq-part{width:100%;padding:70px 0 0;}
+.main-faq-wrap{width:100%;display:flex;flex-wrap:wrap;align-items:flex-start;border-bottom:solid 1px #2F2F2F;}
+.main-faq-left{width:100px;text-align:center;padding:23px 0;color:#F8F8F8;font-family:var(--primary-font);font-size:60px;font-weight:400;line-height:76px;letter-spacing:-0.5px;}
+.main-faq-right{width:calc(100% - 100px);padding:0 50px 0 35px;border-left:solid 1px #2F2F2F;}
+.main-faq-right h4{color:#F8F8F8;font-family:var(--primary-font);font-size:34px;font-weight:400;line-height:2.3;margin:0;padding:23px 0;position:relative;cursor:pointer;}
+.main-faq-right p{margin:0 0 68px;color:#A1A1A1;font-family:var(--secondary-font);font-size:17px;font-weight:400;line-height:27px;}
+.main-faq-desc{display:none;}
+.main-faq-right h4 span{position:absolute;height:40px;width:40px;right:-50px;top:50%;transform:translateY(-50%);-webkit-transform:translateY(-50%);-o-transform:translateY(-50%);-moz-transform:translateY(-50%);-ms-transform:translateY(-50%);display:block;}
+.main-faq-right h4 span:after{content:'';width:28px;height:2px;background:#f8f8f8;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);-webkit-transform:translate(-50%,-50%);-o-transform:translate(-50%,-50%);-moz-transform:translate(-50%,-50%);-ms-transform:translate(-50%,-50%);}
+.main-faq-right h4 span:before{content:'';height:28px;width:2px;background:#f8f8f8;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);-webkit-transform:translate(-50%,-50%);-o-transform:translate(-50%,-50%);-moz-transform:translate(-50%,-50%);-ms-transform:translate(-50%,-50%);}
+.main-faq-wrap.active .main-faq-right h4 span{transform:translateY(-50%) rotate(45deg);-webkit-transform:translateY(-50%) rotate(45deg);-o-transform:translateY(-50%) rotate(45deg);-moz-transform:translateY(-50%) rotate(45deg);-ms-transform:translateY(-50%) rotate(45deg);}
+.main-faq-wrap.active .main-faq-desc{display:block;}
+.main-faq-wrap:last-child{border-bottom:none;}
+.main-faq-wrap.active .main-faq-left{color:#FF9416;}
+
+
+
+@media only screen and (max-width: 1024px) {
+.main-faq h2 {
+    font-size: 50px;
+    line-height: 66px;
+}
+  .main-faq-right h4 {
+    font-size: 24px;
+    line-height: 1.3;
+}
+  .main-faq-left {
+    font-size: 40px;
+    line-height: 46px;
+
+  }
+  .main-faq {
+    padding: 100px 0;
+}
+}
+@media only screen and (max-width: 991px) {
+  .main-faq-left{padding:16px 0;}
+.main-faq h3 {
+    margin: 0 0 30px;
+}
+  .main-faq h2 {
+    font-size: 34px;
+    line-height: 44px;
+}
+  .main-faq-part {
+    padding: 50px 0 0;
+}
+  .main-faq-left {
+    width: 80px;
+}
+  .main-faq-right {
+    width: calc(100% - 80px);
+        padding: 0 50px 0 20px;
+}
+  .main-faq-right h4 {
+    font-size: 20px;
+}
+  .main-faq-right h4 span {
+    height: 30px;
+    width: 30px;
+}
+  .main-faq-right h4 span:before {
+    height: 22px;
+}
+  .main-faq-right h4 span:after {
+    width: 22px;
+}
+  .main-faq-left {
+    font-size: 30px;
+    line-height: 36px;
+}
+  .main-faq {
+    padding: 50px 0;
+}
+  .main-faq h3{font-size:18px;}
+}
+
+
+
+
+
+@media only screen and (max-width: 575px) {
+  
+.main-faq-right h4 {
+    font-size: 17px;
+}
+  .main-faq-right p{font-size:14px;line-height:20px;margin:0 0 25px;}
+.main-faq-left {
+    width: 60px;
+  font-size: 30px;
+    line-height: 36px;
+}
+ .main-faq h2 {
+    font-size: 26px;
+    line-height: 32px;
+}
+  .main-faq h3 {
+    margin: 0 0 5px;
+}
+  .main-faq-part {
+    padding: 40px 0 0;
+}
+  .main-faq-right {
+    width: calc(100% - 60px);
+    padding: 0 50px 0 15px;
+}
+  .main-faq-right h4 span {
+    height: 20px;
+    width: 20px;
+}
+  .main-faq-right h4 span:before {
+    height: 16px;
+}
+  .main-faq-right h4 span:after {
+    width: 16px;
+}
+  .main-faq {
+    padding: 50px 0;
+}
+  .our-newsletter-section .our-newsletter {
+    padding: 50px 0;
+}
+}
+
+
+
+
+
+
+
+

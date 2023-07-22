@@ -1,0 +1,78 @@
+{{ 'sem-advantage.css' | asset_url | stylesheet_tag }}
+<div class="sem-advantage-section">
+  <div class="page-width">
+    <div class="sem-advantage">
+      {%- if section.settings.sub_title != blank -%}
+      <h3>{{ section.settings.sub_title }}</h3>
+      {%- endif -%}
+      {%- if section.settings.title != blank -%}
+      <h2>{{ section.settings.title }}</h2>
+      {%- endif -%}
+      <div class="sem-advantage-part">
+        <div class="sem-advantage-desc">
+          {%- if section.settings.left_title != blank -%}
+          <h4>{{ section.settings.left_title }}</h4>
+          {%- endif -%}
+          {{ section.settings.left_desc }}
+        </div>
+        <div class="sem-advantage-desc">
+          {%- if section.settings.right_title != blank -%}
+          <h4>{{ section.settings.right_title }}</h4>
+          {%- endif -%}
+          {{ section.settings.right_desc }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+{% schema %}
+  {
+    "name": "Sem Advantage",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Heading"
+      },
+      {
+        "type": "text",
+        "id": "sub_title",
+        "label": "Sub Heading"
+      },
+      {
+        "type": "textarea",
+        "id": "left_title",
+        "label": "Left Heading"
+      },
+      {
+        "type": "richtext",
+        "id": "left_desc",
+        "label": "Left Description"
+      },
+      {
+        "type": "textarea",
+        "id": "right_title",
+        "label": "Right Heading"
+      },
+      {
+        "type": "richtext",
+        "id": "right_desc",
+        "label": "Right Description"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Sem Advantage",
+        "category": "Sem Advantage"
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

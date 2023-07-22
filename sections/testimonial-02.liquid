@@ -1,0 +1,104 @@
+{{ 'testimonial.css' | asset_url | stylesheet_tag }}
+{{ 'testimonial.js' | asset_url | script_tag }}
+
+<div class="testimonial-02-section">
+  <div class="page-width">
+  {% if section.settings.title != blank %}
+  <div class="testimonial-title">
+    <h2>{{ section.settings.title }}</h2>
+  </div>
+  {% endif %}
+  <ul class="testimonial-02-slider">
+    {% for block in section.blocks %}
+    <li>
+      {% if block.settings.desc != blank %}
+      <div class="testimonial-02-wrap">
+        {{ block.settings.desc }}
+      </div>
+      {% endif %}
+      <div class="testimonial-02-part bottom-part">
+      {% if block.settings.author_image != blank %}
+        <figure>
+        {%- liquid
+        assign image_height = block.settings.author_image.width | divided_by: block.settings.author_image.aspect_ratio
+          assign sizes = full_width
+      -%}
+        {{
+        block.settings.author_image
+        | image_url: width: 3840
+        | image_tag:
+          loading: 'lazy',
+          width: block.settings.author_image.width,
+          height: image_height,
+          sizes: sizes,
+          widths: widths
+      }}  
+        </figure>
+        {% endif %}
+        <div class="testimonial-02-desc ">
+          {% if block.settings.author_title != blank %}
+          <h4>{{ block.settings.author_title }}</h4>
+          {% endif %}
+      {% if block.settings.author_position != blank %}
+          <h5>{{ block.settings.author_position }}</h5>
+      {% endif %}
+        </div>
+      </div>
+    </li>
+    {% endfor %}
+  </ul>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Testimonial 02",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Heading"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "Testimonial",
+        "name": "Testimonial",
+        "settings": [
+          {
+            "type": "richtext",
+            "id": "desc",
+            "label": "Description"
+          },
+          {
+            "type": "image_picker",
+            "id": "author_image",
+            "label": "Author Image"
+          },
+          {
+            "type": "text",
+            "id": "author_title",
+            "label": "Author Heading"
+          },
+          {
+            "type": "text",
+            "id": "author_position",
+            "label": "Author Position"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Testimonial 02",
+        "category": "Testimonial 02"
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

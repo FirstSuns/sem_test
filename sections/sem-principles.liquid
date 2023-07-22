@@ -1,0 +1,178 @@
+{{ 'sem-principles.css' | asset_url | stylesheet_tag }}
+<div class="sem-principles-section">
+  <div class="page-width">
+    <div class="sem-principles">
+      <div class="sem-principles-title">
+        {%- if section.settings.sub_title != blank -%}
+          <h3>{{ section.settings.sub_title }}</h3>
+        {%- endif -%}
+        {%- if section.settings.title != blank -%}
+          <h2>{{ section.settings.title }}</h2>
+        {%- endif -%}
+      </div>
+      <div class="sem-principles-part">
+        {% for block in section.blocks %}
+          <div class="sem-principles-wrap">
+            <div class="sem-principles-desc">
+              {%- if block.settings.left_number != blank -%}
+                <h5>{{ block.settings.left_number }}</h5>
+              {%- endif -%}
+              {%- if block.settings.left_title != blank -%}
+                <h4>{{ block.settings.left_title }}</h4>
+              {%- endif -%}
+              {{ block.settings.left_desc }}
+            </div>
+            <div class="sem-principles-desc">
+              {%- if block.settings.right_number != blank -%}
+                <h5>{{ block.settings.right_number }}</h5>
+              {%- endif -%}
+              {%- if block.settings.right_title != blank -%}
+                <h4>{{ block.settings.right_title }}</h4>
+              {%- endif -%}
+              {{ block.settings.right_desc }}
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+    <div class="journey-newsletter-section">
+      <div class="journey-newsletter-part">
+        <div class="journey-newsletter-part-inner">
+          {% if section.settings.newsletter_icon != blank %}
+            <figure>
+              {%- liquid
+                assign image_height = section.settings.newsletter_icon.width | divided_by: section.settings.newsletter_icon.aspect_ratio
+                assign sizes = full_width
+              -%}
+              {{
+                section.settings.newsletter_icon
+                | image_url: width: 3840
+                | image_tag:
+                  loading: 'lazy',
+                  width: section.settings.newsletter_icon.width,
+                  height: image_height,
+                  sizes: sizes,
+                  widths: widths
+              }}
+            </figure>
+          {% endif %}
+          <div class="journey-newsletter-desc">
+            {% if section.settings.newsletter_title != blank %}
+              <h4>{{ section.settings.newsletter_title }}</h4>
+            {% endif %}
+          </div>
+          <div class="journey-newsletter-btn">
+            {% if section.settings.newletter_btn_01 != blank and section.settings.newletter_link_01 != blank %}
+              <a href="{{ section.settings.newletter_link_01 }}">{{ section.settings.newletter_btn_01 }}</a>
+            {% endif %}
+            {% if section.settings.newletter_btn_02 != blank and section.settings.newletter_link_02 != blank %}
+              <a href="{{ section.settings.newletter_link_02 }}">{{ section.settings.newletter_btn_02 }}</a>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "SEM Principles",
+  "settings": [
+    {
+      "type": "textarea",
+      "id": "title",
+      "label": "Heading"
+    },
+    {
+      "type": "text",
+      "id": "sub_title",
+      "label": "Sub Heading"
+    },
+    {
+      "type": "header",
+      "content": "Newsletter"
+    },
+    {
+      "type": "image_picker",
+      "id": "newsletter_icon",
+      "label": "Newsletter Icon"
+    },
+    {
+      "type": "text",
+      "id": "newsletter_title",
+      "label": "Newsletter Heading"
+    },
+    {
+      "type": "text",
+      "id": "newletter_btn_01",
+      "label": "Newsletter Button 01"
+    },
+    {
+      "type": "url",
+      "id": "newletter_link_01",
+      "label": "Newsletter Link 01"
+    },
+    {
+      "type": "text",
+      "id": "newletter_btn_02",
+      "label": "Newsletter Button 02"
+    },
+    {
+      "type": "url",
+      "id": "newletter_link_02",
+      "label": "Newsletter Link 02"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "Text",
+      "name": "Text",
+      "settings": [
+        {
+          "type": "text",
+          "id": "left_number",
+          "label": "Left Number"
+        },
+        {
+          "type": "text",
+          "id": "left_title",
+          "label": "Left Heading"
+        },
+        {
+          "type": "richtext",
+          "id": "left_desc",
+          "label": "Left Description"
+        },
+        {
+          "type": "text",
+          "id": "right_number",
+          "label": "Right Number"
+        },
+        {
+          "type": "text",
+          "id": "right_title",
+          "label": "Right Heading"
+        },
+        {
+          "type": "richtext",
+          "id": "right_desc",
+          "label": "Right Description"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "SEM Principles",
+      "category": "SEM Principles"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

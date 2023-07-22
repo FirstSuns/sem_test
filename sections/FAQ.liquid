@@ -1,0 +1,84 @@
+{{ 'faq.css' | asset_url | stylesheet_tag }}
+{{ 'faq.js' | asset_url | script_tag }}
+
+<div class="main-faq-section">
+  <div class="page-width">
+    <div class="main-faq">
+      {% if section.settings.sub_title != blank %}
+      <h3>{{ section.settings.sub_title }}</h3>
+      {% endif %}
+      {% if section.settings.title != blank %}
+      <h2>{{ section.settings.title }}</h2>
+      {% endif %}
+      <div class="main-faq-part">
+        {% for block in section.blocks %}
+        <div class="main-faq-wrap">
+          <div class="main-faq-left">
+            <span>{{ forloop.index }}</span>
+          </div>
+          <div class="main-faq-right">
+          {% if block.settings.title != blank %}
+          <h4>{{ block.settings.title }} <span></span></h4>
+          {% endif %}
+          {% if block.settings.desc != blank %}
+          <div class="main-faq-desc">
+          <p>{{ block.settings.desc }}</p>
+          </div>
+          {% endif %}
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+{% schema %}
+  {
+    "name": "FAQ",
+    "settings": [
+      {
+        "type": "textarea",
+        "id": "title",
+        "label": "Heading"
+      },
+      {
+        "type": "text",
+        "id": "sub_title",
+        "label": "Sub Heading"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "FAQ",
+        "name": "FAQ",
+        "settings": [
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Heading"
+          },
+          {
+            "type": "textarea",
+            "id": "desc",
+            "label": "Description"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "FAQ",
+        "category": "FAQ"
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

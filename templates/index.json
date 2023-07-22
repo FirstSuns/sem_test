@@ -3,9 +3,13 @@
     "f03ad310-ca4e-45e5-a6d0-188f9f09bac1": {
       "type": "video-banner",
       "settings": {
+        "background_image": "shopify:\/\/shop_images\/main-banner.jpg",
         "background_video": "shopify:\/\/files\/videos\/1689098505271_a703a0-3.myshopify.com_c77f0d52063d2c44fdfb63b3f750397c.mp4",
-        "headline_text": "Welcome to our store",
-        "button_text": "Shop Now",
+        "video_link": "",
+        "headline_text": "Unlock Your Highest Potential: Inner Work that <span>Actually Works.<\/span>",
+        "desc": "Sub-headline filler content. Locavore chill wave vinyl banh mi, occupy fanny pack pop-up roof party. Typewriter ugh tofu, flexitarian.",
+        "small_text": "JOIN 100,000 ENTREPRENUERS:",
+        "button_text": "Build Your Journey",
         "button_link": "\/"
       }
     },
@@ -15,35 +19,471 @@
         "f8dfdd69-097f-43c9-ae7a-68158fc0aff7": {
           "type": "banner_block",
           "settings": {
-            "headline": "Hello World 1",
-            "paragraph": "<p>Hot chicken vibecession cold-pressed intelligentsia ennui, <br\/>subway tile blue bottle occupy.  Gatekeep meh copper mug selvage prism .<\/p>"
+            "headline": "<span>01<\/span>A mentorship journey built for you, by you.",
+            "paragraph": "<p>In the 1970s, the internet gave us a way to transcend the limits of standardized learning & local classrooms, opening the door to direct education from professionals worldwide.<\/p>"
           }
         },
         "50a93013-b320-4561-b5fa-27507306c5e5": {
           "type": "banner_block",
           "settings": {
-            "headline": "Your Headline 2",
-            "paragraph": "<p>Activated charcoal la croix keffiyeh tofu vibecession pok pok roof party kombucha. <\/p>"
+            "headline": "<span>02<\/span>A mentorship journey built for you, by you.",
+            "paragraph": "<p>Today, niche 'experts' rule the internet claiming to know what you need. But they don't. <strong>You’re the only expert on your vision for your life. <\/strong><br\/><br\/>Forcing the student to squeeze into the box of ‘the curriculum’ is an outdated relic from the old-world education system.<\/p>"
           }
         },
         "ad1a9728-57bb-44b7-9b22-0ab81da43752": {
           "type": "banner_block",
           "settings": {
-            "headline": "Your Headline 3",
-            "paragraph": "<p>Synth vibecession taiyaki banh mi mlkshk.  Grailed single-origin coffee art party shabby chic before they sold out wayfarers.<\/p>"
+            "headline": "<span>03<\/span>A mentorship journey built for you, by you.",
+            "paragraph": "<p>That’s why I created the worlds first dynamic coaching system; to <strong>put you in the drivers seat<\/strong>, while I ride shotgun holding accountable commitment and consistency.<\/p>"
+          }
+        },
+        "0519a7e5-bcb7-4e33-a3db-9dd5b98b2996": {
+          "type": "banner_block",
+          "settings": {
+            "headline": "<span>04<\/span>A mentorship journey built for you, by you.",
+            "paragraph": "<p>Start, dive in, or pause, at your pace, with the click of a button. Congratulations. <strong>Today is the day your story becomes yours.<\/strong><\/p>"
           }
         }
       },
       "block_order": [
         "f8dfdd69-097f-43c9-ae7a-68158fc0aff7",
         "50a93013-b320-4561-b5fa-27507306c5e5",
-        "ad1a9728-57bb-44b7-9b22-0ab81da43752"
+        "ad1a9728-57bb-44b7-9b22-0ab81da43752",
+        "0519a7e5-bcb7-4e33-a3db-9dd5b98b2996"
       ],
       "settings": {}
+    },
+    "6293ed86-711d-4490-903f-5fa9c8114b42": {
+      "type": "icon-text",
+      "blocks": {
+        "9e22ecb4-f6a6-4b27-8d80-7ee19b81230b": {
+          "type": "Icon",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/icon.svg",
+            "title": "Online Learning School",
+            "desc": "This 6-phase program makes your journey simple & enjoyable with new resources added weekly."
+          }
+        },
+        "ecb0f771-a6b0-4c51-9028-acb85755a885": {
+          "type": "Icon",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/Group_5.svg",
+            "title": "Masterful Mentorship",
+            "desc": "With deep experience and actionable advice, Nic is always there keep you steady and accelerate your expansion."
+          }
+        },
+        "54c4240a-b79d-49f4-8be0-e8ff658d4115": {
+          "type": "Icon",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/Group_6.svg",
+            "title": "High-Caliber Community",
+            "desc": "Accountability, inspiration and enthusiasm flow like water in our tight-knit community."
+          }
+        }
+      },
+      "block_order": [
+        "9e22ecb4-f6a6-4b27-8d80-7ee19b81230b",
+        "ecb0f771-a6b0-4c51-9028-acb85755a885",
+        "54c4240a-b79d-49f4-8be0-e8ff658d4115"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/image_6_3434fa03-97ae-481a-aeeb-b23dd2b3ef9c.png"
+      }
+    },
+    "53ebf769-9fd7-4a97-bf41-eca6c745b771": {
+      "type": "icon-text-block-2",
+      "blocks": {
+        "a21a3682-ee80-4711-a944-8ac1e3362699": {
+          "type": "Icon",
+          "settings": {
+            "icon": "<svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" width=\"35\" height=\"48\" viewbox=\"0 0 35 48\" fill=\"none\">\n<path d=\"M0.512482 48C0.0601909 47.6301 0 47.1052 0 46.5381C0.00343948 36.1694 0.00171974 25.7997 0.00171974 15.431C0.00171974 11.9485 0.00171974 8.466 0.00171974 4.98348C0.00171974 4.71776 -0.00343948 4.4511 0.0679297 4.19384C0.188311 3.75817 0.454011 3.48682 0.872768 3.47836C1.77305 3.46052 2.67506 3.45865 3.57534 3.47836C4.0732 3.48869 4.43091 3.88962 4.44897 4.38726C4.4653 4.85015 4.13855 5.28394 3.66219 5.3384C3.22365 5.38816 2.77738 5.36657 2.33455 5.37033C1.73866 5.37502 1.7378 5.3722 1.7378 6.01256C1.7378 11.4941 1.7378 16.9747 1.7378 22.4562C1.7378 30.1085 1.7378 37.7599 1.73866 45.4114C1.73866 46.1287 1.74038 46.1296 2.3999 46.1296C12.4251 46.1296 22.4503 46.1296 32.4747 46.1296C32.8926 46.1296 33.1015 45.9093 33.1015 45.4686C33.1015 32.4296 33.1015 19.3896 33.1015 6.35058C33.1015 6.16279 33.0912 5.975 33.1015 5.78815C33.1187 5.48863 33.0035 5.36751 32.7266 5.36939C31.497 5.3769 30.2666 5.37596 29.0369 5.37126C28.7867 5.37033 28.6663 5.47736 28.6741 5.75905C28.6827 6.05575 28.6818 6.35245 28.6724 6.64916C28.6526 7.28482 28.3241 7.66697 27.7394 7.70546C27.3542 7.72988 26.9655 7.73833 26.582 7.70828C26.1641 7.67448 25.9509 7.81344 26.0162 8.30545C26.0308 8.41249 26.0214 8.52422 26.0128 8.63314C25.9715 9.13735 25.6577 9.49414 25.2277 9.5317C24.79 9.5702 24.4366 9.28288 24.3206 8.7843C24.293 8.66506 24.2844 8.5383 24.2801 8.41342C24.2629 7.94834 24.0348 7.71548 23.5957 7.71485C22.8519 7.71485 22.1081 7.73082 21.3652 7.70828C20.9989 7.69701 20.8579 7.82001 20.8639 8.23972C20.8759 9.1026 20.5707 9.53452 20.0135 9.53546C19.452 9.53546 19.1373 9.10073 19.1398 8.24348C19.1416 7.8294 19.0048 7.69795 18.636 7.70828C17.8217 7.73082 17.0056 7.73175 16.1905 7.70828C15.8087 7.69701 15.6703 7.85757 15.7038 8.25756C15.7236 8.49136 15.7012 8.72609 15.6161 8.94768C15.4605 9.35236 15.1191 9.57395 14.727 9.52701C14.3478 9.481 14.0477 9.16457 13.9815 8.74111C13.9763 8.71013 13.9755 8.67914 13.9729 8.64816C13.9167 8.02596 13.6037 7.71517 13.0339 7.71579C12.3185 7.71579 11.6039 7.72518 10.8885 7.71298C10.5953 7.70828 10.4638 7.83034 10.487 8.15428C10.4981 8.3092 10.493 8.46694 10.4827 8.62281C10.4474 9.12983 10.1387 9.48851 9.70793 9.53076C9.2694 9.57395 8.91599 9.29039 8.79303 8.79463C8.77411 8.71952 8.76207 8.64159 8.75519 8.56459C8.70188 7.9981 8.41784 7.71517 7.90306 7.71579C7.68896 7.71579 7.47399 7.71861 7.25988 7.71579C6.4516 7.7064 6.12141 7.36932 6.10508 6.45762C6.08358 5.31774 6.09734 4.17787 6.09734 3.038C6.09734 2.77228 6.0896 2.50656 6.10594 2.24178C6.15495 1.4465 6.46536 1.12914 7.20141 1.1282C10.076 1.12539 12.9505 1.12163 15.825 1.1329C16.2378 1.13477 16.5525 1.13571 16.6548 0.557328C16.7227 0.154523 17.0727 -0.0107298 17.4554 0.000537422C17.8466 0.0127436 18.139 0.233394 18.2112 0.634321C18.2929 1.09064 18.525 1.13196 18.8776 1.13102C21.7375 1.11975 24.5983 1.12351 27.4582 1.12539C28.3852 1.12539 28.6655 1.4343 28.6758 2.42675C28.6887 3.62014 28.5313 3.46052 29.6354 3.4671C30.951 3.47461 32.2666 3.4671 33.5822 3.46804C34.5401 3.46804 34.8316 3.7807 34.8333 4.84264C34.8385 8.26225 34.8368 11.6828 34.8368 15.1024C34.8368 25.565 34.835 36.0276 34.8385 46.4911C34.8385 47.0723 34.7912 47.6169 34.3251 48H0.512482ZM17.3737 5.81163C20.391 5.81163 23.4074 5.80505 26.4247 5.82008C26.8185 5.82195 26.9621 5.69144 26.938 5.25953C26.9096 4.74593 26.9328 4.22952 26.932 3.71404C26.9314 3.25646 26.7156 3.02705 26.2845 3.0258C20.3652 3.0258 14.4458 3.0258 8.52647 3.0258C8.41211 3.0258 8.29774 3.03331 8.18338 3.02767C7.928 3.01453 7.82568 3.14504 7.82911 3.42203C7.83771 4.03046 7.85663 4.64171 7.82224 5.24826C7.79644 5.71679 7.96755 5.82289 8.36653 5.82102C11.3692 5.80599 14.3719 5.81256 17.3745 5.81163H17.3737Z\" fill=\"white\"><\/path>\n<path d=\"M3.67225 25.9153C3.67225 20.2779 3.67225 14.6406 3.67225 9.00224C3.67225 8.1018 3.95428 7.68021 4.54931 7.68585C5.13317 7.69148 5.41262 8.12339 5.41348 9.02853C5.41434 19.8667 5.41434 30.7039 5.4152 41.5421C5.4152 42.0278 5.6316 42.271 6.0644 42.2716C13.6158 42.2716 21.1663 42.2716 28.7177 42.2707C29.1763 42.2707 29.4059 42.0128 29.4064 41.497C29.4064 30.6908 29.4064 19.8836 29.4073 9.07735C29.4073 8.88957 29.4004 8.70178 29.4159 8.51587C29.4537 8.03607 29.8097 7.68772 30.2491 7.68772C30.6894 7.68772 31.0686 8.03232 31.0789 8.51493C31.1047 9.69799 31.103 10.8829 31.1064 12.0669C31.1098 13.0491 31.1038 14.0312 31.103 15.0133C31.1021 15.9316 31.0978 16.8508 31.1021 17.7691C31.1064 18.7972 31.1219 19.8263 31.1253 20.8545C31.1279 21.6488 31.1176 22.4431 31.1159 23.2375C31.1124 24.2666 31.1107 25.2947 31.1098 26.3238C31.1098 27.1801 31.1116 28.0364 31.1116 28.8927C31.1116 29.9058 31.1064 30.9189 31.109 31.932C31.1116 32.7424 31.1391 33.5517 31.1253 34.362C31.0961 36.1225 31.1098 37.883 31.1253 39.6435C31.1365 40.8585 31.1133 42.0754 31.0806 43.2904C31.0651 43.8735 30.7023 44.1739 30.0746 44.1749C27.8862 44.1786 25.6987 44.1777 23.5103 44.1777C17.3321 44.1777 11.154 44.1777 4.97581 44.1777C3.91817 44.1777 3.67225 43.9073 3.67139 42.7364C3.67139 37.13 3.67139 31.5236 3.67139 25.9172L3.67225 25.9153Z\" fill=\"white\"><\/path>\n<path d=\"M20.7605 34.1129C22.1183 34.1129 23.4769 34.1129 24.8346 34.1129C25.2275 34.1129 25.5311 34.2801 25.6919 34.6847C25.8295 35.0321 25.765 35.3626 25.556 35.6528C25.3531 35.9335 25.0556 36.003 24.7486 36.0077C24.163 36.0161 23.5766 36.0124 22.9902 36.0124C21.003 36.0124 19.0167 36.0124 17.0295 36.0124C16.8868 36.0124 16.7432 36.0171 16.6013 36.0021C16.0588 35.9438 15.6856 35.5232 15.7088 35.0049C15.7311 34.4951 16.1026 34.1223 16.6443 34.1176C18.0167 34.1063 19.389 34.1139 20.7614 34.1129H20.7605Z\" fill=\"white\"><\/path>\n<path d=\"M20.7492 15.8414C22.0356 15.8414 23.322 15.8395 24.6083 15.8432C24.7786 15.8432 24.9549 15.846 25.1182 15.8911C25.5086 15.9972 25.7287 16.2855 25.7545 16.7249C25.7795 17.1643 25.5869 17.4695 25.2231 17.6488C25.0211 17.7483 24.8061 17.7436 24.5911 17.7436C22.033 17.7436 19.4741 17.7436 16.9159 17.7436C16.8016 17.7436 16.6864 17.7455 16.5737 17.7314C16.0552 17.6648 15.6941 17.2545 15.7061 16.754C15.7181 16.2714 16.1223 15.8639 16.633 15.846C17.0759 15.831 17.5187 15.8414 17.9624 15.8414C18.8911 15.8414 19.8206 15.8414 20.7492 15.8414Z\" fill=\"white\"><\/path>\n<path d=\"M20.7685 25.0204C22.14 25.0204 23.5115 25.0138 24.8839 25.0242C25.3792 25.0279 25.7197 25.3781 25.7558 25.8636C25.791 26.3462 25.4978 26.7509 25.0283 26.8607C24.9174 26.887 24.8022 26.9086 24.6896 26.9095C22.0463 26.9124 19.4031 26.9246 16.7598 26.9048C15.9292 26.8983 15.4915 26.2213 15.8097 25.5312C15.9851 25.1509 16.2783 25.0166 16.6541 25.0176C18.0256 25.0232 19.3971 25.0195 20.7694 25.0204H20.7685Z\" fill=\"white\"><\/path>\n<path d=\"M13.391 33.6734C13.3764 33.9241 13.293 34.1213 13.1795 34.3044C12.6592 35.1448 12.1476 35.9926 11.6119 36.8208C11.1579 37.5231 10.5388 37.5306 10.0598 36.8555C9.77093 36.448 9.49233 36.032 9.22491 35.6086C8.91622 35.1203 8.97039 34.6049 9.34615 34.2706C9.72536 33.9335 10.1923 33.9786 10.5551 34.4471C10.7778 34.7344 10.8802 34.6828 11.0444 34.4011C11.3041 33.9532 11.5792 33.5138 11.8793 33.0979C12.1235 32.7589 12.4649 32.6519 12.8407 32.8246C13.1881 32.9843 13.3686 33.2857 13.391 33.6734Z\" fill=\"white\"><\/path>\n<path d=\"M10.8123 19.0647C10.5518 19.0713 10.3316 18.968 10.1726 18.7474C9.84494 18.2939 9.51561 17.8413 9.21208 17.369C8.9137 16.9033 8.97905 16.4047 9.34536 16.0723C9.70994 15.7418 10.1966 15.7568 10.5303 16.1916C10.7908 16.5305 10.8931 16.3859 11.0496 16.1193C11.2732 15.7381 11.5122 15.3681 11.753 14.9991C12.0832 14.494 12.5604 14.3578 12.9774 14.6376C13.3928 14.9165 13.5114 15.4723 13.207 15.9859C12.6627 16.9024 12.0883 17.7972 11.5174 18.6938C11.3523 18.953 11.1072 19.0741 10.8132 19.0647H10.8123Z\" fill=\"white\"><\/path>\n<path d=\"M13.3901 24.5444C13.3858 24.8129 13.2938 25.0242 13.1708 25.2186C12.6515 26.0401 12.1407 26.8683 11.605 27.6776C11.1467 28.3687 10.5302 28.364 10.0469 27.688C9.76573 27.2946 9.48713 26.8983 9.22401 26.4908C8.91446 26.0129 8.97551 25.4899 9.35815 25.1622C9.73478 24.8392 10.1991 24.873 10.5396 25.3106C10.7606 25.5951 10.8741 25.55 11.0426 25.273C11.3109 24.8317 11.5869 24.3932 11.8939 23.9839C12.1278 23.6712 12.4545 23.5473 12.8183 23.7097C13.1648 23.8646 13.3531 24.1613 13.3901 24.5463V24.5444Z\" fill=\"white\"><\/path>\n<\/svg>",
+            "title": "Take the Quiz",
+            "desc": "Take this quiz so I can build you a totally unique journey from scratch.",
+            "btn_title": "Start the Quiz",
+            "btn_link": "#"
+          }
+        },
+        "ae056354-ac70-4216-a799-9d0f8a01151c": {
+          "type": "Icon",
+          "settings": {
+            "icon": "<svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" width=\"42\" height=\"46\" viewbox=\"0 0 42 46\" fill=\"none\">\n<path d=\"M21.1405 0C21.5408 0.216722 21.9821 0.34094 22.3349 0.666023C23.0927 1.36376 23.4326 2.24827 23.4117 3.32924C23.3915 4.40051 23.4084 4.39875 24.3829 4.39875C28.616 4.39875 32.8491 4.40668 37.0822 4.38906C37.5324 4.3873 37.8207 4.54499 38.0986 4.92293C38.9974 6.1431 39.9308 7.3333 40.849 8.53585C41.2162 9.01598 41.2243 9.26089 40.8731 9.73222C39.926 11.0035 38.9757 12.2721 38.0253 13.5407C37.8175 13.8182 37.5985 14.0649 37.2199 13.8957C37.1507 13.8649 37.0605 13.8913 36.9807 13.8913C32.6003 13.8896 28.2198 13.8913 23.8401 13.8799C23.526 13.8799 23.3923 13.9363 23.4028 14.3274C23.4294 15.382 23.4253 16.4374 23.406 17.4919C23.3988 17.8866 23.4994 18.0179 23.8804 18.0161C27.4571 18.0011 31.0338 18.0161 34.6105 18.0002C35.0905 17.9985 35.4231 18.1289 35.7324 18.5658C36.6167 19.8168 37.5542 21.0229 38.4699 22.2475C38.8202 22.7162 38.8315 22.9496 38.4908 23.4086C37.5284 24.7045 36.5595 25.9943 35.5923 27.2849C35.3748 27.5757 35.0994 27.6946 34.749 27.6937C31.132 27.684 27.5151 27.6919 23.8989 27.677C23.5317 27.6752 23.3964 27.7474 23.398 28.1941C23.4149 33.1611 23.41 38.129 23.4125 43.0959C23.4125 43.6187 23.657 43.8797 24.1462 43.8791C25.4187 43.8791 26.6912 43.88 27.9637 43.8774C28.1537 43.8774 28.3398 43.8791 28.4984 44.0148C28.7256 44.2104 28.7642 44.4623 28.7022 44.7601C28.637 45.0746 28.4219 45.0156 28.227 45.0156C23.1773 45.0156 18.1267 45.0138 13.077 45.02C12.7814 45.02 12.5398 45.0138 12.5277 44.5927C12.5172 44.206 12.7363 43.9108 13.0875 43.88C13.1809 43.8721 13.2751 43.8782 13.3685 43.8782C14.7216 43.8782 16.0746 43.8703 17.4277 43.8862C17.7273 43.8897 17.8465 43.8254 17.8457 43.4571C17.8352 38.4311 17.8368 33.4051 17.8473 28.3791C17.8481 27.9818 17.745 27.8576 17.3721 27.8584C12.9111 27.8717 8.45087 27.8629 3.98986 27.8761C3.60006 27.877 3.35361 27.7342 3.11361 27.4039C2.08836 25.9952 1.03975 24.6076 0 23.213C0 23.0959 0 22.9787 0 22.8615C0.0845651 22.7311 0.162687 22.5937 0.255306 22.4704C1.19438 21.2123 2.14232 19.9613 3.07253 18.6953C3.32703 18.3491 3.6057 18.1897 4.02691 18.1905C8.47342 18.2055 12.9191 18.1958 17.3656 18.2073C17.7257 18.2082 17.8537 18.1113 17.8432 17.6954C17.8167 16.6559 17.8223 15.6154 17.8416 14.5759C17.8489 14.19 17.7587 14.057 17.3761 14.0587C13.7068 14.0755 10.0367 14.064 6.36735 14.0737C6.05406 14.0737 5.84949 13.9653 5.65459 13.6993C4.6994 12.3981 3.72731 11.1118 2.76166 9.81944C2.42098 9.36397 2.41534 9.11553 2.75924 8.65478C3.72248 7.3615 4.69216 6.0735 5.65862 4.78286C5.79875 4.59521 5.95338 4.47716 6.20144 4.47716C9.6968 4.48685 13.1922 4.48773 16.6875 4.48509C17.0193 4.48509 17.4486 4.64278 17.6588 4.41989C17.8883 4.17586 17.716 3.69661 17.7393 3.32043C17.7466 3.20325 17.7466 3.08608 17.753 2.96979C17.8215 1.65625 18.4457 0.769098 19.5136 0.222008C19.6545 0.149767 19.8309 0.158577 19.934 0H21.1397L21.1405 0ZM22.1061 23.169C22.1061 16.5308 22.0981 9.89256 22.115 3.25435C22.1174 2.1866 21.4723 1.43424 20.5679 1.41398C19.6827 1.3946 19.0489 2.17779 19.0481 3.23409C19.0457 5.49117 19.0473 7.74737 19.0473 10.0044C19.0473 21.1119 19.0497 32.2202 19.0408 43.3276C19.0408 43.6554 19.1343 43.7135 19.4017 43.7073C20.1652 43.6906 20.9295 43.6844 21.6922 43.7117C22.0191 43.7232 22.1166 43.6369 22.1158 43.2598C22.1037 36.5626 22.1069 29.8662 22.1077 23.169H22.1061ZM30.3065 5.8092C28.1376 5.8092 25.9687 5.8092 23.7998 5.8092C23.6066 5.8092 23.402 5.74489 23.4044 6.11402C23.4181 8.14998 23.4149 10.185 23.41 12.221C23.41 12.4809 23.4849 12.5778 23.7338 12.5769C28.1119 12.5699 32.4899 12.5707 36.868 12.576C37.0476 12.576 37.1636 12.5117 37.2755 12.3628C38.006 11.3902 38.7365 10.4185 39.4831 9.46088C39.6506 9.24592 39.6401 9.1217 39.4766 8.91203C38.755 7.98876 38.0454 7.05315 37.348 6.10874C37.1781 5.87792 36.996 5.80304 36.7335 5.80392C34.5912 5.81361 32.4488 5.8092 30.3065 5.8092ZM10.892 19.5208V19.5182C8.72229 19.5182 6.55339 19.5182 4.3837 19.5182C4.19685 19.5182 4.03174 19.5111 3.88597 19.7067C3.15146 20.6952 2.40568 21.6731 1.65264 22.6448C1.50848 22.8307 1.52539 22.9558 1.65909 23.1293C2.40004 24.0931 3.13535 25.0622 3.86664 26.0348C3.97778 26.1828 4.09778 26.2498 4.27738 26.2489C8.64256 26.2436 13.0085 26.2418 17.3737 26.2498C17.683 26.2498 17.7506 26.1273 17.7482 25.8102C17.7345 23.8623 17.7305 21.9136 17.7474 19.9657C17.7506 19.5895 17.6427 19.5111 17.3197 19.5138C15.1774 19.5288 13.0343 19.5217 10.892 19.5217V19.5208ZM29.059 19.3376V19.3332C27.3049 19.3332 25.5507 19.3385 23.7974 19.3279C23.5164 19.3261 23.3964 19.3887 23.3988 19.7367C23.4141 21.7427 23.4133 23.7495 23.402 25.7555C23.4004 26.0718 23.5035 26.1537 23.7733 26.1529C27.2944 26.1476 30.8155 26.1502 34.3375 26.1564C34.5557 26.1564 34.7055 26.0815 34.8481 25.8895C35.548 24.9468 36.2559 24.0103 36.9791 23.0888C37.1571 22.8624 37.1531 22.7232 36.9815 22.5021C36.2366 21.5427 35.4996 20.5754 34.778 19.5948C34.6355 19.4019 34.5002 19.3323 34.2811 19.3332C32.5407 19.342 30.8002 19.3376 29.059 19.3376ZM12.0775 12.7514C13.8179 12.7514 15.5592 12.7381 17.2996 12.7619C17.6693 12.7672 17.745 12.6359 17.7426 12.265C17.7305 10.2881 17.7313 8.31031 17.7514 6.33251C17.7555 5.94399 17.5952 5.9114 17.3149 5.91228C13.8196 5.91756 10.325 5.91668 6.82964 5.90699C6.60172 5.90699 6.464 5.99509 6.32547 6.1801C5.6119 7.13068 4.8935 8.07685 4.16141 9.00981C3.99067 9.22742 4.01241 9.35956 4.17107 9.56395C4.89994 10.5004 5.62882 11.4387 6.32467 12.4034C6.52198 12.6765 6.71044 12.7619 7.01568 12.7593C8.70296 12.7425 10.3902 12.7514 12.0775 12.7514Z\" fill=\"white\"><\/path>\n<path d=\"M33.6803 9.93833C32.8645 9.93833 32.0486 9.94098 31.2328 9.93745C30.8059 9.93481 30.5418 9.68197 30.5353 9.28376C30.5281 8.86794 30.7713 8.62126 31.2134 8.62038C32.8315 8.61774 34.4495 8.61862 36.0683 8.62303C36.5217 8.62391 36.8117 8.89613 36.8044 9.29345C36.798 9.66875 36.5112 9.93305 36.0876 9.93657C35.2855 9.94186 34.4825 9.93833 33.6803 9.93833Z\" fill=\"white\"><\/path>\n<path d=\"M27.3708 9.93754C26.9705 9.93754 26.5694 9.94635 26.1692 9.9349C25.8132 9.92521 25.5683 9.6477 25.5619 9.27593C25.5555 8.89622 25.7874 8.62752 26.1643 8.62312C26.9786 8.61343 27.7936 8.61431 28.6079 8.62576C28.9904 8.63105 29.2594 8.93058 29.2514 9.305C29.2441 9.66003 28.9824 9.92785 28.6127 9.93578C28.1987 9.94547 27.7848 9.93843 27.3708 9.93843V9.93754Z\" fill=\"white\"><\/path>\n<path d=\"M13.366 23.5567C12.7636 23.5567 12.1603 23.562 11.5579 23.5549C11.1496 23.5497 10.8653 23.2572 10.8709 22.8704C10.8766 22.4881 11.1238 22.2379 11.5491 22.2344C12.7676 22.2238 13.9862 22.222 15.2047 22.2317C15.6678 22.2352 15.8933 22.4757 15.882 22.8942C15.8716 23.2906 15.5993 23.5541 15.1733 23.5585C14.5709 23.5646 13.9684 23.5602 13.3652 23.5602V23.5576L13.366 23.5567Z\" fill=\"white\"><\/path>\n<path d=\"M7.23657 23.5561C6.63575 23.5561 6.03494 23.5605 5.43412 23.5543C4.97828 23.5499 4.71411 23.2927 4.71411 22.8733C4.71411 22.4557 4.94042 22.2337 5.40916 22.232C6.61079 22.2258 7.81322 22.2258 9.01485 22.2337C9.44412 22.2364 9.72037 22.5139 9.70909 22.8962C9.69782 23.2839 9.41754 23.5526 8.99955 23.557C8.41243 23.5631 7.8245 23.5587 7.23657 23.5587V23.5561Z\" fill=\"white\"><\/path>\n<path d=\"M11.4149 9.84514C10.4927 9.84514 9.57059 9.84779 8.64842 9.84426C8.22077 9.8425 7.95982 9.58349 7.96143 9.18176C7.96304 8.78092 8.2256 8.53248 8.66051 8.53248C10.5314 8.53072 12.4023 8.53072 14.2732 8.53336C14.7484 8.53336 14.9538 8.71925 14.9457 9.12362C14.9368 9.57644 14.692 9.8425 14.2611 9.84426C13.3124 9.84955 12.3637 9.84602 11.4141 9.84602L11.4149 9.84514Z\" fill=\"white\"><\/path>\n<path d=\"M29.9669 23.8239C29.0448 23.8239 28.1226 23.8265 27.2004 23.823C26.7728 23.8213 26.5118 23.5623 26.5134 23.1605C26.515 22.7597 26.7776 22.5112 27.2125 22.5112C29.0834 22.5095 30.9543 22.5095 32.8252 22.5121C33.3004 22.5121 33.5058 22.698 33.4977 23.1024C33.4889 23.5552 33.244 23.8213 32.8131 23.823C31.8644 23.8283 30.9157 23.8248 29.9661 23.8248L29.9669 23.8239Z\" fill=\"white\"><\/path>\n<\/svg>",
+            "title": "Build Your Own",
+            "desc": "Build your own journey with our expansive library of learnings",
+            "btn_title": "View Catalog",
+            "btn_link": "#"
+          }
+        }
+      },
+      "block_order": [
+        "a21a3682-ee80-4711-a944-8ac1e3362699",
+        "ae056354-ac70-4216-a799-9d0f8a01151c"
+      ],
+      "settings": {
+        "bg_image": "shopify:\/\/shop_images\/bg.jpg",
+        "image": "shopify:\/\/shop_images\/hand.png",
+        "title": "Start Here.",
+        "sub_title": "Let’s get you fitted into something nice. How would you like to begin?",
+        "desc": "Either way, you can always modify them however you’d like before you begin, and you can come back to make changes at any time in the future too.”"
+      }
+    },
+    "4b336f95-992d-4998-be05-e1f328e9e8ee": {
+      "type": "icon-text-block-3",
+      "blocks": {
+        "2295dd82-0bb4-475e-9bb8-57f554b95d84": {
+          "type": "Icon",
+          "settings": {
+            "icon_one": "shopify:\/\/shop_images\/image_9.svg",
+            "title": "Your Compass",
+            "sub_title": "1:1 Mentorship",
+            "desc": "<p>Groundedness. Integration. Synthesis. Actionable insights and philosophies. Personal care and accountability to your goals.<\/p><p>When you work with me, it doesn’t matter if you’ve been studying, practicing, and healing for decades or if you just had your first mystical experience this morning. We have your entire life up until today to explore!<\/p><p>Why are you so self-aware yet so self-critical? Why are you so educated yet struggling to make it happen? <\/p><p>Why do you struggle to be proud of yourself? <\/p><p>Why are you contemplating buying plane tickets when you know that travel isn’t the best way to find yourself? What are you hiding from? And what’s hiding from you within your own life-story?<\/p><p>Let’s find out.<\/p><p>Your custom mentorship roadmap is waiting for you.<br\/><\/p>",
+            "btn_title": "Take the Personality Quiz",
+            "btn_link": "#"
+          }
+        },
+        "483dd9cb-fcc5-483f-87d1-89a6435f2686": {
+          "type": "Icon",
+          "settings": {
+            "icon_one": "shopify:\/\/shop_images\/icon-2.svg",
+            "title": "Your Map",
+            "sub_title": "The Self Expansion Method 3.0",
+            "desc": "<p>A living library of proprietary resources inspired by my years of careful study. Over 15,000 pages of non-fiction read so you don’t have to. 10+ hours of video, 100+ downloadable PDF guides and workbooks, and so much more like readings, meditations, & hypnotherapy journeys and so much more…<\/p><p>Pain-stakingly woven into a net that can catch you no matter how hard you fall. Honed over 5 years based on the insights of 500+ SEM students who came before you.<\/p><p>Your bottomless search for self-improvement resoucres ends here. No more YouTube rabbit holes, aimless or forced journaling sessions, no more blank pages and blank minds unsure of what to do next. How much time have you thrown away while you try to ‘think things through’ by yourself?<\/p><p>You don’t need more time, you need more tools.<\/p><p>SEM contains 6 Straightforward Modules that create a unified system that allows you to face life head on, no matter what phase of life you’re in.<\/p>",
+            "btn_title": "Learn More About SEM",
+            "btn_link": "#"
+          }
+        }
+      },
+      "block_order": [
+        "2295dd82-0bb4-475e-9bb8-57f554b95d84",
+        "483dd9cb-fcc5-483f-87d1-89a6435f2686"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/bg-11.webp",
+        "icon": "<svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" width=\"150\" height=\"150\" viewbox=\"0 0 150 150\" fill=\"none\">\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M0 75C0 33.5789 33.5789 0 75 0C116.421 0 150 33.5789 150 75C150 116.421 116.421 150 75 150C33.5789 150 0 116.421 0 75ZM102.993 141.267C111.557 137.645 119.249 132.456 125.853 125.852C132.46 119.249 137.645 111.557 141.267 102.993C145.016 94.129 146.918 84.713 146.918 75C146.918 65.287 145.016 55.871 141.267 47.0066C137.645 38.4431 132.456 30.7514 125.853 24.1475C119.249 17.5397 111.557 12.3553 102.993 8.73322C94.129 4.9838 84.713 3.08209 75 3.08209C65.287 3.08209 55.871 4.9838 47.0066 8.73322C38.4431 12.3553 30.7514 17.5436 24.1475 24.1475C17.5397 30.7514 12.3554 38.4431 8.73323 47.0066C4.9838 55.871 3.08209 65.287 3.08209 75C3.08209 84.713 4.9838 94.129 8.73323 102.993C12.3554 111.557 17.5436 119.249 24.1475 125.852C30.7514 132.46 38.4431 137.645 47.0066 141.267C55.871 145.016 65.287 146.918 75 146.918C84.713 146.918 94.129 145.016 102.993 141.267ZM124.823 65.0942C126.438 63.6365 128.582 62.7493 130.931 62.7488C135.975 62.7499 140.063 66.8384 140.063 71.8832C140.063 76.9288 135.974 81.0176 130.929 81.0176C126.146 81.0176 122.223 77.3376 121.829 72.6547H28.9346C28.7687 74.676 27.9432 76.5083 26.6741 77.9394L69.2755 122.628C70.8417 121.366 72.8282 120.61 74.9961 120.61C80.0416 120.61 84.1305 124.699 84.1305 129.745C84.1305 134.79 80.0416 138.879 74.9961 138.879C69.9506 138.879 65.8617 134.79 65.8617 129.745C65.8617 127.419 66.7335 125.301 68.1607 123.688L25.5593 79.0002C23.9932 80.2616 22.0066 81.0176 19.8387 81.0176C14.7932 81.0176 10.7043 76.9288 10.7043 71.8832C10.7043 66.8377 14.7932 62.7488 19.8387 62.7488C24.622 62.7488 28.545 66.4288 28.9384 71.1117H121.833C121.987 69.2718 122.686 67.5899 123.769 66.2205L81.114 26.2113C79.4977 27.6694 77.353 28.5566 75.0038 28.5566C69.9583 28.5566 65.8695 24.4677 65.8695 19.4222C65.8695 14.3767 69.9583 10.2878 75.0038 10.2878C80.0494 10.2878 84.1382 14.3767 84.1382 19.4222C84.1382 21.5631 83.3976 23.5265 82.1671 25.0849L124.823 65.0942ZM130.931 62.7488C130.931 62.7488 130.932 62.7488 130.933 62.7488H130.929C130.929 62.7488 130.93 62.7488 130.931 62.7488Z\" fill=\"white\"><\/path>\n<\/svg>",
+        "title": "The Journey",
+        "desc": "You are unique. Your support system should be too.",
+        "bottom_desc": "For the price of a single university class, I’ll help you <span>integrate what you’ve learned into YOUR unique value<\/span> proposition and find your own perfect place in the new world economy",
+        "newsletter_bg_image": "shopify:\/\/shop_images\/image_6_1.jpg",
+        "newsletter_icon": "shopify:\/\/shop_images\/Icon_1.svg",
+        "newsletter_title": "Get started by finding the path that is perfect for you.",
+        "newletter_btn_01": "Take the Quiz",
+        "newletter_link_01": "#",
+        "newletter_btn_02": "View Courses",
+        "newletter_link_02": "#"
+      }
+    },
+    "780ae87a-b050-4e9b-8ca4-b02d6b6b3202": {
+      "type": "counter-text",
+      "blocks": {
+        "73e2cbd5-eed7-43d2-a821-2ef066b80f16": {
+          "type": "Count",
+          "settings": {
+            "number": "39",
+            "title": "Europe"
+          }
+        },
+        "bfde9b2d-28f5-41d1-9854-8338d6ae0366": {
+          "type": "Count",
+          "settings": {
+            "number": "8",
+            "title": "Asia\/Africa"
+          }
+        },
+        "b35a7057-09c7-47c6-bd26-830456abe319": {
+          "type": "Count",
+          "settings": {
+            "number": "32",
+            "title": "America"
+          }
+        },
+        "52741327-16bf-4454-a64f-f3d0d9d73792": {
+          "type": "Count",
+          "settings": {
+            "number": "21",
+            "title": "Oceanis"
+          }
+        },
+        "e66a2ef3-36f9-41e2-9844-acc5bdff571e": {
+          "type": "Text",
+          "settings": {
+            "number": "63",
+            "desc": "Female Students"
+          }
+        },
+        "c4da6ec4-6e5a-4c1a-b371-6a4e5d69172c": {
+          "type": "Text",
+          "settings": {
+            "number": "8",
+            "desc": "Students are men seeking to shed old habits and embody healthy masculinity to increase their capacity for fulfillment and success"
+          }
+        },
+        "f49b9bad-fe31-4feb-ba15-d493c74bb21a": {
+          "type": "Text",
+          "settings": {
+            "number": "46",
+            "desc": "Students are entrepreneurs and coaches too"
+          }
+        },
+        "87dafcec-2e6a-466b-99c0-83e5a0789d5f": {
+          "type": "Text",
+          "settings": {
+            "number": "100",
+            "desc": "Students are seeking a grounded masculine teacher to help integrate their healing work, high sensitivity, and spiritual awareness in a practical system for actualizing their full potential."
+          }
+        },
+        "62c0cb1b-9aca-438f-9f2b-027093f673a7": {
+          "type": "Text",
+          "settings": {
+            "number": "47",
+            "desc": "Students are seeking a grounded masculine teacher to help integrate their healing work, high sensitivity, and spiritual awareness in a practical system for actualizing their full potential."
+          }
+        },
+        "b550323b-e6d9-4576-b71e-52e2979abc38": {
+          "type": "Text",
+          "settings": {
+            "number": "91",
+            "desc": "Enroll in SEM despite their parents doubts"
+          }
+        }
+      },
+      "block_order": [
+        "73e2cbd5-eed7-43d2-a821-2ef066b80f16",
+        "bfde9b2d-28f5-41d1-9854-8338d6ae0366",
+        "b35a7057-09c7-47c6-bd26-830456abe319",
+        "52741327-16bf-4454-a64f-f3d0d9d73792",
+        "e66a2ef3-36f9-41e2-9844-acc5bdff571e",
+        "c4da6ec4-6e5a-4c1a-b371-6a4e5d69172c",
+        "f49b9bad-fe31-4feb-ba15-d493c74bb21a",
+        "87dafcec-2e6a-466b-99c0-83e5a0789d5f",
+        "62c0cb1b-9aca-438f-9f2b-027093f673a7",
+        "b550323b-e6d9-4576-b71e-52e2979abc38"
+      ],
+      "settings": {
+        "title": "Evolve yourself so you can <span>evolve humanity.<\/span>",
+        "sub_title": "Case Studies",
+        "ready_title": "Ready",
+        "ready_sub_title": "SEM is for you if:",
+        "ready_desc": "<ul><li>You are afraid of being judged\/rejected for living an unconventional life<\/li><li>You are willing to follow your intuition<\/li><li>your healing journey is turning into a ‘healing loop’ and preventing you from building a fulfilling life<\/li><li>Your fear of failure holds you back from taking risks and trying new things.<\/li><li>You struggle with vulnerability, especially sharing your non-traditional goals<\/li><li>You resist asking for help or always wait for people to offer it<\/li><li>You worry that you don’t have the time, energy, or talent to achieve your goals<\/li><li>Feelings of inadequacy prevent you from being fully present in your work<\/li><li>You have a tendency to judge yourself harshly and get stuck in ‘critical spirals’<\/li><li>You crave deep sense of purpose and passion, driven by a desire to inspire and empower others, and contribute to a better world.<\/li><li>You feel alone or worry that you will feel more alone if you sharing your unique perspectives with loved ones who won’t understand.<\/li><li>You keep your true goals private to protect them, but it prevents you from working on them.<\/li><li>You’ve learned that traveling isn’t the only way to ‘find yourself’ and you’re ready to embark on an inner-journey.<\/li><\/ul>",
+        "not_ready_title": "Not Ready",
+        "not_ready_sub_title": "SEM isn’t for you:",
+        "not_ready_desc": "<ul><li>You aren’t ready to embrace change and reject societal norms that stifle individuality.<\/li><li>You are more committed to meeting others expectations than your own happiness<\/li><li>You believe that your doubts and fears are impossible to overcome<\/li><li>You’re not willing to take risks and embrace uncertainty for your individual growth and fulfillment.<\/li><li>You’re not fully committed to improving the quality and impact of your creative work.<\/li><li>You’re not someone who wants to challenge traditional norms and expectations.<\/li><li>You don’t believe that you can have more meaningful relationships<\/li><\/ul>"
+      }
+    },
+    "4d70c2a0-e27f-4b01-9322-1e338de493d2": {
+      "type": "testimonial-01",
+      "blocks": {
+        "8ea80082-206f-42e1-be59-2d6066239426": {
+          "type": "Testimonial",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Rectangle_1.jpg",
+            "video_link": "",
+            "author_image": "shopify:\/\/shop_images\/diana.png",
+            "author_title": "Diana",
+            "author_position": "California"
+          }
+        },
+        "b1190c58-7bd6-4f06-b894-5650647c0d66": {
+          "type": "Testimonial",
+          "settings": {
+            "video_link": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/ba4f78972c0647ec9b6f979f883a0b85.mp4",
+            "author_image": "shopify:\/\/shop_images\/mariah.png",
+            "author_title": "Mariah",
+            "author_position": "California"
+          }
+        },
+        "a8b9fa87-6c41-403c-8bfc-d7f5553f6199": {
+          "type": "Testimonial",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Rectangle_1.jpg",
+            "video_link": "",
+            "author_image": "shopify:\/\/shop_images\/emma.png",
+            "author_title": "Emma",
+            "author_position": "California"
+          }
+        },
+        "aa6df2b8-d653-451f-8277-79b23430dff6": {
+          "type": "Testimonial",
+          "settings": {
+            "video_link": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/ba4f78972c0647ec9b6f979f883a0b85.mp4",
+            "author_image": "shopify:\/\/shop_images\/patrick.png",
+            "author_title": "Patrick",
+            "author_position": "California"
+          }
+        }
+      },
+      "block_order": [
+        "8ea80082-206f-42e1-be59-2d6066239426",
+        "b1190c58-7bd6-4f06-b894-5650647c0d66",
+        "a8b9fa87-6c41-403c-8bfc-d7f5553f6199",
+        "aa6df2b8-d653-451f-8277-79b23430dff6"
+      ],
+      "settings": {
+        "title": "Client Testimonials"
+      }
+    },
+    "78b7d1e9-952f-4997-b393-cfbac7b65468": {
+      "type": "testimonial-02",
+      "blocks": {
+        "1c780cb6-06a1-4362-9adb-f51151b3f899": {
+          "type": "Testimonial",
+          "settings": {
+            "desc": "<p>\"I started this program feeling lost, defeated, and down on myself about how much work I felt like l'd done, without tangibly seeing proof of my growth in the ways I wanted.<\/p><p>I knew what I loved doing, but I wasn't confident on the steps to take to get there. It was starting to feel impossible to overcome my blocks.<\/p><p>Your program helped me get grounded and grateful for my progress, highlighting deeply subconscious patterns that needed healing. <strong>The program left me with very practical tools on how to maintain that sense of purpose and drive throughout any endeavor I take on.<\/strong><\/p>",
+            "author_image": "shopify:\/\/shop_images\/mariah.png",
+            "author_title": "Mariah",
+            "author_position": "California"
+          }
+        },
+        "0941ee54-eb8a-482d-9dc2-d0d51ca316e9": {
+          "type": "Testimonial",
+          "settings": {
+            "desc": "<p>“ SEM is a doorway that allows us to explore our capabilities and get familiar with ourselves in a deeper and more organized way.<\/p><p>By the way of science, culture and spirituality, Nic offers an incredible yet simple resource for an empowering understanding of reality. <\/p><p>It helped me clarify my strengths and superpowers in a systematic way; and create <strong>a routine of rituals to guide me through my work as a person, an artist and a healer. <\/strong>”<\/p>",
+            "author_image": "shopify:\/\/shop_images\/emma.png",
+            "author_title": "Emma",
+            "author_position": "California"
+          }
+        },
+        "9f5fa42d-dc01-4f05-9b60-1c4cdf451466": {
+          "type": "Testimonial",
+          "settings": {
+            "desc": "<p>“ There was this lovely ongoing feeling that the program was made just for me. <\/p><p>Nic’s teachings always felt so synchronistic and applicable to me. <\/p><p>What I learned about myself and my journey is invaluable, the connections I made were deeper than relationships with people I consider closest to me. <\/p><p>I loved every part of this program and <strong>I am so grateful to my past self for making the decision to step into it. <\/strong>”<\/p>",
+            "author_image": "shopify:\/\/shop_images\/patrick.png",
+            "author_title": "Mariah",
+            "author_position": "Oregon"
+          }
+        }
+      },
+      "block_order": [
+        "1c780cb6-06a1-4362-9adb-f51151b3f899",
+        "0941ee54-eb8a-482d-9dc2-d0d51ca316e9",
+        "9f5fa42d-dc01-4f05-9b60-1c4cdf451466"
+      ],
+      "settings": {
+        "title": "Client Testimonials"
+      }
+    },
+    "5a785bd4-1cf8-47f6-9e97-333972de05d2": {
+      "type": "testimonial-03",
+      "blocks": {
+        "832e3707-cb71-4d69-959c-4ac94c33ade2": {
+          "type": "Testimonial",
+          "settings": {
+            "desc": "<p>\"I started this program feeling lost, defeated, and down on myself about how much work I felt like l'd done, without tangibly seeing proof of my growth in the ways I wanted.<\/p><p>I knew what I loved doing, but I wasn't confident on the steps to take to get there. It was starting to feel impossible to overcome my blocks.<\/p><p>Your program helped me get grounded and grateful for my progress, highlighting deeply subconscious patterns that needed healing. <strong>The program left me with very practical tools on how to maintain that sense of purpose and drive throughout any endeavor I take on.<\/strong><\/p>",
+            "author_image": "shopify:\/\/shop_images\/mariah.png",
+            "author_title": "Mariah",
+            "author_position": "California"
+          }
+        },
+        "f026ac57-9cdc-4b35-b9b4-c05a27390cb8": {
+          "type": "Testimonial",
+          "settings": {
+            "desc": "<p>“ SEM is a doorway that allows us to explore our capabilities and get familiar with ourselves in a deeper and more organized way.<\/p><p>By the way of science, culture and spirituality, Nic offers an incredible yet simple resource for an empowering understanding of reality. <\/p><p>It helped me clarify my strengths and superpowers in a systematic way; and create <strong>a routine of rituals to guide me through my work as a person, an artist and a healer. <\/strong>”<\/p>",
+            "author_image": "shopify:\/\/shop_images\/emma.png",
+            "author_title": "Emma",
+            "author_position": "California"
+          }
+        },
+        "2c5343c7-1189-423a-bfed-487a6614a1da": {
+          "type": "Testimonial",
+          "settings": {
+            "desc": "<p>“ There was this lovely ongoing feeling that the program was made just for me. <\/p><p>Nic’s teachings always felt so synchronistic and applicable to me. <\/p><p>What I learned about myself and my journey is invaluable, the connections I made were deeper than relationships with people I consider closest to me. <\/p><p>I loved every part of this program and <strong>I am so grateful to my past self for making the decision to step into it. <\/strong>”<\/p>",
+            "author_image": "shopify:\/\/shop_images\/mariah.png",
+            "author_title": "Mariah",
+            "author_position": "Oregon"
+          }
+        }
+      },
+      "block_order": [
+        "832e3707-cb71-4d69-959c-4ac94c33ade2",
+        "f026ac57-9cdc-4b35-b9b4-c05a27390cb8",
+        "2c5343c7-1189-423a-bfed-487a6614a1da"
+      ],
+      "settings": {
+        "title": "Client Testimonials",
+        "newsletter_icon": "shopify:\/\/shop_images\/Icon_1.svg",
+        "newsletter_title": "Get started by finding the path that is perfect for you.",
+        "newletter_btn_01": "Take the Quiz",
+        "newletter_link_01": "#",
+        "newletter_btn_02": "View Courses",
+        "newletter_link_02": "#"
+      }
+    },
+    "6a696cd5-96e6-4d53-a642-6c06dd2cf6b3": {
+      "type": "image-text",
+      "settings": {
+        "main_title": "About Nic",
+        "sub_title": "Your SEM",
+        "image": "shopify:\/\/shop_images\/profile_img.jpg",
+        "title": "I believe that everyone deserves to take a chance and see what they’re <span>truly capable<\/span> of",
+        "desc": "<p>...and I know that it is only possible when you embrace your subconscious blocks, shadows, unique history, & character to unlock a clear vision of your highest potential.<\/p>",
+        "btn_title": "Learn More About Nic",
+        "btn_link": "#"
+      }
+    },
+    "6611d7a6-4a80-4ccd-a679-44f0fc2d6289": {
+      "type": "FAQ",
+      "blocks": {
+        "b96ffa5f-8162-4631-b907-53e039b48ad2": {
+          "type": "FAQ",
+          "settings": {
+            "title": "Am I ready for SEM?",
+            "desc": "Whether you are completely new to 'doing the work' or you're decades into healing and ready to get busy building, this program is for you. This methodology is tailored to fit any level of knowledge and experience"
+          }
+        },
+        "a24fa0eb-3bc4-4e8c-9d42-675eeba739be": {
+          "type": "FAQ",
+          "settings": {
+            "title": "How much communication do I get with Nic?",
+            "desc": "Whether you are completely new to 'doing the work' or you're decades into healing and ready to get busy building, this program is for you. This methodology is tailored to fit any level of knowledge and experience"
+          }
+        },
+        "ef1622be-252b-4f35-9cd0-2dda0ee27545": {
+          "type": "FAQ",
+          "settings": {
+            "title": "How many people will be in our group?",
+            "desc": "Whether you are completely new to 'doing the work' or you're decades into healing and ready to get busy building, this program is for you. This methodology is tailored to fit any level of knowledge and experience"
+          }
+        },
+        "8eb7bbf8-5307-46d9-9bea-35b25a7953d3": {
+          "type": "FAQ",
+          "settings": {
+            "title": "When is the next start date?",
+            "desc": "Whether you are completely new to 'doing the work' or you're decades into healing and ready to get busy building, this program is for you. This methodology is tailored to fit any level of knowledge and experience"
+          }
+        }
+      },
+      "block_order": [
+        "b96ffa5f-8162-4631-b907-53e039b48ad2",
+        "a24fa0eb-3bc4-4e8c-9d42-675eeba739be",
+        "ef1622be-252b-4f35-9cd0-2dda0ee27545",
+        "8eb7bbf8-5307-46d9-9bea-35b25a7953d3"
+      ],
+      "settings": {
+        "title": "Frequently Asked Questions",
+        "sub_title": "FAQ"
+      }
+    },
+    "f7660ef7-9f9e-4e4a-86ac-611b8ccb88e5": {
+      "type": "our-newsletter",
+      "settings": {
+        "bg_image": "shopify:\/\/shop_images\/newsletter.jpg",
+        "icon_01": "shopify:\/\/shop_images\/newsletter-icon-1.svg",
+        "icon_02": "shopify:\/\/shop_images\/newsletter-icon-2.svg",
+        "icon_03": "shopify:\/\/shop_images\/newsletter-icon-3.svg",
+        "title": "Join the newsletter"
+      }
     }
   },
   "order": [
     "f03ad310-ca4e-45e5-a6d0-188f9f09bac1",
-    "80fba9b3-d604-40e5-969c-6d7d544f4082"
+    "80fba9b3-d604-40e5-969c-6d7d544f4082",
+    "6293ed86-711d-4490-903f-5fa9c8114b42",
+    "53ebf769-9fd7-4a97-bf41-eca6c745b771",
+    "4b336f95-992d-4998-be05-e1f328e9e8ee",
+    "780ae87a-b050-4e9b-8ca4-b02d6b6b3202",
+    "4d70c2a0-e27f-4b01-9322-1e338de493d2",
+    "78b7d1e9-952f-4997-b393-cfbac7b65468",
+    "5a785bd4-1cf8-47f6-9e97-333972de05d2",
+    "6a696cd5-96e6-4d53-a642-6c06dd2cf6b3",
+    "6611d7a6-4a80-4ccd-a679-44f0fc2d6289",
+    "f7660ef7-9f9e-4e4a-86ac-611b8ccb88e5"
   ]
 }

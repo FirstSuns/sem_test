@@ -4,19 +4,39 @@
   "sections": {
     "footer": {
       "type": "footer",
+      "blocks": {
+        "2f74756c-3964-4d99-8ac9-be9dfe6047f6": {
+          "type": "link_list",
+          "settings": {
+            "heading": "",
+            "menu": "footer"
+          }
+        },
+        "dce5c33b-eded-4958-8f62-daa87d926e3d": {
+          "type": "link_list",
+          "settings": {
+            "heading": "",
+            "menu": "footer-links"
+          }
+        }
+      },
+      "block_order": [
+        "2f74756c-3964-4d99-8ac9-be9dfe6047f6",
+        "dce5c33b-eded-4958-8f62-daa87d926e3d"
+      ],
       "settings": {
         "color_scheme": "background-1",
         "newsletter_enable": false,
         "newsletter_heading": "Subscribe to our emails",
         "enable_follow_on_shop": false,
-        "show_social": false,
+        "show_social": true,
         "enable_country_selector": false,
         "enable_language_selector": false,
         "payment_enable": false,
         "show_policy": false,
         "margin_top": 36,
-        "padding_top": 36,
-        "padding_bottom": 36
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     }
   },

@@ -1,7 +1,16 @@
+{{ 'video-banner.css' | asset_url | stylesheet_tag }}
+{{ 'video-banner.js' | asset_url | script_tag }}
+
+
 {% schema %}
 {
   "name": "Video-Banner",
   "settings": [
+    {
+      "type": "image_picker",
+      "id": "background_image",
+      "label": "Background Image"
+    },
     {
       "type": "video",
       "id": "background_video",
@@ -9,10 +18,25 @@
       "info": "Upload a video to be used as the background"
     },
     {
-      "type": "text",
+      "type": "url",
+      "id": "video_link",
+      "label": "Video Link"
+    },
+    {
+      "type": "textarea",
       "id": "headline_text",
       "label": "Headline Text",
       "default": "Welcome to our store"
+    },
+    {
+      "type": "textarea",
+      "id": "desc",
+      "label": "Description"
+    },
+    {
+      "type": "text",
+      "id": "small_text",
+      "label": "Small Text"
     },
     {
       "type": "text",
@@ -40,79 +64,52 @@
 {% assign video_url = section.settings.background_video.sources[1].url %}
 
 <section class="full-screen-video-banner">
-  <video autoplay loop muted playsinline>
+  {% if section.settings.background_image != blank %}
+  <figure>
+    {%- liquid
+        assign image_height = section.settings.background_image.width | divided_by: section.settings.background_image.aspect_ratio
+          assign sizes = full_width
+      -%}
+    {{
+        section.settings.background_image
+        | image_url: width: 3840
+        | image_tag:
+          loading: 'lazy',
+          width: section.settings.background_image.width,
+          height: image_height,
+          sizes: sizes,
+          widths: widths
+      }}
+    </figure>
+  {% endif %}
+  {% if section.settings.video_link != blank %}
+    {% assign vde_link = section.settings.video_link | split: '/' | last %}
+  <iframe width="773" height="435" src="{{ section.settings.video_link }}?autoplay=1&loop=1&playlist={{ vde_link }}" title="Dummy Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen{% if section.settings.background_image == blank %} style="display:block"{% endif %}></iframe>
+  
+{% else %}
+    {% if video_url != blank %}
+      <video autoplay loop muted playsinline{% if section.settings.background_image == blank %} style="display:block"{% endif %}>
     <source src="{{ video_url }}" type="video/mp4">
   </video>
+  {% endif %}
+    
+  {% endif %}
   <div class="overlay"></div>
+  {% if section.settings.button_text != blank or section.settings.headline_text != blank or section.settings.desc != blank or section.settings.small_text != blank %}
   <div class="content">
     <div class="interior-content">
       <h1>{{ section.settings.headline_text }}</h1>
+      <p>{{ section.settings.desc }}</p>
+      <h4>{{ section.settings.small_text }}</h4>
       <a href="{{ section.settings.button_link }}" class="button">{{ section.settings.button_text }}</a>
     </div>
   </div>
+    {% endif %}
 </section>
 
-<style>
-.full-screen-video-banner {
-  position: relative;
-  height: calc(100vw * .5625 );
-  overflow: hidden;
-}
 
-video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: -1;
-}
-
-.overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Adjust the opacity as desired */
-}
-
-.content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 100%;
-  height: 100%;
-  text-align: left;
-  color: #fff;
-}
-
-.interior-content {
-  display: inline-block;
-  text-align: left;
-  margin-left: 50vw;
-
-h1 {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-}
-
-.button {
-  display: inline-block;
-  padding: 0.75rem 1.5rem;
-  background-color: #000;
-  color: #fff;
-  text-decoration: none;
-  transition: background-color 0.3s ease;
-}
-
-.button:hover {
-  background-color: #333;
-}
-</style>
 
 
 
 {% comment %} {% assign video_url = section.settings.background_video.sources[1].url %} {% endcomment %}
+

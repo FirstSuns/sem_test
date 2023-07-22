@@ -36,20 +36,9 @@
   -%}
   <div class="card-wrapper product-card-wrapper underline-links-hover">
     <div
-      class="
-        card
-        card--{{ settings.card_style }}
-        {% if card_product.featured_media %} card--media{% else %} card--text{% endif %}
-        {% if settings.card_style == 'card' %} color-{{ settings.card_color_scheme }} gradient{% endif %}
-        {% if image_shape and image_shape != 'default' %} card--shape{% endif %}
-        {% if extend_height %} card--extend-height{% endif %}
-        {% if card_product.featured_media == nil and settings.card_style == 'card' %} ratio{% endif %}
-        {% if horizontal_class %} card--horizontal{% endif %}
-      "
-      style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;"
-    >
+      class=" card card--{{ settings.card_style }} {% if card_product.featured_media %} card--media{% else %} card--text{% endif %} {% if settings.card_style == 'card' %} color-{{ settings.card_color_scheme }} gradient{% endif %} {% if image_shape and image_shape != 'default' %} card--shape{% endif %} {% if extend_height %} card--extend-height{% endif %} {% if card_product.featured_media == nil and settings.card_style == 'card' %} ratio{% endif %} {% if horizontal_class %} card--horizontal{% endif %}" style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;">
       <div
-        class="card__inner {% if settings.card_style == 'standard' %}color-{{ settings.card_color_scheme }} gradient{% endif %}{% if card_product.featured_media or settings.card_style == 'standard' %} ratio{% endif %}"
+        class="card__inner {% if settings.card_style == 'standard' %}{%- if card_product.featured_media -%}{%- else -%} color-{{ settings.card_color_scheme }} {%- endif -%} gradient{% endif %}{% if card_product.featured_media or settings.card_style == 'standard' %} ratio{% endif %}"
         style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;"
       >
         {%- if card_product.featured_media -%}
@@ -198,8 +187,30 @@
                 </span>
               </p>
             {%- endif -%}
-
-            {% render 'price', product: card_product, price_class: '' %}
+            <div class="card-product-meta">
+              <div class="card-product-meta-price">
+                {% if card_product.metafields.custom.duration!= blank %}
+                    <div class="np-product-duration">                
+                        {{ card_product.metafields.custom.duration }}               
+                    </div>
+                {% endif %}
+                {% render 'price', product: card_product, price_class: '' %}
+                
+              </div>
+              {% if card_product.metafields.custom.product_type!= blank %}
+                    <div class="np-product-video"> 
+                        <div class="np-product-download"> 
+                            <ul>
+                                <li>
+                                    <span class="download-link">
+                                        {{ card_product.metafields.custom.product_type }}
+                                    </span> 
+                                </li>
+                            </ul>                            
+                        </div>         
+                    </div>
+                {% endif %}
+            </div>
           </div>
         </div>
         {%- if show_quick_add -%}
@@ -337,6 +348,7 @@
     </div>
   </div>
 {%- else -%}
+  
   <div class="card-wrapper product-card-wrapper underline-links-hover">
     <div
       class="

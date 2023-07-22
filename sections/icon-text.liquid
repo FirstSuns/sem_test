@@ -1,0 +1,103 @@
+{{ 'icon-text.css' | asset_url | stylesheet_tag }}
+{{ 'icon-text.js' | asset_url | script_tag }}
+
+<div class="icon-text-section">
+  <div class="page-width">
+    <div class="icon-text-part">
+      {% for block in section.blocks %}
+      <div class="icon-text-wrap">
+        {% if block.settings.icon != blank %}
+        <figure>
+          {%- liquid
+        assign image_height = block.settings.icon.width | divided_by: block.settings.icon.aspect_ratio
+          assign sizes = full_width
+      -%}
+    {{
+        block.settings.icon
+        | image_url: width: 3840
+        | image_tag:
+          loading: 'lazy',
+          width: block.settings.icon.width,
+          height: image_height,
+          sizes: sizes,
+          widths: widths
+      }}
+       </figure>
+          {% endif %}
+        <h4>{{ block.settings.title }}</h4>
+        <p>{{ block.settings.desc }}</p>
+      </div>
+      {% endfor %}
+    </div>
+    {% if section.settings.image != blank %}
+    <div class="icon-text-banner">
+      <figure>
+      {%- liquid
+        assign image_height = section.settings.image.width | divided_by: section.settings.image.aspect_ratio
+          assign sizes = full_width
+      -%}
+    {{
+        section.settings.image
+        | image_url: width: 3840
+        | image_tag:
+          loading: 'lazy',
+          width: section.settings.image.width,
+          height: image_height,
+          sizes: sizes,
+          widths: widths
+      }}  
+      </figure>
+    </div>
+      {% endif %}
+  </div>
+</div>
+
+
+
+{% schema %}
+  {
+    "name": "Icon Text",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "Icon",
+        "name": "Icon",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "icon",
+            "label": "Icon"
+          },
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Heading"
+          },
+          {
+            "type": "textarea",
+            "id": "desc",
+            "label": "Description"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Icon Text",
+        "category": "Icon Text"
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

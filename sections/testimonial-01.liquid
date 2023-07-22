@@ -1,0 +1,129 @@
+{{ 'testimonial.css' | asset_url | stylesheet_tag }}
+{{ 'testimonial.js' | asset_url | script_tag }}
+
+<div class="testimonial-01-section">
+  {% if section.settings.title != blank %}
+    <div class="page-width">
+  <div class="testimonial-title">
+    <h2>{{ section.settings.title }}</h2>
+  </div></div>
+  {% endif %}
+  <ul class="testimonial-01-slider">
+    {% for block in section.blocks %}
+    <li>
+      {% if block.settings.video_link != blank or block.settings.image != blank %}
+      <figure class="testi-slide-fig">
+        {% if block.settings.video_link != blank %}
+        <video width="320" height="240" controls>
+  <source src="{{ block.settings.video_link }}" type="video/mp4">
+  <source src="{{ block.settings.video_link }}" type="video/ogg">
+Your browser does not support the video tag.
+</video>
+        {% else %}
+          {%- liquid
+        assign image_height = block.settings.image.width | divided_by: block.settings.image.aspect_ratio
+          assign sizes = full_width
+      -%}
+    {{
+        block.settings.image
+        | image_url: width: 3840
+        | image_tag:
+          loading: 'lazy',
+          width: block.settings.image.width,
+          height: image_height,
+          sizes: sizes,
+          widths: widths
+      }}
+        {% endif %}
+      </figure>
+        {% endif %}
+      <div class="testimonial-01-part bottom-part">
+      {% if block.settings.author_image != blank %}
+        <figure>
+        {%- liquid
+        assign image_height = block.settings.author_image.width | divided_by: block.settings.author_image.aspect_ratio
+          assign sizes = full_width
+      -%}
+        {{
+        block.settings.author_image
+        | image_url: width: 3840
+        | image_tag:
+          loading: 'lazy',
+          width: block.settings.author_image.width,
+          height: image_height,
+          sizes: sizes,
+          widths: widths
+      }}
+        </figure>
+        {% endif %}
+        <div class="testimonial-01-desc ">
+          {% if block.settings.author_title != blank %}
+          <h4>{{ block.settings.author_title }}</h4>
+          {% endif %}
+      {% if block.settings.author_position != blank %}
+          <h5>{{ block.settings.author_position }}</h5>
+      {% endif %}
+        </div>
+      </div>
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+
+{% schema %}
+  {
+    "name": "Testimonial 01",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Heading"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "Testimonial",
+        "name": "Testimonial",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          },
+          {
+            "type": "url",
+            "id": "video_link",
+            "label": "Video Link"
+          },
+          {
+            "type": "image_picker",
+            "id": "author_image",
+            "label": "Author Image"
+          },
+          {
+            "type": "text",
+            "id": "author_title",
+            "label": "Author Heading"
+          },
+          {
+            "type": "text",
+            "id": "author_position",
+            "label": "Author Position"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Testimonial 01",
+        "category": "Testimonial 01"
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

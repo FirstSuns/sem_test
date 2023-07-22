@@ -1,0 +1,141 @@
+{{ 'icon-text.css' | asset_url | stylesheet_tag }}
+{{ 'icon-text.js' | asset_url | script_tag }}
+
+<div class="icon-bg-text-section">
+  <div class="page-width">
+    <div class="icon-bg-text" style="background:url({{ section.settings.bg_image | img_url: 'master' }}) no-repeat center center;background-size:cover;">
+      {% if section.settings.image != blank %}
+        <div class="icon-bg-text-img">
+      <figure>
+        {%- liquid
+        assign image_height = section.settings.image.width | divided_by: section.settings.image.aspect_ratio
+          assign sizes = full_width
+      -%}
+    {{
+        section.settings.image
+        | image_url: width: 3840
+        | image_tag:
+          loading: 'lazy',
+          width: section.settings.image.width,
+          height: image_height,
+          sizes: sizes,
+          widths: widths
+      }}
+      </figure>
+        </div>
+        {% endif %}
+      <div class="icon-bg-text-part">
+        <div class="icon-bg-text-desc">
+        {% if section.settings.title != blank %}
+        <h2>{{ section.settings.title }}</h2>
+        {% endif %}
+        {% if section.settings.sub_title != blank %}
+        <h3>{{ section.settings.sub_title }}</h3>
+        {% endif %}
+        {% if section.settings.desc != blank %}
+        <p>{{ section.settings.desc }}</p>
+        {% endif %}
+        </div>
+        {% for block in section.blocks %}
+        <div class="icon-bg-text-wrap">
+          {% if block.settings.icon != blank %}
+          <figure>{{ block.settings.icon }}</figure>
+          {% endif %}
+          <div class="icon-bg-text-list">
+            {% if block.settings.title != blank %}
+            <h4>{{ block.settings.title }}</h4>
+            {% endif %}
+            {% if block.settings.desc != blank %}
+            <p>{{ block.settings.desc }}</p>
+            {% endif %}
+          </div>
+          {% if block.settings.btn_title != blank and block.settings.btn_link != blank %}
+          <div class="icon-bg-text-btn">
+            <a href="{{ block.settings.btn_link }}">{{ block.settings.btn_title }}</a>
+          </div>
+          {% endif %}
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+
+
+{% schema %}
+  {
+    "name": "Icon Text Block 2",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "bg_image",
+        "label": "Background Image"
+      },
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image"
+      },
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Heading"
+      },
+      {
+        "type": "text",
+        "id": "sub_title",
+        "label": "Sub Heading"
+      },
+      {
+        "type": "textarea",
+        "id": "desc",
+        "label": "Description"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "Icon",
+        "name": "Icon",
+        "settings": [
+          {
+            "type": "textarea",
+            "id": "icon",
+            "label": "Icon"
+          },
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Heading"
+          },
+          {
+            "type": "textarea",
+            "id": "desc",
+            "label": "Description"
+          },
+          {
+            "type": "text",
+            "id": "btn_title",
+            "label": "Button Heading"
+          },
+          {
+            "type": "url",
+            "id": "btn_link",
+            "label": "Button Link"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Icon Text Block 02",
+        "category": "Icon Text Block 02"
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

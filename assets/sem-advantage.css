@@ -1,0 +1,102 @@
+.sem-advantage-section h3 {
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 35px;
+    color: #A1A1A1;
+    margin: 0 0 41px;
+}
+.sem-advantage-section h2 {
+    margin: 0;
+    font-size: 34px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 50px;
+    padding-bottom: 41px;
+  position:relative;
+}
+.sem-advantage-section h2:after , .sem-advantage-part:after{
+  content: '';
+    position: absolute;
+    background: #A1A1A1;
+    max-width: 460px;
+    height: 1px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+.sem-advantage-part {
+    display: grid;
+    gap: 130px;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 70px;
+    padding-bottom: 70px;
+    margin-bottom: 100px;
+    position: relative;
+}
+.sem-advantage-part h4 {
+    margin: 0  0 40px;
+    font-size: 34px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 50px;
+}
+.sem-advantage-part ul {
+    margin: 0;
+}
+.sem-advantage-part ul li {
+    font-family: Open Sans;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 400;
+    color: #929292;
+    line-height: 27px;
+}
+.sem-advantage-part ul li:not(:last-child) {
+    margin-bottom: 25px;
+}
+.sem-advantage-part h4 span {
+    color: #FF9416;
+}
+
+@media only screen and (max-width: 1200px) {
+.sem-advantage-part {
+    gap: 60px;
+}
+}
+
+@media only screen and (max-width: 991px) {
+.sem-advantage-section h2 {
+    font-size: 24px;
+    line-height: 30px;
+}
+  .sem-advantage-section h3 {
+    font-size: 20px;
+    line-height: 30px;
+    margin: 0 0 20px;
+}
+  .sem-advantage-part h4 {
+    margin: 0 0 30px;
+    font-size: 24px;
+    line-height: 30px;
+}
+  .sem-advantage-part ul li {
+    font-size: 15px;
+    line-height: 25px;
+}
+  .sem-advantage-part ul li:not(:last-child) {
+    margin-bottom: 20px;
+}
+  .sem-advantage-part {
+    gap: 30px;
+}
+}
+
+@media only screen and (max-width: 749px) {
+.sem-advantage-part {
+    grid-template-columns: 1fr;
+      margin-top: 50px;
+    padding-bottom: 50px;
+    margin-bottom: 50px;
+}
+}

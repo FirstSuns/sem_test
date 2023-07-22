@@ -1,3 +1,6 @@
+{{ 'taxt-fade.css' | asset_url | stylesheet_tag }}
+{{ 'taxt-fade.js' | asset_url | script_tag }}
+
 {% schema %}
 {
   "name": "Text Fade",
@@ -14,7 +17,7 @@
       "name": "Banner Block",
       "settings": [
         {
-          "type": "text",
+          "type": "textarea",
           "label": "Headline",
           "id": "headline",
           "default": "Your Headline"
@@ -33,7 +36,7 @@
 
 <div id="text-fade-top" class="banner-section">
   <div id="text-fade-container">
-    <div id="text-fade-content"></div>
+    <div id="text-fade-content"><div class="banner-block"></div></div>
   </div>
   <div id="hidden-content">
   {% for block in section.blocks %}
@@ -45,134 +48,7 @@
   </div>
 </div>
 
-{% stylesheet %}
-
-#hidden-content {
-  display: none;
-}
-
-.testBox {
-  border: 1px solid red; 
-  height: 100vh;
-  width: 100vw;
-}
-
-#text-fade-container {
-  position: relative;
-}
-
-#text-fade-content {
-  position: fixed;
-  width: 100%;
-  top: 40%;
-  text-align: center;
-}
-
-.banner-section {
-  display: block;
-}
-
-.banner-block {
-
-  transition: opacity 0.5s ease-in-out;
-}
-
-.block-number {
-  width: 50px;
-  height: 50px;
-  background-color: #f2f2f2;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: bold;
-}
-
-.block-content {
-  flex: 1;
-  padding: 0 20px;
-}
-
-.block-content h2 {
-  margin: 0;
-  font-size: 24px;
-  line-height: 1.2;
-}
-
-@media screen and (min-width: 768px) {
-  .banner-section {
-    flex-direction: column;
-  }
-
-  .banner-block {
-  }
-
-  .block-number {
-    margin-right: 20px;
-  }
-
-  .block-content {
-    text-align: left;
-  }
-}
-{% endstylesheet %}
-
-{% javascript %}
-function debounce(e, t, n) {
-  var a;
-  return function () {
-    var r = this,
-      i = arguments,
-      o = function () {
-        a = null, n || e.apply(r, i)
-      },
-      s = n && !a;
-    clearTimeout(a), a = setTimeout(o, t || 200), s && e.apply(r, i)
-  }
-}
-
-const texts = [' ']
-
-const stepSize = window.innerHeight
-
-function setText(contentTag, text) {
-  contentTag.innerHTML = text
-}
-
-function getIndex(distance, stepSize) {
-  return parseInt(distance / stepSize)
-}
-
-function getText(texts, index) {
-  return texts[index] ? texts[index] : ' '
-}
-
-function changeText(contentTag, stepSize, texts) {
-    const distance = window.scrollY
-    const index = getIndex(distance, stepSize)
-    const text = getText(texts, index)
-    const bannerTop = document.getElementById('text-fade-top').getBoundingClientRect().top
-    setText(contentTag, text)
-}
-
-function setInittext(contentTag, texts) {
-  const text = getText(texts, 0)
-  setText(contentTag, text)
-}
-
-window.onload = function() {
-  var container = document.getElementById('text-fade-container')
-  var contentTag = document.getElementById('text-fade-content')
-  var bannerBlocks = document.querySelectorAll('.banner-block')
-  var blockCount = (bannerBlocks.length + 1) * 100
-  container.style.height = blockCount + 'vh'
-  var bannerBlocks = document.getElementsByClassName('banner-block');
-  for (var i = 0; i < bannerBlocks.length; i++) {
-    var element = bannerBlocks[i];
-    texts.push(element.outerHTML);
-  }
-  console.log(texts); // Output the 'texts' array to the console
-  window.addEventListener('scroll', debounce(() => { changeText(contentTag, stepSize, texts) }, 20))
-}
 
 
-{% endjavascript %}
+
+

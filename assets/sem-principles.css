@@ -1,0 +1,168 @@
+.sem-principles-section .sem-principles-title h3 {
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 35px;
+    margin: 0 0 40px;
+  color:#A1A1A1;
+}
+.sem-principles-section .sem-principles-title h2 {
+    margin: 0;
+    font-size: 34px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 50px;
+}
+.sem-principles-section .sem-principles-title h2 span {
+    color: #FF9416;
+}
+.sem-principles-section .sem-principles-title {
+    position: relative;
+    padding-bottom: 55px;
+    margin-bottom: 99px;
+}
+.sem-principles-section .sem-principles-title:after {
+    content: '';
+    position: absolute;
+    background: #A1A1A1;
+    max-width: 460px;
+    height: 1px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+.sem-principles-part h5 {
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 76px;
+    letter-spacing: -0.5px;
+    color: #FF9416;
+    margin: 0;
+}
+.sem-principles-part h4 {
+    font-size: 34px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 50px;
+    margin: 0;
+}
+.sem-principles-part p {
+    margin: 10px 0 0;
+    font-family: Open Sans;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 27px;
+    color: #929292;
+}
+.sem-principles-wrap {
+    display: grid;
+    gap: 160px;
+    grid-template-columns: 1fr 1fr;
+}
+.sem-principles-part .sem-principles-wrap:not(:last-child) {
+    margin-bottom: 110px;
+}
+.sem-principles-section {
+    padding: 150px 0;
+}
+.journey-newsletter-part-inner {
+    background: #2F2F2F;
+    padding: 20px;
+}
+.journey-newsletter-part-inner {
+    background: #2F2F2F;
+    padding: 20px;
+    display: grid;
+    gap: 20px;
+    max-width: 762px;
+    margin: 100px auto 0;
+    grid-template-columns: 65px 268px 1fr;
+    align-items: center;
+}
+.journey-newsletter-part-inner .journey-newsletter-btn {
+    display: flex;
+    gap: 20px;
+}
+.journey-newsletter-part-inner h4 {
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
+    margin: 0;
+}
+.journey-newsletter-part-inner .journey-newsletter-btn a {
+    background: #FF9416;
+    padding: 14px 30px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.2;
+    border-radius: 3px;
+    font-family: Open Sans;
+    letter-spacing: 0;
+  text-align:center;
+}
+@media only screen and (max-width: 1200px) {
+.sem-principles-wrap {
+    gap: 60px;
+}
+}
+@media only screen and (max-width: 991px) {
+  .journey-newsletter-part-inner .journey-newsletter-btn a {
+    padding: 14px 20px;
+}
+.sem-principles-wrap {
+    gap: 30px;
+}
+  .sem-principles-part h4 {
+    font-size: 24px;
+    line-height: 40px;
+}
+  .sem-principles-part h5 {
+    font-size: 40px;
+    line-height: 56px;
+}
+  .sem-principles-part p {
+    font-size: 14px;
+    line-height: 20px;
+}
+  .sem-principles-part .sem-principles-wrap:not(:last-child) {
+    margin-bottom: 50px;
+}
+  .sem-principles-section .sem-principles-title {
+    padding-bottom: 25px;
+    margin-bottom: 50px;
+}
+  .sem-principles-section .sem-principles-title h3 {
+    margin: 0 0 10px;
+}
+  .sem-principles-section .sem-principles-title h2 {
+    font-size: 24px;
+    line-height: 30px;
+}
+  .sem-principles-section .sem-principles-title h3 {
+    font-size: 20px;
+    line-height: 30px;
+}
+}
+@media only screen and (max-width: 749px) {
+  .sem-principles-wrap {
+    grid-template-columns: 1fr;
+}
+  .sem-principles-section {
+    padding: 50px 0;
+}
+.journey-newsletter-part-inner {
+    display: flex;
+    flex-wrap: wrap;
+      margin: 50px auto 0;
+}
+  .sem-principles-section .sem-principles-title h3{
+    font-size:16px;
+  }
+  
+}
