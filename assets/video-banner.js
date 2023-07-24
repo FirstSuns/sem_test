@@ -1,4 +1,15 @@
+
+window.addEventListener('load', async () => {
+  let video = document.querySelector('video[muted][autoplay]');
+  try {
+    await video.play();
+  } catch (err) {
+    video.controls = true;
+  }
+});
+
 $(window).on('load', function () {
+   $('.bnr_video').trigger('click')
   $('.interior-content').on('click', function(e){
   return false;
 });

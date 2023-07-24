@@ -1,3 +1,4 @@
+{{ 'https://cdnjs.cloudflare.com/ajax/libs/video.js/7.2.2/video.min.js' | script_tag }}
 {{ 'video-banner.css' | asset_url | stylesheet_tag }}
 {{ 'video-banner.js' | asset_url | script_tag }}
 
@@ -29,6 +30,12 @@
       "default": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
       "label": "t:sections.video.settings.video_url.label",
       "info": "t:sections.video.settings.video_url.info"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_video_looping",
+      "default": true,
+      "label": "t:sections.main-product.settings.enable_video_looping.label"
     },
     {
       "type": "image_picker",
@@ -101,8 +108,7 @@
       >
     </figure>
   {% endif %}
-
-  {% comment %} {%- if section.settings.background_video == null and section.settings.video_url != null -%}
+  {%- if section.settings.background_video == null and section.settings.video_url != null -%}
     {%- liquid
       assign loop = ''
       if section.settings.enable_video_looping
@@ -128,16 +134,8 @@
       ></iframe>
     {%- endif -%}
   {%- else -%}
-    {{
-      section.settings.background_video
-      | video_tag:
-        image_size: '1100x',
-        autoplay: true,
-        loop: section.settings.enable_video_looping,
-        controls: true,
-        muted: false
-    }}
-  {%- endif -%} {% endcomment %}
+    <video src="{{ section.settings.background_video.sources[1].url }}" muted autoplay loop></video>
+  {%- endif -%}
 
   <div class="overlay"></div>
   {% if section.settings.button_text != blank
