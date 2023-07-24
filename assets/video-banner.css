@@ -134,6 +134,9 @@ line-height: 1.4;
   .full-screen-video-banner figure img{min-height:470px;object-fit:cover;}
 }
 @media(max-width:480px){
+  .full-screen-video-banner .interior-content {
+    margin: 0 auto;
+}
 .full-screen-video-banner figure img{min-height:390px;object-position:left center;}
   .full-screen-video-banner .content{position:unset;transform:translate(0,0);}
   .full-screen-video-banner .interior-content{padding:30px 0;}

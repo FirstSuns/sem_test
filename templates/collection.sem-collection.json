@@ -3,16 +3,13 @@
     "banner": {
       "type": "np-collection-banner",
       "settings": {
-        "show_collection_description": true,
-        "show_collection_image": false,
-        "color_scheme": ""
+        "show_collection_description": true
       }
     },
     "product-grid": {
       "type": "np-product-list",
       "settings": {
         "products_per_page": 8,
-        "columns_desktop": 3,
         "image_ratio": "square",
         "image_shape": "default",
         "show_secondary_image": false,
@@ -21,10 +18,7 @@
         "enable_quick_add": false,
         "enable_filtering": false,
         "filter_type": "horizontal",
-        "enable_sorting": true,
-        "columns_mobile": "2",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "enable_sorting": true
       }
     }
   },

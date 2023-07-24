@@ -1,3 +1,41 @@
+.field__input:focus-visible, .select__select:focus-visible, .customer .field input:focus-visible, .customer select:focus-visible, .localization-form__select:focus-visible.localization-form__select:after{
+  box-shadow:none;
+}
+.field__input:focus, .field__input:not(:placeholder-shown), .field__input:-webkit-autofill, .customer .field input:focus, .customer .field input:not(:placeholder-shown), .customer .field input:-webkit-autofill{
+  box-shadow:none;
+  padding:1.5rem;
+}
+
+.our-newsletter-section .our-newsletter .our-newsletter-form .field label{
+  display:none;
+}
+
+.our-newsletter-section ::-webkit-input-placeholder {
+  opacity:1 !important;
+  font-size: 14px !important;
+  font-weight: 400 !important;
+  line-height: 22px !important;
+  font-family: var(--secondary-font) !important;
+  color:#fff !important;
+}
+
+.our-newsletter-section :-ms-input-placeholder {
+  opacity:1 !important;
+  font-size: 14px !important;
+  font-weight: 400 !important;
+  line-height: 22px !important;
+  font-family: var(--secondary-font) !important;
+  color:#fff !important;
+}
+
+.our-newsletter-section ::placeholder {
+  opacity:1 !important;
+  font-size: 14px !important;
+  font-weight: 400 !important;
+  line-height: 22px !important;
+  font-family: var(--secondary-font) !important;
+  color:#fff !important;
+}
 
 .our-newsletter-section {
     position: relative;
@@ -91,6 +129,13 @@
 .our-newsletter-section .our-newsletter {
     align-items: center;
 }
+
+ @media only screen and (min-width: 1367px) {
+.our-newsletter-section .our-newsletter .our-newsletter-form .field-inner label.field__label {
+    top: 25px;
+}
+ }
+
  @media only screen and (max-width: 1366px) {
 .our-newsletter-section .our-newsletter .our-newsletter-title h2 {
     font-size: 50px;

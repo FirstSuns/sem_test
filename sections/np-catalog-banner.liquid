@@ -1,6 +1,6 @@
 {% comment %}theme-check-disable ImgLazyLoading{% endcomment %}
 {{ 'component-collection-hero.css' | asset_url | stylesheet_tag }}
-
+{{ 'np-style.css' | asset_url | stylesheet_tag }}
 
 {%- style -%}
   @media screen and (max-width: 749px) {
@@ -9,7 +9,7 @@
     }
   }
 {%- endstyle -%}
-<div class="np-page-width">
+<div class="np-page-width page-width">
   <div class="np-product-header"> 
     <div class="np-brbreadcrumbs-section">
         {% render 'np-breadcrumbs' %} 

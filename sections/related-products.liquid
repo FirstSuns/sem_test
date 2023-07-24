@@ -4,10 +4,10 @@
 
 
 <!--Slick lib--->
-<link rel="stylesheet" href="//cdn.jsdelivr.net/jquery.slick/1.4.1/slick.css">
+{% comment %} <link rel="stylesheet" href="//cdn.jsdelivr.net/jquery.slick/1.4.1/slick.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-<script src="https://cdn.jsdelivr.net/jquery.slick/1.4.1/slick.min.js"></script>
-<!--End slick lib--->
+<script src="https://cdn.jsdelivr.net/jquery.slick/1.4.1/slick.min.js"></script> {% endcomment %}
+<!--End slick lib---> 
 <script src="{{ 'np-init.js' | asset_url }}" defer="defer"></script>
 
 {% if section.settings.image_shape == 'blob' %}

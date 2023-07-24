@@ -5,251 +5,205 @@
   <div class="page-width">
     <div class="icon-text-journey">
       {% if section.settings.image != blank %}
-      <figure class="main-fig">
-      {%- liquid
-        assign image_height = section.settings.image.width | divided_by: section.settings.image.aspect_ratio
-          assign sizes = full_width
-      -%}
-    {{
-        section.settings.image
-        | image_url: width: 3840
-        | image_tag:
-          loading: 'lazy',
-          width: section.settings.image.width,
-          height: image_height,
-          sizes: sizes,
-          widths: widths
-      }}  
-      </figure>
+        <figure class="main-fig">
+          {% assign image = section.settings.image %}
+          <img
+            srcset="
+              {%- if image.width >= 165 -%}{{ image | image_url: width: 165 }} 165w,{%- endif -%}
+              {%- if image.width >= 360 -%}{{ image | image_url: width: 360 }} 360w,{%- endif -%}
+              {%- if image.width >= 533 -%}{{ image | image_url: width: 533 }} 533w,{%- endif -%}
+              {%- if image.width >= 720 -%}{{ image | image_url: width: 720 }} 720w,{%- endif -%}
+              {%- if image.width >= 940 -%}{{ image | image_url: width: 940 }} 940w,{%- endif -%}
+              {%- if image.width >= 1066 -%}{{ image | image_url: width: 2066 }} 2066w,{%- endif -%}
+              {{ image | image_url }} {{ image.width }}w
+            "
+            src="{{ image | image_url: 'master' }}"
+            sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 130 | divided_by: 4 }}px, (min-width: 990px) calc((100vw - 130px) / 4), (min-width: 750px) calc((100vw - 120px) / 3), calc((100vw - 35px) / 2)"
+            alt="{{ image.alt | escape }}"
+            {% unless lazy_load == false %}
+              loading="lazy"
+            {% endunless %}
+            width="{{ image.width }}"
+            height="{{ image.height }}"
+          >
+          {% comment %}
+            {%- liquid
+              assign image_height = section.settings.image.width | divided_by: section.settings.image.aspect_ratio
+              assign sizes = full_width
+            -%}
+            {{
+              section.settings.image
+              | image_url: width: 3840
+              | image_tag:
+                loading: 'lazy',
+                width: section.settings.image.width,
+                height: image_height,
+                sizes: sizes,
+                widths: widths
+            }}
+          {% endcomment %}
+        </figure>
       {% endif %}
       <div class="icon-text-journey-part">
         {% if section.settings.icon != blank %}
-        <figure>{{ section.settings.icon }}</figure>
+          <figure>{{ section.settings.icon }}</figure>
         {% endif %}
         <div class="icon-text-journey-desc">
           {% if section.settings.title != blank %}
-          <h2>{{ section.settings.title }}</h2>
+            <h2>{{ section.settings.title }}</h2>
           {% endif %}
           {% if section.settings.desc != blank %}
-          <p>{{ section.settings.desc }}</p>
+            <p>{{ section.settings.desc }}</p>
           {% endif %}
+        </div>
       </div>
-      </div>
-      
     </div>
     <div class="two-column-grid-text-section">
       {% if section.settings.bottom_desc != blank %}
-      <p class="main-p">{{ section.settings.bottom_desc }}</p>
-        {% endif %}
+        <p class="main-p">{{ section.settings.bottom_desc }}</p>
+      {% endif %}
       <div class="two-column-grid-text">
         {% for block in section.blocks %}
-        <div class="two-column-grid-text-part">
-          {% if block.settings.icon_one != blank %}
-          <figure>
-            {%- liquid
-        assign image_height = block.settings.icon_one.width | divided_by: block.settings.icon_one.aspect_ratio
-          assign sizes = full_width
-      -%}
-    {{
-        block.settings.icon_one
-        | image_url: width: 3840
-        | image_tag:
-          loading: 'lazy',
-          width: block.settings.icon_one.width,
-          height: image_height,
-          sizes: sizes,
-          widths: widths
-      }}
-          </figure>
-          {% endif %}
-          {% if block.settings.title != blank %}
-          <h3>{{ block.settings.title }}</h3>
-          {% endif %}
-          {% if block.settings.sub_title != blank %}
-          <h4>{{ block.settings.sub_title }}</h4>
-          {% endif %}
-          {% if block.settings.desc != blank %}
-          <p>{{ block.settings.desc }}</p>
-          {% endif %}
-          {% if block.settings.btn_link != blank and block.settings.btn_title != blank %}
-         <div class="btn-main"> <a class="btn" href="{{ block.settings.btn_link }}">{{ block.settings.btn_title }}</a></div>
-          {% endif %}
-        </div>
+          <div class="two-column-grid-text-part">
+            {% if block.settings.icon_one != blank %}
+              <figure>
+                {% assign image = block.settings.icon_one %}
+                <img
+                  srcset="
+                    {%- if image.width >= 165 -%}{{ image | image_url: width: 165 }} 165w,{%- endif -%}
+                    {%- if image.width >= 360 -%}{{ image | image_url: width: 360 }} 360w,{%- endif -%}
+                    {%- if image.width >= 533 -%}{{ image | image_url: width: 533 }} 533w,{%- endif -%}
+                    {%- if image.width >= 720 -%}{{ image | image_url: width: 720 }} 720w,{%- endif -%}
+                    {%- if image.width >= 940 -%}{{ image | image_url: width: 940 }} 940w,{%- endif -%}
+                    {%- if image.width >= 1066 -%}{{ image | image_url: width: 2066 }} 2066w,{%- endif -%}
+                    {{ image | image_url }} {{ image.width }}w
+                  "
+                  src="{{ image | image_url: 'master' }}"
+                  sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 130 | divided_by: 4 }}px, (min-width: 990px) calc((100vw - 130px) / 4), (min-width: 750px) calc((100vw - 120px) / 3), calc((100vw - 35px) / 2)"
+                  alt="{{ image.alt | escape }}"
+                  {% unless lazy_load == false %}
+                    loading="lazy"
+                  {% endunless %}
+                  width="{{ image.width }}"
+                  height="{{ image.height }}"
+                >
+                {% comment %}
+                  {%- liquid
+                    assign image_height = block.settings.icon_one.width | divided_by: block.settings.icon_one.aspect_ratio
+                    assign sizes = full_width
+                  -%}
+                  {{
+                    block.settings.icon_one
+                    | image_url: width: 3840
+                    | image_tag:
+                      loading: 'lazy',
+                      width: block.settings.icon_one.width,
+                      height: image_height,
+                      sizes: sizes,
+                      widths: widths
+                  }}
+                {% endcomment %}
+              </figure>
+            {% endif %}
+            {% if block.settings.title != blank %}
+              <h3>{{ block.settings.title }}</h3>
+            {% endif %}
+            {% if block.settings.sub_title != blank %}
+              <h4>{{ block.settings.sub_title }}</h4>
+            {% endif %}
+            {% if block.settings.desc != blank %}
+              <p>{{ block.settings.desc }}</p>
+            {% endif %}
+            {% if block.settings.btn_link != blank and block.settings.btn_title != blank %}
+              <div class="btn-main">
+                <a class="btn" href="{{ block.settings.btn_link }}">
+                  {{- block.settings.btn_title }}
+                  {% render 'right-arrow' %}
+                </a>
+              </div>
+            {% endif %}
+          </div>
         {% endfor %}
       </div>
-    </div>
-    <div class="journey-newsletter-section">
-      {% if section.settings.newsletter_bg_image != blank %}
-      <figure class="fig-mm">
-        {%- liquid
-        assign image_height = section.settings.newsletter_bg_image.width | divided_by: section.settings.newsletter_bg_image.aspect_ratio
-          assign sizes = full_width
-      -%}
-    {{
-        section.settings.newsletter_bg_image
-        | image_url: width: 3840
-        | image_tag:
-          loading: 'lazy',
-          width: section.settings.newsletter_bg_image.width,
-          height: image_height,
-          sizes: sizes,
-          widths: widths
-      }}
-      </figure>
-      {% endif %}
-      <div class="journey-newsletter-part">
-         <div class="journey-newsletter-part-inner">
-        {% if section.settings.newsletter_icon != blank %}
-        <figure>
-        {%- liquid
-        assign image_height = section.settings.newsletter_icon.width | divided_by: section.settings.newsletter_icon.aspect_ratio
-          assign sizes = full_width
-      -%}
-    {{
-        section.settings.newsletter_icon
-        | image_url: width: 3840
-        | image_tag:
-          loading: 'lazy',
-          width: section.settings.newsletter_icon.width,
-          height: image_height,
-          sizes: sizes,
-          widths: widths
-      }}
-        </figure>
-          {% endif %}
-        <div class="journey-newsletter-desc">
-          {% if section.settings.newsletter_title != blank %}
-            <h4>{{ section.settings.newsletter_title }}</h4>
-            {% endif %}
-        </div>
-        <div class="journey-newsletter-btn">
-          {% if section.settings.newletter_btn_01 != blank and section.settings.newletter_link_01 != blank %}
-          <a href="{{ section.settings.newletter_link_01 }}">{{ section.settings.newletter_btn_01 }}</a>
-          {% endif %}
-          {% if section.settings.newletter_btn_02 != blank and section.settings.newletter_link_02 != blank %}
-          <a href="{{ section.settings.newletter_link_02 }}">{{ section.settings.newletter_btn_02 }}</a>
-          {% endif %}
-        </div>
-      </div> </div>
     </div>
   </div>
 </div>
 
-
 {% schema %}
-  {
-    "name": "Icon Text Block 3",
-    "settings": [
-      {
-        "type": "image_picker",
-        "id": "image",
-        "label": "Image"
-      },
-      {
-        "type": "textarea",
-        "id": "icon",
-        "label": "Icon"
-      },
-      {
-        "type": "text",
-        "id": "title",
-        "label": "Heading"
-      },
-      {
-        "type": "textarea",
-        "id": "desc",
-        "label": "Description"
-      },
-      {
-        "type": "textarea",
-        "id": "bottom_desc",
-        "label": "Bottom Description"
-      },
-      {
-        "type": "header",
-        "content": "Newsletter"
-      },
-      {
-        "type": "image_picker",
-        "id": "newsletter_bg_image",
-        "label": "Newsletter Background Image"
-      },
-      {
-        "type": "image_picker",
-        "id": "newsletter_icon",
-        "label": "Newsletter Icon"
-      },
-      {
-        "type": "text",
-        "id": "newsletter_title",
-        "label": "Newsletter Heading"
-      },
-      {
-        "type": "text",
-        "id": "newletter_btn_01",
-        "label": "Newsletter Button 01"
-      },
-      {
-        "type": "url",
-        "id": "newletter_link_01",
-        "label": "Newsletter Link 01"
-      },
-      {
-        "type": "text",
-        "id": "newletter_btn_02",
-        "label": "Newsletter Button 02"
-      },
-      {
-        "type": "url",
-        "id": "newletter_link_02",
-        "label": "Newsletter Link 02"
-      }
-    ],
-    "blocks": [
-      {
-        "type": "Icon",
-        "name": "Icon",
-        "settings": [
-          {
-            "type": "image_picker",
-            "id": "icon_one",
-            "label": "Icon"
-          },
-          {
-            "type": "text",
-            "id": "title",
-            "label": "Heading"
-          },
-          {
-            "type": "text",
-            "id": "sub_title",
-            "label": "Sub Heading"
-          },
-          {
-            "type": "richtext",
-            "id": "desc",
-            "label": "Description"
-          },
-          {
-            "type": "text",
-            "id": "btn_title",
-            "label": "Button Heading"
-          },
-          {
-            "type": "url",
-            "id": "btn_link",
-            "label": "Button Link"
-          }
-        ]
-      }
-    ],
-    "presets": [
-      {
-        "name": "Icon Text Block 03",
-        "category": "Icon Text Block 03"
-      }
-    ]
-  }
+{
+  "name": "Icon Text Block 3",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "textarea",
+      "id": "icon",
+      "label": "Icon"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading"
+    },
+    {
+      "type": "textarea",
+      "id": "desc",
+      "label": "Description"
+    },
+    {
+      "type": "textarea",
+      "id": "bottom_desc",
+      "label": "Bottom Description"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "Icon",
+      "name": "Icon",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "icon_one",
+          "label": "Icon"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Heading"
+        },
+        {
+          "type": "text",
+          "id": "sub_title",
+          "label": "Sub Heading"
+        },
+        {
+          "type": "richtext",
+          "id": "desc",
+          "label": "Description"
+        },
+        {
+          "type": "text",
+          "id": "btn_title",
+          "label": "Button Heading"
+        },
+        {
+          "type": "url",
+          "id": "btn_link",
+          "label": "Button Link"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Icon Text Block 03",
+      "category": "Icon Text Block 03"
+    }
+  ]
+}
 {% endschema %}
 
 {% stylesheet %}

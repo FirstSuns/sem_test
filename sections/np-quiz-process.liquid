@@ -1,0 +1,86 @@
+{{ 'np-style.css' | asset_url | stylesheet_tag }}
+
+<div class="np-quiz-process">
+  <div class="np-page-width page-width">
+    <div class="np-quiz-process-title">
+      {% if section.settings.heading!=blank %}
+        <h1>{{ section.settings.heading }}</h1>
+      {% endif %}
+      {% if section.settings.sub_heading!=blank %}
+        {{ section.settings.sub_heading }}
+      {% endif %}
+    </div>
+    <div class="np-quiz-process-content">
+      {% for block in section.blocks %}
+        
+        {% if block.settings.qustion!=blank %}
+          <div class="np-quiz-process-content-details">
+            <h1>{{ block.settings.qustion }}</h1>
+          </div>
+        {% endif %}
+        <div class="np-quiz-process-content-que">        
+          {% if block.settings.answer1!=blank %}
+            <button type="button" class="quiz-process-btn">{{ block.settings.answer1 }}</button>
+          {% endif %}
+          {% if block.settings.answer2!=blank %}
+            <button type="button" class="quiz-process-btn">{{ block.settings.answer2 }}</button>
+          {% endif %}
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+
+
+<!--Quiz-->
+
+
+{% schema %}
+  {
+    "name": "Quiz Process",
+    "settings": [
+      {
+        "type": "richtext",
+        "id": "heading",
+        "label": "Heading"
+      },
+      {
+        "type": "richtext",
+        "id": "sub_heading",
+        "label": "Sub Title"
+      }
+    ]
+    ,
+    "blocks":[
+      {
+        "type":"Question",
+        "name":"List",
+        "settings":[
+          {
+            "type": "text",
+            "id": "qustion",
+            "label": "Question"
+          },
+          {
+            "type": "text",
+            "id": "answer1",
+            "label": "Answer 1"
+          },
+          {
+            "type": "text",
+            "id": "answer2",
+            "label": "Answer 2"
+          }
+        ]
+        
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

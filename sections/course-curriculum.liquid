@@ -1,5 +1,7 @@
 {{ 'course-curriculum.css' | asset_url | stylesheet_tag }}
 {{ 'course-curriculum.js' | asset_url | script_tag }}
+{{ 'video-section.css' | asset_url | stylesheet_tag }}
+{{ 'component-deferred-media.css' | asset_url | stylesheet_tag }}
 <div class="course-curriculum-section">
   <div class="page-width">
     {%- if section.settings.icon != blank and section.settings.title != blank -%}
@@ -31,51 +33,169 @@
               <h4>{{ block.settings.title }}</h4>
             {% endif %}
           {% when 'Video' %}
-            {% if block.settings.video_link != blank and block.settings.title != blank %}
-              <div class="course-curriculum-list">
-                <figure>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="25" height="18" viewBox="0 0 25 18" fill="none">
-                    <path d="M23.7044 1.91901C23.6484 1.59966 23.4901 1.30637 23.2529 1.08201C23.0157 0.857649 22.712 0.713983 22.386 0.672009C15.6073 -0.224003 8.73759 -0.224003 1.95885 0.672009C1.633 0.713776 1.32926 0.857245 1.09204 1.08144C0.854825 1.30563 0.696576 1.59878 0.64044 1.91801C-0.21348 6.60147 -0.21348 11.3976 0.64044 16.081C0.69653 16.4004 0.854741 16.6937 1.09195 16.918C1.32915 17.1424 1.63292 17.286 1.95885 17.328C5.34512 17.7757 8.7579 18.0002 12.1745 18C15.5904 18.0001 19.0025 17.7756 22.3881 17.328C22.7141 17.2862 23.0179 17.1426 23.2551 16.9182C23.4924 16.6938 23.6505 16.4004 23.7065 16.081C24.5592 11.3977 24.5585 6.60206 23.7044 1.91901ZM8.11784 12.02V5.98101C8.12666 5.80543 8.18048 5.63493 8.27427 5.48542C8.36805 5.33592 8.49874 5.21229 8.65412 5.1261C8.8095 5.0399 8.9845 4.99395 9.16278 4.99254C9.34106 4.99112 9.51679 5.03429 9.67356 5.11801L15.6774 8.13701C15.8424 8.215 15.9817 8.3374 16.0792 8.4901C16.1767 8.6428 16.2285 8.81956 16.2285 9.00001C16.2285 9.18045 16.1767 9.35722 16.0792 9.50992C15.9817 9.66262 15.8424 9.78502 15.6774 9.86301L9.67356 12.882C9.51686 12.9657 9.34122 13.0089 9.16302 13.0075C8.98482 13.0061 8.80988 12.9603 8.65453 12.8742C8.49917 12.7881 8.36847 12.6646 8.27462 12.5153C8.18076 12.3659 8.12683 12.1955 8.11784 12.02Z" fill="#FF9416"/>
-                  </svg>
-                </figure>
-                <h5>{{ block.settings.title }}</h5>
-                <div class="course-curriculum-list-inner">
-                  <a class="start-link" href="#" data-id="video_list_{{ forloop.index }}">Start</a>
-                  <div class="course-curriculum-section-video" id="video_list_{{ forloop.index }}">
-                    <div class="course-curriculum-video">
-                      <a
-                        href="#"
-                        class="course-curriculum-close"
-                        data-id="video_list_{{ forloop.index }}"
-                      >
-                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path fill-rule="evenodd" clip-rule="evenodd" d="M31.0769 8L33 9.92308L22.4214 20.5L33 31.0769L31.0769 33L20.5 22.4214L9.92308 33L8 31.0769L18.5786 20.5L8 9.92308L9.92308 8L20.5 18.5786L31.0769 8Z" fill="#F8F8F8"/>
-                        </svg>
-                      </a>
-                      {% assign vde_link = block.settings.video_link | split: '/' | last %}
-                      {% if block.settings.video_link contains 'youtu.be' %}
-                        {% assign youtub_link = 'https://www.youtube.com/embed/' | join: 'uS_y_65CcpA' %}
-                      {% else %}
-                        {% assign youtub_link = block.settings.video_link %}
-                      {% endif %}
-                      <div class="video-main">
-                        <iframe
-                          width="773"
-                          height="435"
-                          src="{{ youtub_link }}?playlist={{ vde_link }}"
-                          title="Dummy Video"
-                          frameborder="0"
-                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                          allowfullscreen
-                          {% if section.settings.background_image == blank %}
-                            style="display:block"
-                          {% endif %}
-                        ></iframe>
+            {% if block.settings.title != blank %}
+              {% if block.settings.video_url != blank or block.settings.video != blank %}
+                <div class="course-curriculum-list">
+                  <figure>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="18" viewBox="0 0 25 18" fill="none">
+                      <path d="M23.7044 1.91901C23.6484 1.59966 23.4901 1.30637 23.2529 1.08201C23.0157 0.857649 22.712 0.713983 22.386 0.672009C15.6073 -0.224003 8.73759 -0.224003 1.95885 0.672009C1.633 0.713776 1.32926 0.857245 1.09204 1.08144C0.854825 1.30563 0.696576 1.59878 0.64044 1.91801C-0.21348 6.60147 -0.21348 11.3976 0.64044 16.081C0.69653 16.4004 0.854741 16.6937 1.09195 16.918C1.32915 17.1424 1.63292 17.286 1.95885 17.328C5.34512 17.7757 8.7579 18.0002 12.1745 18C15.5904 18.0001 19.0025 17.7756 22.3881 17.328C22.7141 17.2862 23.0179 17.1426 23.2551 16.9182C23.4924 16.6938 23.6505 16.4004 23.7065 16.081C24.5592 11.3977 24.5585 6.60206 23.7044 1.91901ZM8.11784 12.02V5.98101C8.12666 5.80543 8.18048 5.63493 8.27427 5.48542C8.36805 5.33592 8.49874 5.21229 8.65412 5.1261C8.8095 5.0399 8.9845 4.99395 9.16278 4.99254C9.34106 4.99112 9.51679 5.03429 9.67356 5.11801L15.6774 8.13701C15.8424 8.215 15.9817 8.3374 16.0792 8.4901C16.1767 8.6428 16.2285 8.81956 16.2285 9.00001C16.2285 9.18045 16.1767 9.35722 16.0792 9.50992C15.9817 9.66262 15.8424 9.78502 15.6774 9.86301L9.67356 12.882C9.51686 12.9657 9.34122 13.0089 9.16302 13.0075C8.98482 13.0061 8.80988 12.9603 8.65453 12.8742C8.49917 12.7881 8.36847 12.6646 8.27462 12.5153C8.18076 12.3659 8.12683 12.1955 8.11784 12.02Z" fill="#FF9416"/>
+                    </svg>
+                  </figure>
+                  <h5>{{ block.settings.title }}</h5>
+                  <div class="course-curriculum-list-inner">
+                    <a class="start-link" href="#" data-id="video_list_{{ forloop.index }}">Start</a>
+                    <div class="course-curriculum-section-video" id="video_list_{{ forloop.index }}">
+                      <div class="course-curriculum-video">
+                        <a
+                          href="#"
+                          class="course-curriculum-close"
+                          data-id="video_list_{{ forloop.index }}"
+                          data-video="{% if block.settings.background_video != blank %}{% endif %}"
+                        >
+                          <svg
+                            width="40"
+                            height="40"
+                            viewBox="0 0 40 40"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M31.0769 8L33 9.92308L22.4214 20.5L33 31.0769L31.0769 33L20.5 22.4214L9.92308 33L8 31.0769L18.5786 20.5L8 9.92308L9.92308 8L20.5 18.5786L31.0769 8Z" fill="#F8F8F8"/>
+                          </svg>
+                        </a>
+                        {% assign vde_link = block.settings.video_link | split: '/' | last %}
+                        {% if block.settings.video_link contains 'youtu.be' %}
+                          {% assign youtub_link = 'https://www.youtube.com/embed/' | join: 'uS_y_65CcpA' %}
+                        {% else %}
+                          {% assign youtub_link = block.settings.video_link %}
+                        {% endif %}
+
+                        {%- liquid
+                          assign video_id = block.settings.video.id | default: block.settings.video_url.id
+                          assign video_alt = block.settings.video.alt | default: block.settings.description
+                          assign alt = 'block.video.load_video' | t: description: video_alt | escape
+                          assign poster = block.settings.video.preview_image | default: block.settings.cover_image
+
+                          if block.settings.video != null
+                            assign ratio_diff = block.settings.video.aspect_ratio | minus: poster.aspect_ratio | abs
+                            if ratio_diff < 0.01 and ratio_diff > 0
+                              assign fix_ratio = true
+                            endif
+                          endif
+                        -%}
+
+                        <div class="video-main">
+                          <noscript>
+                            <div
+                              class="video-section__media"
+                              {% if poster != null %}
+                                style="--ratio-percent: {{ 1 | divided_by: poster.aspect_ratio | times: 100 }}%;"
+                              {% endif %}
+                            >
+                              {%- if block.settings.video == null and block.settings.video_url != null -%}
+                                <a
+                                  href="{{ block.settings.video_url }}"
+                                  class="video-section__poster media media--transparent{% if poster == null %} video-section__placeholder{% endif %}"
+                                >
+                                  {%- if poster != null -%}
+                                    {{
+                                      poster
+                                      | image_url: width: 3840
+                                      | image_tag:
+                                        loading: 'lazy',
+                                        sizes: sizes,
+                                        widths: '375, 750, 1100, 1500, 1780, 2000, 3000, 3840',
+                                        alt: alt
+                                    }}
+                                  {%- else -%}
+                                    {{ 'hero-apparel-3' | placeholder_svg_tag: 'placeholder-svg placeholder' }}
+                                  {%- endif -%}
+                                </a>
+                              {%- else -%}
+                                {{
+                                  block.settings.video
+                                  | video_tag:
+                                    image_size: '1100x',
+                                    loop: section.settings.enable_video_looping,
+                                    controls: true,
+                                    muted: false
+                                }}
+                              {%- endif -%}
+                            </div>
+                          </noscript>
+                          <deferred-media
+                            class="video-section__media deferred-media no-js-hidden gradient global-media-settings{% if section.settings.full_width %} global-media-settings--full-width{% endif %}{% if fix_ratio %} media-fit-cover{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                            data-media-id="{{ video_id }}"
+                            {% if poster != null %}
+                              style="--ratio-percent: {{ 1 | divided_by: poster.aspect_ratio | times: 100 }}%;"
+                            {% endif %}
+                          >
+                            <button
+                              id="Deferred-Poster-Modal-{{ video_id }}"
+                              class="video-section__poster media deferred-media__poster media--landscape"
+                              type="button"
+                              aria-label="{{ alt }}"
+                            >
+                              {%- if poster != null -%}
+                                {{
+                                  poster
+                                  | image_url: width: 3840
+                                  | image_tag:
+                                    loading: 'lazy',
+                                    sizes: sizes,
+                                    widths: '375, 750, 1100, 1500, 1780, 2000, 3000, 3840',
+                                    alt: alt
+                                }}
+                              {%- else -%}
+                                {{ 'hero-apparel-3' | placeholder_svg_tag: 'placeholder-svg placeholder' }}
+                              {%- endif -%}
+                              <span class="deferred-media__poster-button motion-reduce">
+                                {%- render 'icon-play' -%}
+                              </span>
+                            </button>
+                            <template>
+                              {%- if block.settings.video == null and block.settings.video_url != null -%}
+                                {%- liquid
+                                  assign loop = ''
+                                  if section.settings.enable_video_looping
+                                    assign loop = '&loop=1&playlist=' | append: video_id
+                                  endif
+                                -%}
+                                {%- if block.settings.video_url.type == 'youtube' -%}
+                                  <iframe
+                                    src="https://www.youtube.com/embed/{{ video_id }}?enablejsapi=1&autoplay=1{{ loop }}"
+                                    class="js-youtube"
+                                    allow="autoplay; encrypted-media"
+                                    allowfullscreen
+                                    title="{{ section.settings.description | escape }}"
+                                  ></iframe>
+                                {%- else -%}
+                                  <iframe
+                                    src="https://player.vimeo.com/video/{{ video_id }}?autoplay=1{{ loop }}"
+                                    class="js-vimeo"
+                                    allow="autoplay; encrypted-media"
+                                    allowfullscreen
+                                    title="{{ section.settings.description | escape }}"
+                                  ></iframe>
+                                {%- endif -%}
+                              {%- else -%}
+                                {{
+                                  block.settings.video
+                                  | video_tag:
+                                    image_size: '1100x',
+                                    autoplay: true,
+                                    loop: section.settings.enable_video_looping,
+                                    controls: true,
+                                    muted: false
+                                }}
+                              {%- endif -%}
+                            </template>
+                          </deferred-media>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>
+              {% endif %}
             {% endif %}
         {% endcase %}
       {% endfor %}
@@ -120,17 +240,42 @@
           "label": "Heading"
         },
         {
-          "type": "url",
-          "id": "video_link",
-          "label": "Video Link"
-        }
-      ]
-    }
-  ],
-  "presets": [
+      "type": "header",
+      "content": "t:sections.video.settings.header__1.content"
+    },
     {
-      "name": "Course Curriculum",
-      "category": "Course Curriculum"
+      "type": "video",
+      "id": "video",
+      "label": "t:sections.video.settings.video.label"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.video.settings.header__2.content"
+    },
+    {
+      "type": "paragraph",
+      "content": "t:sections.video.settings.paragraph.content"
+    },
+    {
+      "type": "video_url",
+      "id": "video_url",
+      "accept": ["youtube", "vimeo"],
+      "default": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+      "label": "t:sections.video.settings.video_url.label",
+      "info": "t:sections.video.settings.video_url.info"
+    },
+    {
+      "type": "image_picker",
+      "id": "cover_image",
+      "label": "t:sections.video.settings.cover_image.label"
+    },
+    {
+      "type": "text",
+      "id": "description",
+      "label": "t:sections.video.settings.description.label",
+      "info": "t:sections.video.settings.description.info"
+    }
+      ]
     }
   ]
 }

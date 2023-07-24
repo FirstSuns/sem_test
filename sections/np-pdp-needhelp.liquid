@@ -1,9 +1,29 @@
 {{ 'np-section-pdpneedhelp.css' | asset_url | stylesheet_tag }}
-<div class="np-pdp-needhelp-container np-page-width" id="np-pdp-{{ section.id }}">
+{{ 'np-style.css' | asset_url | stylesheet_tag }}
+<div class="np-pdp-needhelp-container np-page-width page-width" id="np-pdp-{{ section.id }}">
   <div class="np-pdp-needhelp_inner">
     {% if section.settings.beackgroud_image!=blank %}
     <div class="np-pdp-needhelp-image" style="background-image: url({{ section.settings.beackgroud_image | img_url:'master' }})">      
-        <img src="{{ section.settings.beackgroud_image | img_url:'master' }}" >      
+        
+  {% assign image_nd = section.settings.beackgroud_image %}
+      <img
+                  srcset="
+                    {%- if image_nd.width >= 165 -%}{{ image_nd | image_url: width: 165 }} 165w,{%- endif -%}
+                    {%- if image_nd.width >= 360 -%}{{ image_nd | image_url: width: 360 }} 360w,{%- endif -%}
+                    {%- if image_nd.width >= 533 -%}{{ image_nd | image_url: width: 533 }} 533w,{%- endif -%}
+                    {%- if image_nd.width >= 720 -%}{{ image_nd | image_url: width: 720 }} 720w,{%- endif -%}
+                    {%- if image_nd.width >= 940 -%}{{ image_nd | image_url: width: 940 }} 940w,{%- endif -%}
+                    {%- if image_nd.width >= 1066 -%}{{ image_nd | image_url: width: 1066 }} 1066w,{%- endif -%}
+                    {{ image_nd | image_url }} {{ image_nd.width }}w
+                  "
+                  src="{{ image_nd | image_url: width: 533 }}"
+                  sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 130 | divided_by: 4 }}px, (min-width: 990px) calc((100vw - 130px) / 4), (min-width: 750px) calc((100vw - 120px) / 3), calc((100vw - 35px) / 2)"
+                  alt=""
+                  class="motion-reduce"
+                  loading="lazy"
+                  width="{{ image_nd.width }}"
+                  height="{{ image_nd.height }}"
+                >
     </div>
     {% endif %}
     <div class="np-pdp-needhelp-content_main">
@@ -18,7 +38,12 @@
       <div class="np-needhelp-content_right">
         {% if section.settings.button_text!=blank %}
           <div class="np-pdp-needhelp-button">
-            <a href="{{ section.settings.button_link }}">{{ section.settings.button_text }} </a>
+            <a href="{{ section.settings.button_link }}">
+              <span>{{ section.settings.button_text }} </span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M13.0435 3.88672L12 4.93749L17.164 10.1367H1V11.6367H17.162L12 16.8359L13.0435 17.8867L18.952 11.9367L18.9565 11.9426L20 10.8919L13.0435 3.88672Z" fill="#FF9416"/>
+              </svg>
+            </a>
           </div>
         {% endif %}
       </div>

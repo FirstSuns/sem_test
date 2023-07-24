@@ -1,125 +1,273 @@
 {{ 'testimonial.css' | asset_url | stylesheet_tag }}
 {{ 'testimonial.js' | asset_url | script_tag }}
+{{ 'video-section.css' | asset_url | stylesheet_tag }}
+{{ 'component-deferred-media.css' | asset_url | stylesheet_tag }}
 
 <div class="testimonial-01-section">
   {% if section.settings.title != blank %}
     <div class="page-width">
-  <div class="testimonial-title">
-    <h2>{{ section.settings.title }}</h2>
-  </div></div>
+      <div class="testimonial-title">
+        <h2>{{ section.settings.title }}</h2>
+      </div>
+    </div>
   {% endif %}
   <ul class="testimonial-01-slider">
     {% for block in section.blocks %}
-    <li>
-      {% if block.settings.video_link != blank or block.settings.image != blank %}
-      <figure class="testi-slide-fig">
-        {% if block.settings.video_link != blank %}
-        <video width="320" height="240" controls>
-  <source src="{{ block.settings.video_link }}" type="video/mp4">
-  <source src="{{ block.settings.video_link }}" type="video/ogg">
-Your browser does not support the video tag.
-</video>
-        {% else %}
+      <li>
+        {% if block.settings.video != blank or block.settings.video_url != blank %}
           {%- liquid
-        assign image_height = block.settings.image.width | divided_by: block.settings.image.aspect_ratio
-          assign sizes = full_width
-      -%}
-    {{
-        block.settings.image
-        | image_url: width: 3840
-        | image_tag:
-          loading: 'lazy',
-          width: block.settings.image.width,
-          height: image_height,
-          sizes: sizes,
-          widths: widths
-      }}
+            assign video_id = block.settings.video.id | default: block.settings.video_url.id
+            assign video_alt = block.settings.video.alt | default: block.settings.description
+            assign alt = 'block.video.load_video' | t: description: video_alt | escape
+            assign poster = block.settings.video.preview_image | default: block.settings.cover_image
+
+            if block.settings.video != null
+              assign ratio_diff = block.settings.video.aspect_ratio | minus: poster.aspect_ratio | abs
+              if ratio_diff < 0.01 and ratio_diff > 0
+                assign fix_ratio = true
+              endif
+            endif
+          -%}
+          <noscript>
+            <div
+              class="video-section__media"
+              {% if poster != null %}
+                style="--ratio-percent: {{ 1 | divided_by: poster.aspect_ratio | times: 100 }}%;"
+              {% endif %}
+            >
+              {%- if block.settings.video == null and block.settings.video_url != null -%}
+                <a
+                  href="{{ block.settings.video_url }}"
+                  class="video-section__poster media media--transparent{% if poster == null %} video-section__placeholder{% endif %}"
+                >
+                  {%- if poster != null -%}
+                    {{
+                      poster
+                      | image_url: width: 3840
+                      | image_tag:
+                        loading: 'lazy',
+                        sizes: sizes,
+                        widths: '375, 750, 1100, 1500, 1780, 2000, 3000, 3840',
+                        alt: alt
+                    }}
+                  {%- else -%}
+                    {{ 'hero-apparel-3' | placeholder_svg_tag: 'placeholder-svg placeholder' }}
+                  {%- endif -%}
+                </a>
+              {%- else -%}
+                {{
+                  block.settings.video
+                  | video_tag:
+                    image_size: '1100x',
+                    loop: section.settings.enable_video_looping,
+                    controls: true,
+                    muted: false
+                }}
+              {%- endif -%}
+            </div>
+          </noscript>
+          <deferred-media
+            class="video-section__media deferred-media no-js-hidden gradient global-media-settings{% if section.settings.full_width %} global-media-settings--full-width{% endif %}{% if fix_ratio %} media-fit-cover{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+            data-media-id="{{ video_id }}"
+            {% if poster != null %}
+              style="--ratio-percent: {{ 1 | divided_by: poster.aspect_ratio | times: 100 }}%;"
+            {% endif %}
+          >
+            <button
+              id="Deferred-Poster-Modal-{{ video_id }}"
+              class="video-section__poster media deferred-media__poster media--landscape"
+              type="button"
+              aria-label="{{ alt }}"
+            >
+              {%- if poster != null -%}
+                {{
+                  poster
+                  | image_url: width: 3840
+                  | image_tag:
+                    loading: 'lazy',
+                    sizes: sizes,
+                    widths: '375, 750, 1100, 1500, 1780, 2000, 3000, 3840',
+                    alt: alt
+                }}
+              {%- else -%}
+                {{ 'hero-apparel-3' | placeholder_svg_tag: 'placeholder-svg placeholder' }}
+              {%- endif -%}
+              <span class="deferred-media__poster-button motion-reduce">
+                {%- render 'icon-play' -%}
+              </span>
+            </button>
+            <template>
+              {%- if block.settings.video == null and block.settings.video_url != null -%}
+                {%- liquid
+                  assign loop = ''
+                  if section.settings.enable_video_looping
+                    assign loop = '&loop=1&playlist=' | append: video_id
+                  endif
+                -%}
+                {%- if block.settings.video_url.type == 'youtube' -%}
+                  <iframe
+                    src="https://www.youtube.com/embed/{{ video_id }}?enablejsapi=1&autoplay=1{{ loop }}"
+                    class="js-youtube"
+                    allow="autoplay; encrypted-media"
+                    allowfullscreen
+                    title="{{ section.settings.description | escape }}"
+                  ></iframe>
+                {%- else -%}
+                  <iframe
+                    src="https://player.vimeo.com/video/{{ video_id }}?autoplay=1{{ loop }}"
+                    class="js-vimeo"
+                    allow="autoplay; encrypted-media"
+                    allowfullscreen
+                    title="{{ section.settings.description | escape }}"
+                  ></iframe>
+                {%- endif -%}
+              {%- else -%}
+                {{
+                  block.settings.video
+                  | video_tag:
+                    image_size: '1100x',
+                    autoplay: true,
+                    loop: section.settings.enable_video_looping,
+                    controls: true,
+                    muted: false
+                }}
+              {%- endif -%}
+            </template>
+          </deferred-media>
         {% endif %}
-      </figure>
-        {% endif %}
-      <div class="testimonial-01-part bottom-part">
-      {% if block.settings.author_image != blank %}
-        <figure>
-        {%- liquid
-        assign image_height = block.settings.author_image.width | divided_by: block.settings.author_image.aspect_ratio
-          assign sizes = full_width
-      -%}
-        {{
-        block.settings.author_image
-        | image_url: width: 3840
-        | image_tag:
-          loading: 'lazy',
-          width: block.settings.author_image.width,
-          height: image_height,
-          sizes: sizes,
-          widths: widths
-      }}
-        </figure>
-        {% endif %}
-        <div class="testimonial-01-desc ">
-          {% if block.settings.author_title != blank %}
-          <h4>{{ block.settings.author_title }}</h4>
+        <div class="testimonial-01-part bottom-part">
+          {% if block.settings.author_image != blank %}
+            {% if block.settings.author_image != blank %}
+              <figure>
+                {% assign image = block.settings.author_image %}
+                <img
+                  srcset="
+                    {%- if image.width >= 165 -%}{{ image | image_url: width: 165 }} 165w,{%- endif -%}
+                    {%- if image.width >= 360 -%}{{ image | image_url: width: 360 }} 360w,{%- endif -%}
+                    {%- if image.width >= 533 -%}{{ image | image_url: width: 533 }} 533w,{%- endif -%}
+                    {%- if image.width >= 720 -%}{{ image | image_url: width: 720 }} 720w,{%- endif -%}
+                    {%- if image.width >= 940 -%}{{ image | image_url: width: 940 }} 940w,{%- endif -%}
+                    {%- if image.width >= 1066 -%}{{ image | image_url: width: 2066 }} 2066w,{%- endif -%}
+                    {{ image | image_url }} {{ image.width }}w
+                  "
+                  src="{{ image | image_url: 'master' }}"
+                  sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 130 | divided_by: 4 }}px, (min-width: 990px) calc((100vw - 130px) / 4), (min-width: 750px) calc((100vw - 120px) / 3), calc((100vw - 35px) / 2)"
+                  alt="{{ image.alt | escape }}"
+                  {% unless lazy_load == false %}
+                    loading="lazy"
+                  {% endunless %}
+                  width="{{ image.width }}"
+                  height="{{ image.height }}"
+                >
+                {% comment %}
+                      {%- liquid
+                    assign image_height = block.settings.author_image.width | divided_by: block.settings.author_image.aspect_ratio
+                      assign sizes = full_width
+                  -%}
+                    {{
+                    block.settings.author_image
+                    | image_url: width: 3840
+                    | image_tag:
+                      loading: 'lazy',
+                      width: block.settings.author_image.width,
+                      height: image_height,
+                      sizes: sizes,
+                      widths: widths
+                  }}
+                {% endcomment %}
+              </figure>
+            {% endif %}
           {% endif %}
-      {% if block.settings.author_position != blank %}
-          <h5>{{ block.settings.author_position }}</h5>
-      {% endif %}
+          <div class="testimonial-01-desc ">
+            {% if block.settings.author_title != blank %}
+              <h4>{{ block.settings.author_title }}</h4>
+            {% endif %}
+            {% if block.settings.author_position != blank %}
+              <h5>{{ block.settings.author_position }}</h5>
+            {% endif %}
+          </div>
         </div>
-      </div>
-    </li>
+      </li>
     {% endfor %}
   </ul>
 </div>
 
 {% schema %}
-  {
-    "name": "Testimonial 01",
-    "settings": [
-      {
-        "type": "text",
-        "id": "title",
-        "label": "Heading"
-      }
-    ],
-    "blocks": [
-      {
-        "type": "Testimonial",
-        "name": "Testimonial",
-        "settings": [
-          {
-            "type": "image_picker",
-            "id": "image",
-            "label": "Image"
-          },
-          {
-            "type": "url",
-            "id": "video_link",
-            "label": "Video Link"
-          },
-          {
-            "type": "image_picker",
-            "id": "author_image",
-            "label": "Author Image"
-          },
-          {
-            "type": "text",
-            "id": "author_title",
-            "label": "Author Heading"
-          },
-          {
-            "type": "text",
-            "id": "author_position",
-            "label": "Author Position"
-          }
-        ]
-      }
-    ],
-    "presets": [
-      {
-        "name": "Testimonial 01",
-        "category": "Testimonial 01"
-      }
-    ]
-  }
+{
+  "name": "Testimonial 01",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "Testimonial",
+      "name": "Testimonial",
+      "settings": [
+        {
+           "type": "header",
+          "content": "t:sections.video.settings.header__1.content"
+        },
+        {
+          "type": "video",
+          "id": "video",
+          "label": "t:sections.video.settings.video.label"
+        },
+        {
+          "type": "header",
+          "content": "t:sections.video.settings.header__2.content"
+        },
+        {
+          "type": "paragraph",
+          "content": "t:sections.video.settings.paragraph.content"
+        },
+        {
+          "type": "video_url",
+          "id": "video_url",
+          "accept": ["youtube", "vimeo"],
+          "default": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+          "label": "t:sections.video.settings.video_url.label",
+          "info": "t:sections.video.settings.video_url.info"
+        },
+        {
+          "type": "image_picker",
+          "id": "cover_image",
+          "label": "t:sections.video.settings.cover_image.label"
+        },
+        {
+          "type": "text",
+          "id": "description",
+          "label": "t:sections.video.settings.description.label",
+          "info": "t:sections.video.settings.description.info"
+        },
+        {
+          "type": "image_picker",
+          "id": "author_image",
+          "label": "Author Image"
+        },
+        {
+          "type": "text",
+          "id": "author_title",
+          "label": "Author Heading"
+        },
+        {
+          "type": "text",
+          "id": "author_position",
+          "label": "Author Position"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Testimonial 01",
+      "category": "Testimonial 01"
+    }
+  ]
+}
 {% endschema %}
 
 {% stylesheet %}

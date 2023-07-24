@@ -40,7 +40,7 @@
     "needhelp": {
       "type": "np-pdp-needhelp",
       "settings": {
-        "beackgroud_image": "shopify:\/\/shop_images\/image_6.jpg",
+        "beackgroud_image": "shopify:\/\/shop_images\/image_6.png",
         "heading": "Need Help?",
         "content": "Take the quiz to get a journey of lessons and teachings designed just for you.",
         "button_text": "Take the Quiz?",

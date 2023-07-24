@@ -3,171 +3,213 @@
 
 <div class="testimonial-01-section">
   <div class="page-width">
-  {% if section.settings.title != blank %}
-  <div class="testimonial-title">
-    <h2>{{ section.settings.title }}</h2>
-  </div>
-  {% endif %}
-  <ul class="testimonial-03-slider">
-    {% for block in section.blocks %}
-    <li>
-      <div class="testimonial-03-part">
-      {% if block.settings.author_image != blank %}
-        <figure>
-          {%- liquid
-        assign image_height = block.settings.author_image.width | divided_by: block.settings.author_image.aspect_ratio
-          assign sizes = full_width
-      -%}
-        {{
-        block.settings.author_image
-        | image_url: width: 3840
-        | image_tag:
-          loading: 'lazy',
-          width: block.settings.author_image.width,
-          height: image_height,
-          sizes: sizes,
-          widths: widths
-      }}
-        </figure>
-        {% endif %}
-        <div class="testimonial-03-desc ">
-          {% if block.settings.author_title != blank %}
-          <h4>{{ block.settings.author_title }}</h4>
+    {% if section.settings.title != blank %}
+      <div class="testimonial-title">
+        <h2>{{ section.settings.title }}</h2>
+      </div>
+    {% endif %}
+    <ul class="testimonial-03-slider">
+      {% for block in section.blocks %}
+        <li>
+          <div class="testimonial-03-part">
+            {% if block.settings.author_image != blank %}
+              <figure>
+                {% assign image = block.settings.author_image %}
+                <img
+                  srcset="
+                    {%- if image.width >= 165 -%}{{ image | image_url: width: 165 }} 165w,{%- endif -%}
+                    {%- if image.width >= 360 -%}{{ image | image_url: width: 360 }} 360w,{%- endif -%}
+                    {%- if image.width >= 533 -%}{{ image | image_url: width: 533 }} 533w,{%- endif -%}
+                    {%- if image.width >= 720 -%}{{ image | image_url: width: 720 }} 720w,{%- endif -%}
+                    {%- if image.width >= 940 -%}{{ image | image_url: width: 940 }} 940w,{%- endif -%}
+                    {%- if image.width >= 1066 -%}{{ image | image_url: width: 2066 }} 2066w,{%- endif -%}
+                    {{ image | image_url }} {{ image.width }}w
+                  "
+                  src="{{ image | image_url: 'master' }}"
+                  sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 130 | divided_by: 4 }}px, (min-width: 990px) calc((100vw - 130px) / 4), (min-width: 750px) calc((100vw - 120px) / 3), calc((100vw - 35px) / 2)"
+                  alt="{{ image.alt | escape }}"
+                  {% unless lazy_load == false %}
+                    loading="lazy"
+                  {% endunless %}
+                  width="{{ image.width }}"
+                  height="{{ image.height }}"
+                >
+                {% comment %}
+                      {%- liquid
+                    assign image_height = block.settings.author_image.width | divided_by: block.settings.author_image.aspect_ratio
+                      assign sizes = full_width
+                  -%}
+                    {{
+                    block.settings.author_image
+                    | image_url: width: 3840
+                    | image_tag:
+                      loading: 'lazy',
+                      width: block.settings.author_image.width,
+                      height: image_height,
+                      sizes: sizes,
+                      widths: widths
+                  }}
+                {% endcomment %}
+              </figure>
+            {% endif %}
+            <div class="testimonial-03-desc ">
+              {% if block.settings.author_title != blank %}
+                <h4>{{ block.settings.author_title }}</h4>
+              {% endif %}
+              {% if block.settings.author_position != blank %}
+                <h5>{{ block.settings.author_position }}</h5>
+              {% endif %}
+            </div>
+          </div>
+          {% if block.settings.desc != blank %}
+            <div class="testimonial-02-wrap">
+              {{ block.settings.desc }}
+            </div>
           {% endif %}
-      {% if block.settings.author_position != blank %}
-          <h5>{{ block.settings.author_position }}</h5>
-      {% endif %}
-        </div>
-      </div>
-      {% if block.settings.desc != blank %}
-      <div class="testimonial-02-wrap">
-        {{ block.settings.desc }}
-      </div>
-      {% endif %}
-    </li>
-    {% endfor %}
-  </ul>
+        </li>
+      {% endfor %}
+    </ul>
     <div class="journey-newsletter-section">
       <div class="journey-newsletter-part">
-         <div class="journey-newsletter-part-inner">
-        {% if section.settings.newsletter_icon != blank %}
-        <figure>
-          
-        {%- liquid
-        assign image_height = section.settings.newsletter_icon.width | divided_by: section.settings.newsletter_icon.aspect_ratio
-          assign sizes = full_width
-      -%}
-        {{
-        section.settings.newsletter_icon
-        | image_url: width: 3840
-        | image_tag:
-          loading: 'lazy',
-          width: section.settings.newsletter_icon.width,
-          height: image_height,
-          sizes: sizes,
-          widths: widths
-      }}  
-        </figure>
+        <div class="journey-newsletter-part-inner">
+          {% if section.settings.newsletter_icon != blank %}
+            <figure>
+              {% assign image = section.settings.newsletter_icon %}
+              <img
+                srcset="
+                  {%- if image.width >= 165 -%}{{ image | image_url: width: 165 }} 165w,{%- endif -%}
+                  {%- if image.width >= 360 -%}{{ image | image_url: width: 360 }} 360w,{%- endif -%}
+                  {%- if image.width >= 533 -%}{{ image | image_url: width: 533 }} 533w,{%- endif -%}
+                  {%- if image.width >= 720 -%}{{ image | image_url: width: 720 }} 720w,{%- endif -%}
+                  {%- if image.width >= 940 -%}{{ image | image_url: width: 940 }} 940w,{%- endif -%}
+                  {%- if image.width >= 1066 -%}{{ image | image_url: width: 2066 }} 2066w,{%- endif -%}
+                  {{ image | image_url }} {{ image.width }}w
+                "
+                src="{{ image | image_url: 'master' }}"
+                sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 130 | divided_by: 4 }}px, (min-width: 990px) calc((100vw - 130px) / 4), (min-width: 750px) calc((100vw - 120px) / 3), calc((100vw - 35px) / 2)"
+                alt="{{ image.alt | escape }}"
+                {% unless lazy_load == false %}
+                  loading="lazy"
+                {% endunless %}
+                width="{{ image.width }}"
+                height="{{ image.height }}"
+              >
+              {% comment %}
+                {%- liquid
+                  assign image_height = section.settings.newsletter_icon.width | divided_by: section.settings.newsletter_icon.aspect_ratio
+                  assign sizes = full_width
+                -%}
+                {{
+                  section.settings.newsletter_icon
+                  | image_url: width: 3840
+                  | image_tag:
+                    loading: 'lazy',
+                    width: section.settings.newsletter_icon.width,
+                    height: image_height,
+                    sizes: sizes,
+                    widths: widths
+                }}
+              {% endcomment %}
+            </figure>
           {% endif %}
-        <div class="journey-newsletter-desc">
-          {% if section.settings.newsletter_title != blank %}
-            <h4>{{ section.settings.newsletter_title }}</h4>
+          <div class="journey-newsletter-desc">
+            {% if section.settings.newsletter_title != blank %}
+              <h4>{{ section.settings.newsletter_title }}</h4>
             {% endif %}
+          </div>
+          <div class="journey-newsletter-btn">
+            {% if section.settings.newletter_btn_01 != blank and section.settings.newletter_link_01 != blank %}
+              <a href="{{ section.settings.newletter_link_01 }}">{{ section.settings.newletter_btn_01 }}</a>
+            {% endif %}
+            {% if section.settings.newletter_btn_02 != blank and section.settings.newletter_link_02 != blank %}
+              <a href="{{ section.settings.newletter_link_02 }}">{{ section.settings.newletter_btn_02 }}</a>
+            {% endif %}
+          </div>
         </div>
-        <div class="journey-newsletter-btn">
-          {% if section.settings.newletter_btn_01 != blank and section.settings.newletter_link_01 != blank %}
-          <a href="{{ section.settings.newletter_link_01 }}">{{ section.settings.newletter_btn_01 }}</a>
-          {% endif %}
-          {% if section.settings.newletter_btn_02 != blank and section.settings.newletter_link_02 != blank %}
-          <a href="{{ section.settings.newletter_link_02 }}">{{ section.settings.newletter_btn_02 }}</a>
-          {% endif %}
-        </div>
-      </div> </div>
+      </div>
     </div>
   </div>
 </div>
 
-
-
 {% schema %}
-  {
-    "name": "Testimonial 03",
-    "settings": [
-      {
-        "type": "text",
-        "id": "title",
-        "label": "Heading"
-      },
-      {
-        "type": "header",
-        "content": "Newsletter"
-      },
-      {
-        "type": "image_picker",
-        "id": "newsletter_icon",
-        "label": "Newsletter Icon"
-      },
-      {
-        "type": "text",
-        "id": "newsletter_title",
-        "label": "Newsletter Heading"
-      },
-      {
-        "type": "text",
-        "id": "newletter_btn_01",
-        "label": "Newsletter Button 01"
-      },
-      {
-        "type": "url",
-        "id": "newletter_link_01",
-        "label": "Newsletter Link 01"
-      },
-      {
-        "type": "text",
-        "id": "newletter_btn_02",
-        "label": "Newsletter Button 02"
-      },
-      {
-        "type": "url",
-        "id": "newletter_link_02",
-        "label": "Newsletter Link 02"
-      }
-    ],
-    "blocks": [
-      {
-        "type": "Testimonial",
-        "name": "Testimonial",
-        "settings": [
-          {
-            "type": "richtext",
-            "id": "desc",
-            "label": "Description"
-          },
-          {
-            "type": "image_picker",
-            "id": "author_image",
-            "label": "Author Image"
-          },
-          {
-            "type": "text",
-            "id": "author_title",
-            "label": "Author Heading"
-          },
-          {
-            "type": "text",
-            "id": "author_position",
-            "label": "Author Position"
-          }
-        ]
-      }
-    ],
-    "presets": [
-      {
-        "name": "Testimonial 03",
-        "category": "Testimonial 03"
-      }
-    ]
-  }
+{
+  "name": "Testimonial 03",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading"
+    },
+    {
+      "type": "header",
+      "content": "Newsletter"
+    },
+    {
+      "type": "image_picker",
+      "id": "newsletter_icon",
+      "label": "Newsletter Icon"
+    },
+    {
+      "type": "text",
+      "id": "newsletter_title",
+      "label": "Newsletter Heading"
+    },
+    {
+      "type": "text",
+      "id": "newletter_btn_01",
+      "label": "Newsletter Button 01"
+    },
+    {
+      "type": "url",
+      "id": "newletter_link_01",
+      "label": "Newsletter Link 01"
+    },
+    {
+      "type": "text",
+      "id": "newletter_btn_02",
+      "label": "Newsletter Button 02"
+    },
+    {
+      "type": "url",
+      "id": "newletter_link_02",
+      "label": "Newsletter Link 02"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "Testimonial",
+      "name": "Testimonial",
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "desc",
+          "label": "Description"
+        },
+        {
+          "type": "image_picker",
+          "id": "author_image",
+          "label": "Author Image"
+        },
+        {
+          "type": "text",
+          "id": "author_title",
+          "label": "Author Heading"
+        },
+        {
+          "type": "text",
+          "id": "author_position",
+          "label": "Author Position"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Testimonial 03",
+      "category": "Testimonial 03"
+    }
+  ]
+}
 {% endschema %}
 
 {% stylesheet %}

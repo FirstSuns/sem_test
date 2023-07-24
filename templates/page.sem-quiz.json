@@ -1,0 +1,93 @@
+{
+  "sections": {
+    "quiz-package": {
+      "type": "np-quiz-package",
+      "blocks": {
+        "b4addbbf-0c25-4a75-9e9e-6011e8e7a447": {
+          "type": "List",
+          "settings": {
+            "title": "A. The Quiz",
+            "content": "Take the 7 question quiz to automatically generate a tailored program based on your needs",
+            "image": "shopify:\/\/shop_images\/Group_10.png",
+            "link": "shopify:\/\/pages\/catalog"
+          }
+        },
+        "493295de-21d9-4005-a9c5-1335341c32b7": {
+          "type": "List",
+          "settings": {
+            "title": "B. Packages",
+            "content": "View my selection of pre-fabricated packages and see if theres a fit.",
+            "image": "shopify:\/\/shop_images\/Image_3.png",
+            "link": "shopify:\/\/pages\/catalog"
+          }
+        },
+        "853a833d-f881-40ad-a34d-f907367030e1": {
+          "type": "List",
+          "settings": {
+            "title": "C. Do it Yourself",
+            "content": "See all available lessons and materials and build a path thats perfect for you.",
+            "image": "shopify:\/\/shop_images\/Image5.png",
+            "link": "shopify:\/\/pages\/catalog"
+          }
+        }
+      },
+      "block_order": [
+        "b4addbbf-0c25-4a75-9e9e-6011e8e7a447",
+        "493295de-21d9-4005-a9c5-1335341c32b7",
+        "853a833d-f881-40ad-a34d-f907367030e1"
+      ],
+      "settings": {
+        "title": "<p>Welcome. Lets build <strong>your journey.<\/strong><\/p>",
+        "content": "<p>No wrong answers here. No matter what you choose, you’ll still be able to tailor and edit your program design afterwards.<\/p>",
+        "package_title": "<p>Choose a Path:<\/p>"
+      }
+    },
+    "faq-package": {
+      "type": "FAQ",
+      "blocks": {
+        "d4a03027-eca2-4f89-9625-fb81cdef75ea": {
+          "type": "FAQ",
+          "settings": {
+            "title": "Am I ready for SEM?",
+            "desc": "Whether you are completely new to 'doing the work' or you're decades into healing and ready to get busy building, this program is for you. This methodology is tailored to fit any level of knowledge and experience"
+          }
+        },
+        "77c0ee39-6a8a-4f50-8de0-37be2127b2f2": {
+          "type": "FAQ",
+          "settings": {
+            "title": "How much communication do I get with Nic?",
+            "desc": "Whether you are completely new to 'doing the work' or you're decades into healing and ready to get busy building, this program is for you. This methodology is tailored to fit any level of knowledge and experience"
+          }
+        },
+        "77e641a8-2a0b-4f75-a418-f97a468adadc": {
+          "type": "FAQ",
+          "settings": {
+            "title": "How many people will be in our group?",
+            "desc": "Whether you are completely new to 'doing the work' or you're decades into healing and ready to get busy building, this program is for you. This methodology is tailored to fit any level of knowledge and experience"
+          }
+        },
+        "9f9a6ad4-0125-487d-aeca-9a2ddbe15306": {
+          "type": "FAQ",
+          "settings": {
+            "title": "When is the next start date?",
+            "desc": "Whether you are completely new to 'doing the work' or you're decades into healing and ready to get busy building, this program is for you. This methodology is tailored to fit any level of knowledge and experience"
+          }
+        }
+      },
+      "block_order": [
+        "d4a03027-eca2-4f89-9625-fb81cdef75ea",
+        "77c0ee39-6a8a-4f50-8de0-37be2127b2f2",
+        "77e641a8-2a0b-4f75-a418-f97a468adadc",
+        "9f9a6ad4-0125-487d-aeca-9a2ddbe15306"
+      ],
+      "settings": {
+        "title": "Frequently Asked Questions",
+        "sub_title": "FAQ"
+      }
+    }
+  },
+  "order": [
+    "quiz-package",
+    "faq-package"
+  ]
+}

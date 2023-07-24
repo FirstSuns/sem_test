@@ -254,14 +254,17 @@
     line-height: 27px;
     color: #a1a1a1;
 }
-  .two-column-grid-text a.btn {
+.two-column-grid-text a.btn {
     padding: 14px 37px;
     background: #FF9416;
     border-radius: 3px;
     text-decoration: none;
     color: #fff;
-    margin: 50px 0 0;  
+    margin: 50px 0 0;
     font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 .two-column-grid-text .btn-main {
     display: flex;
@@ -334,6 +337,7 @@
 .icon-text-part .icon-text-wrap:not(:last-child) {
     position: relative;
 }
+.two-column-grid-text p{margin:0 0 32px;}
 
 
 @media only screen and (min-width: 769px) {
@@ -441,6 +445,7 @@
     font-size: 28px;
     line-height: 60px;
 }
+  .two-column-grid-text p{margin:0 0 18px;}
 }
 
 @media only screen and (max-width: 749px) {
@@ -463,6 +468,7 @@
    .two-column-grid-text {
     grid-template-columns: 1fr;
 }
+  .two-column-grid-text p{margin:0 0 18px;}
 }
 
 @media only screen and (max-width: 575px) {
@@ -505,6 +511,7 @@
   .icon-text-banner {
     padding-top: 50px;
 }
+  .two-column-grid-text p{margin:0 0 18px;}
 }
 
 

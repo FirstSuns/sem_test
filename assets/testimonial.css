@@ -2,8 +2,8 @@
 .testimonial-02-slider li,.testimonial-03-slider li{display:inline-block;margin:0;padding:0 30px;}
 .testimonial-01-slider li{padding:0 50px;}
 .testimonial-01-slider video{width:100%;}
-.testi-slide-fig{width:100%;padding-bottom:100%;position:relative;}
-.testi-slide-fig img,.testi-slide-fig video{position:absolute;top:0;left:0;height:100%;object-fit:cover;}
+.testi-slide-fig{width:100%;padding-bottom:60%;position:relative;}
+.testi-slide-fig img,.testi-slide-fig video,.testi-slide-fig iframe{width:100%;border:none;position:absolute;top:0;left:0;height:100%;object-fit:cover;}
 
 .testimonial-title h2 {
     margin: 0 0 100px;

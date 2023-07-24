@@ -31,10 +31,6 @@
       "type": "np-collection-main-catalog",
       "settings": {
         "products_per_page": 16,
-        "title": "<p>Featured Products<\/p>",
-        "content": "<p>Establish a secure inner foundation, learn techniques for improving your physical, mental & spiritual hygiene & unleash your life-force. Learn to live in harmony with the things you can't control.<\/p>",
-        "button_text": "View All",
-        "button_link": "shopify:\/\/collections\/courses",
         "image_ratio": "adapt",
         "image_shape": "default",
         "show_secondary_image": false,

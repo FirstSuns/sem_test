@@ -5,183 +5,313 @@
   <div class="page-width">
     <div class="counter-text">
       {% if section.settings.sub_title != blank %}
-      <h3>{{ section.settings.sub_title }}</h3>
+        <h3>{{ section.settings.sub_title }}</h3>
       {% endif %}
       {% if section.settings.title != blank %}
-      <h2>{{ section.settings.title }}</h2>
+        <h2>{{ section.settings.title }}</h2>
       {% endif %}
       <div class="counter-text-number-section">
         {% for block in section.blocks %}
           {% if block.type == 'Count' %}
-        <div class="counter-text-number">
-            {% if block.settings.number != blank %}
-         
-            
-{% assign num_list = block.settings.number | times: 3 %}
-          <div class="progress blue">
-<!--                  <span class="progress-left">
-                                   <span class="progress-bar"></span>
-                 </span>
-                 <span class="progress-right">
-                                   <span class="progress-bar"></span>
-                 </span> -->
-            <span class="progress-right">
-            <svg class="vue-sweet-progress-circle" viewBox="0 0 100 100" gapPosition="top"><path d="M 50,50 m 0,-47 a 47,47 0 1 1 0,94 a 47,47 0 1 1 0,-94" stroke="#ebebeb" stroke-width="6" fill-opacity="0" style="stroke-dasharray: 295.31px, 295.31px; stroke-dashoffset: 0px; transition: stroke-dashoffset 0.3s ease 0s, stroke-dasharray 0.3s ease 0s, stroke 0.3s ease 0s;"></path><path d="M 50,50 m 0,-47 a 47,47 0 1 1 0,94 a 47,47 0 1 1 0,-94" stroke="#FF9416" stroke-width="6" fill-opacity="0" style="stroke-dasharray: {{ num_list }}px, 295.31px;stroke-dashoffset: 0px;transition: stroke-dashoffset 0.3s ease 0s, stroke-dasharray 0.3s ease 0s, stroke 0.3s ease 0s;"></path></svg>
-            </span>   
-              <div class="progress-value">{{ block.settings.number }}%</div>
-               </div>
-
-
-          
+            <div class="counter-text-number">
+              {% if block.settings.number != blank %}
+                {% assign num_list = block.settings.number | times: 3 %}
+                <div class="progress blue">
+                  <!--
+                    <span class="progress-left">
+                                      <span class="progress-bar"></span>
+                    </span>
+                    <span class="progress-right">
+                                      <span class="progress-bar"></span>
+                    </span>
+                  -->
+                  <span class="progress-right">
+                    <svg class="vue-sweet-progress-circle" viewBox="0 0 100 100" gapPosition="top">
+                      <path d="M 50,50 m 0,-47 a 47,47 0 1 1 0,94 a 47,47 0 1 1 0,-94" stroke="#ebebeb" stroke-width="6" fill-opacity="0" style="stroke-dasharray: 295.31px, 295.31px; stroke-dashoffset: 0px; transition: stroke-dashoffset 0.3s ease 0s, stroke-dasharray 0.3s ease 0s, stroke 0.3s ease 0s;"></path><path d="M 50,50 m 0,-47 a 47,47 0 1 1 0,94 a 47,47 0 1 1 0,-94" stroke="#FF9416" stroke-width="6" fill-opacity="0" style="stroke-dasharray: {{ num_list }}px, 295.31px;stroke-dashoffset: 0px;transition: stroke-dashoffset 0.3s ease 0s, stroke-dasharray 0.3s ease 0s, stroke 0.3s ease 0s;"></path>
+                    </svg>
+                  </span>
+                  <div class="progress-value">{{ block.settings.number }}%</div>
+                </div>
               {% endif %}
-            {% if block.settings.title != blank %}
-          <p>{{ block.settings.title }}</p>
-            {% endif %}
-        </div>
-            {% endif %}
-          {% endfor %}
+              {% if block.settings.title != blank %}
+                <p>{{ block.settings.title }}</p>
+              {% endif %}
+            </div>
+          {% endif %}
+        {% endfor %}
       </div>
       <div class="counter-text-number-box">
         {% for block in section.blocks %}
           {% if block.type == 'Text' %}
-        <div class="counter-text-number-wrap">
-          {% if block.settings.number != blank %}
-         
-  
-          
-<progress id="file" value="{{ block.settings.number }}" max="100"   > {{ block.settings.number }} </progress>
-       
-          <h5>{{ block.settings.number }}%</h5>
+            <div class="counter-text-number-wrap">
+              {% if block.settings.number != blank %}
+                <progress id="file" value="{{ block.settings.number }}" max="100">{{ block.settings.number }}</progress>
+
+                <h5>{{ block.settings.number }}%</h5>
               {% endif %}
-            {% if block.settings.desc != blank %}
-          <p>{{ block.settings.desc }}</p>
-            {% endif %}
-        </div>
-            {% endif %}
-          {% endfor %}
+              {% if block.settings.desc != blank %}
+                <p>{{ block.settings.desc }}</p>
+              {% endif %}
+            </div>
+          {% endif %}
+        {% endfor %}
       </div>
     </div>
     <div class="ready-not-ready-section">
       <div class="ready-not-ready-wrap">
         {% if section.settings.ready_title != blank %}
-        <h2>{{ section.settings.ready_title }}</h2>
+          <h2>{{ section.settings.ready_title }}</h2>
         {% endif %}
         {% if section.settings.ready_sub_title != blank %}
-        <h3>{{ section.settings.ready_sub_title }}</h3>
+          <h3>{{ section.settings.ready_sub_title }}</h3>
         {% endif %}
         {{ section.settings.ready_desc }}
       </div>
       <div class="ready-not-ready-wrap">
         {% if section.settings.not_ready_title != blank %}
-        <h2>{{ section.settings.not_ready_title }}</h2>
+          <h2>{{ section.settings.not_ready_title }}</h2>
         {% endif %}
         {% if section.settings.not_ready_sub_title != blank %}
-        <h3>{{ section.settings.not_ready_sub_title }}</h3>
+          <h3>{{ section.settings.not_ready_sub_title }}</h3>
         {% endif %}
         {{ section.settings.not_ready_desc }}
+      </div>
+    </div>
+    <div class="journey-newsletter-section">
+      {% if section.settings.newsletter_bg_image != blank %}
+        <figure class="fig-mm">
+          {% assign image = section.settings.newsletter_bg_image %}
+          <img
+            srcset="
+              {%- if image.width >= 165 -%}{{ image | image_url: width: 165 }} 165w,{%- endif -%}
+              {%- if image.width >= 360 -%}{{ image | image_url: width: 360 }} 360w,{%- endif -%}
+              {%- if image.width >= 533 -%}{{ image | image_url: width: 533 }} 533w,{%- endif -%}
+              {%- if image.width >= 720 -%}{{ image | image_url: width: 720 }} 720w,{%- endif -%}
+              {%- if image.width >= 940 -%}{{ image | image_url: width: 940 }} 940w,{%- endif -%}
+              {%- if image.width >= 1066 -%}{{ image | image_url: width: 2066 }} 2066w,{%- endif -%}
+              {{ image | image_url }} {{ image.width }}w
+            "
+            src="{{ image | image_url: 'master' }}"
+            sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 130 | divided_by: 4 }}px, (min-width: 990px) calc((100vw - 130px) / 4), (min-width: 750px) calc((100vw - 120px) / 3), calc((100vw - 35px) / 2)"
+            alt="{{ image.alt | escape }}"
+            {% unless lazy_load == false %}
+              loading="lazy"
+            {% endunless %}
+            width="{{ image.width }}"
+            height="{{ image.height }}"
+          >
+          {% comment %}
+            {%- liquid
+              assign image_height = section.settings.newsletter_bg_image.width | divided_by: section.settings.newsletter_bg_image.aspect_ratio
+              assign sizes = full_width
+            -%}
+            {{
+              section.settings.newsletter_bg_image
+              | image_url: width: 3840
+              | image_tag:
+                loading: 'lazy',
+                width: section.settings.newsletter_bg_image.width,
+                height: image_height,
+                sizes: sizes,
+                widths: widths
+            }}
+          {% endcomment %}
+        </figure>
+      {% endif %}
+      <div class="journey-newsletter-part">
+        <div class="journey-newsletter-part-inner">
+          {% if section.settings.newsletter_icon != blank %}
+            <figure>
+              {% assign image = section.settings.newsletter_icon %}
+              <img
+                srcset="
+                  {%- if image.width >= 165 -%}{{ image | image_url: width: 165 }} 165w,{%- endif -%}
+                  {%- if image.width >= 360 -%}{{ image | image_url: width: 360 }} 360w,{%- endif -%}
+                  {%- if image.width >= 533 -%}{{ image | image_url: width: 533 }} 533w,{%- endif -%}
+                  {%- if image.width >= 720 -%}{{ image | image_url: width: 720 }} 720w,{%- endif -%}
+                  {%- if image.width >= 940 -%}{{ image | image_url: width: 940 }} 940w,{%- endif -%}
+                  {%- if image.width >= 1066 -%}{{ image | image_url: width: 2066 }} 2066w,{%- endif -%}
+                  {{ image | image_url }} {{ image.width }}w
+                "
+                src="{{ image | image_url: 'master' }}"
+                sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 130 | divided_by: 4 }}px, (min-width: 990px) calc((100vw - 130px) / 4), (min-width: 750px) calc((100vw - 120px) / 3), calc((100vw - 35px) / 2)"
+                alt="{{ image.alt | escape }}"
+                {% unless lazy_load == false %}
+                  loading="lazy"
+                {% endunless %}
+                width="{{ image.width }}"
+                height="{{ image.height }}"
+              >
+              {% comment %}
+                {%- liquid
+                  assign image_height = section.settings.newsletter_icon.width | divided_by: section.settings.newsletter_icon.aspect_ratio
+                  assign sizes = full_width
+                -%}
+                {{
+                  section.settings.newsletter_icon
+                  | image_url: width: 3840
+                  | image_tag:
+                    loading: 'lazy',
+                    width: section.settings.newsletter_icon.width,
+                    height: image_height,
+                    sizes: sizes,
+                    widths: widths
+                }}
+              {% endcomment %}
+            </figure>
+          {% endif %}
+          <div class="journey-newsletter-desc">
+            {% if section.settings.newsletter_title != blank %}
+              <h4>{{ section.settings.newsletter_title }}</h4>
+            {% endif %}
+          </div>
+          <div class="journey-newsletter-btn">
+            {% if section.settings.newletter_btn_01 != blank and section.settings.newletter_link_01 != blank %}
+              <a href="{{ section.settings.newletter_link_01 }}">{{ section.settings.newletter_btn_01 }}</a>
+            {% endif %}
+            {% if section.settings.newletter_btn_02 != blank and section.settings.newletter_link_02 != blank %}
+              <a href="{{ section.settings.newletter_link_02 }}">{{ section.settings.newletter_btn_02 }}</a>
+            {% endif %}
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </div>
 
-<style>
-
-</style>
-
 {% schema %}
-  {
-    "name": "Counter Text",
-    "settings": [
-      {
-        "type": "textarea",
-        "id": "title",
-        "label": "Heading"
-      },
-      {
-        "type": "text",
-        "id": "sub_title",
-        "label": "Sub Heading"
-      },
-      {
-        "type": "header",
-        "content": "Ready"
-      },
-      {
-        "type": "text",
-        "id": "ready_title",
-        "label": "Heading"
-      },
-      {
-        "type": "text",
-        "id": "ready_sub_title",
-        "label": "Sub Heading"
-      },
-      {
-        "type": "richtext",
-        "id": "ready_desc",
-        "label": "Description"
-      },
-      {
-        "type": "header",
-        "content": "Not Ready"
-      },
-      {
-        "type": "text",
-        "id": "not_ready_title",
-        "label": "Heading"
-      },
-      {
-        "type": "text",
-        "id": "not_ready_sub_title",
-        "label": "Sub Heading"
-      },
-      {
-        "type": "richtext",
-        "id": "not_ready_desc",
-        "label": "Description"
-      }
-    ],
-    "blocks": [
-      {
-        "type": "Count",
-        "name": "Count",
-        "settings": [
-          {
-            "type": "text",
-            "id": "number",
-            "label": "Number"
-          },
-          {
-            "type": "text",
-            "id": "title",
-            "label": "Heading"
-          }
-        ]
-      },
-      {
-        "type": "Text",
-        "name": "Text",
-        "settings": [
-          {
-            "type": "text",
-            "id": "number",
-            "label": "Number"
-          },
-          {
-            "type": "textarea",
-            "id": "desc",
-            "label": "Description"
-          }
-        ]
-      }
-    ],
-    "presets": [
-      {
-        "name": "Counter Text",
-        "category": "Counter Text"
-      }
-    ]
-  }
+{
+  "name": "Counter Text",
+  "settings": [
+    {
+      "type": "textarea",
+      "id": "title",
+      "label": "Heading"
+    },
+    {
+      "type": "text",
+      "id": "sub_title",
+      "label": "Sub Heading"
+    },
+    {
+      "type": "header",
+      "content": "Ready"
+    },
+    {
+      "type": "text",
+      "id": "ready_title",
+      "label": "Heading"
+    },
+    {
+      "type": "text",
+      "id": "ready_sub_title",
+      "label": "Sub Heading"
+    },
+    {
+      "type": "richtext",
+      "id": "ready_desc",
+      "label": "Description"
+    },
+    {
+      "type": "header",
+      "content": "Not Ready"
+    },
+    {
+      "type": "text",
+      "id": "not_ready_title",
+      "label": "Heading"
+    },
+    {
+      "type": "text",
+      "id": "not_ready_sub_title",
+      "label": "Sub Heading"
+    },
+    {
+      "type": "richtext",
+      "id": "not_ready_desc",
+      "label": "Description"
+    },
+    {
+      "type": "header",
+      "content": "Newsletter"
+    },
+    {
+      "type": "image_picker",
+      "id": "newsletter_bg_image",
+      "label": "Newsletter Background Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "newsletter_icon",
+      "label": "Newsletter Icon"
+    },
+    {
+      "type": "text",
+      "id": "newsletter_title",
+      "label": "Newsletter Heading"
+    },
+    {
+      "type": "text",
+      "id": "newletter_btn_01",
+      "label": "Newsletter Button 01"
+    },
+    {
+      "type": "url",
+      "id": "newletter_link_01",
+      "label": "Newsletter Link 01"
+    },
+    {
+      "type": "text",
+      "id": "newletter_btn_02",
+      "label": "Newsletter Button 02"
+    },
+    {
+      "type": "url",
+      "id": "newletter_link_02",
+      "label": "Newsletter Link 02"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "Count",
+      "name": "Count",
+      "settings": [
+        {
+          "type": "text",
+          "id": "number",
+          "label": "Number"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Heading"
+        }
+      ]
+    },
+    {
+      "type": "Text",
+      "name": "Text",
+      "settings": [
+        {
+          "type": "text",
+          "id": "number",
+          "label": "Number"
+        },
+        {
+          "type": "textarea",
+          "id": "desc",
+          "label": "Description"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Counter Text",
+      "category": "Counter Text"
+    }
+  ]
+}
 {% endschema %}
 
 {% stylesheet %}

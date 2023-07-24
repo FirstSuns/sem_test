@@ -3,6 +3,7 @@
 
 {{ 'component-slider.css' | asset_url | stylesheet_tag }}
 {{ 'template-collection.css' | asset_url | stylesheet_tag }}
+{{ 'np-style.css' | asset_url | stylesheet_tag }}
 {% if section.settings.image_shape == 'blob' %}
   {{ 'mask-blobs.css' | asset_url | stylesheet_tag }}
 {%- endif -%}
@@ -13,7 +14,7 @@
   <script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
 {%- endif -%}
 <div class="np-catalog-section">
-  <div class="np-page-width">
+  <div class="np-page-width page-width">
     <div class="np-catalog-section-inner">
       <div class="np-catalog-widget-top">
         {% unless section.settings.title == blank %}

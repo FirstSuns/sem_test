@@ -1,0 +1,27 @@
+{
+  "sections": {
+    "main": {
+      "type": "np-quiz-process",
+      "blocks": {
+        "506b8cb5-f2fa-4fb7-8a1f-c39a07ca4b3e": {
+          "type": "Question",
+          "settings": {
+            "qustion": "Example question goes here.",
+            "answer1": "Answer #1",
+            "answer2": "Answer #2"
+          }
+        }
+      },
+      "block_order": [
+        "506b8cb5-f2fa-4fb7-8a1f-c39a07ca4b3e"
+      ],
+      "settings": {
+        "heading": "<p>Question 1\/7<\/p>",
+        "sub_heading": "<p>Example subheading goes here (Optional).<\/p>"
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}
