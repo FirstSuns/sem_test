@@ -39,16 +39,11 @@
     <div id="text-fade-content"><div class="banner-block"></div></div>
   </div>
   <div id="hidden-content">
-  {% for block in section.blocks %}
+    {% for block in section.blocks %}
       <div class="banner-block">
-        <div class="block-headline">{{ block.settings.headline }}</div>
-        <div class="block-paragraph">{{ block.settings.paragraph }}</div>
+        <div class="block-headline" style="opacity:0;visibility:hidden">{{ block.settings.headline }}</div>
+        <div class="block-paragraph" style="opacity:0;visibility:hidden">{{ block.settings.paragraph }}</div>
       </div>
-  {% endfor %}
+    {% endfor %}
   </div>
 </div>
-
-
-
-
-

@@ -5,6 +5,7 @@
       "settings": {
         "background_video": "shopify:\/\/files\/videos\/1689098505271_a703a0-3.myshopify.com_c77f0d52063d2c44fdfb63b3f750397c.mp4",
         "video_link": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+        "enable_video_looping": true,
         "background_image": "shopify:\/\/shop_images\/main-banner.jpg",
         "headline_text": "Unlock Your Highest Potential: Inner Work that <span>Actually Works.<\/span>",
         "desc": "Sub-headline filler content. Locavore chill wave vinyl banh mi, occupy fanny pack pop-up roof party. Typewriter ugh tofu, flexitarian.",
@@ -119,8 +120,7 @@
         "ae056354-ac70-4216-a799-9d0f8a01151c"
       ],
       "settings": {
-        "bg_image": "shopify:\/\/shop_images\/bg.jpg",
-        "image": "shopify:\/\/shop_images\/hand.png",
+        "bg_image": "shopify:\/\/shop_images\/middle_fdce06ae-531f-48c8-9675-fbd5437b9643.jpg",
         "title": "Start Here.",
         "sub_title": "Let’s get you fitted into something nice. How would you like to begin?",
         "desc": "Either way, you can always modify them however you’d like before you begin, and you can come back to make changes at any time in the future too.”"

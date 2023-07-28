@@ -45,7 +45,15 @@
           {% if block.type == 'Text' %}
             <div class="counter-text-number-wrap">
               {% if block.settings.number != blank %}
-                <progress id="file" value="{{ block.settings.number }}" max="100">{{ block.settings.number }}</progress>
+                <div
+                  class="progress-line"
+                  id="file-{{ forloop.index }}"
+                  value="{{ block.settings.number }}"
+                  max="100"
+                ></div>
+                <style>
+                  #file-{{ forloop.index }}:after{width:{{ block.settings.number }}%;}
+                </style>
 
                 <h5>{{ block.settings.number }}%</h5>
               {% endif %}

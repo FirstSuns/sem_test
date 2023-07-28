@@ -72,6 +72,7 @@
 }
   .icon-bg-text  .icon-bg-text-part {
     width: 45%;
+    margin:0 0 0 auto;
 }
   .icon-bg-text .icon-bg-text-img {
     width: 55%;
@@ -158,6 +159,7 @@
     font-size: 38px;
     line-height: 60px;
 }
+  .icon-bg-text .icon-bg-text-part{width:65%;}
 }
 
 @media only screen and (max-width: 767px) {
@@ -175,6 +177,7 @@
   .icon-bg-text .icon-bg-text-part h3{font-size:18px;line-height:26px;}
   .icon-bg-text .icon-bg-text-part p{font-size:14px;line-height:20px;}
   .icon-bg-text .icon-bg-text-part .icon-bg-text-wrap h4{font-size:18px;}
+  .icon-bg-text .icon-bg-text-part{width:100%;}
 }
 
 

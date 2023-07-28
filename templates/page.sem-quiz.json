@@ -8,7 +8,9 @@
           "settings": {
             "title": "A. The Quiz",
             "content": "Take the 7 question quiz to automatically generate a tailored program based on your needs",
-            "image": "shopify:\/\/shop_images\/Group_10.png",
+            "image": "shopify:\/\/shop_images\/banner.png",
+            "normal_image": "shopify:\/\/shop_images\/icon01.png",
+            "hover_image": "shopify:\/\/shop_images\/icon01-y.png",
             "link": "shopify:\/\/pages\/catalog"
           }
         },
@@ -17,7 +19,9 @@
           "settings": {
             "title": "B. Packages",
             "content": "View my selection of pre-fabricated packages and see if theres a fit.",
-            "image": "shopify:\/\/shop_images\/Image_3.png",
+            "image": "shopify:\/\/shop_images\/banner.png",
+            "normal_image": "shopify:\/\/shop_images\/icon03.png",
+            "hover_image": "shopify:\/\/shop_images\/icon03-y.png",
             "link": "shopify:\/\/pages\/catalog"
           }
         },
@@ -26,7 +30,9 @@
           "settings": {
             "title": "C. Do it Yourself",
             "content": "See all available lessons and materials and build a path thats perfect for you.",
-            "image": "shopify:\/\/shop_images\/Image5.png",
+            "image": "shopify:\/\/shop_images\/banner.png",
+            "normal_image": "shopify:\/\/shop_images\/icon02.png",
+            "hover_image": "shopify:\/\/shop_images\/icon02-y.png",
             "link": "shopify:\/\/pages\/catalog"
           }
         }

@@ -26,3 +26,28 @@ $(document).ready(function(){
             $('.video-main iframe').get(0).pause();
         }
   });
+
+$(window).on('load', function(){
+  var win_link = window.location.href;
+  let searchParams = new URLSearchParams(window.location.search)
+  var v = localStorage.getItem('email'); 
+  console.log('vvvv',v)
+if (v == 'true')
+{
+  console.log('iffffffff');
+  $('.course-curriculum-section').show();
+}else{
+  if(searchParams.has('customer_posted')){
+    console.log('iff')
+    localStorage.setItem("email", "true");
+localStorage.getItem("email");
+    $('.course-curriculum-section').show();
+  }else{
+    console.log('elsee');
+    $('.course-curriculum-section').hide();
+  }
+}
+})
+
+
+

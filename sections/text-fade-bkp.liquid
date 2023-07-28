@@ -1,0 +1,327 @@
+<style>
+    #hidden-content {
+    display: none;
+  }
+    #text-fade-container{display:block;}
+    #text-fade-container .banner-block{opacity:1 !important;visibility:visible !important;}
+
+  .testBox {
+    border: 1px solid red;
+    height: 100vh;
+    width: 100vw;
+  }
+
+  #text-fade-container {
+    position: relative;
+  }
+
+  #text-fade-content {
+    position: fixed;
+    width: 100%;
+    top: 40%;
+    text-align: center;
+  }
+
+  .banner-section {
+    display: block;
+  }
+
+  .banner-block {
+    transition: opacity 0.5s ease-in-out;
+    width:100%;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+    max-width:1180px;
+    margin:0 auto;
+    padding:0 15px;
+    align-items:center;
+    height:40vh;
+  }
+    .banner-block .block-headline{
+      width:30%;
+      text-align:left;
+      font-family: var(--primary-font);
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 35px;
+      color:#fff;
+    }
+    .banner-block .block-headline span{
+      font-family: var(--primary-font);
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 70px;
+      color:#FF9416;
+      display:block;
+      padding:0 0 10px;
+    }
+    .banner-block .block-paragraph{
+      width:55%;
+      text-align:left;
+    }
+
+    .banner-block .block-paragraph p{
+      font-family: var(--primary-font);
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 35px;
+      text-align:left;
+      color:#fff;
+      margin:0;
+    }
+    .banner-block .block-paragraph p strong{
+      color:#FF9416;
+    }
+
+  .block-number {
+    width: 50px;
+    height: 50px;
+    background-color: #f2f2f2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+  }
+
+  .block-content {
+    flex: 1;
+    padding: 0 20px;
+  }
+
+  .block-content h2 {
+    margin: 0;
+    font-size: 24px;
+    line-height: 1.2;
+  }
+
+
+
+  @media screen and (min-width: 768px) {
+    .banner-section {
+      flex-direction: column;
+    }
+
+    .banner-block {
+    }
+
+    .block-number {
+      margin-right: 20px;
+    }
+
+    .block-content {
+      text-align: left;
+    }
+  }
+
+  @media(max-width:1366px){
+    .banner-block .block-paragraph{width:65%;}
+    .banner-block .block-paragraph p,.banner-block .block-headline{font-size:20px;line-height:30px;}
+    .banner-block .block-headline span{font-size:38px;line-height:1.1;}
+  }
+
+  @media(max-width:991px){
+    .banner-block .block-paragraph p,.banner-block .block-headline{font-size:18px;line-height:24px;}
+    .banner-block .block-headline span{font-size:32px;}
+  }
+
+  @media(max-width:767px){
+    .banner-block .block-paragraph p,.banner-block .block-headline{font-size:16px;line-height:22px;}
+    .banner-block .block-headline span{font-size:28px;}
+  }
+
+  @media screen and (max-width: 575px) {
+  #text-fade-container .banner-block {
+      flex-direction: column;
+      height: auto;
+    gap: 22px;
+  }
+    .banner-block .block-headline {
+      width: 100%;
+  }
+    .banner-block .block-paragraph {
+      width: 100%;
+  }
+  .banner-block .block-paragraph p,.banner-block .block-headline{font-size:14px;line-height:20px;}
+    .banner-block .block-headline span{font-size:24px;}
+  }
+</style>
+<script>
+
+    $(window).on('load', function(){
+      setTimeout(function(){
+        var bannerBlocks = document.querySelectorAll('.banner-block')
+    var blockCount = bannerBlocks.length;
+        var w_width_1 = $('#text-fade-top').height() / 4;
+        var wid_l = w_width_1 / 2
+
+      var inner_h = $('#text-fade-top').offset().top - 200;
+        var inr_h = $('.full-screen-video-banner').innerHeight() / 2;
+        var i_h = $('#text-fade-top').innerHeight()+inr_h+300;
+          // var w_width_1 = $('#text-fade-top').height() / blockCount;
+          // var w_width_m = w_width_1+inner_h;
+          // var w_width_2 = w_width_1+w_width_1+inner_h;
+          // var w_width_3 = w_width_1+w_width_1+w_width_1+inner_h;
+          // var w_width_4 = w_width_1+w_width_1+w_width_1+w_width_1+inner_h - 100;
+          // var w_width_5 = w_width_1+w_width_1+w_width_1+w_width_1+w_width_1+inner_h - 200;
+
+
+
+          var w_width_m = w_width_1+inner_h-wid_l;
+
+          var w_width_2 = w_width_1+w_width_1+inner_h;
+          var w_width_3 = w_width_1+w_width_1+w_width_1+inner_h;
+          var w_width_4 = w_width_1+w_width_1+w_width_1+w_width_1+inner_h - wid_l;
+          var w_width_5 = w_width_1+w_width_1+w_width_1+w_width_1+w_width_1+inner_h - w_width_1;
+
+
+          $(window).scroll(function(){
+          if($(this).scrollTop()<=inr_h){
+            $('#text-fade-container .banner-block').html('');
+          }else if($(this).scrollTop()>=inner_h && $(this).scrollTop()<=w_width_m){
+              var htm = $('#hidden-content .banner-block:nth-child(1)').html()
+              $('#text-fade-container .banner-block').html(htm);
+              $('.banner-block:nth-child(1)').css({"opacity":"1","visibility":"visible"});
+              $('.banner-block:nth-child(2)').css({"opacity":"0","visibility":"hidden"});
+              $('.banner-block:nth-child(3)').css({"opacity":"0","visibility":"hidden"});
+              $('.banner-block:nth-child(4)').css({"opacity":"0","visibility":"hidden"});
+            }else if($(this).scrollTop()>=w_width_m && $(this).scrollTop()<=w_width_2){
+              var htm = $('#hidden-content .banner-block:nth-child(2)').html()
+              $('#text-fade-container .banner-block').html(htm);
+              $('.banner-block:nth-child(2)').css({"opacity":"1","visibility":"visible"});
+              $('.banner-block:nth-child(1)').css({"opacity":"0","visibility":"hidden"});
+              $('.banner-block:nth-child(3)').css({"opacity":"0","visibility":"hidden"});
+              $('.banner-block:nth-child(4)').css({"opacity":"0","visibility":"hidden"});
+            }else if($(this).scrollTop()>=w_width_2 && $(this).scrollTop()<=w_width_3){
+              var htm = $('#hidden-content .banner-block:nth-child(3)').html()
+              $('#text-fade-container .banner-block').html(htm);
+              $('.banner-block:nth-child(3)').css({"opacity":"1","visibility":"visible"});
+              $('.banner-block:nth-child(2)').css({"opacity":"0","visibility":"hidden"});
+              $('.banner-block:nth-child(1)').css({"opacity":"0","visibility":"hidden"});
+              $('.banner-block:nth-child(4)').css({"opacity":"0","visibility":"hidden"});
+            }else if($(this).scrollTop()>=w_width_3 && $(this).scrollTop()<=w_width_4){
+              var htm = $('#hidden-content .banner-block:nth-child(4)').html()
+              $('#text-fade-container .banner-block').html(htm);
+              $('.banner-block:nth-child(4)').css({"opacity":"1","visibility":"visible"});
+              $('.banner-block:nth-child(2)').css({"opacity":"0","visibility":"hidden"});
+              $('.banner-block:nth-child(3)').css({"opacity":"0","visibility":"hidden"});
+              $('.banner-block:nth-child(1)').css({"opacity":"0","visibility":"hidden"});
+            }else if($(this).scrollTop()>=w_width_4 && $(this).scrollTop()<=i_h){
+              var htm = $('#hidden-content .banner-block:nth-child(5)').html()
+              $('#text-fade-container .banner-block').html('');
+              $('.banner-block:nth-child(1)').css({"opacity":"0","visibility":"hidden"});
+              $('.banner-block:nth-child(2)').css({"opacity":"0","visibility":"hidden"});
+              $('.banner-block:nth-child(3)').css({"opacity":"0","visibility":"hidden"});
+              $('.banner-block:nth-child(4)').css({"opacity":"1","visibility":"visible"});
+            }
+          });
+              },100)
+        })
+
+
+  <!------ Fixed Layout ------->
+  function debounce(e, t, n) {
+    var a;
+    return function () {
+      var r = this,
+        i = arguments,
+        o = function () {
+          a = null, n || e.apply(r, i)
+        },
+        s = n && !a;
+      clearTimeout(a), a = setTimeout(o, t || 200), s && e.apply(r, i)
+    }
+  }
+
+  const texts = [' ']
+
+  const stepSize = window.innerHeight
+
+  function setText(contentTag, text) {
+    contentTag.innerHTML = text
+  }
+
+  function getIndex(distance, stepSize) {
+    return parseInt(distance / stepSize)
+  }
+
+  function getText(texts, index) {
+    return texts[index] ? texts[index] : ' '
+  }
+
+  function changeText(contentTag, stepSize, texts) {
+      const distance = window.scrollY
+      const index = getIndex(distance, stepSize)
+      const text = getText(texts, index)
+      const bannerTop = document.getElementById('text-fade-top').getBoundingClientRect().top
+      setText(contentTag, text)
+  }
+
+  function setInittext(contentTag, texts) {
+    const text = getText(texts, 0)
+    setText(contentTag, text)
+  }
+
+  window.onload = function() {
+    var container = document.getElementById('text-fade-container')
+    var contentTag = document.getElementById('text-fade-content')
+    var bannerBlocks = document.querySelectorAll('.banner-block')
+    var blockCount = (bannerBlocks.length + -1) * 100
+    container.style.height = blockCount + 'vh'
+    console.log('container.style.height = blockCount',container.style.height = blockCount + 'vh')
+    var bannerBlocks = document.getElementsByClassName('banner-block');
+    for (var i = 0; i < bannerBlocks.length; i++) {
+      var element = bannerBlocks[i];
+     // texts.push(element.outerHTML);
+    }
+    console.log(texts); // Output the 'texts' array to the console
+  //  window.addEventListener('scroll', debounce(() => { changeText(contentTag, stepSize, texts) }, 200))
+  }
+</script>
+
+{% schema %}
+{
+  "name": "Text Fade",
+  "settings": [],
+  "presets": [
+    {
+      "name": "Text Fade Section",
+      "category": "Custom"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "banner_block",
+      "name": "Banner Block",
+      "settings": [
+        {
+          "type": "textarea",
+          "label": "Headline",
+          "id": "headline",
+          "default": "Your Headline"
+        },
+        {
+          "type": "richtext",
+          "label": "Paragraph",
+          "id": "paragraph",
+          "default": "<p>Your paragraph text</p>"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
+
+<div id="text-fade-top" class="banner-section">
+  <div id="text-fade-container">
+    <div id="text-fade-content"><div class="banner-block"></div></div>
+  </div>
+  <div id="hidden-content">
+    {% for block in section.blocks %}
+      <div class="banner-block">
+        <div class="block-headline">{{ block.settings.headline }}</div>
+        <div class="block-paragraph">{{ block.settings.paragraph }}</div>
+      </div>
+    {% endfor %}
+  </div>
+</div>

@@ -31,7 +31,7 @@
     grid-template-columns: 1fr 1fr;
     margin-top: 70px;
     padding-bottom: 70px;
-    margin-bottom: 100px;
+    margin-bottom: 250px;
     position: relative;
 }
 .sem-advantage-part h4 {
@@ -90,6 +90,7 @@
   .sem-advantage-part {
     gap: 30px;
 }
+  .sem-advantage-part{margin-bottom:150px;}
 }
 
 @media only screen and (max-width: 749px) {
@@ -99,4 +100,5 @@
     padding-bottom: 50px;
     margin-bottom: 50px;
 }
+  .sem-advantage-part{margin-bottom:80px;}
 }
