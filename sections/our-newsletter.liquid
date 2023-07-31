@@ -3,7 +3,7 @@
 <div class="our-newsletter-section">
   {% if section.settings.bg_image != blank %}
     <figure class="news-fig">
-      {% assign image = section.settings.bg_image %}
+      {% comment %} {% assign image = section.settings.bg_image %}
       <img
         srcset="
           {%- if image.width >= 165 -%}{{ image | image_url: width: 165 }} 165w,{%- endif -%}
@@ -22,12 +22,12 @@
         {% endunless %}
         width="{{ image.width }}"
         height="{{ image.height }}"
-      >
-      {% comment %}
-            {%- liquid
-            assign image_height = section.settings.bg_image.width | divided_by: section.settings.bg_image.aspect_ratio
-              assign sizes = full_width
-          -%}
+      > {% endcomment %}
+      
+        {%- liquid
+          assign image_height = section.settings.bg_image.width | divided_by: section.settings.bg_image.aspect_ratio
+            assign sizes = full_width
+        -%}
         {{
             section.settings.bg_image
             | image_url: width: 3840
@@ -38,7 +38,7 @@
               sizes: sizes,
               widths: widths
           }}
-      {% endcomment %}
+      
     </figure>
   {% endif %}
   <div class="page-width">

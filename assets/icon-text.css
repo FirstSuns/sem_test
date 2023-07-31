@@ -167,6 +167,9 @@
     padding: 50px 20px;
     flex-wrap: wrap;
 }
+  .icon-bg-text.fs-bg-sec{
+    background-size: cover !important;
+  }
   .icon-bg-text .icon-bg-text-img , .icon-bg-text .icon-bg-text-part {
     width: 100%;
 }
@@ -230,8 +233,8 @@
     font-size: 34px;
     font-style: normal;
     font-weight: 400;
-    margin: 100px 0;
-    line-height: 50px;
+    margin: 300px 0 100px 0;
+    line-height: 50px; 
 }
   .icon-text-journey-section p.main-p span {
     color: #FF9416;
