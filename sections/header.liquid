@@ -346,7 +346,7 @@
             -%} 
          
           </span>
-          <span class="small-hide"> Sign In</span>
+          <span class="small-hide" {%- if customer -%} style="color: #FF9416;" {%- endif -%}> {%- if customer -%} Acount {%- else -%} Sign In {%- endif -%}</span>
         </a>
       {%- endif -%}
 

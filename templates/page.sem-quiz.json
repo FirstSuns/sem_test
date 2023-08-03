@@ -11,7 +11,7 @@
             "image": "shopify:\/\/shop_images\/banner.png",
             "normal_image": "shopify:\/\/shop_images\/icon01.png",
             "hover_image": "shopify:\/\/shop_images\/icon01-y.png",
-            "link": "shopify:\/\/pages\/catalog"
+            "link": "shopify:\/\/pages\/the-quiz"
           }
         },
         "493295de-21d9-4005-a9c5-1335341c32b7": {
@@ -22,7 +22,7 @@
             "image": "shopify:\/\/shop_images\/banner.png",
             "normal_image": "shopify:\/\/shop_images\/icon03.png",
             "hover_image": "shopify:\/\/shop_images\/icon03-y.png",
-            "link": "shopify:\/\/pages\/catalog"
+            "link": "shopify:\/\/pages\/sem-packages"
           }
         },
         "853a833d-f881-40ad-a34d-f907367030e1": {
@@ -33,7 +33,7 @@
             "image": "shopify:\/\/shop_images\/banner.png",
             "normal_image": "shopify:\/\/shop_images\/icon02.png",
             "hover_image": "shopify:\/\/shop_images\/icon02-y.png",
-            "link": "shopify:\/\/pages\/catalog"
+            "link": "shopify:\/\/pages\/bundle-builder"
           }
         }
       },

@@ -1,0 +1,115 @@
+{% comment %} {{ 'np-style.css' | asset_url | stylesheet_tag }} {% endcomment %}
+
+
+<div class="np-tool-testimonials">
+  <div class="page-width np-page-width">
+      <div class="np-tool-testimonials-top">
+          {% if section.settings.title!=blank %}
+            <div class="np-tool-testimonials-title">
+              {{ section.settings.title }} 
+            </div>
+          {% endif %}   
+      </div>
+      <div class="np-tool-testimonials-bottom">
+        <!--Loop-->
+        {% for block in section.blocks %}
+          <div class="np-tool-testimonials-item">         
+            <div class="np-tool-testimonials-content">
+              {% if block.settings.content!=blank %}
+                <div class="np-tool-testimonials-inner-content">
+                  {{ block.settings.content }}
+                </div>
+              {% endif %}
+              <div class="np-tool-client-content">                
+                  <div class="np-tool-client-img">
+                    {% if block.settings.client_image!=blank %} 
+                      {% assign image_nd = block.settings.client_image %}
+                      <img
+                          srcset="
+                            {%- if image_nd.width >= 165 -%}{{ image_nd | image_url: width: 165 }} 165w,{%- endif -%}
+                            {%- if image_nd.width >= 360 -%}{{ image_nd | image_url: width: 360 }} 360w,{%- endif -%}
+                            {%- if image_nd.width >= 533 -%}{{ image_nd | image_url: width: 533 }} 533w,{%- endif -%}
+                            {%- if image_nd.width >= 720 -%}{{ image_nd | image_url: width: 720 }} 720w,{%- endif -%}
+                            {%- if image_nd.width >= 940 -%}{{ image_nd | image_url: width: 940 }} 940w,{%- endif -%}
+                            {%- if image_nd.width >= 1066 -%}{{ image_nd | image_url: width: 1066 }} 1066w,{%- endif -%}
+                            {{ image_nd | image_url }} {{ image_nd.width }}w
+                          "
+                          src="{{ image_nd | image_url: width: 533 }}"
+                          sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 130 | divided_by: 4 }}px, (min-width: 990px) calc((100vw - 130px) / 4), (min-width: 750px) calc((100vw - 120px) / 3), calc((100vw - 35px) / 2)"
+                          alt=""
+                          class="motion-reduce"
+                          loading="lazy"
+                          width="{{ image_nd.width }}"
+                          height="{{ image_nd.height }}"
+                        >  
+                      {% endif %}   
+                  </div>
+                  <div class="np-tool-client-content-sec">
+                    {% if block.settings.client_name!=blank %}
+                      <div class="np-tool-client-name">
+                        {{ block.settings.client_name }}
+                      </div>
+                    {% endif %}        
+                    {% if block.settings.client_location!=blank %}
+                      <div class="np-tool-client-location">
+                        {{ block.settings.client_location }}
+                      </div>
+                    {% endif %}
+                  </div>                 
+              </div>   
+          </div>          
+        </div>
+      {% endfor %}
+      </div>
+  </div>
+</div>
+
+
+{% schema %}
+  {
+    "name": "SEM Tools Testimonials",
+    "settings": [
+      {
+        "type": "richtext",
+        "id": "title",
+        "label": "Heading"
+      }
+    ],
+    "blocks":[
+      {
+        "type":"Cards",
+        "name":"Cards",
+        "settings":[
+          {
+            "type": "richtext",
+            "id": "content",
+            "label": "Content"
+          },
+          {
+            "type": "text",
+            "id": "client_name",
+            "label": "Client Name"
+          },
+          {
+            "type": "text",
+            "id": "client_location",
+            "label": "Client Location"
+          },
+          {
+            "type": "image_picker",
+            "id": "client_image",
+            "label": "Client Picutre"
+          }
+          
+        ]
+        
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

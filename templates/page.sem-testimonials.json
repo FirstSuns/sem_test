@@ -1,0 +1,297 @@
+{
+  "sections": {
+    "main": {
+      "type": "np-main-testimonials",
+      "blocks": {
+        "8c5d82f5-fdd2-459e-8e1d-a073601229fe": {
+          "type": "List",
+          "settings": {
+            "title": "The reason why I hired you, I'm living right now.",
+            "content": "In this video, we hear how Mariah was able to overcome her struggle to actualize her dreams. In the end, SEM provided a clear plan and the structure she needed to overcome her mental, emotional and spiritual obstacles.",
+            "tag": "",
+            "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+            "filter_type": "2",
+            "cover_image": "shopify:\/\/shop_images\/Image_2.png",
+            "description": "",
+            "enable_video_looping": false
+          }
+        },
+        "55918f44-d1a4-4285-bd46-8b272ab66c77": {
+          "type": "List",
+          "settings": {
+            "title": "This one is deep....",
+            "content": "Out of all of the case-study interviews I did recently, catching up with Diana was by far the most moving & gratifying for me; sharing both laughs & tears... you simply have to watch to understand how profound and personal this kind of transformation is.",
+            "tag": "",
+            "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+            "filter_type": "2",
+            "cover_image": "shopify:\/\/shop_images\/Image_2_bfe181ab-b75d-4dfb-b5b1-8e1173f91447.png",
+            "description": "",
+            "enable_video_looping": false
+          }
+        },
+        "807264e3-bb69-4310-a546-5369428e0289": {
+          "type": "List",
+          "settings": {
+            "title": "I knew right away that I had made the right decision.",
+            "content": "In this video, we hear how Pat was able to overcome his feeling of being lost, without the tools necessary to find his way in life. Hear his experience working with me as he discovered his \"North Star goals\" & the true meaning of purpose in life.",
+            "tag": "",
+            "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+            "filter_type": "2",
+            "cover_image": "shopify:\/\/shop_images\/Image_3_5b640c5e-be34-4bd2-9f38-beaa802ac1b2.png",
+            "description": "",
+            "enable_video_looping": false
+          }
+        },
+        "57e65b52-7381-4c91-8570-df4256360a48": {
+          "type": "List",
+          "settings": {
+            "title": "You were able to help me collapse my timeline of a vision that I thought was gonna happen in 3 or 4 years, in like 3 MONTHS!",
+            "content": "In this video, Marisol tells us what it was like to have me 'in her pocket' during our 3 months of coaching. From one of the darkest periods of her life, through healing her relationship with the inner & outer masculine archetype, all the way to using my 12-minute 'Torus' meditation track to manifest not one but TWO houses on a ranch in Mexico... you simply have to hear it from her!",
+            "tag": "",
+            "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+            "filter_type": "2",
+            "cover_image": "shopify:\/\/shop_images\/Image_2.png",
+            "description": "",
+            "enable_video_looping": false
+          }
+        }
+      },
+      "block_order": [
+        "8c5d82f5-fdd2-459e-8e1d-a073601229fe",
+        "55918f44-d1a4-4285-bd46-8b272ab66c77",
+        "807264e3-bb69-4310-a546-5369428e0289",
+        "57e65b52-7381-4c91-8570-df4256360a48"
+      ],
+      "settings": {
+        "title": "<p>Hear it from my students!<\/p>",
+        "content": "<p>Establish a secure inner foundation, learn techniques for improving your physical, mental & spiritual hygiene & unleash your life-force. Learn to live in harmony with the things you can't control.<\/p>"
+      }
+    },
+    "sem-tools": {
+      "type": "np-sem-tools",
+      "blocks": {
+        "f5b6d009-8fdc-4643-b16d-a5c341b19e2b": {
+          "type": "Cards",
+          "settings": {
+            "content": "<p>“In this video, we hear how Mariah was able to overcome her struggle to actualize her dreams. In the end, SEM provided a clear plan and the structure she needed to overcome her mental, emotional and spiritual obstacles.”<\/p>"
+          }
+        },
+        "89404a12-b5a5-41c5-b974-56cdd9fe9790": {
+          "type": "Cards",
+          "settings": {
+            "content": "<p>“In this video, we hear how Mariah was able to overcome her struggle to actualize her dreams. In the end, SEM provided a clear plan and the structure she needed to overcome her mental, emotional and spiritual obstacles.”<\/p>"
+          }
+        },
+        "c0d48ff3-fe4a-4875-9bd7-588bfafceec4": {
+          "type": "Cards",
+          "settings": {
+            "content": "<p>“Out of all of the case-study interviews I did recently, catching up with Diana was by far the most moving & gratifying for me; sharing both laughs & tears... you simply have to watch to understand how profound and personal this kind of transformation is.”<\/p>"
+          }
+        },
+        "061426b1-02b1-42f9-95d2-5fc08a58963b": {
+          "type": "Cards",
+          "settings": {
+            "content": "<p>“Out of all of the case-study interviews I did recently, catching up with Diana was by far the most moving & gratifying for me; sharing both laughs & tears... you simply have to watch to understand how profound and personal this kind of transformation is.”<\/p>"
+          }
+        },
+        "9e6c2232-8612-420b-ae40-076df4b8eb72": {
+          "type": "Cards",
+          "settings": {
+            "content": "<p>“In this video, we hear how Pat was able to overcome his feeling of being lost, without the tools necessary to find his way in life. Hear his experience working with me as he discovered his \"North Star goals\" & the true meaning of purpose in life.”<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "f5b6d009-8fdc-4643-b16d-a5c341b19e2b",
+        "89404a12-b5a5-41c5-b974-56cdd9fe9790",
+        "c0d48ff3-fe4a-4875-9bd7-588bfafceec4",
+        "061426b1-02b1-42f9-95d2-5fc08a58963b",
+        "9e6c2232-8612-420b-ae40-076df4b8eb72"
+      ],
+      "settings": {
+        "title": "<p>About the SEM tools & resources:<\/p>",
+        "content": "",
+        "package_title": ""
+      }
+    },
+    "more-testimonail": {
+      "type": "np-main-testimonials",
+      "blocks": {
+        "1d4ba454-f6dc-424b-aba2-14168ef950b8": {
+          "type": "List",
+          "settings": {
+            "title": "",
+            "content": "In this video, Marisol tells us what it was like to have me 'in her pocket' during our 3 months of coaching. From one of the darkest periods of her life, through healing her relationship with the inner & outer masculine archetype, all the way to using my 12-minute 'Torus' meditation track to manifest not one but TWO houses on a ranch in Mexico... you simply have to hear it from her!",
+            "tag": "",
+            "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+            "filter_type": "1",
+            "cover_image": "shopify:\/\/shop_images\/Image_4_64173ff7-2c0e-4ea5-9558-29c8fd439f31.png",
+            "description": "",
+            "enable_video_looping": false
+          }
+        },
+        "70aa6f33-8e22-4db3-a794-22a4c3e7baba": {
+          "type": "List",
+          "settings": {
+            "title": "",
+            "content": "In this video, Marisol tells us what it was like to have me 'in her pocket' during our 3 months of coaching. From one of the darkest periods of her life, through healing her relationship with the inner & outer masculine archetype, all the way to using my 12-minute 'Torus' meditation track to manifest not one but TWO houses on a ranch in Mexico... you simply have to hear it from her!",
+            "tag": "",
+            "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+            "filter_type": "1",
+            "cover_image": "shopify:\/\/shop_images\/Image_5.png",
+            "description": "",
+            "enable_video_looping": false
+          }
+        },
+        "4b1fa42d-9c0a-4926-bbf1-c5738141dbdc": {
+          "type": "List",
+          "settings": {
+            "title": "",
+            "content": "In this video, Marisol tells us what it was like to have me 'in her pocket' during our 3 months of coaching. From one of the darkest periods of her life, through healing her relationship with the inner & outer masculine archetype, all the way to using my 12-minute 'Torus' meditation track to manifest not one but TWO houses on a ranch in Mexico... you simply have to hear it from her!",
+            "tag": "",
+            "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+            "filter_type": "1",
+            "cover_image": "shopify:\/\/shop_images\/Image_6_b0721158-f624-4245-ade0-d031fed2e843.png",
+            "description": "",
+            "enable_video_looping": false
+          }
+        }
+      },
+      "block_order": [
+        "1d4ba454-f6dc-424b-aba2-14168ef950b8",
+        "70aa6f33-8e22-4db3-a794-22a4c3e7baba",
+        "4b1fa42d-9c0a-4926-bbf1-c5738141dbdc"
+      ],
+      "settings": {
+        "title": "<p><strong>Do you have a favorite video or resource?<\/strong><\/p>",
+        "content": ""
+      }
+    },
+    "testimonial-2": {
+      "type": "testimonial-03",
+      "blocks": {
+        "879ca430-1d78-46f4-b048-5e9c43aa6a24": {
+          "type": "Testimonial",
+          "settings": {
+            "desc": "<p>\"I started this program feeling lost, defeated, and down on myself about how much work I felt like I'd done, without tangibly seeing proof of my growth in the ways I wanted.<\/p><p><br\/>I knew what I loved doing, but I wasn't confident on the steps to take to get there. It was starting to feel impossible to overcome my blocks.<\/p><p><br\/>Your program helped me get grounded and grateful for my progress, highlighting deeply subconscious patterns that needed healing. <strong>The program left me with very practical tools on how to maintain that sense of purpose and drive throughout any endeavor I take on.<\/strong><\/p>",
+            "author_title": "",
+            "author_position": ""
+          }
+        },
+        "4eb28ae3-b304-44b8-ade2-0ed4e0eb877f": {
+          "type": "Testimonial",
+          "settings": {
+            "desc": "<p>\" SEM is a doorway that allows us to explore our capabilities and get familiar with ourselves in a deeper and more organized way.<br\/>By the way of science, culture and spirituality, Nic offers an incredible yet simple resource for an empowering understanding of reality.<\/p><p><br\/>It helped me clarify my strengths and superpowers in a systematic way; and create <strong>a routine of rituals to guide me through my work as a person, an artist and a healer. <\/strong>\"<\/p>",
+            "author_title": "",
+            "author_position": ""
+          }
+        },
+        "02b5a354-16d0-42ab-8e76-24edcc030fa0": {
+          "type": "Testimonial",
+          "settings": {
+            "desc": "<p>\"I started this program feeling lost, defeated, and down on myself about how much work I felt like l'd done, without tangibly seeing proof of my growth in the ways I wanted.<\/p><p>I knew what I loved doing, but I wasn't confident on the steps to take to get there. It was starting to feel impossible to overcome my blocks.<\/p><p>Your program helped me get grounded and grateful for my progress, highlighting deeply subconscious patterns that needed healing. <strong>The program left me with very practical tools on how to maintain that sense of purpose and drive throughout any endeavor I take on.<\/strong><\/p>",
+            "author_title": "",
+            "author_position": ""
+          }
+        }
+      },
+      "block_order": [
+        "879ca430-1d78-46f4-b048-5e9c43aa6a24",
+        "4eb28ae3-b304-44b8-ade2-0ed4e0eb877f",
+        "02b5a354-16d0-42ab-8e76-24edcc030fa0"
+      ],
+      "custom_css": [],
+      "settings": {
+        "title": "SEM is a Swiss-Army Knife for life!",
+        "newsletter_title": "",
+        "newletter_btn_01": "",
+        "newletter_link_01": "",
+        "newletter_btn_02": "",
+        "newletter_link_02": ""
+      }
+    },
+    "21073057-a31b-4d53-b681-c2da9a673b74": {
+      "type": "testimonial-02",
+      "blocks": {
+        "5129a6bc-0df5-462c-b8a6-5d48b349d404": {
+          "type": "Testimonial",
+          "settings": {
+            "desc": "<p>“ SEM is a doorway that allows us to explore our capabilities and get familiar with ourselves in a deeper and more organized way.<\/p><p>By the way of science, culture and spirituality, Nic offers an incredible yet simple resource for an empowering understanding of reality. <\/p><p>It helped me clarify my strengths and superpowers in a systematic way; and create <strong>a routine of rituals to guide me through my work as a person, an artist and a healer. <\/strong><\/p>",
+            "author_image": "shopify:\/\/shop_images\/emma.png",
+            "author_title": "Emma",
+            "author_position": "California"
+          }
+        }
+      },
+      "block_order": [
+        "5129a6bc-0df5-462c-b8a6-5d48b349d404"
+      ],
+      "settings": {
+        "title": "Client Testimonial"
+      }
+    },
+    "sem-testimonials": {
+      "type": "np-sem-tools-testimonials",
+      "blocks": {
+        "6bdfea34-daca-442b-a4af-c71779b20c4f": {
+          "type": "Cards",
+          "settings": {
+            "content": "<p> SEM is a doorway that allows us to explore our capabilities and get familiar with ourselves in a deeper and more organized way.By the way of science, culture and spirituality, Nic offers an incredible yet simple resource for an empowering understanding of reality. <\/p>",
+            "client_name": "Diana",
+            "client_location": "CalCalifornia",
+            "client_image": "shopify:\/\/shop_images\/Userpic.png"
+          }
+        },
+        "8561e078-88ad-4c90-8b3b-caeccd0a278e": {
+          "type": "Cards",
+          "settings": {
+            "content": "<p>There was this lovely ongoing feeling that the program was made just for me. Nic’s teachings always felt so synchronistic and applicable to me. What I learned about myself and my journey is invaluable, the connections I made were deeper than relationships with people I consider closest to me. <\/p>",
+            "client_name": "Mariah",
+            "client_location": "calfCalifornia",
+            "client_image": "shopify:\/\/shop_images\/mariah.webp"
+          }
+        }
+      },
+      "block_order": [
+        "6bdfea34-daca-442b-a4af-c71779b20c4f",
+        "8561e078-88ad-4c90-8b3b-caeccd0a278e"
+      ],
+      "settings": {
+        "title": "<p>About the SEM tools & resources:<\/p>"
+      }
+    },
+    "need-help": {
+      "type": "np-pdp-needhelp",
+      "disabled": true,
+      "settings": {
+        "beackgroud_image": "shopify:\/\/shop_images\/image_6_31747758-babe-40c8-a3c6-5a8c902b8bc0.jpg",
+        "heading": "Get started by finding the path that is perfect for you.",
+        "content": "",
+        "button_text": "Take the Quiz",
+        "button_link": ""
+      }
+    },
+    "newslatter-box": {
+      "type": "np-newsletter-box",
+      "settings": {
+        "newsletter_bg_image": "shopify:\/\/shop_images\/newsletter_1.jpg",
+        "newsletter_icon": "shopify:\/\/shop_images\/icon02.png",
+        "newsletter_title": "Get started by finding the path that is perfect for you.",
+        "newletter_btn_01": "Take the Quiz",
+        "newletter_link_01": "#",
+        "newletter_btn_02": "View Courses",
+        "newletter_link_02": "#"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "sem-tools",
+    "more-testimonail",
+    "testimonial-2",
+    "21073057-a31b-4d53-b681-c2da9a673b74",
+    "sem-testimonials",
+    "need-help",
+    "newslatter-box"
+  ]
+}

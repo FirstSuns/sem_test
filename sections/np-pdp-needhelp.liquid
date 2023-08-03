@@ -1,5 +1,5 @@
 {{ 'np-section-pdpneedhelp.css' | asset_url | stylesheet_tag }}
-{{ 'np-style.css' | asset_url | stylesheet_tag }}
+{% comment %} {{ 'np-style.css' | asset_url | stylesheet_tag }} {% endcomment %}
 <div class="np-pdp-needhelp-container np-page-width page-width" id="np-pdp-{{ section.id }}">
   <div class="np-pdp-needhelp_inner">
     {% if section.settings.beackgroud_image!=blank %}

@@ -1,0 +1,80 @@
+{% comment %} {{ 'np-style.css' | asset_url | stylesheet_tag }} {% endcomment %}
+{% if section.settings.title!=blank %}
+<div class="np-project-nic">
+  <div class="page-width np-page-width">
+    <div class="np-project-nic-top">
+      <div class="np-project-nic_title">
+        {{ section.settings.title }}
+      </div>
+    </div>
+    <div class="np-project-nic-bottom">
+      {% for block in section.blocks %}
+        <div class="np-project-nic-item">
+          {% if block.settings.title!=blank %}
+            <div class="np-project-nic-item-title">
+              {{ block.settings.title }}
+            </div>
+          {% endif %}
+          {% if block.settings.sub_title!=blank %}
+            <div class="np-project-nic-item-subtitle">
+              {{ block.settings.sub_title }}
+            </div>
+          {% endif %}
+          {% if block.settings.content!=blank %}
+            <div class="np-project-nic-item-content">
+              {{ block.settings.content }}
+            </div>
+          {% endif %}
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+{% endif %}
+  
+  
+ 
+
+
+{% schema %}
+  {
+    "name": "Strategy Projects",
+    "settings": [
+      {
+        "type": "richtext",
+        "id": "title",
+        "label": "Content"
+      }
+    ],
+    "blocks":[
+      {
+        "type":"List",
+        "name":"List",
+        "settings":[
+          {
+            "type": "richtext",
+            "id": "title",
+            "label": "Heading"
+          },
+          {
+            "type": "richtext",
+            "id": "sub_title",
+            "label": "Sub Heading"
+          },
+          {
+            "type": "textarea",
+            "id": "content",
+            "label": "Content"
+          }
+        ]
+        
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

@@ -1,0 +1,246 @@
+{{ 'video-section.css' | asset_url | stylesheet_tag }}
+{{ 'component-deferred-media.css' | asset_url | stylesheet_tag }}
+{% comment %} {{ 'np-style.css' | asset_url | stylesheet_tag }} {% endcomment %}
+
+<div class="np-testimonials">
+  <div class="page-width np-page-width">
+    <div class="np-testimonials-top">
+      {% if section.settings.title!=blank %}
+        <div class="np-testimonials--heading">{{ section.settings.title }}</div>
+      {% endif %}
+      {% if section.settings.content!=blank %}
+        <div class="np-testimonials--content">{{ section.settings.content }}</div>
+      {% endif %}
+    </div>
+    <div class="np-testimonials-bottom">
+        {% for block in section.blocks %}
+          <div class="np-testimonials-video-loop">
+            <div class="{%- if block.settings.filter_type == '1' -%} np-testimonials-video-left np-testimonials-video-width25 {%- else -%} np-testimonials-video-left np-testimonials-video-width50 {%- endif -%}">
+              <!--Video section-->
+              {%- liquid
+                assign video_id = block.settings.video.id | default: block.settings.video_url.id
+                assign video_alt = block.settings.video.alt | default: block.settings.description
+                assign alt = 'sections.video.load_video' | t: description: video_alt | escape
+                assign poster = block.settings.video.preview_image | default: block.settings.cover_image
+              
+                if block.settings.video != null
+                  assign ratio_diff = block.settings.video.aspect_ratio | minus: poster.aspect_ratio | abs
+                  if ratio_diff < 0.01 and ratio_diff > 0
+                    assign fix_ratio = true
+                  endif
+                endif
+              -%}
+              
+              <div class="color-{{ block.settings.color_scheme }} gradient">
+                <div class="video-section section-{{ block.id }}-padding">          
+                              
+                    <noscript>
+                      <div
+                        class="video-section__media"
+                        {% if poster != null %}
+                          style="--ratio-percent: {{ 1 | divided_by: poster.aspect_ratio | times: 100 }}%;"
+                        {% endif %}
+                      >
+                        {%- if section.settings.video == null and section.settings.video_url != null -%}
+                          <a
+                            href="{{ section.settings.video_url }}"
+                            class="video-section__poster media media--transparent{% if poster == null %} video-section__placeholder{% endif %}"
+                          >
+                            {%- if poster != null -%}
+                              {{
+                                poster
+                                | image_url: width: 3840
+                                | image_tag:
+                                  loading: 'lazy',
+                                  sizes: sizes,
+                                  widths: '375, 750, 1100, 1500, 1780, 2000, 3000, 3840',
+                                  alt: alt
+                              }}
+                            {%- else -%}
+                              {{ 'hero-apparel-3' | placeholder_svg_tag: 'placeholder-svg placeholder' }}
+                            {%- endif -%}
+                          </a>
+                        {%- else -%}
+                          {{
+                            block.settings.video
+                            | video_tag: image_size: '1100x', loop: block.settings.enable_video_looping, controls: true, muted: false
+                          }}
+                        {%- endif -%}
+                      </div>
+                    </noscript>
+                    <deferred-media
+                      class="video-section__media deferred-media no-js-hidden gradient global-media-settings{% if block.settings.full_width %} global-media-settings--full-width{% endif %}{% if fix_ratio %} media-fit-cover{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                      data-media-id="{{ video_id }}"
+                      {% if poster != null %}
+                        style="--ratio-percent: {{ 1 | divided_by: poster.aspect_ratio | times: 100 }}%;"
+                      {% endif %}
+                    >
+                      <button
+                        id="Deferred-Poster-Modal-{{ video_id }}"
+                        class="video-section__poster media deferred-media__poster media--landscape"
+                        type="button"
+                        aria-label="{{ alt }}"
+                      >
+                        {%- if poster != null -%}
+                          {{
+                            poster
+                            | image_url: width: 3840
+                            | image_tag: loading: 'lazy', sizes: sizes, widths: '375, 750, 1100, 1500, 1780, 2000, 3000, 3840', alt: alt
+                          }}
+                        {%- else -%}
+                          {{ 'hero-apparel-3' | placeholder_svg_tag: 'placeholder-svg placeholder' }}
+                        {%- endif -%}
+                        <span class="deferred-media__poster-button motion-reduce">
+                          {%- render 'icon-play' -%}
+                        </span>
+                      </button>
+                      <template>
+                        {%- if block.settings.video == null and block.settings.video_url != null -%}
+                          {%- liquid
+                            assign loop = ''
+                            if block.settings.enable_video_looping
+                              assign loop = '&loop=1&playlist=' | append: video_id
+                            endif
+                          -%}
+                          {%- if block.settings.video_url.type == 'youtube' -%}
+                            <iframe
+                              src="https://www.youtube.com/embed/{{ video_id }}?enablejsapi=1&autoplay=1{{ loop }}"
+                              class="js-youtube"
+                              allow="autoplay; encrypted-media"
+                              allowfullscreen
+                              title="{{ block.settings.title | escape }}"
+                            ></iframe>
+                          {%- else -%}
+                            <iframe
+                              src="https://player.vimeo.com/video/{{ video_id }}?autoplay=1{{ loop }}"
+                              class="js-vimeo"
+                              allow="autoplay; encrypted-media"
+                              allowfullscreen
+                              title="{{ block.settings.title | escape }}"
+                            ></iframe>
+                          {%- endif -%}
+                        {%- else -%}
+                          {{
+                            section.settings.video
+                            | video_tag:
+                              image_size: '1100x',
+                              autoplay: true,
+                              loop: block.settings.enable_video_looping,
+                              controls: true,
+                              muted: false
+                          }}
+                        {%- endif -%}
+                      </template>
+                    </deferred-media>
+                </div>
+              </div>
+              <!--video section end-->
+            </div>
+            <div class="np-testimonials-video-right">
+              <div class="np-testimonials-package-content">
+                {% if block.settings.title!=blank %}
+                  <div class="np-testimonials-package-inner-title">
+                    <h2>{{ block.settings.title }}</h2>
+                  </div>
+                {% endif %}
+                {% if block.settings.content!=blank %}
+                  <div class="np-testimonials-package-inner-content">
+                    <p>{{ block.settings.content }}</p>
+                  </div>
+                {% endif %}
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+    </div>
+  </div>
+</div>
+{% schema %}
+  {
+    "name": "Testimonials",
+    "settings": [
+      {
+        "type": "richtext",
+        "id": "title",
+        "label": "Heading"
+      },
+      {
+        "type": "richtext",
+        "id": "content",
+        "label": "Content"
+      }
+      
+    ],
+    "blocks":[
+      {
+        "type":"List",
+        "name":"Data",
+        "settings":[
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Heading"
+          },
+          {
+            "type": "textarea",
+            "id": "content",
+            "label": "Content"
+          },
+          {
+            "type": "text",
+            "id": "tag",
+            "label": "Tag Video"
+          },          
+          {
+            "type": "video_url",
+            "id": "video_url",
+            "accept": ["youtube", "vimeo"],
+            "default": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+            "label": "t:sections.video.settings.video_url.label",
+            "info": "t:sections.video.settings.video_url.info"
+          },
+          {
+              "type": "select",
+              "id": "filter_type",
+              "options": [
+                {
+                  "value": "1",
+                  "label": "25%"
+                },
+                {
+                  "value": "2",
+                  "label": "50%"
+                }
+              ],
+              "default": "2",
+              "label": "Select Video Width"            
+          },
+          {
+            "type": "image_picker",
+            "id": "cover_image",
+            "label": "t:sections.video.settings.cover_image.label"
+          },
+          {
+            "type": "text",
+            "id": "description",
+            "label": "t:sections.video.settings.description.label",
+            "info": "t:sections.video.settings.description.info"
+          },
+          {
+            "type": "checkbox",
+            "id": "enable_video_looping",
+            "label": "t:sections.video.settings.enable_video_looping.label",
+            "default": false
+          }
+        ]
+        
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

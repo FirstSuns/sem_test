@@ -1103,6 +1103,508 @@ opacity: 0;
 .np-quiz-package-item a:hover .center_images .hover_image {
 opacity: 1;
 }
+
+.np-testimonials-top {
+  margin-top: 100px;
+  margin-bottom: 70px;
+}
+.np-testimonials--heading {
+  color: #fff;
+  font-family: Marcellus;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.3;
+  margin-bottom: 15px;
+}
+.np-testimonials--heading p {
+  font: inherit;
+  margin: 0;
+}
+.np-testimonials--content {
+  color: #A1A1A1;
+  text-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  font-family: Marcellus;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 35px;
+}
+.np-testimonials--content p {
+  font: inherit;
+  margin: 0;
+}
+.np-testimonials-video-loop {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-bottom: 70px;
+  align-items: center;
+}
+.np-testimonials-video-left {
+  width: 50%;
+}
+
+.np-testimonials-video-left.np-testimonials-video-width25 {
+  width: 33.33%;
+}
+
+.np-testimonials-video-right {
+  width: 50%;
+  padding-left: 5%;
+}
+
+.np-testimonials-video-width25 + .np-testimonials-video-right {
+  width: 66.66%;
+} 
+
+
+.np-testimonials-package-inner-title {
+  color: #fff;
+  font-family: Marcellus;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.3;
+  margin-bottom: 15px;
+}
+.np-testimonials-package-inner-title h2 {
+  font: inherit;
+  margin: 0;
+}
+.np-testimonials-package-inner-content {
+  color: #A1A1A1;
+  font-family: Open Sans;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.4;
+}
+.np-testimonials-package-inner-content p {
+  margin: 0;
+}
+.np-testimonials-video-loop span.deferred-media__poster-button.motion-reduce {
+  background: #fff;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.np-testimonials-video-loop span.deferred-media__poster-button.motion-reduce:after {
+  content: "Play";
+  color: #191919;
+  font-family: DM Sans;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 17px;
+  margin-left: 8px;
+}
+.np-testimonials-video-loop span.deferred-media__poster-button.motion-reduce svg.icon.icon-play {
+  fill: #000;
+  color: #000;
+  position: relative;
+  padding-right: 0;
+  width: 16px;
+  height: 16px;
+  margin: 0;
+}
+
+.np-sem-tool {
+  margin-top: 70px;
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 40px;
+}
+.np-sem-tool-top {
+  margin-bottom: 40px;
+}
+.np-sem-tool__title {
+  color: #fff;
+  font-family: Marcellus;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.3;
+  margin: 0 0 40px;
+}
+.np-sem-tool__title p {
+  margin: 0;
+}
+.np-sem-tool-bottom {
+  display: flex;
+  flex-wrap: wrap;
+  width: calc(100% + 30px);
+  margin-left: -15px;
+  margin-right: -15px;
+}
+.np-sem-tool-item {
+  padding: 0 15px;
+  width: 33.33%;
+}
+.np-sem-tool-content {
+  display: flex;
+  width: 100%;
+  padding: 40px;
+  flex-direction: column;
+  align-items: flex-start;
+  background: #2F2F2F;
+  margin-bottom: 30px;
+  height: calc(100% - 30px);
+}
+.np-sem-tool-inner-content {
+  color: #A1A1A1;
+  font-family: Marcellus;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.4;
+}
+.np-sem-tool-inner-content p {
+  margin: 0;
+}
+
+.np-testimonials-video-loop:last-child {
+  margin-bottom: 0;
+}
+.np-testimonials {
+  margin-bottom: 50px;
+}
+body.wc-page\.sem-testimonials .testimonial-01-section {
+  padding: 70px 0;
+}
+body.wc-page\.sem-testimonials .testimonial-01-section .testimonial-title {
+  color: #fff;
+  font-feature-settings: 'clig' off, 'liga' off;
+  font-family: Marcellus;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.3;
+}
+body.wc-page\.sem-testimonials .testimonial-01-section .testimonial-title h2 {
+  font: inherit;
+  color: inherit;
+  margin-bottom: 40px;
+}
+body.wc-page\.sem-testimonials .testimonial-02-section {
+  padding: 70px 0;
+}
+body.wc-page\.sem-testimonials .testimonial-02-section p {
+  color: #FFF;
+  font-family: Marcellus;
+}
+body.wc-page\.sem-testimonials  .testimonial-03-slider .testimonial-02-wrap p {
+  color: #FFF;
+  font-family: Marcellus;
+}
+.np-tool-testimonials {
+  padding: 70px 0;
+}
+.np-tool-testimonials-top {
+  margin-bottom: 40px;
+}
+.np-tool-testimonials-title {
+  color: #FFF;
+  font-family: Marcellus;
+  font-size: 34px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 50px;
+}
+.np-tool-testimonials-title p {
+  font: inherit;
+  margin: 0;
+}
+.np-tool-testimonials-bottom {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.np-tool-testimonials-item {
+  display: flex;
+  width: calc(50% - 10px);
+  padding: 40px;
+  align-items: flex-start;
+  background: #2F2F2F;
+}
+.np-tool-testimonials-inner-content {
+  color: #FFF;
+  font-family: Marcellus;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.np-tool-testimonials-inner-content p {
+  margin: 0;
+  font: inherit;
+}
+.np-tool-client-content {
+  display: flex;
+  align-items: center;
+  margin-top: 40px;
+}
+.np-tool-client-img {
+  max-width: 60px;
+  max-height: 60px;
+  margin-right: 30px;
+}
+.np-tool-client-content-sec {
+  width: calc(100% - 90px);
+}
+.np-tool-client-name {
+  color: #FFF;
+  font-family: Open Sans;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.3;
+}
+.np-tool-client-location {
+  color: #A1A1A1;
+  font-family: Open Sans;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.3;
+  margin-top: 5px;
+}
+
+.np-journey-newsletter-section {
+  margin-bottom: 0;
+  position: relative;
+}
+
+.np-journey-newsletter-section .np-journey-newsletter-part {
+  padding: 71px 75px;
+  position: relative;
+}
+.np-journey-newsletter-part-inner {
+  background: #2F2F2F;
+  padding: 30px;
+  display: grid;
+  grid-template-columns: 64px 1fr 1fr;
+  align-items: center;
+  gap: 30px;
+}
+.np-journey-newsletter-part-inner figure {
+  margin: 0;
+}
+.np-journey-newsletter-part-inner h4 {
+  margin: 0;
+  font-size: 20px;
+  line-height: 28px;
+  color: #fff;
+  padding: 2px;
+}
+.np-journey-newsletter-part-inner .np-journey-newsletter-btn {
+  display: flex;
+  gap: 20px;
+  justify-content: flex-end;
+}
+.np-journey-newsletter-part-inner .np-journey-newsletter-btn a {
+  background: #FF9416;
+  border-radius: 3px;
+  padding: 14px 50px;
+  color: #fff;
+  text-decoration: none;
+  white-space: nowrap;
+  font-family: Open Sans;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 22px;
+}
+.np-journey-newsletter-section figure.fig-mm {
+  position: absolute;
+  height: 100%;
+  width: 80%;
+  background-position: center;
+  background-size: cover;
+}
+.np-journey-newsletter-section figure.fig-mm img {
+  opacity: 0;
+}
+.np-counter-text-section {
+  padding: 70px 0;
+}
+
+
+.np-about-nic {
+  padding: 100 0 70px;
+}
+.np-about-nic-image {
+  margin-bottom: 50px;
+}
+.np-about-nic-image img {
+  object-fit: cover;
+  width: 100%;
+  max-height: 671px;
+  object-position: top;
+}
+.np-about-nic-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.np-about-nic_title {
+  display: flex;
+  padding-right: 0px;
+  flex-direction: column;
+  align-items: flex-start;
+  color: #fff;
+  font-family: Gotu;
+  font-size: 58px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 76px;
+  letter-spacing: -0.5px;
+  width: 35%;
+}
+.np-about-nic_description {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 25px;
+}
+.np-about-nic_description {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 25px;
+  color: #A1A1A1;
+  font-family: Marcellus;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 35px;
+  width: 65%;
+  padding-left: 50px;
+}
+.np-about-nic_description p {
+  margin-top: 0;
+  margin-bottom: 15px;
+  font: inherit;
+  color: inherit;
+}
+.np-about-nic_description p:last-child {
+  border-bottom: 1px solid #2F2F2F;
+  padding-bottom: 50px;
+  margin-bottom: 0;
+}
+.np-about-nic_description strong {
+  color: #FF9416;
+  font-weight: 400;
+}
+.np-about-nic_title p {
+  margin: 0;
+  font: inherit;
+  color: inherit;
+}
+body.wc-page\.sem-about-nic .testimonial-01-section {
+  padding: 70px 0;
+}
+body.wc-page\.sem-about-nic .testimonial-01-section .testimonial-title {
+  color: #fff;
+  font-family: Marcellus;
+  font-size: 46px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.3;
+}
+body.wc-page\.sem-about-nic .testimonial-01-section .testimonial-title h2 {
+  font: inherit;
+  color: inherit;
+  margin-bottom: 50px;
+}
+.np-project-nic {
+  padding: 70px 0;
+}
+.np-project-nic-top {
+  margin-bottom: 50px;
+}
+.np-project-nic_title {
+  color: #FFF;
+  font-family: Marcellus;
+  font-size: 46px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.3;
+}
+.np-project-nic_title p {
+  font: inherit;
+  color: inherit;
+  margin: 0;
+}
+.np-project-nic-bottom {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+.np-project-nic-item {
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 50px;
+  margin-bottom: 50px;
+  position: relative;
+}
+.np-project-nic-item::after {
+  content: '';
+  position: absolute;
+  left: 0px;
+  width: 40%;
+  height: 1px;
+  background: #A1A1A1;
+  bottom: 0;
+}
+.np-project-nic-item-title {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  color: #F8F8F8;
+  font-family: Marcellus;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.3;
+}
+.np-project-nic-item-title 
+ p {
+    font: inherit;
+    color: inherit;
+    margin: 0;
+}
+.np-project-nic-item-subtitle {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  color: #FF9416;
+  font-family: Marcellus;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.3;
+}
+.np-project-nic-item-subtitle p {
+  margin: 10px 0;
+}
+.np-project-nic-item-content {
+  color: #A1A1A1;
+  font-family: Open Sans;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5;
+}
+body.wc-page\.sem-about-nic .np_pdp_need_help {
+  margin-top: 0;
+  margin-bottom: 100px;
+}
 @media screen and (max-width: 1200px){
   .np-product-header {
     margin-top: 50px;
@@ -1197,6 +1699,51 @@ padding: 15px 30px;
 width: 48%;
 font-size: 14px;
 line-height: 1.5;
+}
+
+.np-testimonials--heading, .np-sem-tool__title, body.wc-page\.sem-testimonials .testimonial-01-section .testimonial-title {
+  font-size: 40px;
+  line-height: 1.3;
+}
+.np-testimonials--content {
+  font-size: 22px;
+  line-height: 1.5;
+}
+.np-testimonials-package-inner-title {
+  font-size: 22px;
+  line-height: 1.3;
+}
+.np-testimonials-package-inner-content, .np-sem-tool-inner-content, .np-tool-testimonials-inner-content {
+  font-size: 16px;
+  line-height: 1.4;
+}
+.np-testimonials--heading, .np-tool-testimonials-title {
+  font-size: 32px;
+  line-height: 1.3;
+}
+.np-journey-newsletter-part-inner .np-journey-newsletter-btn a {
+  padding: 12px 30px;
+}
+.np-journey-newsletter-part-inner h4 {
+  font-size: 16px;
+}
+.np-about-nic_title {
+  font-size: 45px;
+  line-height: 1.3;
+  width: 35%;
+}
+.np-about-nic_description {
+  font-size: 20px;
+  line-height: 1.5;
+  width: 65%;
+  padding-left: 50px;
+}
+body.wc-page\.sem-about-nic .testimonial-01-section .testimonial-title, .np-project-nic_title {
+  font-size: 38px;
+  line-height: 1.3;
+}
+.np-project-nic-item-title {
+  font-size: 28px;
 }
 }
 
@@ -1293,6 +1840,99 @@ header {
 }
 .center_images {
 width: 115px;
+}
+
+.np-testimonials--heading {
+  font-size: 28px;
+  line-height: 1.3;
+}
+.np-testimonials--content {
+  font-size: 18px;
+  line-height: 1.5;
+}
+.np-testimonials-package-inner-title {
+  font-size: 18px;
+  line-height: 1.3;
+}
+.np-testimonials-package-inner-content, .np-sem-tool-inner-content, .np-tool-testimonials-inner-content {
+  font-size: 14px;
+  line-height: 1.4;
+}
+.np-testimonials-video-loop {
+  margin-bottom: 50px;
+}
+.np-sem-tool {
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+.np-testimonials--heading, .np-sem-tool__title, body.wc-page\.sem-testimonials .testimonial-01-section .testimonial-title {
+  font-size: 26px;
+  line-height: 1.3;
+}
+.np-sem-tool-item {
+  padding: 0 15px;
+  width: 50%;
+}
+.np-testimonials-top {
+  margin-top: 50px;
+  margin-bottom: 60px;
+}
+.np-testimonials--heading {
+  font-size: 22px;
+  line-height: 1.3;
+}
+.np-testimonials-video-left.np-testimonials-video-width25 {
+  width: 40.33%;
+}
+.np-testimonials-video-width25+.np-testimonials-video-right {
+  width: 59.66%;
+}
+body.wc-page\.sem-testimonials .testimonial-01-section {
+  padding: 50px 0;
+}
+body.wc-page\.sem-testimonials .testimonial-01-section .testimonial-title h2 {
+  margin-bottom: 20px;
+}
+.np-tool-testimonials {
+  padding: 50px 0;
+}
+.np-journey-newsletter-part-inner .np-journey-newsletter-btn {
+  flex-wrap: wrap;
+}
+.np-counter-text-section {
+  padding: 50px 0;
+}
+.np-counter-text-section, .np-about-nic {
+  padding: 50px 0;
+}
+.np-about-nic-image {
+  margin-bottom: 30px;
+}
+body.wc-page\.sem-about-nic .testimonial-01-section {
+  padding: 50px 0;
+}
+.np-project-nic {
+  padding: 50px 0;
+}
+.np-about-nic_title {
+  font-size: 32px;
+}
+.np-about-nic_description {
+  font-size: 18px;
+  line-height: 1.5;
+  width: 65%;
+  padding-left: 50px;
+  gap: 10px;
+}
+body.wc-page\.sem-about-nic .testimonial-01-section .testimonial-title, .np-project-nic_title {
+  font-size: 32px;
+  line-height: 1.3;
+}
+.np-project-nic-top {
+  margin-bottom: 30px;
+}
+.np-journey-newsletter-section .np-journey-newsletter-part {
+  padding-right: 0;
 }
 }
 @media screen and (max-width: 860px){
@@ -1431,6 +2071,137 @@ margin: 40px auto 0;
 body.wc-page\.sem-quiz .np-video-section {
 margin: 80px auto 40px;
 }
+.np-tool-testimonials-item {
+  width: calc(100% - 0px);
+  padding: 40px;
+}
+.np-journey-newsletter-part-inner {
+  grid-template-columns: 1fr;
+}
+.np-journey-newsletter-part-inner figure {
+  margin: 0;
+  max-width: 64px;
+}
+.np-journey-newsletter-part-inner .np-journey-newsletter-btn a {
+  padding: 12px 30px;
+  width: 100%;
+  text-align: center;
+}
+.np-testimonials-video-left {
+  width: 100%;
+}
+.np-testimonials-video-right {
+  width: 100%;
+  padding-left: 0;
+  margin-top: 30px;
+}
+.np-testimonials {
+  margin-bottom: 25px;
+}
+.np-sem-tool {
+  margin-top: 25px;
+  margin-bottom: 20px;
+}
+.np-sem-tool-top {
+  margin-bottom: 20px;
+}
+.np-testimonials--heading, .np-sem-tool__title, body.wc-page\.sem-testimonials .testimonial-01-section .testimonial-title {
+  font-size: 22px;
+  line-height: 1.3;
+  margin-bottom: 20px;
+}
+
+.np-sem-tool-item {
+  padding: 0 15px;
+  width: 100%;
+}
+.np-testimonials-top {
+  margin-top: 40px;
+  margin-bottom: 50px;
+}
+.np-testimonials-video-left.np-testimonials-video-width25 {
+  width: 100%;
+}
+.np-testimonials-video-width25+.np-testimonials-video-right {
+  width: 100%;
+}
+body.wc-page\.sem-testimonials .testimonial-01-section {
+  padding: 25px 0;
+}
+body.wc-page\.sem-testimonials .testimonial-02-section {
+  padding: 25px 0;
+}
+.np-tool-testimonials {
+  padding: 25px 0;
+}
+.np-testimonials--heading, .np-tool-testimonials-title {
+  font-size: 24px;
+  line-height: 1.3;
+}
+.np-tool-testimonials-top {
+  margin-bottom: 20px;
+}
+.np-journey-newsletter-section figure.fig-mm {
+  width: 70%;
+}
+.np-journey-newsletter-part-inner {
+  padding: 30px;
+  gap: 20px;
+}
+.np-testimonials-bottom {
+  margin-top: 30px;
+}
+.np-testimonials-video-loop span.deferred-media__poster-button.motion-reduce:after {
+  display: none;
+}
+.np-testimonials-video-loop span.deferred-media__poster-button.motion-reduce {
+  width: 60px;
+  height: 60px;
+}
+
+.np-about-nic-content {
+  flex-wrap: wrap;
+}
+.np-about-nic_title {
+  font-size: 28px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+.np-about-nic_description {
+  font-size: 16px;
+  line-height: 1.5;
+  width: 100%;
+  padding-left: 0;
+  gap: 0;
+}
+.np-counter-text-section, .np-about-nic, body.wc-page\.sem-about-nic .testimonial-01-section, .np-project-nic {
+  padding: 25px 0;
+}
+body.wc-page\.sem-about-nic .testimonial-01-section .testimonial-title h2 {
+  margin-bottom: 30px;
+}
+body.wc-page\.sem-about-nic .testimonial-01-section .testimonial-title, .np-project-nic_title {
+  font-size: 24px;
+  line-height: 1.3;
+}
+.np-project-nic-item-title {
+  font-size: 22px;
+}
+.np-project-nic-item-subtitle {
+  font-size: 17px;
+}
+.np-project-nic-item-content {
+  font-size: 16px;
+  line-height: 1.5;
+}
+.np-project-nic-item {
+  padding-bottom: 35px;
+  margin-bottom: 35px;
+}
+body.wc-page\.sem-about-nic .np_pdp_need_help {
+  margin-top: 0;
+  margin-bottom: 40px;
+}
 }
 @media screen and (max-width: 640px){
   .left-section-text {
@@ -1446,6 +2217,36 @@ margin: 80px auto 40px;
 }
 .np-brbreadcrumbs-section {
   max-width: calc(100% - 230px);
+}
+.np-testimonials {
+  margin-bottom: 25px;
+  margin-top: 25px;
+}
+.np-testimonials--content {
+  font-size: 16px;
+  line-height: 1.5;
+}
+.np-testimonials--heading {
+  margin-bottom: 10px;
+}
+.np-sem-tool-content {
+  padding: 30px;
+}
+.np-testimonials--heading {
+  font-size: 18px;
+  line-height: 1.3;
+  margin-bottom: 10px;
+}
+.np-testimonials--heading, .np-tool-testimonials-title {
+  font-size: 20px;
+  line-height: 1.3;
+}
+.np-tool-testimonials-item {
+  padding: 25px;
+}
+.np-journey-newsletter-section .np-journey-newsletter-part {
+  padding: 40px;
+  padding-right: 0;
 }
 }
 @media screen and (max-width: 580px){
@@ -1581,7 +2382,27 @@ flex-wrap: wrap;
 .center_images {
 width: 151px;
 }
-
+.np-about-nic_title {
+  font-size: 22px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+.np-project-nic-item-content {
+  font-size: 14px;
+}
+.np-project-nic-item-subtitle {
+  font-size: 16px;
+}
+.np-project-nic-item-subtitle p {
+  margin: 4px 0 10px;
+}
+.np-project-nic-item {
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+}
+.np-project-nic-item:after {
+  width: 50%;
+}
 }
 
 @media screen and (max-width: 480px){
@@ -1600,5 +2421,10 @@ width: 151px;
 .center_images {
   width: 120px;
 }
+.np-journey-newsletter-section .np-journey-newsletter-part {
+  padding: 20px;
+  padding-right: 0;
+}
+
 
 }

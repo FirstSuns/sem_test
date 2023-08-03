@@ -1,0 +1,137 @@
+{
+  "sections": {
+    "main": {
+      "type": "np-about-nic-main",
+      "settings": {
+        "cover_image": "shopify:\/\/shop_images\/about.png",
+        "title": "<p>Here’s the Headline About Nic Patino<\/p>",
+        "content": "<p>In this video, I share some ideas about what it takes to find comfort in your unique style of existing.<\/p><p><strong>It doesn't get much simpler than simply existing...<\/strong><\/p><p>...but there's so much complexity just beneath the surface when we think about the way individuals conduct themselves as they move through life.<\/p><p>See, as humans, we all have an equal right to claim space and exist in whatever way suits us - as long as everyone else's rights are respected too!<\/p><p>But sometimes, when people (or society as a whole) infringe on our expression, we end up imposing limitations on our own sense of confidence when it comes to sharing our inner-essence.<\/p><p>Let's reflect on topics like \"the right to take up space\", \"lovers & haters\", \"paying the cost of being yourself\" & more...<\/p>"
+      }
+    },
+    "testimonial2": {
+      "type": "testimonial-03",
+      "blocks": {
+        "60be1571-5c56-4181-b8f8-87b2508d7739": {
+          "type": "Testimonial",
+          "settings": {
+            "desc": "<p>“ SEM is a doorway that allows us to explore our capabilities and get familiar with ourselves in a deeper and more organized way.<\/p><p>By the way of science, culture and spirituality, Nic offers an incredible yet simple resource for an empowering understanding of reality. <\/p><p>It helped me clarify my strengths and superpowers in a systematic way; and create <strong>a routine of rituals to guide me through my work as a person, an artist and a healer. <\/strong>”<\/p>",
+            "author_image": "shopify:\/\/shop_images\/Userpic.png",
+            "author_title": "Emma",
+            "author_position": "California"
+          }
+        },
+        "4b1f6621-86e3-418f-9245-9333230f4328": {
+          "type": "Testimonial",
+          "settings": {
+            "desc": "<p>“ There was this lovely ongoing feeling that the program was made just for me.<\/p><p> Nic’s teachings always felt so synchronistic and applicable to me. <\/p><p>What I learned about myself and my journey is invaluable, the connections I made were deeper than relationships with people I consider closest to me. <\/p><p>I loved every part of this program and<strong> I am so grateful to my past self for making the decision to step into it.<\/strong> ”<\/p>",
+            "author_image": "shopify:\/\/shop_images\/mariah.webp",
+            "author_title": "Mariah",
+            "author_position": "Oregon"
+          }
+        },
+        "6e22295f-69af-4a9d-8ec0-a3f6be284e72": {
+          "type": "Testimonial",
+          "settings": {
+            "desc": "<p>“ SEM is a doorway that allows us to explore our capabilities and get familiar with ourselves in a deeper and more organized way.<\/p><p>By the way of science, culture and spirituality, Nic offers an incredible yet simple resource for an empowering understanding of reality. <\/p><p>It helped me clarify my strengths and superpowers in a systematic way; and create <strong>a routine of rituals to guide me through my work as a person, an artist and a healer. <\/strong>”<\/p>",
+            "author_image": "shopify:\/\/shop_images\/Userpic.png",
+            "author_title": "Emma",
+            "author_position": "California"
+          }
+        }
+      },
+      "block_order": [
+        "60be1571-5c56-4181-b8f8-87b2508d7739",
+        "4b1f6621-86e3-418f-9245-9333230f4328",
+        "6e22295f-69af-4a9d-8ec0-a3f6be284e72"
+      ],
+      "settings": {
+        "title": "A Selection of Testimonials",
+        "newsletter_title": "",
+        "newletter_btn_01": "",
+        "newletter_link_01": "",
+        "newletter_btn_02": "",
+        "newletter_link_02": ""
+      }
+    },
+    "project": {
+      "type": "np-about-nic-project",
+      "blocks": {
+        "1f3d2c23-e416-4ba2-b19d-2916222378d1": {
+          "type": "List",
+          "settings": {
+            "title": "<p>P&O Ferries<\/p>",
+            "sub_title": "<p>UX design — Dover, UK — 2005<\/p>",
+            "content": "I was hired to redesign the online travel booking experience for P&O. The new design lifted conversion rates 70%, doubled online turnover and produced an estimated 10:1 ROI.\n<br><br>\neDigitalResearch rated it the UK’s top travel website, primarily for its “easily negotiated booking process.” Without the success of this first project who knows where I’d be? Hopefully not in a budget hotel in Dover."
+          }
+        },
+        "0ff490be-d334-420d-8709-dcefcf21bd03": {
+          "type": "List",
+          "settings": {
+            "title": "<p>Argos<\/p>",
+            "sub_title": "<p>UX design — Dover, UK — 2009<\/p>",
+            "content": "Determined only to work in the most glamorous locations in the British Isles, I was chomping at the bit to get to Milton Keynes, where I was the lead interaction design consultant on this site redesign for the UK’s equivalent of Walmart.\n<br><br>\nThe new site won Retail Week’s Online Retailer of the Year Award and generated over £1 billion of revenue in its first year."
+          }
+        },
+        "e251152c-d07e-44cf-97c6-8ead79dcbc8c": {
+          "type": "List",
+          "settings": {
+            "title": "<p>Friend’s Provident<\/p>",
+            "sub_title": "<p>UX design — Dover, UK — 2005<\/p>",
+            "content": "I was contracted to define the user-centered workflow, processes, and deliverables necessary to deliver an ambitious 3-year program of 120 e-business projects.\n<br><br>\nHeroically I also commuted to Salisbury every day, a place so inconvenient to get to, you can’t even get there from Salisbury."
+          }
+        },
+        "37d3c972-b94a-4807-a879-12fde6ee6a5a": {
+          "type": "List",
+          "settings": {
+            "title": "<p>P&O Ferries<\/p>",
+            "sub_title": "<p>UX design — Dover, UK — 2005<\/p>",
+            "content": "I was hired to redesign the online travel booking experience for P&O. The new design lifted conversion rates 70%, doubled online turnover and produced an estimated 10:1 ROI.\n<br><br>\neDigitalResearch rated it the UK’s top travel website, primarily for its “easily negotiated booking process.” Without the success of this first project who knows where I’d be? Hopefully not in a budget hotel in Dover."
+          }
+        },
+        "0a171806-4bee-42bb-a347-1e0bfeb0bca5": {
+          "type": "List",
+          "settings": {
+            "title": "<p>Argos<\/p>",
+            "sub_title": "<p>UX design — Dover, UK — 2009<\/p>",
+            "content": "Determined only to work in the most glamorous locations in the British Isles, I was chomping at the bit to get to Milton Keynes, where I was the lead interaction design consultant on this site redesign for the UK’s equivalent of Walmart.\n<br><br>\nThe new site won Retail Week’s Online Retailer of the Year Award and generated over £1 billion of revenue in its first year."
+          }
+        },
+        "00e6b464-5ec3-4c55-bc32-673264d20838": {
+          "type": "List",
+          "settings": {
+            "title": "<p>Friend’s Provident<\/p>",
+            "sub_title": "<p>UX design — Dover, UK — 2005<\/p>",
+            "content": "I was contracted to define the user-centered workflow, processes, and deliverables necessary to deliver an ambitious 3-year program of 120 e-business projects.\n<br><br>\nHeroically I also commuted to Salisbury every day, a place so inconvenient to get to, you can’t even get there from Salisbury."
+          }
+        }
+      },
+      "block_order": [
+        "1f3d2c23-e416-4ba2-b19d-2916222378d1",
+        "0ff490be-d334-420d-8709-dcefcf21bd03",
+        "e251152c-d07e-44cf-97c6-8ead79dcbc8c",
+        "37d3c972-b94a-4807-a879-12fde6ee6a5a",
+        "0a171806-4bee-42bb-a347-1e0bfeb0bca5",
+        "00e6b464-5ec3-4c55-bc32-673264d20838"
+      ],
+      "settings": {
+        "title": "<p>Selected design, CX and strategy projects<\/p>"
+      }
+    },
+    "needhelp": {
+      "type": "np-pdp-needhelp",
+      "settings": {
+        "beackgroud_image": "shopify:\/\/shop_images\/image_6.png",
+        "heading": "Need Help?",
+        "content": "Take the quiz to get a journey of lessons and teachings designed just for you.",
+        "button_text": "Take the Quiz?",
+        "button_link": "#"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "testimonial2",
+    "project",
+    "needhelp"
+  ]
+}

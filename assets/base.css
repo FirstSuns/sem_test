@@ -611,7 +611,8 @@ details > * {
 
 .underlined-link,
 .customer a {
-  color: rgba(var(--color-link), var(--alpha-link));
+  /* color: rgba(var(--color-link), var(--alpha-link)); */
+  color: #ff9416;
 }
 
 .inline-richtext a,
@@ -622,7 +623,8 @@ details > * {
 .underlined-link:hover,
 .customer a:hover,
 .inline-richtext a:hover {
-  color: rgb(var(--color-link));
+  /* color: rgb(var(--color-link)); */
+  color: #fff;
   text-decoration-thickness: 0.2rem;
 }
 
@@ -860,6 +862,7 @@ summary::-webkit-details-marker {
 .title-wrapper-with-link a {
   margin-top: 0;
   flex-shrink: 0;
+  color: #ff9416;
 }
 
 .title-wrapper--no-top-margin {

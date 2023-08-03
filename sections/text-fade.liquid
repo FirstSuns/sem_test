@@ -1,5 +1,38 @@
+{{ 'https://cdn.rawgit.com/michalsnik/aos/2.0.4/dist/aos.js' | script_tag }}
+{{ 'https://cdn.rawgit.com/michalsnik/aos/2.0.4/dist/aos.css' | stylesheet_tag }}
+
+{% comment %}
+  {{ 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/15309/jquery.fullPage.css' | stylesheet_tag }}
+  {{ 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/15309/examples.css' | stylesheet_tag }}
+  {{ '//cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js' | script_tag }}
+  {{ '//cdnjs.cloudflare.com/ajax/libs/jQuery-slimScroll/1.3.1/jquery.slimscroll.min.js' | script_tag }}
+  {{ 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/15309/jquery.fullPage.min.js' | script_tag }}
+  {{ 'fullpage.js' | asset_url | script_tag }}
+{% endcomment %}
+
 {{ 'taxt-fade.css' | asset_url | stylesheet_tag }}
 {{ 'taxt-fade.js' | asset_url | script_tag }}
+
+<script>
+          AOS.init({
+          duration: 1000,
+            mirror: true,
+            offset: 520
+        });
+  //   $(document).ready(function() {
+  //     $('#fullpage').fullpage({
+  //       scrollBar: true,
+  //       navigation: true
+  //     });
+  // });
+
+    //   $('#text-fade-content').fullpage({
+    //   sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff'],
+    //   anchors: ['firstPage-1', 'firstPage-2', 'firstPage-3', 'firstPage-4', 'firstPage-5'],
+    //   menu: '#menu',
+    //   slidesNavigation: true
+    // });
+</script>
 
 {% schema %}
 {
@@ -36,13 +69,94 @@
 
 <div id="text-fade-top" class="banner-section">
   <div id="text-fade-container">
-    <div id="text-fade-content"><div class="banner-block"></div></div>
+    <div id="fullpage">
+      <div id="text-fade-content">
+        <div class="banner-block"></div>
+        <!--
+          {% for block in section.blocks %}
+            <div
+              class="banner-block section"
+              id="section{{ forloop.index0 }}"
+              data-aos="fade"
+              data-aos-mirror="true"
+              data-offset="1400"
+            >
+              <div
+                class="banner-block-part"
+                data-aos="fade"
+                data-aos-mirror="true"
+                data-offset="1400"
+              >
+                <div class="block-headline">
+                  {{ block.settings.headline }}
+                </div>
+                <div class="block-paragraph">
+                  {{ block.settings.paragraph }}
+                </div>
+              </div>
+            </div>
+          {% endfor %}
+          <div
+            class="banner-block section"
+            id="section5"
+            data-aos="fade"
+            data-aos-mirror="true"
+            data-offset="400"
+          >
+            <div class="banner-block-part">
+              <div class="block-headline">
+                {{ block.settings.headline }}
+              </div>
+              <div class="block-paragraph">
+                {{ block.settings.paragraph }}
+              </div>
+            </div>
+          </div>
+          <div
+            class="banner-block section"
+            id="section6"
+            data-aos="fade"
+            data-aos-mirror="true"
+            data-offset="400"
+            style="position:fixed;"
+          >
+            <div class="banner-block-part">
+              <div class="block-headline">
+                {{ block.settings.headline }}
+              </div>
+              <div class="block-paragraph">
+                {{ block.settings.paragraph }}
+              </div>
+            </div>
+          </div>
+        -->
+      </div>
+    </div>
   </div>
   <div id="hidden-content">
     {% for block in section.blocks %}
-      <div class="banner-block">
-        <div class="block-headline" style="opacity:0;visibility:hidden">{{ block.settings.headline }}</div>
-        <div class="block-paragraph" style="opacity:0;visibility:hidden">{{ block.settings.paragraph }}</div>
+      <div
+        class="banner-block"
+        data-aos="fade"
+        data-aos-mirror="true"
+        data-offset="1400"
+      >
+        <div
+          class="block-headline"
+          data-aos="fade"
+          data-aos-mirror="true"
+          data-offset="1400"
+        >
+          {{ block.settings.headline }}
+        </div>
+        <div
+          class="block-paragraph"
+          data-aos="fade"
+          data-aos-mirror="true"
+          data-offset="1400"
+        >
+          {{ block.settings.paragraph }}
+        </div>
       </div>
     {% endfor %}
   </div>

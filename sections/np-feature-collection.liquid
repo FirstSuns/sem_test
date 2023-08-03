@@ -3,7 +3,7 @@
 
 {{ 'component-slider.css' | asset_url | stylesheet_tag }}
 {{ 'template-collection.css' | asset_url | stylesheet_tag }}
-{{ 'np-style.css' | asset_url | stylesheet_tag }}
+{% comment %} {{ 'np-style.css' | asset_url | stylesheet_tag }} {% endcomment %}
 {% if section.settings.image_shape == 'blob' %}
   {{ 'mask-blobs.css' | asset_url | stylesheet_tag }}
 {%- endif -%}
