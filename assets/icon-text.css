@@ -220,20 +220,17 @@
     bottom: 0;
     z-index: 1;
 }
+
   .icon-text-journey .icon-text-journey-part {
     position: relative;
     z-index: 2;
-}
-  .icon-text-journey .icon-text-journey-part {
-    position: relative;
-    z-index: 2;
-    padding: 110px;
+    padding: 220px 110px 0px 110px;
 }
  .icon-text-journey-section p.main-p {
     font-size: 34px;
     font-style: normal;
     font-weight: 400;
-    margin: 300px 0 100px 0;
+    margin: 100px 0 100px 0;
     line-height: 50px; 
 }
   .icon-text-journey-section p.main-p span {

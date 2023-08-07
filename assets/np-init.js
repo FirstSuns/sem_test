@@ -44,4 +44,33 @@ jQuery(document).ready(function($){
     // shopify_payment_button();
   }, 1000);
 
+
+
+   $(".accordion").on("click", ".heading", function() {  
+     $(this).toggleClass("active").next().slideToggle();  
+     $(".contents").not($(this).next()).slideUp(300);                  
+     $(this).siblings().removeClass("active");
+   });
+
+
+  // Show the first tab and hide the rest
+    $('#tabs-nav li:first-child').addClass('active');
+    $('.tab-content').hide();
+    $('.tab-content:first').show();
+    
+    // Click function
+    $('#tabs-nav li').click(function(){
+      $('#tabs-nav li').removeClass('active');
+      $(this).addClass('active');
+      $('.tab-content').hide();
+      
+      var activeTab = $(this).find('a').attr('href');
+      $(activeTab).fadeIn();
+      return false;
+    });
+
+ $('.bndlr-old-price').insertBefore('<div></div>');
+  
+      
+           
 });

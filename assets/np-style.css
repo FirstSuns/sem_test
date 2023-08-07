@@ -1436,7 +1436,7 @@ body.wc-page\.sem-testimonials  .testimonial-03-slider .testimonial-02-wrap p {
 
 
 .np-about-nic {
-  padding: 100 0 70px;
+    padding: 100px 0 70px;
 }
 .np-about-nic-image {
   margin-bottom: 50px;
@@ -1605,6 +1605,411 @@ body.wc-page\.sem-about-nic .np_pdp_need_help {
   margin-top: 0;
   margin-bottom: 100px;
 }
+.np-tool-testimonials-inner-content p {
+  margin-bottom: 15px;
+}
+
+
+.np-account-top {
+  padding: 70px 0 20px;
+}
+h1.np-account-customer__title {
+  color: #fff;
+  font-family: Marcellus;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.3;
+  margin: 0;
+}
+.np-account-top p {
+  color: #A1A1A1;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-family: Marcellus;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5;
+  margin: 5px 0 0;
+}
+.np-account-buttons-sec {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  border-bottom: 1px solid #2f2f2f;
+  padding-bottom: 35px;
+}
+.np-account-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.np-account-btn {
+  display: flex;
+  padding: 14px 45px;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 3px;
+  background: #FF9416;
+  color: #FFF;
+  font-family: Open Sans;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 22px;
+  text-decoration: none;
+  margin-right: 15px;
+  margin-bottom: 15px;
+}
+.np-account-logout-buttons a {
+  margin-bottom: 15px;
+  color: #FFF;
+  font-family: Open Sans;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 27px;
+  text-decoration-line: underline;
+}
+.np-account-accordion-sec .heading {
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  align-items: center;
+  padding: 20px 0;
+  color: #f8f8f8;
+  font-family: Marcellus;
+  font-size: 34px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.3;
+  border-top: 1px solid #2f2f2f;
+  border-bottom: 1px solid #2f2f2f;
+  margin-top: -1px;
+}
+table.order-history {
+  background: #2F2F2F;
+  width: 100%;
+  text-align: left;
+  padding: 15px 0;
+  margin-bottom: 30px;
+}
+table.order-history th {
+  color: #A1A1A1;
+  font-family: DM Sans;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  text-transform: uppercase;
+  padding: 10px 25px;
+}
+table.order-history th#ColumnTotal {
+  text-align: right;
+}
+table.order-history td {
+  color: #FFF;
+  font-family: Open Sans;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.4;
+  padding: 10px 25px;
+}
+table.order-history td[data-label="Total"] {
+  text-align: right;
+}
+table.order-history td a {
+  color: inherit;
+  font: inherit;
+}
+.np-account-accordion-sec .contents {
+  display: none;
+}
+.np-account {
+  padding: 0 !important;
+  margin-bottom: -11px;
+}
+.np-account-accordion-sec .heading svg {
+  transform: rotate(45deg);
+  transition: 0.3s;
+}
+.np-account-accordion-sec .heading.active svg {
+  transform: rotate(0deg);
+  transition: 0.3s;
+}
+.cust-address {
+  color: #FFF;
+  font-family: Open Sans;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.6;
+}
+.cust-address a {
+  color: #FF9416;
+  font-family: Open Sans;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+  display: inline-flex;
+  padding: 2px 10px;
+  align-items: flex-start;
+  gap: 10px;
+  border-radius: 4px;
+  border: 1px solid #FF9416;
+  text-decoration: none;
+  margin-bottom: 40px;
+}
+
+
+
+
+/* Tabs */
+.tabs {
+  width: 100%;
+  background-color: transparent;
+  border-radius: 0;
+}
+ul#tabs-nav {
+  list-style: none;
+  margin: 0 0 50px;
+  padding: 0;
+  overflow: auto;
+}
+ul#tabs-nav li {
+  float: left;
+  margin: 0 -1px 0 0!important;
+  padding: 20px 10px;
+  cursor: pointer;
+  width: 50%;
+  text-align: center;
+  color: #fff;
+  font-family: Open Sans;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 27px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: transparent #A1A1A1 #A1A1A1 transparent;
+  border-radius: 0;
+}
+
+ul#tabs-nav li:hover, ul#tabs-nav li.active {
+  background-color: transparent;
+}
+ul#tabs-nav li:first-child.active {
+  border-top-color: #a1a1a1;
+  border-bottom-color: transparent;
+  border-radius: 0 5px 0 0;
+  border-right-color: #a1a1a1;
+}
+ul#tabs-nav li:last-child.active {
+  border-bottom-color: transparent;
+  border-top-color: #a1a1a1;
+  border-radius: 5px 0 0 0;
+  border-left-color: #a1a1a1;
+}
+ul#tabs-nav li:last-child {
+  border-right-color: transparent;
+}
+ul#tabs-nav li:first-child {
+  border-right-color: transparent;
+}
+#tabs-nav li a {
+  text-decoration: none;
+  color: #FFF;
+}
+.tab-content {
+  padding: 0;
+  width: 100%;
+}
+
+.np-packages {
+  padding: 0px 0;
+}
+.np-packages-top {
+  padding: 20px 0 70px;
+  text-align: center;
+}
+.np-packages-top .np-packages-top-title {
+  margin: 0;
+  color: #fff;
+  text-align: center;
+  font-family: Marcellus;
+  font-size: 68px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.3;
+  letter-spacing: -1px;
+}
+p.np-packages-top-desc {
+  color: #A1A1A1;
+  text-align: center;
+  font-family: Marcellus;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5;
+  max-width: 976px;
+  margin: 15px auto 0;
+}
+.np-packages-sections {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 0 auto;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.np-packages-sec {
+  width: calc(33.33% - 30px);
+  display: inline-block;
+  margin: 0 15px;
+  padding: 20px;
+  background: #2F2F2F;
+}
+.bundler-target-element {
+  padding: 0;
+  background: transparent;
+}
+.bndlr-container {
+  max-width: 100% !important;
+  margin: 0px auto !important;
+  padding: 0 !important;
+}
+.bndlr-products-container {
+  width: 100%;
+  background-color: transparent !important;
+  border-radius: 0 !important;
+  padding: 0px !important;
+  margin: 0 !important;
+}
+.bndlr-container h2.bndlr-bundle-title {
+  text-align: left;
+  display: none !important;
+}
+.bndlr-bundle-description {
+  display: none !important;
+}
+.bndlr-inner-products-container {
+  margin: 0 !important;
+}
+.bndlr-inner-products-container > div:first-child {
+  justify-content: left;
+  width: 100% !important;
+}
+.bndlr-product {
+  padding: 0!important;
+  flex-basis: 100%!important;
+  max-width: 100%!important;
+  flex-direction: inherit !important;
+  width: 100% !important;
+  display: flex !important;
+  justify-content: flex-start !important;
+  align-items: center;
+  margin-bottom: 20px !important;
+}
+a.bndlr-product-image-url {
+  width: 70px;
+  display: inline-block;
+  margin-right: 15px;
+}
+.bndlr-product-qn-container {
+  display: inline-block;
+  width: calc(100% - 90px);
+}
+.bndlr-product-image-url img {
+  margin: 0 !important;
+}
+.np-packages-sec-title {
+  margin-bottom: 40px;
+}
+.np-packages-sec-title h2 {
+  color: #FF9416;
+  font-family: Marcellus;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.3;
+  margin: 0;
+}
+
+.np-packages-sec-title p {
+  color: #A1A1A1;
+  font-family: Open Sans;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5;
+  margin: 5px 0 0;
+}
+a.bndlr-product-title {
+  color: #fff;
+  font-family: Marcellus;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5;
+}
+.sealsubs-target-element.sealsubs-full {
+  display: none !important;
+}
+.bndlr-product-options-container {
+  display: none !important;
+}
+.bndlr-total-price {
+  color: #fff !important;
+  font-family: Marcellus;
+  font-size: 20px;
+  font-style: normal;
+  line-height: 1.5;
+  display: flex;
+  width: 100%;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+}
+.bndlr-total-price span {
+  margin-left: 5px;
+}
+.bndlr-add-to-cart {
+  width: 100% !important;
+}
+.bndlr-bundle-checkout-warning {
+  color: #A1A1A1;
+  font-family: Open Sans;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.3;
+  width: 100%;
+  text-align: center;
+  margin: 0;
+}
+.bndlr-add-to-cart {
+  width: 100% !important;
+  max-width: 100% !important;
+  padding: 14px 25px !important;
+  color: #fff !important;
+  font-family: Open Sans;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.3;
+}
+.bndlr-total-price span.bndlr-old-price {
+  color: #A1A1A1 !important;
+  font-weight: 600 !important;
+}
+.bndlr-total-price span.bndlr-new-price {
+  color: #fff !important;
+  font-weight: 600 !important;
+}
 @media screen and (max-width: 1200px){
   .np-product-header {
     margin-top: 50px;
@@ -1745,6 +2150,22 @@ body.wc-page\.sem-about-nic .testimonial-01-section .testimonial-title, .np-proj
 .np-project-nic-item-title {
   font-size: 28px;
 }
+
+h1.np-account-customer__title {
+  font-size: 42px;
+}
+.np-account-top p {
+  font-size: 20px;
+}
+.np-account-btn {
+  padding: 12px 35px;
+  font-size: 14px;
+}
+.np-account-accordion-sec .heading {
+  padding: 20px 0;
+  font-size: 30px;
+}
+
 }
 
 @media screen and (max-width: 989px){
@@ -1933,6 +2354,55 @@ body.wc-page\.sem-about-nic .testimonial-01-section .testimonial-title, .np-proj
 }
 .np-journey-newsletter-section .np-journey-newsletter-part {
   padding-right: 0;
+}
+h1.np-account-customer__title {
+  font-size: 35px;
+}
+.np-account-top p {
+  font-size: 18px;
+}
+.np-account-btn {
+  padding: 10px 22px;
+}
+.np-account-accordion-sec .heading {
+  font-size: 24px;
+}
+table.order-history td {
+  font-size: 14px;
+  padding: 10px 20px;
+}
+table.order-history th {
+  padding: 10px 20px;
+}
+.np-account-accordion-sec .heading svg {
+  width: 30px;
+}
+.np-packages-sec {
+  width: calc(100% - 0px);
+  display: inline-block;
+  margin: 0 0 30px;
+  max-width: 640px;
+}
+.np-packages-sections {
+  justify-content: center;
+}
+.np-packages-top .np-packages-top-title {
+  font-size: 54px;
+}
+p.np-packages-top-desc {
+  font-size: 18px;
+}
+.np-packages-sec-title h2 {
+  font-size: 24px;
+}
+a.bndlr-product-title {
+  font-size: 16px;
+}
+.bndlr-total-price {
+  font-size: 18px;
+}
+.np-packages-top {
+  padding: 20px 0 50px;
 }
 }
 @media screen and (max-width: 860px){
@@ -2202,6 +2672,19 @@ body.wc-page\.sem-about-nic .np_pdp_need_help {
   margin-top: 0;
   margin-bottom: 40px;
 }
+.np-packages-top .np-packages-top-title {
+  font-size: 34px;
+}
+p.np-packages-top-desc {
+  font-size: 16px;
+}
+.np-packages-sec-title h2 {
+  font-size: 20px;
+}
+ul#tabs-nav li {
+  padding: 13px 5px;
+  font-size: 12px;
+}
 }
 @media screen and (max-width: 640px){
   .left-section-text {
@@ -2403,6 +2886,29 @@ width: 151px;
 .np-project-nic-item:after {
   width: 50%;
 }
+.np-account-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 100%;
+}
+.np-account-btn {
+  padding: 10px 22px;
+  font-size: 14px;
+  margin-right: 0;
+  width: 100%;
+}
+.np-account-btn:last-child {
+  margin-right: 0;
+}
+.table-responsive {
+  overflow-x: scroll;
+  width: 100%;
+  display: inline-block;
+}
+table.order-history {
+  min-width: 767px;
+}
 }
 
 @media screen and (max-width: 480px){
@@ -2425,6 +2931,13 @@ width: 151px;
   padding: 20px;
   padding-right: 0;
 }
-
-
+h1.np-account-customer__title {
+  font-size: 28px;
+}
+.np-account-accordion-sec .heading {
+  font-size: 20px;
+}
+.np-packages-top {
+  padding: 0px 0 30px;
+}
 }
