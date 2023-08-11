@@ -118,7 +118,8 @@
         "ae056354-ac70-4216-a799-9d0f8a01151c"
       ],
       "settings": {
-        "bg_image": "shopify:\/\/shop_images\/11.png",
+        "bg_image": "shopify:\/\/shop_images\/hand-shot-mini.png",
+        "image": "shopify:\/\/shop_images\/hand-shot-mini.png",
         "title": "Start Here.",
         "sub_title": "Let’s get you fitted into something nice. How would you like to begin?",
         "desc": "Either way, you can always modify them however you’d like before you begin, and you can come back to make changes at any time in the future too.”"

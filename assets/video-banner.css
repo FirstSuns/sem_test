@@ -141,3 +141,4 @@ line-height: 1.4;
   .full-screen-video-banner .content{position:unset;transform:translate(0,0);}
   .full-screen-video-banner .interior-content{padding:30px 0;}
 }
+.full-screen-video-banner img{width:100%;}

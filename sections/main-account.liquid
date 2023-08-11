@@ -25,11 +25,11 @@
       <div class="np-account-buttons">
         <a  href="/apps/my/courses/list" class="np-account-btn">View Your SEM Courses</a>
         <a  href="/a/subscriptions/manage" class="np-account-btn">Manage Subscriptions</a>
-        <a  href="/apps/customer_portal/" class="np-account-btn" target="_blank">Manage Your 1:1 Bookings</a>
+        {% comment %} <a  href="/apps/customer_portal/" class="np-account-btn" target="_blank">Manage Your 1:1 Bookings</a>
         {%- for order in customer.orders -%}
         <a  href="https://app.filemonk.io/orders/{{ order.id }}?from=order_status&customer_id={{ customer.id }}&shopify_domain=a703a0-3.myshopify.com" 
           class="np-account-btn" target="_blank">Download Journeys</a>
-        {%- endfor -%}
+        {%- endfor -%} {% endcomment %} 
       </div>
       <div class="np-account-logout-buttons">
         <a href="{{ routes.account_logout_url }}">

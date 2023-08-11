@@ -85,7 +85,8 @@
 
     <div class="np-product-details_left {% if section.settings.enable_sticky_info %} product__column-sticky{% endif %}">
         {%- for block in section.blocks -%}
-            {%- case block.type -%}                
+            {%- case block.type -%}   
+             
                 {%- when 'title' -%}
                 <div class="np-section_title">
                     <div class="product__title" {{ block.shopify_attributes }}>
@@ -95,6 +96,21 @@
                         </a>
                     </div>
                 </div>
+                {%- when 'price' -%} 
+                <div class="no-js-hidden" id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
+                  {%- render 'price',
+                    product: product,
+                    use_variant: true,
+                    show_badges: true,
+                    price_class: 'price--large'
+                  -%}
+              
+                </div>
+
+               
+      
+               {%- when 'variant_picker' -%}
+               {% render 'product-variant-picker', product: product, block: block, product_form_id: product_form_id %}
             {%- endcase -%}
         {%- endfor -%}
         {% if product.metafields.custom.duration!= blank %}
@@ -102,6 +118,8 @@
                 {{ product.metafields.custom.duration }}               
             </div>
         {% endif %}
+
+       
         
         {% if product.metafields.custom.download_pdf_link!= blank or product.metafields.custom.other_text_information!= blank %}
             <div class="np-product-download"> 
@@ -169,7 +187,7 @@
                             </h2>
                         </a>
                         </div>  
-                    {% endcomment %}
+                    
 
                   
                   {%- when 'price' -%}
@@ -181,6 +199,9 @@
                         price_class: 'price--large'
                       -%}
                     </div>
+
+
+                  {% endcomment %}
                     {%- if cart.taxes_included or shop.shipping_policy.body != blank -%}
                       <div class="product__tax caption rte">
                         {%- if cart.taxes_included -%}
@@ -397,11 +418,11 @@
                       block: block,
                       product_link: product_url
                     %}
-      
+                   {% comment %}
                   {%- when 'variant_picker' -%}
                     {% render 'product-variant-picker', product: product, block: block, product_form_id: product_form_id %}
 
-                    {% comment %}
+                   
 
                         {%- when 'buy_buttons' -%}
                         {%- render 'buy-buttons', block: block, product: product, product_form_id: product_form_id, section_id: section.id, show_pickup_availability: true -%}

@@ -1,4 +1,9 @@
+
 {{ 'section-main-page.css' | asset_url | stylesheet_tag }}
+{{ 'np-style.css' | asset_url | stylesheet_tag }}
+{{ 'quiz.css' | asset_url | stylesheet_tag }}
+{{ 'quiz.js' | asset_url | script_tag }}
+{% include 'journey-js' %}
 
 {%- style -%}
   .section-{{ section.id }}-padding {

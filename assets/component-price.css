@@ -45,7 +45,8 @@
 
 @media screen and (min-width: 750px) {
   .price--large {
-    font-size: 1.8rem;
+    /* font-size: 1.8rem; */
+    font-size: 24px;
   }
 }
 
@@ -82,7 +83,8 @@
 .price--on-sale .price-item--regular {
   text-decoration: line-through;
   color: rgba(var(--color-foreground), 0.75);
-  font-size: 1.3rem;
+  /* font-size: 1.3rem; */
+  font-size: 24px;
 }
 
 .unit-price {

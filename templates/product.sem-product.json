@@ -7,6 +7,10 @@
           "type": "title",
           "settings": {}
         },
+        "28719120-4c54-4d34-aa60-ae31051a8028": {
+          "type": "price",
+          "settings": {}
+        },
         "variant_picker": {
           "type": "variant_picker",
           "settings": {
@@ -37,6 +41,7 @@
       },
       "block_order": [
         "title",
+        "28719120-4c54-4d34-aa60-ae31051a8028",
         "variant_picker",
         "quantity_selector",
         "buy_buttons",

@@ -156,6 +156,8 @@ cart-items {
 
 .cart__ctas button {
   width: 100%;
+  background: #FF9416;
+  color: #fff;
 }
 
 .cart__ctas > *:not(noscript:first-child) + * {

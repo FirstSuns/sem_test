@@ -1,0 +1,171 @@
+<div class="np-packages-bundles">
+  <div class="page-width np-page-width">
+    <div class="np-packages">
+      <div class="np-packages-top">      
+        {% if section.settings.title!=blank %}
+          <h1 class="np-packages-top-title">{{ section.settings.title }}</h1>
+        {% endif %}
+        {% if section.settings.content!=blank %}
+          <div class="np-packages-top-desc">{{ section.settings.content }}</div>
+        {% endif %}        
+      </div>
+      
+      <div class="np-packages-bottom">
+          <div class="np-packages-sections">
+            {% for block in section.blocks %}
+              <div class="np-packages-sec">
+                  <div class="np-packages-sec-title">
+                      {% if block.settings.title!=blank %}
+                        <h2>{{ block.settings.title }}</h2>
+                      {% endif %}
+                  </div>
+                  <div class="np-packages-sec-content">
+                      {% if block.settings.content!=blank %}
+                        {{ block.settings.content }}
+                      {% endif %}                      
+                  </div>
+                  {% if block.settings.total_text!=blank %}
+                    <div class="np-package-total-text">
+                      <p>{{ block.settings.total_text }}</p>
+                      <p>
+                        <span class="np-price">{{ block.settings.total_price }}</span>{% if block.settings.price_time_period == 'oneTime' %} One Time {% elsif block.settings.price_time_period == 'perMonth' %}/mo {% elsif block.settings.price_time_period == 'perYear' %}/yr {% endif %}
+                      </p>
+                      <input type="hidden" class="hidden_price" value="{{ block.settings.total_price }}">
+                      <input type="hidden" class="pre_pay_price" value="{{ block.settings.pre_pay_price }}">
+                    </div>
+                  {% endif %}
+                  {% if block.settings.enable_pre_pay %}
+                    {% if block.settings.prepay_content!=balnk %}
+                      <div class="np-package-total-checkbox">
+                        <input type="checkbox" class="prepay_checkbox">
+                        <lable>{{ block.settings.prepay_content }}</lable>
+                      </div>
+                    {% endif %}
+                  {% endif %}
+  
+                  {% if block.settings.enable_pre_btn %}
+                      {% if block.settings.btn_content!=balnk %}
+                        <div class="np-package-total-btn">
+                          <a href="{{ block.settings.btn_content }}" class="next-btn">Next</a>
+                        </div>
+                      {% endif %}
+                  {% endif %}
+                
+                  {% if block.settings.discounts_content!=balnk %}
+                    <div class="np-package-total-desc">
+                       {{ block.settings.discounts_content }}
+                    </div>                      
+                  {% endif %}
+      
+              </div>  
+            {% endfor %}
+          </div>
+      </div>    
+    </div>
+  </div>
+</div>
+ 
+
+
+{% schema %}
+  {
+    "name": "Bundles",
+    "settings": [
+      {
+        "type": "richtext",
+        "id": "title",
+        "label": "Heading"
+      },
+      {
+        "type": "richtext",
+        "id": "content",
+        "label": "Content"
+      }
+    ],
+    "blocks":[
+      {
+        "type":"List",
+        "name":"Items",
+        "settings":[
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Heading"
+          },
+          {
+            "type": "richtext",
+            "id": "content",
+            "label": "Content"
+          },
+          {
+            "type": "text",
+            "id": "total_text",
+            "label": "Total Content"
+          },
+          {
+            "type": "text",
+            "id": "total_price",
+            "label": "Total Price ($)"
+          },
+          {
+            "type": "select",
+            "id": "price_time_period",
+            "options": [
+              {
+                "value": "oneTime",
+                "label": "One Time"
+              },
+              {
+                "value": "perMonth",
+                "label": "Per Month"
+              },
+              {
+                "value": "perYear",
+                "label": "Per Year"
+              }
+            ],
+            "default": "oneTime",
+            "label": "Price Time Period"
+          },
+          {
+            "type": "checkbox",
+            "id": "enable_pre_pay",
+            "label": "Enable Pre-Pay"
+          },
+          {
+            "type": "text",
+            "id": "pre_pay_price",
+            "label": "Pre-Pay Price"
+          },
+          {
+            "type": "richtext",
+            "id": "prepay_content",
+            "label": "Pre Pay Content"
+          },
+          {
+            "type": "checkbox",
+            "id": "enable_pre_btn",
+            "label": "Enable Button"
+          },
+          {
+            "type": "url",
+            "id": "btn_content",
+            "label": "Button URL"
+          }, 
+          {
+            "type": "richtext",
+            "id": "discounts_content",
+            "label": "Discounts Text"
+          }
+        ]
+        
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

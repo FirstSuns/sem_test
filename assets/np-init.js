@@ -4,7 +4,7 @@ jQuery(document).ready(function($){
     // setTimeout(related_product, 2000);
      $(".related-products-slider").slick({ 
       infinite: false,
-      slidesToShow: 3,
+      slidesToShow: 5,
       dots: false,
       prevArrow: false,
       nextArrow: false,
@@ -12,7 +12,7 @@ jQuery(document).ready(function($){
         {
           breakpoint: 1024,
           settings: {
-            slidesToShow: 3
+            slidesToShow: 5
           }
         }, 
         {
@@ -69,8 +69,20 @@ jQuery(document).ready(function($){
       return false;
     });
 
- $('.bndlr-old-price').insertBefore('<div></div>');
+
+  $('.prepay_checkbox').on('change', function(){
+    
+    let price = $(this).closest('.np-packages-sec').find('.hidden_price').val();
+    let pre_pay_price = $(this).closest('.np-packages-sec').find('.pre_pay_price').val();
+    // console.log(price);
+    // console.log(pre_pay_price);
+    if($(this).prop('checked')) {
+      $(this).closest('.np-packages-sec').find('.np-package-total-text .np-price').html(pre_pay_price);          
+    } else {
+      $(this).closest('.np-packages-sec').find('.np-package-total-text .np-price').html(price);      
+    } 
+  });
   
-      
+ 
            
 });

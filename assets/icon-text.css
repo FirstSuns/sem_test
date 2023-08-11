@@ -70,12 +70,12 @@
     gap: 57px;
     padding: 122px 56px;
 }
-  .icon-bg-text  .icon-bg-text-part {
-    width: 45%;
-    margin:0 0 0 auto;
+.icon-bg-text .icon-bg-text-part {
+    width: 60%;
+    margin: 0 0 0 auto;
 }
-  .icon-bg-text .icon-bg-text-img {
-    width: 55%;
+.icon-bg-text .icon-bg-text-img {
+    width: 40%;
 }
   .icon-bg-text .icon-bg-text-part h2 {
     font-size: 48px;
@@ -98,14 +98,14 @@
     display: flex;
 }
   .icon-bg-text .icon-bg-text-part .icon-bg-text-wrap .icon-bg-text-btn {
-    margin-left: 65px;
+    margin-left: 45px;
 }
   .icon-bg-text .icon-bg-text-part .icon-bg-text-wrap figure {
     margin: 0 26px  0 0;
     width: 34px;
 }
-  .icon-bg-text .icon-bg-text-part .icon-bg-text-wrap a {
-    width: 171px;
+.icon-bg-text .icon-bg-text-part .icon-bg-text-wrap a {
+    width: 140px;
     display: block;
     background: #FF9416;
     border-radius: 3px;
@@ -167,9 +167,7 @@
     padding: 50px 20px;
     flex-wrap: wrap;
 }
-  .icon-bg-text.fs-bg-sec{
-    background-size: cover !important;
-  }
+
   .icon-bg-text .icon-bg-text-img , .icon-bg-text .icon-bg-text-part {
     width: 100%;
 }
@@ -224,7 +222,16 @@
   .icon-text-journey .icon-text-journey-part {
     position: relative;
     z-index: 2;
-    padding: 220px 110px 0px 110px;
+    padding: 220px 110px 110px 0;
+}
+.icon-text-journey .icon-text-journey-part:after{
+  content: "";
+  position: absolute;
+  background: #A1A1A1;
+  height: 1px;
+  width: 30%;
+  bottom: 0;
+  left: 0;
 }
  .icon-text-journey-section p.main-p {
     font-size: 34px;
@@ -489,7 +496,7 @@
    .icon-text-journey .icon-text-journey-part {
     flex-direction: column;
     align-items: flex-start;
-         padding: 30px;
+         padding: 30px 0;
          gap: 20px;
 }
   .icon-text-journey-section p.main-p {
