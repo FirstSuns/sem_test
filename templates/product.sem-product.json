@@ -7,15 +7,15 @@
           "type": "title",
           "settings": {}
         },
-        "28719120-4c54-4d34-aa60-ae31051a8028": {
-          "type": "price",
-          "settings": {}
-        },
         "variant_picker": {
           "type": "variant_picker",
           "settings": {
             "picker_type": "button"
           }
+        },
+        "3d4c97df-ff82-4f24-9224-a70c75d5d55d": {
+          "type": "price",
+          "settings": {}
         },
         "quantity_selector": {
           "type": "quantity_selector",
@@ -24,7 +24,7 @@
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
-            "show_dynamic_checkout": false,
+            "show_dynamic_checkout": true,
             "show_gift_card_recipient": false
           }
         },
@@ -37,28 +37,36 @@
           "settings": {
             "np_form_heading": "Got A Question?"
           }
+        },
+        "61e11e30-efd0-43ec-9c9a-8a43eeca0419": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<style>\n    .badge {\n        background-color: #FF9416;\n    }\n<\/style>"
+          }
         }
       },
       "block_order": [
         "title",
-        "28719120-4c54-4d34-aa60-ae31051a8028",
         "variant_picker",
+        "3d4c97df-ff82-4f24-9224-a70c75d5d55d",
         "quantity_selector",
         "buy_buttons",
         "description",
-        "question_form"
+        "question_form",
+        "61e11e30-efd0-43ec-9c9a-8a43eeca0419"
       ],
+      "custom_css": [],
       "settings": {
         "enable_sticky_info": true,
         "media_size": "large",
         "constrain_to_viewport": true,
-        "media_fit": "contain",
+        "media_fit": "cover",
         "gallery_layout": "stacked",
         "media_position": "left",
         "image_zoom": "lightbox",
         "mobile_thumbnails": "hide",
         "hide_variants": true,
-        "enable_video_looping": false,
+        "enable_video_looping": true,
         "padding_top": 36,
         "padding_bottom": 12
       }
@@ -79,7 +87,7 @@
         "heading": "Related Products",
         "heading_size": "h2",
         "products_to_show": 10,
-        "columns_desktop": 3,
+        "columns_desktop": 4,
         "color_scheme": "background-1",
         "image_ratio": "square",
         "image_shape": "default",

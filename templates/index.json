@@ -3,15 +3,15 @@
     "f03ad310-ca4e-45e5-a6d0-188f9f09bac1": {
       "type": "video-banner",
       "settings": {
-        "background_video": "shopify:\/\/files\/videos\/1689098505271_a703a0-3.myshopify.com_c77f0d52063d2c44fdfb63b3f750397c.mp4",
+        "background_video": "shopify:\/\/files\/videos\/gift-hand-bg-29.mp4",
         "video_link": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
         "enable_video_looping": true,
-        "background_image": "shopify:\/\/shop_images\/main-banner.jpg",
+        "background_image": "shopify:\/\/shop_images\/Comp_1_0_00_07_10.png",
         "headline_text": "Unlock Your Highest Potential: Inner Work that <span>Actually Works.<\/span>",
         "desc": "Sub-headline filler content. Locavore chill wave vinyl banh mi, occupy fanny pack pop-up roof party. Typewriter ugh tofu, flexitarian.",
         "small_text": "JOIN 100,000 ENTREPRENUERS:",
         "button_text": "Build Your Journey",
-        "button_link": "\/"
+        "button_link": "shopify:\/\/pages\/quiz"
       }
     },
     "80fba9b3-d604-40e5-969c-6d7d544f4082": {

@@ -148,9 +148,10 @@ Shopify.formatMoney = function(cents, format) {
                                             if(h3_text == 'Purchase Multiple Sessions:'){
       var for_p_t = $('.journey-forth-accordian h3.active').attr('data-d');
       for_p_t = parseInt(for_p_t)*parseInt($('.journey_qty').val());
-       for_p_t = '$'+for_p_t+'/mo';
+       for_p_t = '$'+for_p_t;
     } else{
     var for_p_t = $('.journey-forth-accordian h3.active').attr('data-id');
+                                              
                                             }
 
     if(first_p == undefined){
@@ -177,7 +178,7 @@ Shopify.formatMoney = function(cents, format) {
       
     }
     if(for_p_t == undefined){
-    for_p_t = '$0.00/mo';
+    for_p_t = '$0.00';
       var left_t = 'No Sessions'
     }else{
       var left_t = '2 Sessions (Redeemable Forever)'
@@ -190,9 +191,11 @@ Shopify.formatMoney = function(cents, format) {
     $('.journey-price-2 span:last-child').text(sec_p_t);
     $('.journey-price-3 span:last-child').text(thi_p_t);
   if(h3_text == '”Mentor in my pocket” add-on option for unlimited direct-message & voice-note support ($333/mo)'){
-        $('.journey-price-6 span:last-child').text(for_p_t);                                    
+        $('.journey-price-6 span:last-child').text(for_p_t);    
+    $('.journey-price-4 span:last-child').text('$0.00');
     }else
     {
+      $('.journey-price-6 span:last-child').text('$0.00/mo');
     $('.journey-price-4 span:last-child').text(for_p_t);
     }
 
@@ -286,33 +289,68 @@ Shopify.formatMoney = function(cents, format) {
     var for_p = $('.journey-forth-accordian h3.active').next('.bundler-target-element').find('.bndlr-total-price span.bndlr-new-price').attr('data-currentprice');
                                       }
 
+  
+  var first_l = $('.journey-first-accordian h3.active').length;
+  
   var first_p = 0;
+  if(first_l == 0){
+    var html_first = '<h3><span>Module 1 Monthly Subscription</span><span>$0.00/mo</span></h3>';
+  }else{
+  var html_first = '';
+  }
   $('.journey-first-accordian h3.active').each(function(){
     var first_pric = $(this).next('.bundler-target-element').find('.bndlr-total-price span.bndlr-new-price').attr('data-currentprice');
-  
+
+    var h3_first_t = $(this).text();
+    var htm_first_s = '<h3 class="journey-price"><span>'+ h3_first_t+'</span><span>'+Shopify.formatMoney(first_pric, window.money_format)+'/mo</span></h3>';
+     html_first += htm_first_s;
                  first_p =+ parseInt(first_pric) + parseInt(first_p);
   })
+  $('.build-journey-btn-part-1').html(html_first);
 
+  var sec_l = $('.journey-second-accordian h3.active').length;
+  
+  if(sec_l == 0){
+    var html_sec = '<h3><span>Module 1 ($33/mo.)</span><span>$0.00</span></h3>';
+  }else{
+  var html_sec = '';
+  }
+  
   var sec_p = 0;
   $('.journey-second-accordian h3.active').each(function(){
     var sec_pric = $(this).next('.bundler-target-element').find('.bndlr-total-price span.bndlr-new-price').attr('data-currentprice');
-  
-                 sec_p =+ parseInt(sec_pric) + parseInt(sec_p);
+
+    var h3_sec_t = $(this).text();
+    var htm_sec_s = '<h3 class="journey-price"><span>'+ h3_sec_t+'</span><span>'+Shopify.formatMoney(sec_pric, window.money_format)+'</span></h3>';
+     html_sec += htm_sec_s;
+     sec_p =+ parseInt(sec_pric) + parseInt(sec_p);
   })
+  $('.build-journey-btn-part-2').html(html_sec);
   
     var first_p_t = Shopify.formatMoney(first_p, window.money_format)+'/mo'
-    var sec_p_t = Shopify.formatMoney(sec_p, window.money_format)+'/mo'
+    var sec_p_t = Shopify.formatMoney(sec_p, window.money_format)
   console.log('sec_p_t',sec_p_t)
   
     // var first_p_t = $('.journey-first-accordian h3.active').attr('data-id');
     // var sec_p_t = $('.journey-second-accordian h3.active').attr('data-id');
+  
+  var thi_l = $('.journey-third-accordian h3.active').length;
+  
+  if(thi_l == 0){
+    var html_thi = 'Session Subscription';
+  }else{
+  var html_thi = $('.journey-third-accordian h3.active').text();
+  }
+
+  $('.journey-price-3 span:first-child').text(html_thi);
     var thi_p_t = $('.journey-third-accordian h3.active').attr('data-id');
                                             if(h3_text == 'Purchase Multiple Sessions:'){
       var for_p_t = $('.journey-forth-accordian h3.active').attr('data-d');
       for_p_t = parseInt(for_p_t)*parseInt($('.journey_qty').val());
-       for_p_t = '$'+for_p_t+'/mo';
-    }else{
+       for_p_t = '$'+for_p_t;
+    } else{
     var for_p_t = $('.journey-forth-accordian h3.active').attr('data-id');
+                                              
                                             }
 
     if(first_p == undefined){
@@ -336,22 +374,29 @@ Shopify.formatMoney = function(cents, format) {
     }
     if(thi_p_t == undefined){
     thi_p_t = '$0.00/mo';
+      
+    }
+    if(for_p_t == undefined){
+    for_p_t = '$0.00';
       var left_t = 'No Sessions'
     }else{
       var left_t = '2 Sessions (Redeemable Forever)'
     }
-    if(for_p_t == undefined){
-    for_p_t = '$0.00/mo';
-    }
 
  
-      
-      $('.journey-price-3 span:first-child').text(left_t);
+      $('.journey-price-4 span:first-child').text(left_t);
 
     $('.journey-price-1 span:last-child').text(first_p_t);
     $('.journey-price-2 span:last-child').text(sec_p_t);
     $('.journey-price-3 span:last-child').text(thi_p_t);
+  if(h3_text == '”Mentor in my pocket” add-on option for unlimited direct-message & voice-note support ($333/mo)'){
+        $('.journey-price-6 span:last-child').text(for_p_t);    
+    $('.journey-price-4 span:last-child').text('$0.00');
+    }else
+    {
+      $('.journey-price-6 span:last-child').text('$0.00/mo');
     $('.journey-price-4 span:last-child').text(for_p_t);
+    }
 
     var total_p = parseInt(first_p)+parseInt(sec_p)+parseInt(thi_p)+parseInt(for_p);
 $('.journey-price-5 span:last-child').text(Shopify.formatMoney(total_p, window.money_format));
@@ -435,33 +480,68 @@ Shopify.formatMoney = function(cents, format) {
     var for_p = $('.journey-forth-accordian h3.active').next('.bundler-target-element').find('.bndlr-total-price span.bndlr-new-price').attr('data-currentprice');
                                       }
 
+  
+  var first_l = $('.journey-first-accordian h3.active').length;
+  
   var first_p = 0;
+  if(first_l == 0){
+    var html_first = '<h3><span>Module 1 Monthly Subscription</span><span>$0.00/mo</span></h3>';
+  }else{
+  var html_first = '';
+  }
   $('.journey-first-accordian h3.active').each(function(){
     var first_pric = $(this).next('.bundler-target-element').find('.bndlr-total-price span.bndlr-new-price').attr('data-currentprice');
-  
+
+    var h3_first_t = $(this).text();
+    var htm_first_s = '<h3 class="journey-price"><span>'+ h3_first_t+'</span><span>'+Shopify.formatMoney(first_pric, window.money_format)+'/mo</span></h3>';
+     html_first += htm_first_s;
                  first_p =+ parseInt(first_pric) + parseInt(first_p);
   })
+  $('.build-journey-btn-part-1').html(html_first);
 
+  var sec_l = $('.journey-second-accordian h3.active').length;
+  
+  if(sec_l == 0){
+    var html_sec = '<h3><span>Module 1 ($33/mo.)</span><span>$0.00</span></h3>';
+  }else{
+  var html_sec = '';
+  }
+  
   var sec_p = 0;
   $('.journey-second-accordian h3.active').each(function(){
     var sec_pric = $(this).next('.bundler-target-element').find('.bndlr-total-price span.bndlr-new-price').attr('data-currentprice');
-  
-                 sec_p =+ parseInt(sec_pric) + parseInt(sec_p);
+
+    var h3_sec_t = $(this).text();
+    var htm_sec_s = '<h3 class="journey-price"><span>'+ h3_sec_t+'</span><span>'+Shopify.formatMoney(sec_pric, window.money_format)+'</span></h3>';
+     html_sec += htm_sec_s;
+     sec_p =+ parseInt(sec_pric) + parseInt(sec_p);
   })
+  $('.build-journey-btn-part-2').html(html_sec);
   
     var first_p_t = Shopify.formatMoney(first_p, window.money_format)+'/mo'
-    var sec_p_t = Shopify.formatMoney(sec_p, window.money_format)+'/mo'
+    var sec_p_t = Shopify.formatMoney(sec_p, window.money_format)
   console.log('sec_p_t',sec_p_t)
   
     // var first_p_t = $('.journey-first-accordian h3.active').attr('data-id');
     // var sec_p_t = $('.journey-second-accordian h3.active').attr('data-id');
+  
+  var thi_l = $('.journey-third-accordian h3.active').length;
+  
+  if(thi_l == 0){
+    var html_thi = 'Session Subscription';
+  }else{
+  var html_thi = $('.journey-third-accordian h3.active').text();
+  }
+
+  $('.journey-price-3 span:first-child').text(html_thi);
     var thi_p_t = $('.journey-third-accordian h3.active').attr('data-id');
                                             if(h3_text == 'Purchase Multiple Sessions:'){
       var for_p_t = $('.journey-forth-accordian h3.active').attr('data-d');
       for_p_t = parseInt(for_p_t)*parseInt($('.journey_qty').val());
-       for_p_t = '$'+for_p_t+'/mo';
-    }else{
+       for_p_t = '$'+for_p_t;
+    } else{
     var for_p_t = $('.journey-forth-accordian h3.active').attr('data-id');
+                                              
                                             }
 
     if(first_p == undefined){
@@ -485,22 +565,29 @@ Shopify.formatMoney = function(cents, format) {
     }
     if(thi_p_t == undefined){
     thi_p_t = '$0.00/mo';
+      
+    }
+    if(for_p_t == undefined){
+    for_p_t = '$0.00';
       var left_t = 'No Sessions'
     }else{
       var left_t = '2 Sessions (Redeemable Forever)'
     }
-    if(for_p_t == undefined){
-    for_p_t = '$0.00/mo';
-    }
 
  
-      
-      $('.journey-price-3 span:first-child').text(left_t);
+      $('.journey-price-4 span:first-child').text(left_t);
 
     $('.journey-price-1 span:last-child').text(first_p_t);
     $('.journey-price-2 span:last-child').text(sec_p_t);
     $('.journey-price-3 span:last-child').text(thi_p_t);
+  if(h3_text == '”Mentor in my pocket” add-on option for unlimited direct-message & voice-note support ($333/mo)'){
+        $('.journey-price-6 span:last-child').text(for_p_t);    
+    $('.journey-price-4 span:last-child').text('$0.00');
+    }else
+    {
+      $('.journey-price-6 span:last-child').text('$0.00/mo');
     $('.journey-price-4 span:last-child').text(for_p_t);
+    }
 
     var total_p = parseInt(first_p)+parseInt(sec_p)+parseInt(thi_p)+parseInt(for_p);
 $('.journey-price-5 span:last-child').text(Shopify.formatMoney(total_p, window.money_format));
@@ -558,63 +645,63 @@ function example(count) {
       if(actualLng0 == 1){
         setTimeout(function(){
        $(htm_array[0]).trigger('click');
-          },400)
+          },1000)
       }
       }
       if(typeof(actualLng1) != 'undefined'){
       if(actualLng1 == 1){
         setTimeout(function(){
        $(htm_array[1]).trigger('click');
-          },800)
+          },2000)
       }
       }
       if(typeof(actualLng2) != 'undefined'){
       if(actualLng2 == 1){
         setTimeout(function(){
        $(htm_array[2]).trigger('click');
-          },1200)
+          },3000)
       }
       }
       if(typeof(actualLng3) != 'undefined'){
       if(actualLng3 == 1){
        setTimeout(function(){
        $(htm_array[3]).trigger('click');
-          },1600)
+          },4000)
       }
       }
       if(typeof(actualLng4) != 'undefined'){
       if(actualLng4 == 1){
         setTimeout(function(){
        $(htm_array[4]).trigger('click');
-          },2000)
+          },5000)
       }
       }
       if(typeof(actualLng5) != 'undefined'){
       if(actualLng5 == 1){
         setTimeout(function(){
        $(htm_array[5]).trigger('click');
-          },2400)
+          },6000)
       }
       }
       if(typeof(actualLng6) != 'undefined'){
       if(actualLng6 == 1){
        setTimeout(function(){
        $(htm_array[6]).trigger('click');
-          },2800)
+          },7000)
       }
       }
       if(typeof(actualLng7) != 'undefined'){
       if(actualLng7 == 1){
         setTimeout(function(){
        $(htm_array[7]).trigger('click');
-          },3200)
+          },8000)
       }
       }
       if(typeof(actualLng8) != 'undefined'){
       if(actualLng8 == 1){
         setTimeout(function(){
        $(htm_array[8]).trigger('click');
-          },3600)
+          },5800)
       }
       }
       
@@ -627,11 +714,15 @@ function example(count) {
      //    $('.build-journey-accordian.journey-third-accordian h3.active').next('.bundler-target-element').find('.bndlr-add-to-cart').trigger('click');
      //  }, 3000)
       setTimeout(function(){
-        
-      },4500);
-      setTimeout(function(){
         window.location.href="/cart";
-      }, 4200);
+      }, 9000);
+
+
+      var active = length+000;
+      console.log('active',active)
+      setTimeout(function(){
+        console.log('active',active)
+      },active);
       
     })
 

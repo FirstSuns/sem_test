@@ -1,0 +1,168 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "vendor": {
+          "type": "text",
+          "settings": {
+            "text": "{{ product.vendor }}",
+            "text_style": "uppercase"
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "description": {
+          "type": "description",
+          "settings": {}
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button"
+          }
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "disabled": true,
+          "settings": {}
+        },
+        "c2eb5346-5d4f-4074-9dd2-352197cd74bb": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<style>\n\n    .badge {\n        background-color: #FF9416;\n    }\n\n    #apt-container {\n        display: none;\n    }\n    #add_option {\n        display: none;\n    }\n    #multiple_suggestion_modal {\n        z-index: 100; \n        background-color: #191919;\n        padding: 10px 40px 40px 40px; \n        position: absolute;\n        width: 60%;\n        left: 50%;\n        top: 40%;\n        transform: translate(-50%, -50%);\n        -webkit-box-shadow: -8px 6px 71px -13px rgba(0,0,0,0.67);\n        -moz-box-shadow: -8px 6px 71px -13px rgba(0,0,0,0.67);\n        box-shadow: -8px 6px 71px -13px rgba(0,0,0,0.67);\n    }\n    #modal_overlay {\n        background-color: rgba(0,0,0,0.4);\n        height: 100%;\n        width: 100%;\n        position: absolute;\n        z-index: 99;\n        backdrop-filter: blur(10px);\n    }\n    #modal_container { \n        display: none;\n        height: 100%;\n        width: 100%;\n        top: 0; \n        left: 0;\n        position: absolute;\n    }\n    .add-more-quantity {\n        margin: 20px 0px;\n    }\n    #multiple_suggestion_modal h3 {\n        margin-bottom: 0px; \n    }\n    .add-more-btn {\n        display: flex;\n        flex-basis: 100%;\n        flex: 1;\n    }\n    .cart-item__quantity-wrapper span {\n        display: flex;\n        align-items: center;\n        color: #fff;\n        margin-right: 15px;\n    }\n    a.no-thanks { \n        border: 1px solid #FF9416;\n        padding: 0 30px; \n        text-align: center; \n        color: #fff; \n        text-decoration: none;\n        font-family: 'Open Sans', sans-serif;\n        font-size: 15px;\n        line-height: 40px;\n        display: flex;\n        flex-basis: 100%;\n        flex: 1;\n        margin-bottom: 10px;\n        justify-content: center;\n    }\n    .buttons-block {\n        display: flex; \n        flex-direction: row;\n        width: 100%;\n        gap: 10px;\n    }\n    #multiple_suggestion_modal p {\n        font-family: 'Open Sans', sans-serif;\n        margin-top: 0px;\n        margin-bottom: 30px;\n    }\n    .seperator_line { \n        width: 100%;\n        display: block; \n        height: 1px; \n        border-top: 1px solid #2F2F2F; \n        margin-bottom: 10px;\n    }\n<\/style>\n    <div id=\"modal_container\">\n        <div id=\"modal_overlay\" class=\"modal_overlay\"> <\/div>\n        <div id=\"multiple_suggestion_modal\">\n            <h1>Add More Sessions to Save!<\/h1> \n            <div class=\"seperator_line\"><\/div>\n            <h3>2-3 sessions - $222\/ea. | Save $222 - $333 ($444-$666)<\/h3>\n            <p>Includes: + Access to modules 1-3 for 3 months ($232 value) + 6mo of free VIP Community Access<\/p>\n            <h3>4-6 sessions - $177\/ea. | Save $624 - $936 ($708-$1062)<\/h3>\n            <p>Includes: + Access to FULL SEM PROGRAM for 1yr + 1 year of free VIP Community Access ($396 value) + Productivity ($222)<\/p>\n            <h3>7+ sessions - $133\/ea. | Save $1,200 - $1,800 ($798-$1197)<\/h3>\n            <p>BONUSES: + Access to FULL SEM PROGRAM for LIFE ($499 value) + Lifetime VIP access ($33\/mo savings) + Productivity ($222)<\/p>\n            {% form 'product', product %}\n                <!-- form content -->\n                <select id=\"add_option\" name=\"id\">\n                    {% for variant in product.variants %}\n                        <option value=\"{{ variant.id }}\" {% if variant == product.selected_or_first_available_variant %}selected=\"selected\"{% endif %} >\n                        {{ variant.title }} - {{ variant.price | money }}\n                        <\/option>\n                    {% endfor %}\n                <\/select>\n                <div class=\"cart-item__quantity-wrapper\">\n                    <span>Addittional Sessions:<\/span>\n                    <quantity-input class=\"quantity cart-quantity add-more-quantity\">\n                      <button class=\"quantity__button no-js-hidden\" name=\"minus\" type=\"button\">\n                        <span class=\"visually-hidden\">\n                          {{- 'products.product.quantity.decrease' | t: product: item.product.title | escape -}}\n                        <\/span>\n                        {% render 'icon-minus' %}\n                      <\/button>\n                      <input\n                        class=\"quantity__input\"\n                        type=\"number\"\n                        data-quantity-variant-id=\"{{ item.variant.id }}\"\n                        name=\"quantity\"\n                        value=\"{{ item.quantity }}\"\n                        {% # theme-check-disable %}\n                        data-cart-quantity=\"{{ cart | item_count_for_variant: item.variant.id }}\"\n                        min=\"{{ item.variant.quantity_rule.min }}\"\n                        {% if item.variant.quantity_rule.max != null %}\n                          max=\"{{ item.variant.quantity_rule.max }}\"\n                        {% endif %}\n                        step=\"{{ item.variant.quantity_rule.increment }}\"\n                        {% # theme-check-enable %}\n                        aria-label=\"{{ 'products.product.quantity.input_label' | t: product: item.product.title | escape }}\"\n                        id=\"Drawer-quantity-{{ item.index | plus: 1 }}\"\n                        data-index=\"{{ item.index | plus: 1 }}\"\n                      >\n                      <button class=\"quantity__button no-js-hidden\" name=\"plus\" type=\"button\">\n                        <span class=\"visually-hidden\">\n                          {{- 'products.product.quantity.increase' | t: product: item.product.title | escape -}}\n                        <\/span>\n                        {% render 'icon-plus' %}\n                      <\/button>\n                    <\/quantity-input>\n                <\/div>\n                <div class=\"seperator_line\"><\/div>\n                <div class=\"buttons-block\">\n                    <button type=\"submit\" class=\"product-form__submit shopify-payment-button__button button button--full-width add-more-btn button--secondary\" value=\"Add to cart\">Add Sessions<\/button>\n                    <a href=\"\/cart\" class=\"no-thanks\">No Thanks<\/a>\n                <\/div>  \n            {% endform %}\n        <\/div>\n    <\/div>\n    \n    <script>\n    document.addEventListener('click', function (event) {\n    \n        if (!event.target.matches('.appointo-confirm')) return;\n        const modalWindow = document.getElementById('modal_container');\n    \n        document.body.appendChild(modalWindow);\n        modalWindow.style.display = 'block';\n    \n    }, false);\n    document.addEventListener('click', function (event) {\n        if (!event.target.matches('.modal_overlay')) return;\n        const modalWindow = document.getElementById('modal_container');\n        modalWindow.style.display = 'none';\n    }, false);\n\n    <\/script>"
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": false
+          }
+        },
+        "share": {
+          "type": "share",
+          "disabled": true,
+          "settings": {
+            "share_label": "Share"
+          }
+        }
+      },
+      "block_order": [
+        "vendor",
+        "title",
+        "price",
+        "description",
+        "variant_picker",
+        "quantity_selector",
+        "c2eb5346-5d4f-4074-9dd2-352197cd74bb",
+        "buy_buttons",
+        "share"
+      ],
+      "custom_css": [
+        "#apt-container {display: none;}"
+      ],
+      "settings": {
+        "enable_sticky_info": true,
+        "media_size": "large",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "gallery_layout": "stacked",
+        "media_position": "right",
+        "image_zoom": "lightbox",
+        "mobile_thumbnails": "hide",
+        "hide_variants": true,
+        "enable_video_looping": false,
+        "padding_top": 100,
+        "padding_bottom": 100
+      }
+    },
+    "related-products": {
+      "type": "related-products",
+      "disabled": true,
+      "settings": {
+        "heading": "You may also like",
+        "heading_size": "h2",
+        "products_to_show": 10,
+        "columns_desktop": 5,
+        "color_scheme": "background-1",
+        "image_ratio": "square",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "columns_mobile": "2",
+        "padding_top": 100,
+        "padding_bottom": 100
+      }
+    },
+    "cc6f2be6-32a4-4d77-a2d1-cd0df0030d7c": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "{{ section.settings.collection.title }}",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": true,
+        "description_style": "body",
+        "collection": "one-to-one-subscriptions",
+        "products_to_show": 19,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 0,
+        "padding_bottom": 100
+      }
+    },
+    "f7409e86-4f96-4507-afbc-402be39c8b39": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "{{ section.settings.collection.title }}",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": true,
+        "description_style": "body",
+        "collection": "deep-dive-sessions",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "main",
+    "related-products",
+    "cc6f2be6-32a4-4d77-a2d1-cd0df0030d7c",
+    "f7409e86-4f96-4507-afbc-402be39c8b39"
+  ]
+}

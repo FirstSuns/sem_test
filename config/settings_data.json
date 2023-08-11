@@ -101,8 +101,8 @@
     "brand_description": "<p><\/p>",
     "brand_image": "shopify:\/\/shop_images\/Facebook.svg",
     "brand_image_width": 100,
-    "social_facebook_link": "https:\/\/facebook.com\/shopify",
-    "social_instagram_link": "http:\/\/instagram.com\/shopify",
+    "social_facebook_link": "",
+    "social_instagram_link": "http:\/\/instagram.com\/nicpatino",
     "social_youtube_link": "",
     "social_tiktok_link": "",
     "social_twitter_link": "https:\/\/twitter.com\/shopify",
@@ -133,6 +133,35 @@
       }
     },
     "content_for_index": [],
+    "blocks": {
+      "7231527610335159538": {
+        "type": "shopify:\/\/apps\/courses-plus\/blocks\/subscription-embed-block\/ce230994-1eaa-437b-a472-ab50f3058a28",
+        "disabled": true,
+        "settings": {}
+      },
+      "5149645339031002760": {
+        "type": "shopify:\/\/apps\/order-limits-minmaxify\/blocks\/app-embed-block\/3acfba32-89f3-4377-ae20-cbb9abc48475",
+        "disabled": false,
+        "settings": {
+          "async": false
+        }
+      },
+      "5918445685253060206": {
+        "type": "shopify:\/\/apps\/bundler\/blocks\/bundler-script-append\/7a6ae1b8-3b16-449b-8429-8bb89a62c664",
+        "disabled": false,
+        "settings": {}
+      },
+      "341186785192672687": {
+        "type": "shopify:\/\/apps\/seal-subscriptions\/blocks\/subscription-script-append\/13b25004-a140-4ab7-b5fe-29918f759699",
+        "disabled": false,
+        "settings": {}
+      },
+      "9278379683843197553": {
+        "type": "shopify:\/\/apps\/appointo\/blocks\/app-embed\/8e9086b8-9c22-4cd3-b1d1-0967727a5d97",
+        "disabled": false,
+        "settings": {}
+      }
+    },
     "color_schemes": {
       "background-1": {
         "settings": {

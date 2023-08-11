@@ -41,8 +41,15 @@
         },
         "share": {
           "type": "share",
+          "disabled": true,
           "settings": {
             "share_label": "Share"
+          }
+        },
+        "c2eb5346-5d4f-4074-9dd2-352197cd74bb": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<style>\n    .badge {\n        background-color: #FF9416;\n    }\n<\/style>"
           }
         }
       },
@@ -54,7 +61,11 @@
         "quantity_selector",
         "buy_buttons",
         "description",
-        "share"
+        "share",
+        "c2eb5346-5d4f-4074-9dd2-352197cd74bb"
+      ],
+      "custom_css": [
+        "#apt-container,.product-form__quantity {display: none;}"
       ],
       "settings": {
         "enable_sticky_info": true,
@@ -62,21 +73,22 @@
         "constrain_to_viewport": true,
         "media_fit": "contain",
         "gallery_layout": "stacked",
-        "media_position": "left",
+        "media_position": "right",
         "image_zoom": "lightbox",
         "mobile_thumbnails": "hide",
         "hide_variants": true,
         "enable_video_looping": false,
-        "padding_top": 36,
-        "padding_bottom": 12
+        "padding_top": 100,
+        "padding_bottom": 100
       }
     },
     "related-products": {
       "type": "related-products",
+      "disabled": true,
       "settings": {
         "heading": "You may also like",
         "heading_size": "h2",
-        "products_to_show": 5,
+        "products_to_show": 10,
         "columns_desktop": 5,
         "color_scheme": "background-1",
         "image_ratio": "square",
@@ -85,13 +97,71 @@
         "show_vendor": false,
         "show_rating": false,
         "columns_mobile": "2",
-        "padding_top": 36,
-        "padding_bottom": 28
+        "padding_top": 100,
+        "padding_bottom": 100
+      }
+    },
+    "cc6f2be6-32a4-4d77-a2d1-cd0df0030d7c": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "One-to-One (60mins) Session Options",
+        "heading_size": "h1",
+        "description": "<p>Choose from weekly, biweekly, monthly subscription options. <\/p>",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "one-to-one-subscriptions",
+        "products_to_show": 19,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 0,
+        "padding_bottom": 100
+      }
+    },
+    "b6d36cee-e14d-4374-9a3f-62707fda3235": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Deep Dive (90mins) Session Options",
+        "heading_size": "h1",
+        "description": "<p>Choose from weekly, biweekly, monthly subscription options. <\/p>",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "deep-dive-sessions",
+        "products_to_show": 19,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 0,
+        "padding_bottom": 100
       }
     }
   },
   "order": [
     "main",
-    "related-products"
+    "related-products",
+    "cc6f2be6-32a4-4d77-a2d1-cd0df0030d7c",
+    "b6d36cee-e14d-4374-9a3f-62707fda3235"
   ]
 }

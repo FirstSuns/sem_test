@@ -26,6 +26,7 @@
     },
     "56361cf9-2cbb-4013-bf5e-38db0553bb8a": {
       "type": "featured-collection",
+      "disabled": true,
       "settings": {
         "title": "Book a 1:1 Session",
         "heading_size": "h1",
@@ -54,6 +55,7 @@
     },
     "a1dc85af-8b2f-4313-959b-2790e4432bce": {
       "type": "featured-collection",
+      "disabled": true,
       "settings": {
         "title": "Digital Journeys",
         "heading_size": "h1",
@@ -82,7 +84,6 @@
     },
     "product-grid": {
       "type": "np-collection-main-catalog",
-      "disabled": true,
       "blocks": {
         "de92925a-0cff-4d67-8f81-7cf20235400e": {
           "type": "collection",
@@ -100,19 +101,20 @@
       ],
       "settings": {
         "products_per_page": 8,
-        "image_ratio": "square",
+        "image_ratio": "adapt",
         "image_shape": "default",
         "show_secondary_image": false,
         "show_vendor": false,
         "show_rating": false,
         "enable_quick_add": false,
-        "enable_filtering": true,
+        "enable_filtering": false,
         "filter_type": "horizontal",
-        "enable_sorting": true
+        "enable_sorting": false
       }
     },
     "2c518c14-1d1d-481d-8a57-e034adbe3c05": {
       "type": "featured-collection",
+      "disabled": true,
       "settings": {
         "title": "More Tools",
         "heading_size": "h1",

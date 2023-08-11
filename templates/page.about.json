@@ -9,8 +9,9 @@
     "4088019f-1b9b-41a3-871a-7170e0bd86d6": {
       "type": "video-banner",
       "settings": {
-        "background_video": "shopify:\/\/files\/videos\/1689119100774_a703a0-3.myshopify.com_0ce1abb1735be819479d284cfd61df1c.mp4",
+        "background_video": "shopify:\/\/files\/videos\/text-roll-3.3.mp4",
         "video_link": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+        "enable_video_looping": true,
         "headline_text": "",
         "desc": "",
         "small_text": "",
@@ -106,8 +107,8 @@
           "type": "Video",
           "settings": {
             "title": "Start Here! (5:31)",
-            "background_video": "shopify:\/\/files\/videos\/1689119100774_a703a0-3.myshopify.com_0ce1abb1735be819479d284cfd61df1c.mp4",
-            "video_link": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc"
+            "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+            "description": ""
           }
         },
         "99cfecb1-6b55-4b66-aba5-8ca96825b8d2": {
@@ -120,56 +121,56 @@
           "type": "Video",
           "settings": {
             "title": "1.1 What’s your why? (19:28)",
-            "background_video": "shopify:\/\/files\/videos\/1689119100774_a703a0-3.myshopify.com_0ce1abb1735be819479d284cfd61df1c.mp4",
-            "video_link": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc"
+            "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+            "description": ""
           }
         },
         "99205186-9de1-432a-bfe7-f6014a7dd9e8": {
           "type": "Video",
           "settings": {
             "title": "1.2 ‘Niche’ Down your account (16:23)",
-            "background_video": "shopify:\/\/files\/videos\/1689119100774_a703a0-3.myshopify.com_0ce1abb1735be819479d284cfd61df1c.mp4",
-            "video_link": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc"
+            "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+            "description": ""
           }
         },
         "81b3443e-43d5-4190-9030-55d3c10a6fff": {
           "type": "Video",
           "settings": {
             "title": "1.3 Attracting The Right Types of Followers (19:12)",
-            "background_video": "shopify:\/\/files\/videos\/1689119100774_a703a0-3.myshopify.com_0ce1abb1735be819479d284cfd61df1c.mp4",
-            "video_link": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc"
+            "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+            "description": ""
           }
         },
         "c09d54cf-8228-42e5-8c82-678b98712408": {
           "type": "Video",
           "settings": {
             "title": "1.4 Your Brand Message (8:07)",
-            "background_video": "shopify:\/\/files\/videos\/1689119100774_a703a0-3.myshopify.com_0ce1abb1735be819479d284cfd61df1c.mp4",
-            "video_link": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc"
+            "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+            "description": ""
           }
         },
         "b862b6f3-7af8-428d-8d84-27a6a8da6956": {
           "type": "Video",
           "settings": {
             "title": "1.5 Brand Visualization (12:19)",
-            "background_video": "shopify:\/\/files\/videos\/1689119100774_a703a0-3.myshopify.com_0ce1abb1735be819479d284cfd61df1c.mp4",
-            "video_link": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc"
+            "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+            "description": ""
           }
         },
         "219399d3-033c-497e-83f3-488e639ea7a2": {
           "type": "Video",
           "settings": {
             "title": "1.6 Personal Messaging (3:09)",
-            "background_video": "shopify:\/\/files\/videos\/1689119100774_a703a0-3.myshopify.com_0ce1abb1735be819479d284cfd61df1c.mp4",
-            "video_link": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc"
+            "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+            "description": ""
           }
         },
         "3624a89f-679b-4d04-af3a-92262aa5ff31": {
           "type": "Video",
           "settings": {
             "title": "1.7 Personal Messaging",
-            "background_video": "shopify:\/\/files\/videos\/1689119100774_a703a0-3.myshopify.com_0ce1abb1735be819479d284cfd61df1c.mp4",
-            "video_link": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc"
+            "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+            "description": ""
           }
         },
         "6a479f35-3e54-4ea9-be17-8d7530cd67b2": {
@@ -182,55 +183,56 @@
           "type": "Video",
           "settings": {
             "title": "2.1 Personal Messaging",
-            "background_video": "shopify:\/\/files\/videos\/1689119100774_a703a0-3.myshopify.com_0ce1abb1735be819479d284cfd61df1c.mp4",
-            "video_link": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc"
+            "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+            "description": ""
           }
         },
         "53ef8bb0-79dd-4474-aa79-417ac7903066": {
           "type": "Video",
           "settings": {
             "title": "2.2 Attracting The Right Types of Followers (19:12)",
-            "background_video": "shopify:\/\/files\/videos\/1689119100774_a703a0-3.myshopify.com_0ce1abb1735be819479d284cfd61df1c.mp4",
-            "video_link": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc"
+            "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+            "description": ""
           }
         },
         "ac8de2da-92e1-495b-b4b5-e74c63176f13": {
           "type": "Video",
           "settings": {
             "title": "2.3 Brand Visualization (12:19)",
-            "background_video": "shopify:\/\/files\/videos\/1689119100774_a703a0-3.myshopify.com_0ce1abb1735be819479d284cfd61df1c.mp4",
-            "video_link": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc"
+            "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+            "description": ""
           }
         },
         "d08b41ed-9e19-4aee-b521-68348ce66857": {
           "type": "Video",
           "settings": {
             "title": "2.4 Your Brand Message (8:07)",
-            "background_video": "shopify:\/\/files\/videos\/1689119100774_a703a0-3.myshopify.com_0ce1abb1735be819479d284cfd61df1c.mp4",
-            "video_link": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc"
+            "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+            "description": ""
           }
         },
         "8eae447c-084e-412d-9b68-455736332c7a": {
           "type": "Video",
           "settings": {
             "title": "2.5 What’s your why? (19:28)",
-            "background_video": "shopify:\/\/files\/videos\/1689119100774_a703a0-3.myshopify.com_0ce1abb1735be819479d284cfd61df1c.mp4",
-            "video_link": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc"
+            "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+            "description": ""
           }
         },
         "5e9743dd-82b3-436d-92cd-6357decf6695": {
           "type": "Video",
           "settings": {
             "title": "2.6 ‘Niche’ Down your account (16:23)",
-            "background_video": "shopify:\/\/files\/videos\/1689119100774_a703a0-3.myshopify.com_0ce1abb1735be819479d284cfd61df1c.mp4",
-            "video_link": "https:\/\/youtu.be\/9xwazD5SyVg"
+            "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+            "description": ""
           }
         },
         "acf72db7-b1f8-4a16-8a34-7ddb5bd3d0d0": {
           "type": "Video",
           "settings": {
             "title": "2.7 Personal Messaging (3:09)",
-            "video_link": "https:\/\/youtu.be\/9xwazD5SyVg"
+            "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+            "description": ""
           }
         },
         "8c4c11ab-112b-4c55-93ea-aa0857aefeb8": {
@@ -243,28 +245,32 @@
           "type": "Video",
           "settings": {
             "title": "2.1 Personal Messaging",
-            "video_link": "https:\/\/youtu.be\/9xwazD5SyVg"
+            "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+            "description": ""
           }
         },
         "26a7f46b-2f8a-4dae-abab-7fa814dbcdc0": {
           "type": "Video",
           "settings": {
             "title": "2.2 Attracting The Right Types of Followers (19:12)",
-            "video_link": "https:\/\/youtu.be\/9xwazD5SyVg"
+            "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+            "description": ""
           }
         },
         "b2c9ea5a-cde0-429e-a43c-97ad548c8aaa": {
           "type": "Video",
           "settings": {
             "title": "2.3 Brand Visualization (12:19)",
-            "video_link": "https:\/\/youtu.be\/9xwazD5SyVg"
+            "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+            "description": ""
           }
         },
         "a6a5e62d-511e-4fc6-a893-5b37ce09ae0b": {
           "type": "Video",
           "settings": {
             "title": "2.4 Your Brand Message (8:07)",
-            "video_link": "https:\/\/youtu.be\/9xwazD5SyVg"
+            "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+            "description": ""
           }
         },
         "d3bf89e1-9ebc-47c9-b90f-4f9db6e4d13f": {
@@ -277,70 +283,80 @@
           "type": "Video",
           "settings": {
             "title": "2.1 Personal Messaging",
-            "video_link": "https:\/\/youtu.be\/9xwazD5SyVg"
+            "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+            "description": ""
           }
         },
         "3b9a02e8-ebc5-48dc-a676-bb7c5e7f745e": {
           "type": "Video",
           "settings": {
             "title": "2.2 Attracting The Right Types of Followers (19:12)",
-            "video_link": "https:\/\/youtu.be\/9xwazD5SyVg"
+            "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+            "description": ""
           }
         },
         "9bf9eddc-51d4-48e0-b6aa-0b8a7c02d1de": {
           "type": "Video",
           "settings": {
             "title": "2.3 Brand Visualization (12:19)",
-            "video_link": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc"
+            "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+            "description": ""
           }
         },
         "9a460f5c-5569-4f68-bfd1-b9e8af802b8b": {
           "type": "Video",
           "settings": {
             "title": "2.4 Your Brand Message (8:07)",
-            "video_link": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc"
+            "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+            "description": ""
           }
         },
         "ced5489d-80aa-4a00-b05a-6035bc6fc5d3": {
           "type": "Video",
           "settings": {
             "title": "2.5 What’s your why? (19:28)",
-            "video_link": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc"
+            "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+            "description": ""
           }
         },
         "9fc161a1-591e-41a8-aa15-178cb334a5cf": {
           "type": "Video",
           "settings": {
             "title": "2.6 ‘Niche’ Down your account (16:23)",
-            "video_link": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc"
+            "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+            "description": ""
           }
         },
         "dd1b6558-5ace-48e2-ac36-7c2e98e49764": {
           "type": "Video",
           "settings": {
             "title": "2.7 Personal Messaging (3:09)",
-            "video_link": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc"
+            "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+            "description": ""
           }
         },
         "cdb8a8b7-b719-4390-b6ec-a43bb639c42f": {
           "type": "Video",
           "settings": {
             "title": "2.1 Personal Messaging",
-            "video_link": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc"
+            "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+            "description": ""
           }
         },
         "cad2a5a2-aabc-486d-afc4-ebe356120e0a": {
           "type": "Video",
           "settings": {
             "title": "2.2 Attracting The Right Types of Followers (19:12)",
-            "video_link": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc"
+            "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+            "description": ""
           }
         },
         "255ab41a-5bf0-4bd8-80b2-242d40f4ad8c": {
           "type": "Video",
           "settings": {
             "title": "2.3 Brand Visualization (12:19)",
-            "video_link": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc"
+            "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+            "description": ""
           }
         },
         "dbbe9867-ab85-4522-bb56-82571fcee1c7": {
@@ -353,42 +369,48 @@
           "type": "Video",
           "settings": {
             "title": "2.1 Personal Messaging",
-            "video_link": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc"
+            "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+            "description": ""
           }
         },
         "5de07bf5-2304-44b3-8873-fa14bac44004": {
           "type": "Video",
           "settings": {
             "title": "2.2 Attracting The Right Types of Followers (19:12)",
-            "video_link": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc"
+            "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+            "description": ""
           }
         },
         "7789e09f-38e0-40fd-98db-f9f23049c5af": {
           "type": "Video",
           "settings": {
             "title": "2.3 Brand Visualization (12:19)",
-            "video_link": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc"
+            "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+            "description": ""
           }
         },
         "756fafb0-f085-44af-9160-883e9fc2a19d": {
           "type": "Video",
           "settings": {
             "title": "2.4 Your Brand Message (8:07)",
-            "video_link": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc"
+            "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+            "description": ""
           }
         },
         "9ebb49ac-a713-4cf8-8066-72c1381d30bb": {
           "type": "Video",
           "settings": {
             "title": "2.5 What’s your why? (19:28)",
-            "video_link": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc"
+            "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+            "description": ""
           }
         },
         "e4aae335-21de-4f18-b356-c913028dd606": {
           "type": "Video",
           "settings": {
             "title": "2.6 ‘Niche’ Down your account (16:23)",
-            "video_link": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc"
+            "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+            "description": ""
           }
         },
         "0e4ed27d-2d0b-4c93-b15c-4a2b783209e9": {
@@ -401,49 +423,56 @@
           "type": "Video",
           "settings": {
             "title": "2.1 Personal Messaging",
-            "video_link": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc"
+            "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+            "description": ""
           }
         },
         "efda6b9a-65e3-41ff-8a65-937a398963c1": {
           "type": "Video",
           "settings": {
             "title": "2.2 Attracting The Right Types of Followers (19:12)",
-            "video_link": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc"
+            "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+            "description": ""
           }
         },
         "149c7129-de3f-43e5-84f9-2dd9d12795ec": {
           "type": "Video",
           "settings": {
             "title": "2.3 Brand Visualization (12:19)",
-            "video_link": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc"
+            "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+            "description": ""
           }
         },
         "a9cad38c-4ee9-41f0-b8d4-4662cd0693a6": {
           "type": "Video",
           "settings": {
             "title": "2.4 Your Brand Message (8:07)",
-            "video_link": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc"
+            "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+            "description": ""
           }
         },
         "9887e87e-91a2-4747-add7-1791e0aa119f": {
           "type": "Video",
           "settings": {
             "title": "2.5 What’s your why? (19:28)",
-            "video_link": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc"
+            "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+            "description": ""
           }
         },
         "8aa7afb9-347b-41b8-a98a-1122cd976f77": {
           "type": "Video",
           "settings": {
             "title": "2.6 ‘Niche’ Down your account (16:23)",
-            "video_link": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc"
+            "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+            "description": ""
           }
         },
         "e8767261-790f-4f56-afd8-325d4f813256": {
           "type": "Video",
           "settings": {
             "title": "2.7 Personal Messaging (3:09)",
-            "video_link": "https:\/\/youtu.be\/9xwazD5SyVg"
+            "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+            "description": ""
           }
         }
       },
