@@ -7,7 +7,7 @@
           "type": "List",
           "settings": {
             "title": "A. The Quiz",
-            "content": "Take the 7 question quiz to automatically generate a tailored program based on your needs",
+            "content": "A six-question quiz that automatically generates a tailored program based on your answers.",
             "image": "shopify:\/\/shop_images\/banner.png",
             "normal_image": "shopify:\/\/shop_images\/icon01.png",
             "hover_image": "shopify:\/\/shop_images\/icon01-y.png",
@@ -18,22 +18,22 @@
           "type": "List",
           "settings": {
             "title": "B. Packages",
-            "content": "View my selection of pre-fabricated packages and see if theres a fit.",
+            "content": "Choose from 3 recommended journeys based on how deep you want to dive.",
             "image": "shopify:\/\/shop_images\/banner.png",
             "normal_image": "shopify:\/\/shop_images\/icon03.png",
             "hover_image": "shopify:\/\/shop_images\/icon03-y.png",
-            "link": "shopify:\/\/pages\/sem-packages"
+            "link": "shopify:\/\/pages\/bundles"
           }
         },
         "853a833d-f881-40ad-a34d-f907367030e1": {
           "type": "List",
           "settings": {
             "title": "C. Do it Yourself",
-            "content": "See all available lessons and materials and build a path thats perfect for you.",
+            "content": "See all available options in one place and craft your own plan.",
             "image": "shopify:\/\/shop_images\/banner.png",
             "normal_image": "shopify:\/\/shop_images\/icon02.png",
             "hover_image": "shopify:\/\/shop_images\/icon02-y.png",
-            "link": "shopify:\/\/pages\/bundle-builder"
+            "link": "shopify:\/\/pages\/build-your-journey"
           }
         }
       },
@@ -43,9 +43,39 @@
         "853a833d-f881-40ad-a34d-f907367030e1"
       ],
       "settings": {
-        "title": "<p>Welcome. Lets build <strong>your journey.<\/strong><\/p>",
-        "content": "<p>No wrong answers here. No matter what you choose, you’ll still be able to tailor and edit your program design afterwards.<\/p>",
+        "title": "<p>Let's build <strong>your journey.<\/strong><\/p>",
+        "content": "",
         "package_title": "<p>Choose a Path:<\/p>"
+      }
+    },
+    "f2d37c02-2fba-45b5-8694-88e5c3c1af5f": {
+      "type": "rich-text",
+      "blocks": {
+        "template--20172122390828__f2d37c02-2fba-45b5-8694-88e5c3c1af5f-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "There's no wrong direction here.<strong> <\/strong>",
+            "heading_size": "h2"
+          }
+        },
+        "template--20172122390828__f2d37c02-2fba-45b5-8694-88e5c3c1af5f-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>No matter which path you choose, you'll be able to tailor your plan before (and after) enrollment.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--20172122390828__f2d37c02-2fba-45b5-8694-88e5c3c1af5f-heading-1",
+        "template--20172122390828__f2d37c02-2fba-45b5-8694-88e5c3c1af5f-text-1"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 80,
+        "padding_bottom": 52
       }
     },
     "faq-package": {
@@ -94,6 +124,7 @@
   },
   "order": [
     "quiz-package",
+    "f2d37c02-2fba-45b5-8694-88e5c3c1af5f",
     "faq-package"
   ]
 }

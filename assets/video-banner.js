@@ -32,5 +32,5 @@ $('.full-screen-video-banner img,.full-screen-video-banner .content').on('click'
   $('.full-screen-video-banner').find('iframe').show();
   var src = $('.full-screen-video-banner').find('iframe').attr('src');
   $('.full-screen-video-banner').find('iframe').attr('src',src+'&autoplay=1');
-  $('.full-screen-video-banner .content').hide();
+  // $('.full-screen-video-banner .content').hide();
 });

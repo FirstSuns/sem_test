@@ -7,9 +7,9 @@
           "type": "List",
           "settings": {
             "title": "Dip Your Toes In",
-            "content": "<p><strong>SEM Resources: <\/strong>the 7 Core Journeys: 2 for 1 - $55 (Save $55)<\/p><p><strong>Private 1:1 Sessions:<\/strong> One 1:1 breakthrough session - $333 (no expiration)<\/p>",
+            "content": "<p>One<strong> 1:1  <\/strong>session (1hr) - $333<\/p>",
             "total_text": "Total:",
-            "total_price": "$388",
+            "total_price": "$333",
             "price_time_period": "oneTime",
             "enable_pre_pay": false,
             "pre_pay_price": "",
@@ -23,32 +23,32 @@
           "type": "List",
           "settings": {
             "title": "Immerse Yourself",
-            "content": "<p><strong>SEM Resources: <\/strong>Sem Subscription - $155\/mo or $455 for 6mo. (Save $475! Over 50%!)<\/p><p><strong>Private 1:1 Sessions:<\/strong> Monthly 90min deep-dive - $288\/mo (‘most popular’ - save $83\/mo)<\/p><p><\/p>",
-            "total_text": "Monthly Total:",
+            "content": "<p><strong>Monthly 1:1 Session (1hr) - <\/strong>$288<\/p><p><strong>+<\/strong><\/p><p><strong>The Self Expansion Method - <\/strong>$155\/mo <\/p><h5>(6 months prepaid - $76\/mo)<\/h5><h5><\/h5><p><\/p>",
+            "total_text": "Total:",
             "total_price": "$443",
             "price_time_period": "perMonth",
             "enable_pre_pay": true,
             "pre_pay_price": "$363",
-            "prepay_content": "<p>Pre-pay for 6 months of  the SEM resources and save +50%!<\/p>",
+            "prepay_content": "<p>Pre-pay for 6 months of access to SEM Resources & save 50%!<\/p>",
             "enable_pre_btn": true,
             "btn_content": "#",
-            "discounts_content": "<p>Discounts will be applied at checkout.<\/p>"
+            "discounts_content": "<p>*Pre-payment is for SEM resources only, not 1:1 sessions.<\/p><p>Discounts applied at checkout. <\/p>"
           }
         },
         "02626679-acf7-45ba-a3ce-8ad43814b6d0": {
           "type": "List",
           "settings": {
             "title": "The Deep Dive",
-            "content": "<p><strong>SEM Resources:<\/strong> SEM Subscription (included)<\/p><p><strong>Private 1:1 Sessions:<\/strong> Biweekly - $222 ($444\/mo) + (Includes FREE access to Full SEM Program) (Save $244\/mo)<\/p>",
-            "total_text": "Monthly Total:",
-            "total_price": "$444",
+            "content": "<p><strong>Biweekly 1:1 Session (1hr)<\/strong> - $444<\/p><h5><em>(Save $222\/mo!)<\/em><\/h5><p><strong>+ <\/strong><\/p><p><strong>The Self Expansion Method - <\/strong>$155\/mo<\/p><h5>(6 months prepaid - $76\/mo)<\/h5>",
+            "total_text": "Total:",
+            "total_price": "$599",
             "price_time_period": "perMonth",
-            "enable_pre_pay": false,
-            "pre_pay_price": "",
-            "prepay_content": "",
+            "enable_pre_pay": true,
+            "pre_pay_price": "$520",
+            "prepay_content": "<p>Pre-pay for 6 months of access to SEM Resources & save 50%!<\/p>",
             "enable_pre_btn": true,
             "btn_content": "#",
-            "discounts_content": "<p>Discounts will be applied at checkout.<\/p>"
+            "discounts_content": "<p>*Pre-payment is for SEM resources only, not 1:1 sessions.<\/p><p>Discounts applied at checkout. <\/p>"
           }
         }
       },
@@ -58,12 +58,78 @@
         "02626679-acf7-45ba-a3ce-8ad43814b6d0"
       ],
       "settings": {
-        "title": "<p>Levels of Intensity<\/p>",
-        "content": "<p>Don’t want to build your own? Here are a few incredible pre-built options:<\/p>"
+        "title": "<p>Levels of Depth<\/p>",
+        "content": "<p>Here are a few options for your mentorship journey:<\/p>"
+      }
+    },
+    "092c7e74-c2c1-4085-94ff-69cdead61f96": {
+      "type": "rich-text",
+      "blocks": {
+        "template--20474036093228__092c7e74-c2c1-4085-94ff-69cdead61f96-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>You'll be able to modify these options to your liking on the next page. <\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--20474036093228__092c7e74-c2c1-4085-94ff-69cdead61f96-text-1"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 0,
+        "padding_bottom": 60
+      }
+    },
+    "af5b77fa-af38-433b-8991-50db6a09fa6a": {
+      "type": "rich-text",
+      "blocks": {
+        "template--20474036093228__af5b77fa-af38-433b-8991-50db6a09fa6a-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "Not sure exactly what you need?",
+            "heading_size": "h2"
+          }
+        },
+        "template--20474036093228__af5b77fa-af38-433b-8991-50db6a09fa6a-text-1": {
+          "type": "text",
+          "settings": {
+            "text": ""
+          }
+        },
+        "template--20474036093228__af5b77fa-af38-433b-8991-50db6a09fa6a-button-1": {
+          "type": "button",
+          "settings": {
+            "button_label": "Try the Journey Generator Quiz",
+            "button_link": "shopify:\/\/pages\/the-quiz",
+            "button_style_secondary": true,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "template--20474036093228__af5b77fa-af38-433b-8991-50db6a09fa6a-heading-1",
+        "template--20474036093228__af5b77fa-af38-433b-8991-50db6a09fa6a-text-1",
+        "template--20474036093228__af5b77fa-af38-433b-8991-50db6a09fa6a-button-1"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
       }
     }
   },
   "order": [
-    "main"
+    "main",
+    "092c7e74-c2c1-4085-94ff-69cdead61f96",
+    "af5b77fa-af38-433b-8991-50db6a09fa6a"
   ]
 }

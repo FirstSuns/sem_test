@@ -16,6 +16,11 @@
       "label": "t:sections.video.settings.video.label"
     },
     {
+      "type": "video",
+      "id": "mobile_video",
+      "label": "Mobile Video Background"
+    },
+    {
       "type": "header",
       "content": "t:sections.video.settings.header__2.content"
     },
@@ -36,6 +41,12 @@
       "id": "enable_video_looping",
       "default": true,
       "label": "t:sections.main-product.settings.enable_video_looping.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_scroll_btn",
+      "default": true,
+      "label": "Enable Scroll Btn"
     },
     {
       "type": "image_picker",
@@ -79,10 +90,27 @@
   ]
 }
 {% endschema %}
-
 {% assign video_asset = section.settings.background_video %}
+{% assign mobile_video_asset = section.settings.mobile_background_video %}
 {% assign video_url = section.settings.background_video.sources[1].url %}
+<style>
 
+#mobile_background_video {
+  display: block !important;
+}
+#desktop_background_video {
+  display: none !important;
+}
+
+@media only screen and (min-width: 48em) {
+  #mobile_background_video {
+    display: none !important;
+  }
+  #desktop_background_video {
+    display: block !important;
+  }
+}
+</style>
 <section class="full-screen-video-banner">
   {% if section.settings.background_image != blank %}
     <figure>
@@ -134,7 +162,8 @@
       ></iframe>
     {%- endif -%}
   {%- else -%}
-    <video src="{{ section.settings.background_video.sources[1].url }}" muted autoplay loop></video>
+    <video id="desktop_background_video" src="{{ section.settings.background_video.sources[1].url }}" playsinline muted autoplay loop></video>
+    <video id="mobile_background_video" src="{{ section.settings.mobile_video.sources[1].url }}" playsinline muted autoplay loop></video>
   {%- endif -%}
 
   <div class="overlay"></div>
@@ -151,6 +180,9 @@
         <a href="{{ section.settings.button_link }}" class="button">{{ section.settings.button_text }}</a>
       </div>
     </div>
+    {%- if section.settings.enable_scroll_btn -%}
+        <a href="#" class="scroll-btn"><span></span>Scroll</a>
+    {%- endif -%}
   {% endif %}
 </section>
 
@@ -160,3 +192,34 @@
     video{display:block !important;}
   </style>
 {% endif %}
+
+
+<script>
+  // Wait for the DOM to be fully loaded
+  document.addEventListener('DOMContentLoaded', function () {
+    // Find the anchor tag with the class 'scroll-btn'
+    const scrollButton = document.querySelector('.scroll-btn');
+    
+    // Add a click event listener to the anchor tag
+    scrollButton.addEventListener('click', function (event) {
+      event.preventDefault(); // Prevent default anchor behavior
+      
+      const startY = window.scrollY;
+      const targetY = startY + window.innerHeight;
+      const duration = 1000; // Animation duration in milliseconds
+      
+      function animateScroll(timestamp) {
+        const progress = Math.min((timestamp - startTime) / duration, 1);
+        const newY = startY + (targetY - startY) * progress;
+        window.scrollTo(0, newY);
+
+        if (progress < 1) {
+          window.requestAnimationFrame(animateScroll);
+        }
+      }
+
+      const startTime = performance.now();
+      window.requestAnimationFrame(animateScroll);
+    });
+  });
+</script>

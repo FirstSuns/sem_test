@@ -59,10 +59,17 @@ Shopify.formatMoney = function(cents, format) {
     }
   }
   else if($(this).hasClass('forth')){
+    var last_t_g = $(this).text();
   if($(this).hasClass('active')){
       $(this).removeClass('active');
     }else{
-    $(this).parents('.build-journey-accordian').find('h3').removeClass('active');
+    //$(this).parents('.build-journey-accordian').find('h3').removeClass('active');
+    if(last_t_g == '”Mentor in my pocket” add-on option for unlimited direct-message & voice-note support ($333/mo)'){
+      
+    }else{
+    $('.module-journey-21').removeClass('active');
+    $('.module-journey-20').removeClass('active');
+    }
     $(this).addClass('active');
     
     }
@@ -70,11 +77,19 @@ Shopify.formatMoney = function(cents, format) {
   $(this).toggleClass('active');
   }
 
-        if($(this).hasClass('active')){
+  var h3_main_text = $(this).text();
+
+   if($(this).hasClass('active')){
       var h3_text = $(this).text();
+          
     }else{
     var h3_text = '';
     }
+   if($('.module-journey-21').hasClass('active')){
+     var h3_s_text = $('.module-journey-21').text();
+   }else{
+     var h3_s_text = '';
+   }
 
 
     var first_p = $('.journey-first-accordian h3.active').next('.bundler-target-element').find('.bndlr-total-price span.bndlr-new-price').attr('data-currentprice');
@@ -83,12 +98,33 @@ Shopify.formatMoney = function(cents, format) {
     var thi_p = $('.journey-third-accordian h3.active').next('.bundler-target-element').find('.bndlr-total-price span.bndlr-new-price').attr('data-currentprice');
 
   
-                                      if(h3_text == 'Purchase Multiple Sessions:'){
+                                      if(h3_s_text == 'Purchase Multiple Sessions:'){
       var for_p = $('.journey-forth-accordian h3.active').attr('data-p');
       for_p = parseInt(for_p)*parseInt($('.journey_qty').val());
+
+      if($('.module-journey-22').hasClass('active')){
+       var for_p_last = $('.module-journey-22.active').next('.bundler-target-element').find('.bndlr-total-price span.bndlr-new-price').attr('data-currentprice');
+      } 
     }else{
-    var for_p = $('.journey-forth-accordian h3.active').next('.bundler-target-element').find('.bndlr-total-price span.bndlr-new-price').attr('data-currentprice');
-                                      }
+                                        if($('.module-journey-22').hasClass('active')){
+       var for_p_last = $('.module-journey-22.active').next('.bundler-target-element').find('.bndlr-total-price span.bndlr-new-price').attr('data-currentprice');
+      } 
+    var for_p = $('.journey-forth-accordian h3.module-journey-20.active').next('.bundler-target-element').find('.bndlr-total-price span.bndlr-new-price').attr('data-currentprice');
+    }
+ /* if(h3_text == '”Mentor in my pocket” add-on option for unlimited direct-message & voice-note support ($333/mo)'){
+  var for_p_last = $('.module-journey-22.active').next('.bundler-target-element').find('.bndlr-total-price span.bndlr-new-price').attr('data-currentprice');
+
+    if($('.module-journey-21').hasClass('active')){
+       var for_p = $('h3.module-journey-21.active').attr('data-p');
+      for_p = parseInt(for_p)*parseInt($('.journey_qty').val());
+    } 
+    if($('.module-journey-20').hasClass('active')){
+       var for_p = $('.journey-forth-accordian h3.module-journey-20.active').next('.bundler-target-element').find('.bndlr-total-price span.bndlr-new-price').attr('data-currentprice');
+} 
+    
+  }
+  */
+  console.log('for_p_last',for_p_last,for_p)
 
   
   var first_l = $('.journey-first-accordian h3.active').length;
@@ -145,14 +181,38 @@ Shopify.formatMoney = function(cents, format) {
 
   $('.journey-price-3 span:first-child').text(html_thi);
     var thi_p_t = $('.journey-third-accordian h3.active').attr('data-id');
-                                            if(h3_text == 'Purchase Multiple Sessions:'){
+    if(h3_s_text == 'Purchase Multiple Sessions:'){
       var for_p_t = $('.journey-forth-accordian h3.active').attr('data-d');
       for_p_t = parseInt(for_p_t)*parseInt($('.journey_qty').val());
        for_p_t = '$'+for_p_t;
+      if($('.module-journey-22').hasClass('active')){
+       var for_p_t_last = $('.module-journey-22').attr('data-id');
+      } 
     } else{
+
+      if($('.module-journey-22').hasClass('active')){
+       var for_p_t_last = $('.module-journey-22').attr('data-id');
+      } 
     var for_p_t = $('.journey-forth-accordian h3.active').attr('data-id');
                                               
-                                            }
+    }
+
+
+                               if(h3_s_text == 'Purchase Multiple Sessions:'){
+      var for_p = $('.journey-forth-accordian h3.active').attr('data-p');
+      for_p = parseInt(for_p)*parseInt($('.journey_qty').val());
+
+      if($('.module-journey-22').hasClass('active')){
+       var for_p_last = $('.module-journey-22.active').next('.bundler-target-element').find('.bndlr-total-price span.bndlr-new-price').attr('data-currentprice');
+      } 
+    }else{
+                                        if($('.module-journey-22').hasClass('active')){
+       var for_p_last = $('.module-journey-22.active').next('.bundler-target-element').find('.bndlr-total-price span.bndlr-new-price').attr('data-currentprice');
+      } 
+    var for_p = $('.journey-forth-accordian h3.module-journey-20.active').next('.bundler-target-element').find('.bndlr-total-price span.bndlr-new-price').attr('data-currentprice');
+    }
+
+  
 
     if(first_p == undefined){
     first_p = 0.00;
@@ -166,6 +226,10 @@ Shopify.formatMoney = function(cents, format) {
     if(for_p == undefined){
     for_p = 0.00;
     }
+  if(for_p_last == undefined){
+    for_p_last = 0.00;
+    }
+  
 
     if(first_p_t == undefined){
     first_p_t = '$0.00/mo';
@@ -183,6 +247,10 @@ Shopify.formatMoney = function(cents, format) {
     }else{
       var left_t = '2 Sessions (Redeemable Forever)'
     }
+  if(for_p_t_last == undefined){
+    for_p_t_last = '$0.00/mo';
+    }
+  
 
  
       $('.journey-price-4 span:first-child').text(left_t);
@@ -191,19 +259,87 @@ Shopify.formatMoney = function(cents, format) {
     $('.journey-price-2 span:last-child').text(sec_p_t);
     $('.journey-price-3 span:last-child').text(thi_p_t);
   if(h3_text == '”Mentor in my pocket” add-on option for unlimited direct-message & voice-note support ($333/mo)'){
-        $('.journey-price-6 span:last-child').text(for_p_t);    
-    $('.journey-price-4 span:last-child').text('$0.00');
+        $('.journey-price-6 span:last-child').text(for_p_t_last);    
+  //  $('.journey-price-6 span:last-child').text('$0.00/mo');
     }else
     {
-      $('.journey-price-6 span:last-child').text('$0.00/mo');
+    //  $('.journey-price-4 span:last-child').text('$0.00');
     $('.journey-price-4 span:last-child').text(for_p_t);
     }
 
-    var total_p = parseInt(first_p)+parseInt(sec_p)+parseInt(thi_p)+parseInt(for_p);
+  
+    var total_p = parseInt(first_p)+parseInt(sec_p)+parseInt(thi_p)+parseInt(for_p)+parseInt(for_p_last);
+  console.log('for_p_last',for_p_last,'for_p',for_p,'total_p',total_p)
 $('.journey-price-5 span:last-child').text(Shopify.formatMoney(total_p, window.money_format));
 console.log('total_p',Shopify.formatMoney(total_p, window.money_format))
-    
 
+  var le_1 = $('.journey-first-accordian h3.active').length;
+  var le_2 = $('.journey-second-accordian h3.active').length;
+  var le_3 = $('.journey-third-accordian h3.active').length;
+  var le_4 = $('.journey-forth-accordian h3.active').length;
+  var metar = $(this).text();
+
+  if(le_1 == 0 && le_2 == 0){
+    $('.build-journey-btn-wrap:nth-child(1) h4').addClass('active');
+    $('.build-journey-btn-wrap:nth-child(1) h3').removeClass('active');
+  }else{
+    $('.build-journey-btn-wrap:nth-child(1) h4').removeClass('active');
+  }
+
+  if(le_3 == 0 && le_4 == 0){
+    $('.build-journey-btn-wrap:nth-child(2) h4').addClass('active');
+    $('.build-journey-btn-wrap:nth-child(2) h3').removeClass('active');
+  }else{
+    $('.build-journey-btn-wrap:nth-child(2) h4').removeClass('active');
+  }
+  
+  if(le_1 == 0){
+    $('.build-journey-btn-wrap:nth-child(1) .build-journey-btn-part-1 h3').removeClass('active');
+  }else{
+    $('.build-journey-btn-wrap:nth-child(1) .build-journey-btn-part-1 h3').addClass('active');
+  }
+
+  if(le_2 == 0){
+    $('.build-journey-btn-wrap:nth-child(1) .build-journey-btn-part-2 h3').removeClass('active');
+  }else{
+    $('.build-journey-btn-wrap:nth-child(1) .build-journey-btn-part-2 h3').addClass('active');
+  }
+
+  if(le_3 == 0){
+    $('.build-journey-btn-wrap:nth-child(2) .build-journey-btn-part-3 h3').removeClass('active');
+  }else{
+    $('.build-journey-btn-wrap:nth-child(2) .build-journey-btn-part-3 h3').addClass('active');
+  }
+
+  if(le_4 == 0){
+    $('.build-journey-btn-wrap:nth-child(2) .build-journey-btn-part-4 h3').removeClass('active');
+    $('.build-journey-btn-wrap:nth-child(2) .build-journey-btn-part-6 h3').removeClass('active');
+  }else{
+    if(metar == '”Mentor in my pocket” add-on option for unlimited direct-message & voice-note support ($333/mo)'){
+      if($('.module-journey-22').hasClass('active')){
+        $('.build-journey-btn-wrap:nth-child(2) .build-journey-btn-part-6 h3').addClass('active');
+      }else{
+      $('.build-journey-btn-wrap:nth-child(2) .build-journey-btn-part-6 h3').removeClass('active');
+      }
+      if($('.module-journey-20').hasClass('active') || $('.module-journey-21').hasClass('active')){
+        $('.build-journey-btn-wrap:nth-child(2) .build-journey-btn-part-4 h3').addClass('active');
+      }else{
+        $('.build-journey-btn-wrap:nth-child(2) .build-journey-btn-part-4 h3').removeClass('active');
+      }
+    }else{
+      if($('.module-journey-20').hasClass('active') || $('.module-journey-21').hasClass('active')){
+        $('.build-journey-btn-wrap:nth-child(2) .build-journey-btn-part-4 h3').addClass('active');
+      }else{
+        $('.build-journey-btn-wrap:nth-child(2) .build-journey-btn-part-4 h3').removeClass('active');
+      }
+    }
+  }
+  var tot_qty_part = $('.build-journey-product h3.active').length;
+  if(tot_qty_part == 0){
+    $('.btn.journey_btn').addClass('active');
+  }else{
+    $('.btn.journey_btn').removeClass('active');
+  }
 
   {% include 'journey-opacity' %}
 })
@@ -272,8 +408,17 @@ Shopify.formatMoney = function(cents, format) {
     $rooms.val(a);
 
 
-    var h3_text = $('.module-journey-21.active').text();
-    console.log('h3_text',h3_text);
+    if($(this).hasClass('active')){
+      var h3_text = $(this).text();
+          
+    }else{
+    var h3_text = '';
+    }
+   if($('.module-journey-21').hasClass('active')){
+     var h3_s_text = $('.module-journey-21').text();
+   }else{
+     var h3_s_text = '';
+   }
 
 
     var first_p = $('.journey-first-accordian h3.active').next('.bundler-target-element').find('.bndlr-total-price span.bndlr-new-price').attr('data-currentprice');
@@ -282,12 +427,33 @@ Shopify.formatMoney = function(cents, format) {
     var thi_p = $('.journey-third-accordian h3.active').next('.bundler-target-element').find('.bndlr-total-price span.bndlr-new-price').attr('data-currentprice');
 
   
-                                      if(h3_text == 'Purchase Multiple Sessions:'){
+                                      if(h3_s_text == 'Purchase Multiple Sessions:'){
       var for_p = $('.journey-forth-accordian h3.active').attr('data-p');
       for_p = parseInt(for_p)*parseInt($('.journey_qty').val());
+
+      if($('.module-journey-22').hasClass('active')){
+       var for_p_last = $('.module-journey-22.active').next('.bundler-target-element').find('.bndlr-total-price span.bndlr-new-price').attr('data-currentprice');
+      } 
     }else{
-    var for_p = $('.journey-forth-accordian h3.active').next('.bundler-target-element').find('.bndlr-total-price span.bndlr-new-price').attr('data-currentprice');
-                                      }
+                                        if($('.module-journey-22').hasClass('active')){
+       var for_p_last = $('.module-journey-22.active').next('.bundler-target-element').find('.bndlr-total-price span.bndlr-new-price').attr('data-currentprice');
+      } 
+    var for_p = $('.journey-forth-accordian h3.module-journey-20.active').next('.bundler-target-element').find('.bndlr-total-price span.bndlr-new-price').attr('data-currentprice');
+    }
+ /* if(h3_text == '”Mentor in my pocket” add-on option for unlimited direct-message & voice-note support ($333/mo)'){
+  var for_p_last = $('.module-journey-22.active').next('.bundler-target-element').find('.bndlr-total-price span.bndlr-new-price').attr('data-currentprice');
+
+    if($('.module-journey-21').hasClass('active')){
+       var for_p = $('h3.module-journey-21.active').attr('data-p');
+      for_p = parseInt(for_p)*parseInt($('.journey_qty').val());
+    } 
+    if($('.module-journey-20').hasClass('active')){
+       var for_p = $('.journey-forth-accordian h3.module-journey-20.active').next('.bundler-target-element').find('.bndlr-total-price span.bndlr-new-price').attr('data-currentprice');
+} 
+    
+  }
+  */
+  console.log('for_p_last',for_p_last,for_p)
 
   
   var first_l = $('.journey-first-accordian h3.active').length;
@@ -344,14 +510,38 @@ Shopify.formatMoney = function(cents, format) {
 
   $('.journey-price-3 span:first-child').text(html_thi);
     var thi_p_t = $('.journey-third-accordian h3.active').attr('data-id');
-                                            if(h3_text == 'Purchase Multiple Sessions:'){
+    if(h3_s_text == 'Purchase Multiple Sessions:'){
       var for_p_t = $('.journey-forth-accordian h3.active').attr('data-d');
       for_p_t = parseInt(for_p_t)*parseInt($('.journey_qty').val());
        for_p_t = '$'+for_p_t;
+      if($('.module-journey-22').hasClass('active')){
+       var for_p_t_last = $('.module-journey-22').attr('data-id');
+      } 
     } else{
+
+      if($('.module-journey-22').hasClass('active')){
+       var for_p_t_last = $('.module-journey-22').attr('data-id');
+      } 
     var for_p_t = $('.journey-forth-accordian h3.active').attr('data-id');
                                               
-                                            }
+    }
+
+
+                               if(h3_s_text == 'Purchase Multiple Sessions:'){
+      var for_p = $('.journey-forth-accordian h3.active').attr('data-p');
+      for_p = parseInt(for_p)*parseInt($('.journey_qty').val());
+
+      if($('.module-journey-22').hasClass('active')){
+       var for_p_last = $('.module-journey-22.active').next('.bundler-target-element').find('.bndlr-total-price span.bndlr-new-price').attr('data-currentprice');
+      } 
+    }else{
+                                        if($('.module-journey-22').hasClass('active')){
+       var for_p_last = $('.module-journey-22.active').next('.bundler-target-element').find('.bndlr-total-price span.bndlr-new-price').attr('data-currentprice');
+      } 
+    var for_p = $('.journey-forth-accordian h3.module-journey-20.active').next('.bundler-target-element').find('.bndlr-total-price span.bndlr-new-price').attr('data-currentprice');
+    }
+
+  
 
     if(first_p == undefined){
     first_p = 0.00;
@@ -365,6 +555,10 @@ Shopify.formatMoney = function(cents, format) {
     if(for_p == undefined){
     for_p = 0.00;
     }
+  if(for_p_last == undefined){
+    for_p_last = 0.00;
+    }
+  
 
     if(first_p_t == undefined){
     first_p_t = '$0.00/mo';
@@ -382,6 +576,10 @@ Shopify.formatMoney = function(cents, format) {
     }else{
       var left_t = '2 Sessions (Redeemable Forever)'
     }
+  if(for_p_t_last == undefined){
+    for_p_t_last = '$0.00/mo';
+    }
+  
 
  
       $('.journey-price-4 span:first-child').text(left_t);
@@ -390,15 +588,17 @@ Shopify.formatMoney = function(cents, format) {
     $('.journey-price-2 span:last-child').text(sec_p_t);
     $('.journey-price-3 span:last-child').text(thi_p_t);
   if(h3_text == '”Mentor in my pocket” add-on option for unlimited direct-message & voice-note support ($333/mo)'){
-        $('.journey-price-6 span:last-child').text(for_p_t);    
-    $('.journey-price-4 span:last-child').text('$0.00');
+        $('.journey-price-6 span:last-child').text(for_p_t_last);    
+  //  $('.journey-price-6 span:last-child').text('$0.00/mo');
     }else
     {
-      $('.journey-price-6 span:last-child').text('$0.00/mo');
+    //  $('.journey-price-4 span:last-child').text('$0.00');
     $('.journey-price-4 span:last-child').text(for_p_t);
     }
 
-    var total_p = parseInt(first_p)+parseInt(sec_p)+parseInt(thi_p)+parseInt(for_p);
+  
+    var total_p = parseInt(first_p)+parseInt(sec_p)+parseInt(thi_p)+parseInt(for_p)+parseInt(for_p_last);
+  console.log('for_p_last',for_p_last,'for_p',for_p,'total_p',total_p)
 $('.journey-price-5 span:last-child').text(Shopify.formatMoney(total_p, window.money_format));
 console.log('total_p',Shopify.formatMoney(total_p, window.money_format))
     
@@ -464,8 +664,18 @@ Shopify.formatMoney = function(cents, format) {
         b--;
         $rooms.val(b);
 
-      var h3_text = $('.module-journey-21.active').text();
-    console.log('h3_text',h3_text);
+      if($(this).hasClass('active')){
+      var h3_text = $(this).text();
+          
+    }else{
+    var h3_text = '';
+    }
+   if($('.module-journey-21').hasClass('active')){
+     var h3_s_text = $('.module-journey-21').text();
+   }else{
+     var h3_s_text = '';
+   }
+
 
     var first_p = $('.journey-first-accordian h3.active').next('.bundler-target-element').find('.bndlr-total-price span.bndlr-new-price').attr('data-currentprice');
     var sec_p = $('.journey-second-accordian h3.active').next('.bundler-target-element').find('.bndlr-total-price span.bndlr-new-price').attr('data-currentprice');
@@ -473,12 +683,33 @@ Shopify.formatMoney = function(cents, format) {
     var thi_p = $('.journey-third-accordian h3.active').next('.bundler-target-element').find('.bndlr-total-price span.bndlr-new-price').attr('data-currentprice');
 
   
-                                      if(h3_text == 'Purchase Multiple Sessions:'){
+                                      if(h3_s_text == 'Purchase Multiple Sessions:'){
       var for_p = $('.journey-forth-accordian h3.active').attr('data-p');
       for_p = parseInt(for_p)*parseInt($('.journey_qty').val());
+
+      if($('.module-journey-22').hasClass('active')){
+       var for_p_last = $('.module-journey-22.active').next('.bundler-target-element').find('.bndlr-total-price span.bndlr-new-price').attr('data-currentprice');
+      } 
     }else{
-    var for_p = $('.journey-forth-accordian h3.active').next('.bundler-target-element').find('.bndlr-total-price span.bndlr-new-price').attr('data-currentprice');
-                                      }
+                                        if($('.module-journey-22').hasClass('active')){
+       var for_p_last = $('.module-journey-22.active').next('.bundler-target-element').find('.bndlr-total-price span.bndlr-new-price').attr('data-currentprice');
+      } 
+    var for_p = $('.journey-forth-accordian h3.module-journey-20.active').next('.bundler-target-element').find('.bndlr-total-price span.bndlr-new-price').attr('data-currentprice');
+    }
+ /* if(h3_text == '”Mentor in my pocket” add-on option for unlimited direct-message & voice-note support ($333/mo)'){
+  var for_p_last = $('.module-journey-22.active').next('.bundler-target-element').find('.bndlr-total-price span.bndlr-new-price').attr('data-currentprice');
+
+    if($('.module-journey-21').hasClass('active')){
+       var for_p = $('h3.module-journey-21.active').attr('data-p');
+      for_p = parseInt(for_p)*parseInt($('.journey_qty').val());
+    } 
+    if($('.module-journey-20').hasClass('active')){
+       var for_p = $('.journey-forth-accordian h3.module-journey-20.active').next('.bundler-target-element').find('.bndlr-total-price span.bndlr-new-price').attr('data-currentprice');
+} 
+    
+  }
+  */
+  console.log('for_p_last',for_p_last,for_p)
 
   
   var first_l = $('.journey-first-accordian h3.active').length;
@@ -535,14 +766,38 @@ Shopify.formatMoney = function(cents, format) {
 
   $('.journey-price-3 span:first-child').text(html_thi);
     var thi_p_t = $('.journey-third-accordian h3.active').attr('data-id');
-                                            if(h3_text == 'Purchase Multiple Sessions:'){
+    if(h3_s_text == 'Purchase Multiple Sessions:'){
       var for_p_t = $('.journey-forth-accordian h3.active').attr('data-d');
       for_p_t = parseInt(for_p_t)*parseInt($('.journey_qty').val());
        for_p_t = '$'+for_p_t;
+      if($('.module-journey-22').hasClass('active')){
+       var for_p_t_last = $('.module-journey-22').attr('data-id');
+      } 
     } else{
+
+      if($('.module-journey-22').hasClass('active')){
+       var for_p_t_last = $('.module-journey-22').attr('data-id');
+      } 
     var for_p_t = $('.journey-forth-accordian h3.active').attr('data-id');
                                               
-                                            }
+    }
+
+
+                               if(h3_s_text == 'Purchase Multiple Sessions:'){
+      var for_p = $('.journey-forth-accordian h3.active').attr('data-p');
+      for_p = parseInt(for_p)*parseInt($('.journey_qty').val());
+
+      if($('.module-journey-22').hasClass('active')){
+       var for_p_last = $('.module-journey-22.active').next('.bundler-target-element').find('.bndlr-total-price span.bndlr-new-price').attr('data-currentprice');
+      } 
+    }else{
+                                        if($('.module-journey-22').hasClass('active')){
+       var for_p_last = $('.module-journey-22.active').next('.bundler-target-element').find('.bndlr-total-price span.bndlr-new-price').attr('data-currentprice');
+      } 
+    var for_p = $('.journey-forth-accordian h3.module-journey-20.active').next('.bundler-target-element').find('.bndlr-total-price span.bndlr-new-price').attr('data-currentprice');
+    }
+
+  
 
     if(first_p == undefined){
     first_p = 0.00;
@@ -556,6 +811,10 @@ Shopify.formatMoney = function(cents, format) {
     if(for_p == undefined){
     for_p = 0.00;
     }
+  if(for_p_last == undefined){
+    for_p_last = 0.00;
+    }
+  
 
     if(first_p_t == undefined){
     first_p_t = '$0.00/mo';
@@ -573,6 +832,10 @@ Shopify.formatMoney = function(cents, format) {
     }else{
       var left_t = '2 Sessions (Redeemable Forever)'
     }
+  if(for_p_t_last == undefined){
+    for_p_t_last = '$0.00/mo';
+    }
+  
 
  
       $('.journey-price-4 span:first-child').text(left_t);
@@ -581,15 +844,17 @@ Shopify.formatMoney = function(cents, format) {
     $('.journey-price-2 span:last-child').text(sec_p_t);
     $('.journey-price-3 span:last-child').text(thi_p_t);
   if(h3_text == '”Mentor in my pocket” add-on option for unlimited direct-message & voice-note support ($333/mo)'){
-        $('.journey-price-6 span:last-child').text(for_p_t);    
-    $('.journey-price-4 span:last-child').text('$0.00');
+        $('.journey-price-6 span:last-child').text(for_p_t_last);    
+  //  $('.journey-price-6 span:last-child').text('$0.00/mo');
     }else
     {
-      $('.journey-price-6 span:last-child').text('$0.00/mo');
+    //  $('.journey-price-4 span:last-child').text('$0.00');
     $('.journey-price-4 span:last-child').text(for_p_t);
     }
 
-    var total_p = parseInt(first_p)+parseInt(sec_p)+parseInt(thi_p)+parseInt(for_p);
+  
+    var total_p = parseInt(first_p)+parseInt(sec_p)+parseInt(thi_p)+parseInt(for_p)+parseInt(for_p_last);
+  console.log('for_p_last',for_p_last,'for_p',for_p,'total_p',total_p)
 $('.journey-price-5 span:last-child').text(Shopify.formatMoney(total_p, window.money_format));
 console.log('total_p',Shopify.formatMoney(total_p, window.money_format))
     }
@@ -713,15 +978,19 @@ function example(count) {
      //  setTimeout(function(){
      //    $('.build-journey-accordian.journey-third-accordian h3.active').next('.bundler-target-element').find('.bndlr-add-to-cart').trigger('click');
      //  }, 3000)
-      setTimeout(function(){
-        window.location.href="/cart";
-      }, 9000);
+     
 
+      // setTimeout(function(){
+      //   window.location.href="/cart";
+      // },9000);
 
-      var active = length+000;
+      
+      var length_1 = $('.build-journey-accordian h3.active').length;
+length_1 = length_1+2;
+      var active = length_1+'000';
       console.log('active',active)
       setTimeout(function(){
-        console.log('active',active)
+        window.location.href="/cart";
       },active);
       
     })

@@ -14,8 +14,8 @@
               {%- if image_nd.width >= 1066 -%}{{ image_nd | image_url: width: 1066 }} 1066w,{%- endif -%}
               {{ image_nd | image_url }} {{ image_nd.width }}w
             "
-            src="{{ image_nd | image_url: width: 533 }}"
-            sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 130 | divided_by: 4 }}px, (min-width: 990px) calc((100vw - 130px) / 4), (min-width: 750px) calc((100vw - 120px) / 3), calc((100vw - 35px) / 2)"
+            src="{{ image_nd | image_url: width: 1066 }}"
+            sizes="1250px"
             alt=""
             class="motion-reduce"
             loading="lazy"

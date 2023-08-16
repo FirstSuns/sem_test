@@ -37,7 +37,7 @@
     },
     "search": {
       "search": "Search",
-      "reset": "Clear search term"
+      "reset": "Clear search"
     },
     "cart": {
       "view": "View cart ({{ count }})",
@@ -59,8 +59,8 @@
   },
   "newsletter": {
     "label": "Email",
-    "success": "Thanks for subscribing",
-    "button_label": "Subscribe"
+    "success": "Welcome!",
+    "button_label": "Join"
   },
   "accessibility": {
     "skip_to_text": "Skip to content",
@@ -83,21 +83,21 @@
   "blogs": {
     "article": {
       "blog": "Blog",
-      "read_more_title": "Read more: {{ title }}",
+      "read_more_title": "Keep reading: {{ title }}",
       "comments": {
         "one": "{{ count }} comment",
         "other": "{{ count }} comments"
       },
-      "moderated": "Please note, comments need to be approved before they are published.",
+      "moderated": "Comments can take up to 12 hours to be published.",
       "comment_form_title": "Leave a comment",
       "name": "Name",
       "email": "Email",
       "message": "Comment",
       "post": "Post comment",
       "back_to_blog": "Back to blog",
-      "share": "Share this article",
+      "share": "Share this piece",
       "success": "Your comment was posted successfully! Thank you!",
-      "success_moderated": "Your comment was posted successfully. We will publish it in a little while, as our blog is moderated."
+      "success_moderated": "Your comment was submitted. "
     }
   },
   "onboarding": {
@@ -154,7 +154,7 @@
         "sale_price": "Sale price",
         "unit_price": "Unit price"
       },
-      "share": "Share this product",
+      "share": "Share this",
       "sold_out": "Sold out",
       "unavailable": "Unavailable",
       "vendor": "Vendor",

@@ -1666,6 +1666,9 @@ h1.np-account-customer__title {
   margin-right: 15px;
   margin-bottom: 15px;
 }
+.np-account-buttons-sec .btn{
+  display: none;
+}
 .np-account-logout-buttons a {
   margin-bottom: 15px;
   color: #FFF;

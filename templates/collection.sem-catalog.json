@@ -14,48 +14,20 @@
         "068cc470-91b2-4bc2-9bdf-7e88c2c28fa3"
       ],
       "custom_css": [
-        ".collection-hero__text-wrapper a {font-family: \"Open Sans\", sans-serif; text-decoration: none; padding: 8px 20px; border-radius: 3px; margin: 20px 0px; display: inline-block; color: #fff; background-color: #ff9416;}",
-        "h1 p {margin: 0px 0px;}"
+        ".collection-hero__text-wrapper a {font-family: \"Open Sans\", sans-serif; text-decoration: none; padding: 8px 20px; border-radius: 5px; margin: 20px 0px; display: inline-block; color: #fff; background-color: #ff9416;}",
+        "h1 p {margin: 0px px;}"
       ],
       "settings": {
-        "col_title": "<p>Featured Lesson or <strong>Product Title<\/strong> Goes Here.<\/p>",
-        "col_content": "<p>LCD screens are uniquely modern in style, and the liquid crystals that make them work have allowed humanity to create slimmer<\/p>",
-        "col_button_text": "Take the Quiz",
+        "col_title": "<p>Single Purchase Offers<\/p>",
+        "col_content": "<p>This is where I keep everything that I offer outside of my mentorship system.<\/p><p>If you're looking for ongoing services like private 1:1 mentorship, click here:<\/p>",
+        "col_button_text": "Mentorship",
         "col_button_link": "shopify:\/\/pages\/quiz"
-      }
-    },
-    "56361cf9-2cbb-4013-bf5e-38db0553bb8a": {
-      "type": "featured-collection",
-      "settings": {
-        "title": "Book a 1:1 Session",
-        "heading_size": "h1",
-        "description": "",
-        "show_description": true,
-        "description_style": "body",
-        "collection": "1-1-meetings",
-        "products_to_show": 2,
-        "columns_desktop": 2,
-        "full_width": false,
-        "show_view_all": true,
-        "view_all_style": "solid",
-        "enable_desktop_slider": false,
-        "color_scheme": "",
-        "image_ratio": "adapt",
-        "image_shape": "default",
-        "show_secondary_image": false,
-        "show_vendor": false,
-        "show_rating": false,
-        "enable_quick_add": false,
-        "columns_mobile": "2",
-        "swipe_on_mobile": false,
-        "padding_top": 0,
-        "padding_bottom": 100
       }
     },
     "a1dc85af-8b2f-4313-959b-2790e4432bce": {
       "type": "featured-collection",
       "settings": {
-        "title": "Digital Journeys",
+        "title": "{{ section.settings.collection.title }}",
         "heading_size": "h1",
         "description": "",
         "show_description": true,
@@ -82,7 +54,6 @@
     },
     "product-grid": {
       "type": "np-collection-main-catalog",
-      "disabled": true,
       "blocks": {
         "de92925a-0cff-4d67-8f81-7cf20235400e": {
           "type": "collection",
@@ -98,6 +69,7 @@
       "block_order": [
         "de92925a-0cff-4d67-8f81-7cf20235400e"
       ],
+      "disabled": true,
       "settings": {
         "products_per_page": 8,
         "image_ratio": "square",
@@ -111,10 +83,80 @@
         "enable_sorting": true
       }
     },
+    "56361cf9-2cbb-4013-bf5e-38db0553bb8a": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "{{ section.settings.collection.title }}",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": true,
+        "description_style": "subtitle",
+        "collection": "1-1-meetings",
+        "products_to_show": 2,
+        "columns_desktop": 2,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 0,
+        "padding_bottom": 56
+      }
+    },
+    "be54ed68-27c6-4f01-a878-1d6500c371c9": {
+      "type": "rich-text",
+      "blocks": {
+        "template--20265370026284__be54ed68-27c6-4f01-a878-1d6500c371c9-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "Looking for more support?",
+            "heading_size": "h2"
+          }
+        },
+        "template--20265370026284__be54ed68-27c6-4f01-a878-1d6500c371c9-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Discover the value of enrolling in an ongoing rhythm of 1:1 sessions. <\/p>"
+          }
+        },
+        "template--20265370026284__be54ed68-27c6-4f01-a878-1d6500c371c9-button-1": {
+          "type": "button",
+          "settings": {
+            "button_label": "Build a mentorship journey",
+            "button_link": "shopify:\/\/pages\/quiz",
+            "button_style_secondary": true,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "template--20265370026284__be54ed68-27c6-4f01-a878-1d6500c371c9-heading-1",
+        "template--20265370026284__be54ed68-27c6-4f01-a878-1d6500c371c9-text-1",
+        "template--20265370026284__be54ed68-27c6-4f01-a878-1d6500c371c9-button-1"
+      ],
+      "settings": {
+        "desktop_content_position": "left",
+        "content_alignment": "left",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 0,
+        "padding_bottom": 52
+      }
+    },
     "2c518c14-1d1d-481d-8a57-e034adbe3c05": {
       "type": "featured-collection",
       "settings": {
-        "title": "More Tools",
+        "title": "{{ section.settings.collection.title }}",
         "heading_size": "h1",
         "description": "",
         "show_description": true,
@@ -142,9 +184,10 @@
   },
   "order": [
     "banner",
-    "56361cf9-2cbb-4013-bf5e-38db0553bb8a",
     "a1dc85af-8b2f-4313-959b-2790e4432bce",
     "product-grid",
+    "56361cf9-2cbb-4013-bf5e-38db0553bb8a",
+    "be54ed68-27c6-4f01-a878-1d6500c371c9",
     "2c518c14-1d1d-481d-8a57-e034adbe3c05"
   ]
 }

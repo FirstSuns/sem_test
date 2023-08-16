@@ -46,7 +46,7 @@
                   {% if block.settings.enable_pre_btn %}
                       {% if block.settings.btn_content!=balnk %}
                         <div class="np-package-total-btn">
-                          <a href="{{ block.settings.btn_content }}" class="next-btn">Next</a>
+                          <a href="{{ block.settings.btn_content }}" class="next-btn wc_next_btn_{{ forloop.index }}">Next</a>
                         </div>
                       {% endif %}
                   {% endif %}
@@ -64,6 +64,82 @@
     </div>
   </div>
 </div>
+
+<script>
+  $(document).ready(function(){
+    $('.wc_next_btn_1').on('click', function(e){
+      e.preventDefault();
+      sessionStorage.setItem("first_journey_btn", "first_journey_btn_1");
+      setTimeout(function(){
+      window.location.href = '/pages/bundles-journey';
+      }, 100);
+    })
+    $('.wc_next_btn_2').on('click', function(e){
+      e.preventDefault();
+      if($('.prepay_checkbox:checked').val() == 'on'){
+      sessionStorage.setItem("first_journey_btn", "first_journey_btn_2");
+        setTimeout(function(){
+      window.location.href = '/pages/bundles-journey';
+      }, 100);
+      }else{
+      sessionStorage.setItem("first_journey_btn", "first_journey_btn_3");
+        setTimeout(function(){
+      window.location.href = '/pages/bundles-journey';
+      }, 100);
+      }
+    })
+    $('.wc_next_btn_3').on('click', function(e){
+      e.preventDefault();
+      sessionStorage.setItem("first_journey_btn", "first_journey_btn_4");
+      setTimeout(function(){
+      window.location.href = '/pages/bundles-journey';
+      }, 100);
+    })
+  })
+</script>
+
+<!-- <script>
+$(window).on('load', function(){
+var data = sessionStorage.getItem("first_journey_btn");
+if(data == 'first_journey_btn_1'){
+$('.journey-h2-4').trigger('click');
+$('.module-journey-20').trigger('click');
+}
+if(data == 'first_journey_btn_2'){
+$('.journey-h2-1').trigger('click');
+$('.journey-h2-3').trigger('click');
+setTimeout(function(){
+$('.module-journey-16').trigger('click');
+$('.module-journey-8').trigger('click');
+},100);
+}
+if(data == 'first_journey_btn_3'){
+$('.journey-h2-1').trigger('click');
+$('.journey-h2-3').trigger('click');
+setTimeout(function(){
+$('.module-journey-16').trigger('click');
+$('.module-journey-7').trigger('click');
+},100);
+}
+if(data == 'first_journey_btn_4'){
+$('.journey-h2-1').trigger('click');
+$('.journey-h2-3').trigger('click');
+setTimeout(function(){
+$('.module-journey-7').trigger('click');
+},200);
+setTimeout(function(){
+$('.module-journey-18').trigger('click');
+},100);
+}
+$('.journey-back-btn a').on('click', function(e){
+e.preventDefault();
+setTimeout(function(){
+sessionStorage.removeItem('first_journey_btn');
+window.location.href = '/pages/bundles';
+}, 100);
+});
+});
+</script> -->
  
 
 

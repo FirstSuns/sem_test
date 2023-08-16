@@ -2,6 +2,35 @@
   "name": "t:sections.footer.name",
   "type": "footer",
   "sections": {
+    "d8678d40-276b-4aef-90a3-240d94bd80e0": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<script>\ndocument.addEventListener('DOMContentLoaded', function() {\n  const announcementBar = document.querySelector('.essential_countdown_announcement_bar_wrapper');\n\n  if (announcementBar) {\n    \/\/ Set initial opacity to 0\n    announcementBar.style.opacity = '0';\n\n    \/\/ Triggering a reflow to ensure the initial style change takes effect\n    void announcementBar.offsetWidth;\n\n    \/\/ Delay the fade-in effect for 2 seconds\n    setTimeout(function() {\n      \/\/ Fade in the element\n      announcementBar.style.opacity = '1';\n    }, 2000); \/\/ 2000 milliseconds = 2 seconds\n  }\n});\n<\/script>\n\n<style>\n.essential_countdown_announcement_bar_wrapper {\n  opacity: 0;\n}\n<\/style>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "16919558635272e04c": {
+      "type": "apps",
+      "blocks": {
+        "8a15c5f8-e581-483b-ac91-c1fe2074c2e3": {
+          "type": "shopify:\/\/apps\/courses-plus\/blocks\/subscription-button-block\/ce230994-1eaa-437b-a472-ab50f3058a28",
+          "disabled": true,
+          "settings": {
+            "display_couses_subscription_button": true,
+            "block_button_text": "Customer subscriptions",
+            "position": "courses_s_button_full_width"
+          }
+        }
+      },
+      "block_order": [
+        "8a15c5f8-e581-483b-ac91-c1fe2074c2e3"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
     "footer": {
       "type": "footer",
       "blocks": {
@@ -41,6 +70,8 @@
     }
   },
   "order": [
+    "d8678d40-276b-4aef-90a3-240d94bd80e0",
+    "16919558635272e04c",
     "footer"
   ]
 }

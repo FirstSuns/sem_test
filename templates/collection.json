@@ -32,7 +32,7 @@
     "8154bd77-844e-47a3-8732-68b1416ca131": {
       "type": "featured-collection",
       "settings": {
-        "title": "Book a 1:1 Session",
+        "title": "{{ section.settings.collection.title }}",
         "heading_size": "h1",
         "description": "",
         "show_description": true,
@@ -60,7 +60,7 @@
     "21cabd65-7bae-4186-9b8b-e9c02d1d49d5": {
       "type": "featured-collection",
       "settings": {
-        "title": "Digital Journeys",
+        "title": "{{ section.settings.collection.title }}",
         "heading_size": "h1",
         "description": "",
         "show_description": true,

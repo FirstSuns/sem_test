@@ -66,51 +66,55 @@
         {% for block in section.blocks %}
           <div class="two-column-grid-text-part">
             {% if block.settings.icon_one != blank %}
-              <figure>
-                {% assign image = block.settings.icon_one %}
-                <img
-                  srcset="
-                    {%- if image.width >= 165 -%}{{ image | image_url: width: 165 }} 165w,{%- endif -%}
-                    {%- if image.width >= 360 -%}{{ image | image_url: width: 360 }} 360w,{%- endif -%}
-                    {%- if image.width >= 533 -%}{{ image | image_url: width: 533 }} 533w,{%- endif -%}
-                    {%- if image.width >= 720 -%}{{ image | image_url: width: 720 }} 720w,{%- endif -%}
-                    {%- if image.width >= 940 -%}{{ image | image_url: width: 940 }} 940w,{%- endif -%}
-                    {%- if image.width >= 1066 -%}{{ image | image_url: width: 2066 }} 2066w,{%- endif -%}
-                    {{ image | image_url }} {{ image.width }}w
-                  "
-                  src="{{ image | image_url: 'master' }}"
-                  sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 130 | divided_by: 4 }}px, (min-width: 990px) calc((100vw - 130px) / 4), (min-width: 750px) calc((100vw - 120px) / 3), calc((100vw - 35px) / 2)"
-                  alt="{{ image.alt | escape }}"
-                  {% unless lazy_load == false %}
-                    loading="lazy"
-                  {% endunless %}
-                  width="{{ image.width }}"
-                  height="{{ image.height }}"
-                >
-                {% comment %}
-                  {%- liquid
-                    assign image_height = block.settings.icon_one.width | divided_by: block.settings.icon_one.aspect_ratio
-                    assign sizes = full_width
-                  -%}
-                  {{
-                    block.settings.icon_one
-                    | image_url: width: 3840
-                    | image_tag:
-                      loading: 'lazy',
-                      width: block.settings.icon_one.width,
-                      height: image_height,
-                      sizes: sizes,
-                      widths: widths
-                  }}
-                {% endcomment %}
-              </figure>
-            {% endif %}
-            {% if block.settings.title != blank %}
-              <h3>{{ block.settings.title }}</h3>
-            {% endif %}
-            {% if block.settings.sub_title != blank %}
-              <h4>{{ block.settings.sub_title }}</h4>
-            {% endif %}
+              <div class="header-block-icon">
+                <figure>
+                  {% assign image = block.settings.icon_one %}
+                  <img
+                    srcset="
+                      {%- if image.width >= 165 -%}{{ image | image_url: width: 165 }} 165w,{%- endif -%}
+                      {%- if image.width >= 360 -%}{{ image | image_url: width: 360 }} 360w,{%- endif -%}
+                      {%- if image.width >= 533 -%}{{ image | image_url: width: 533 }} 533w,{%- endif -%}
+                      {%- if image.width >= 720 -%}{{ image | image_url: width: 720 }} 720w,{%- endif -%}
+                      {%- if image.width >= 940 -%}{{ image | image_url: width: 940 }} 940w,{%- endif -%}
+                      {%- if image.width >= 1066 -%}{{ image | image_url: width: 2066 }} 2066w,{%- endif -%}
+                      {{ image | image_url }} {{ image.width }}w
+                    "
+                    src="{{ image | image_url: 'master' }}"
+                    sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 130 | divided_by: 4 }}px, (min-width: 990px) calc((100vw - 130px) / 4), (min-width: 750px) calc((100vw - 120px) / 3), calc((100vw - 35px) / 2)"
+                    alt="{{ image.alt | escape }}"
+                    {% unless lazy_load == false %}
+                      loading="lazy"
+                    {% endunless %}
+                    width="{{ image.width }}"
+                    height="{{ image.height }}"
+                  >
+                  {% comment %}
+                    {%- liquid
+                      assign image_height = block.settings.icon_one.width | divided_by: block.settings.icon_one.aspect_ratio
+                      assign sizes = full_width
+                    -%}
+                    {{
+                      block.settings.icon_one
+                      | image_url: width: 3840
+                      | image_tag:
+                        loading: 'lazy',
+                        width: block.settings.icon_one.width,
+                        height: image_height,
+                        sizes: sizes,
+                        widths: widths
+                    }}
+                  {% endcomment %}
+                </figure>
+              {% endif %}
+              <div class="header-block-text">
+              {% if block.settings.title != blank %}
+                <h3>{{ block.settings.title }}</h3>
+              {% endif %}
+              {% if block.settings.sub_title != blank %}
+                <h4>{{ block.settings.sub_title }}</h4>
+              {% endif %}
+              </div>
+            </div>
             {% if block.settings.desc != blank %}
               <p>{{ block.settings.desc }}</p>
             {% endif %}
